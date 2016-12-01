@@ -46,11 +46,10 @@
 						}
 						result = $.parseJSON(result);
 						console.log(result);
-						var amount = result.amount / 100000000;
-						var pin = result.pin / 100000000;
+						
 						var package = result.package / 100000000
-						var total = package + pin;
-						var xhtml = '<div class="col-md-12">Please send '+amount+' BTC to this address.</div><div class="col-md-6"><img style="margin-left:-10px" src="https://chart.googleapis.com/chart?chs=225x225&chld=L|0&cht=qr&chl=bitcoin:'+result.input_address+'?amount='+amount+'"/><p>'+result.input_address+'</p></div><div class="col-md-6"><p>Your Packet: '+package+' BTC</p><p>Pin: '+pin+' BTC</p><p>Total: '+ total +' BTC</p></div>'
+						
+						var xhtml = '<div class="col-md-12">Please send '+package+' BTC to this address.</div><div class="col-md-6"><img style="margin-left:-10px" src="https://chart.googleapis.com/chart?chs=225x225&chld=L|0&cht=qr&chl=bitcoin:'+result.input_address+'?amount='+package+'"/><p>'+result.input_address+'</p></div><div class="col-md-6"><p>Your Packet: '+package+' BTC</p>Total: '+ package +' BTC</p></div>'
 						alertify.alert(xhtml, function(){
 						    //location.reload(true);
 						  });

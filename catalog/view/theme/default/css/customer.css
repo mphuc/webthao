@@ -97,7 +97,7 @@
     border: 5px solid rgba(255, 255, 255, 0.70);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.06) inset;
     transition: all 0.5s ease;
-    min-height: 330px;
+    min-height: 312px;
 }
 .deposite:hover .deposite_time_digit{
     transform: scale(1.1);
@@ -148,6 +148,8 @@
     line-height: 25px;
     text-align: center;
     padding: 0px 20px 10px;
+    text-align: center;
+
 }
 .ribbon-design {
     color: #ffffff;
@@ -844,4 +846,9 @@ span.btn.btn-default.btn-tree {
 }
 .input-group{
     width: 100%;    
+}
+.card-action form{
+    margin-top: 15px;
+    float: left;
+    width: 100%;
 }

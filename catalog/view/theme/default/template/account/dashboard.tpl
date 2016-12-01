@@ -81,40 +81,32 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="bg-white widget widgett-shadow">
-                        <?php $packet = $self -> check_packet_pd (15000000) ;?>
-                        <?php $class = ""; if(count($packet) > 0) $class = "active";?>
+                        <?php $packet = $self -> check_packet_pd (50000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
                         <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
                             <div class="card-action">
-                                <span class="sparkline-bar2">1.2 BTC</span>
+                                <span class="sparkline-bar2">0.5 BTC</span>
                             </div>
-                            <div class="widget-font-20 clearfix">
-                                Days
-                                <span class="pull-right">
-                                    <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                </span>
+                            <div class="widget-font-20 clearfix text-center">
+                                60 Days
                             </div>
-                            <div class="font-size-14 red-200 clearfix">
-                                2.5% Daily
-                                <span class="pull-right">+ 1.1 BTC</span>
+                            <div class="widget-font-20 clearfix text-center">
+                                2% Daily
                             </div>
-                            
                         </div>
                         <div class="widgets-top-padding padding-30 padding-bottom-10">
                             <div class="row no-space">
                                 <div class="col-xs-12 text-center">
-                                    <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
+                                    <p><span class="icon md-circle circle-success"></span>60 days: 0.6 BTC + 0.5 BTC</p>
                                     <p class="margin-bottom-10">
-                                        <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
-                                    </p>
-                                    <p class="margin-bottom-20">
-                                        <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
+                                        <span class="icon md-circle circle-blue"></span>Daily profit: 0.01 BTC
                                     </p>
                                 </div>
                                 
                                 <div class="card-action">
                                     <?php if (count($packet) === 0) {?>
                                     <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                        <input type="hidden" name="invest" value="0">
+                                        <input type="hidden" name="invest" value="50000000">
                                         <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
                                     </form>
                                     <?php } else {?>
@@ -132,40 +124,33 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
+                            <?php $packet = $self -> check_packet_pd (100000000) ;?>
+                        <?php $class = ""; if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
                             <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
+                                    <span class="sparkline-bar2">1 BTC</span>
                                 </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    60 Days
                                 </div>
-                                <div class="font-size-14 red-200 clearfix">
-                                    2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.1% Daily
                                 </div>
-                                
                             </div>
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
+                                        <p><span class="icon md-circle circle-success"></span>60 days: 1.26 BTC +1 BTC </p>
                                         <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.021 BTC
                                         </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
+                                        
                                     </div>
                                     
                                     <div class="card-action">
                                         <?php if (count($packet) === 0) {?>
                                         <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
+                                            <input type="hidden" name="invest" value="100000000">
                                             <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
                                         </form>
                                         <?php } else {?>
@@ -183,40 +168,33 @@
                         
                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
+                            <?php $packet = $self -> check_packet_pd (500000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
                             <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
+                                    <span class="sparkline-bar2">5 BTC</span>
                                 </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    60 Days
                                 </div>
-                                <div class="font-size-14 red-200 clearfix">
-                                    2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.2% Daily
                                 </div>
-                                
                             </div>
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
+                                        <p><span class="icon md-circle circle-success"></span>60 days: 6.6 BTC + 5 BTC </p>
                                         <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.11 BTC
                                         </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
+                                        
                                     </div>
                                     
                                     <div class="card-action">
                                         <?php if (count($packet) === 0) {?>
                                         <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
+                                            <input type="hidden" name="invest" value="500000000">
                                             <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
                                         </form>
                                         <?php } else {?>
@@ -234,40 +212,34 @@
 
                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
+                            <?php $packet = $self -> check_packet_pd (1000000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
                             <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
+                                    <span class="sparkline-bar2">10 BTC</span>
                                 </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    60 Days
                                 </div>
-                                <div class="font-size-14 red-200 clearfix">
-                                    2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.3% Daily
                                 </div>
                                 
                             </div>
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
+                                        <p><span class="icon md-circle circle-success"></span>60 days: 13.8 BTC + 10 BTC </p>
                                         <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.23 BTC
                                         </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
+                                       
                                     </div>
                                     
                                     <div class="card-action">
                                         <?php if (count($packet) === 0) {?>
                                         <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
+                                            <input type="hidden" name="invest" value="1000000000">
                                             <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
                                         </form>
                                         <?php } else {?>
@@ -285,40 +257,33 @@
 
                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
+                            <?php $packet = $self -> check_packet_pd (2000000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
                             <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
+                                    <span class="sparkline-bar2">20 BTC</span>
                                 </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    60 Days
                                 </div>
-                                <div class="font-size-14 red-200 clearfix">
-                                    2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.4% Daily
                                 </div>
-                                
                             </div>
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
+                                        <p><span class="icon md-circle circle-success"></span>60 days: 14.4 BTC + 10 BTC </p>
                                         <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.24 BTC
                                         </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
+                                       
                                     </div>
                                     
                                     <div class="card-action">
                                         <?php if (count($packet) === 0) {?>
                                         <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
+                                            <input type="hidden" name="invest" value="2000000000">
                                             <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
                                         </form>
                                         <?php } else {?>
@@ -336,40 +301,33 @@
 
                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
+                            <?php $packet = $self -> check_packet_pd (5000000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
                             <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
+                                    <span class="sparkline-bar2">50 BTC</span>
                                 </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
+                                <div class="widget-font-20 clearfix text-center">
+                                    60 Days
                                 </div>
-                                <div class="font-size-14 red-200 clearfix">
+                                <div class="widget-font-20 clearfix text-center">
                                     2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
                                 </div>
-                                
                             </div>
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
+                                        <p><span class="icon md-circle circle-success"></span>60 days: 75 BTC + 50 BTC </p>
                                         <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 1.25 BTC
                                         </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
+                                        
                                     </div>
                                     
                                     <div class="card-action">
                                         <?php if (count($packet) === 0) {?>
                                         <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
+                                            <input type="hidden" name="invest" value="5000000000">
                                             <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
                                         </form>
                                         <?php } else {?>
@@ -385,158 +343,6 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                        <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
-                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
-                                <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
-                                </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
-                                </div>
-                                <div class="font-size-14 red-200 clearfix">
-                                    2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
-                                </div>
-                                
-                            </div>
-                            <div class="widgets-top-padding padding-30 padding-bottom-10">
-                                <div class="row no-space">
-                                    <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
-                                        <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
-                                        </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="card-action">
-                                        <?php if (count($packet) === 0) {?>
-                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
-                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
-                                        </form>
-                                        <?php } else {?>
-                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
-                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
-                                        </form>
-                                        <?php } ?>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                        <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
-                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
-                                <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
-                                </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
-                                </div>
-                                <div class="font-size-14 red-200 clearfix">
-                                    2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
-                                </div>
-                                
-                            </div>
-                            <div class="widgets-top-padding padding-30 padding-bottom-10">
-                                <div class="row no-space">
-                                    <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
-                                        <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
-                                        </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="card-action">
-                                        <?php if (count($packet) === 0) {?>
-                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
-                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
-                                        </form>
-                                        <?php } else {?>
-                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
-                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
-                                        </form>
-                                        <?php } ?>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                        <div class="bg-white widget widgett-shadow">
-                            <?php $packet = $self -> check_packet_pd (30000000) ;?>
-                            <?php $class = ""; if(count($packet) > 0) $class = "active";?>
-                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
-                                <div class="card-action">
-                                    <span class="sparkline-bar2">1.2 BTC</span>
-                                </div>
-                                <div class="widget-font-20 clearfix">
-                                    Days
-                                    <span class="pull-right">
-                                        <i class="icon md-caret-up" aria-hidden="true"></i> 60
-                                    </span>
-                                </div>
-                                <div class="font-size-14 red-200 clearfix">
-                                    2.5% Daily
-                                    <span class="pull-right">+ 1.1 BTC</span>
-                                </div>
-                                
-                            </div>
-                            <div class="widgets-top-padding padding-30 padding-bottom-10">
-                                <div class="row no-space">
-                                    <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>60 days: 11.52 BTC + 9.6 BTC </p>
-                                        <p class="margin-bottom-10">
-                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.192 BTC
-                                        </p>
-                                        <p class="margin-bottom-20">
-                                            <span class="icon md-circle circle-blue"></span>Fee : 0.64 BTC 
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="card-action">
-                                        <?php if (count($packet) === 0) {?>
-                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="0">
-                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
-                                        </form>
-                                        <?php } else {?>
-                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
-                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
-                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
-                                        </form>
-                                        <?php } ?>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
