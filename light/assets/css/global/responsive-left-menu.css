@@ -1,0 +1,335 @@
+/*-- dashboard-v2 --*/
+.site-menu-left .main-content .main-header{
+    background: none;
+}
+.site-menu-left .clarclass-main-screen{
+    clear: both;
+}
+.site-menu-left .nav.navbar-right{
+    padding-right: 30px;
+}
+
+@media (max-width: 1899px){
+    /*-- Masonry --*/
+    #myContent{
+        width: 100%;
+    }
+}
+@media (max-width: 1599px){
+    /*-- userlist --*/
+    .site-menu-left .user-details{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .site-menu-left .img-size {
+        height: auto;
+        width: 100%;
+    }
+    .user-details h4{
+        margin-bottom: 11px;
+    }
+    /*-- gallery --*/
+    .site-menu-left #gallerylist.filter-gallery .grid figure{
+        max-width: 32.2%;
+        min-width: 29%;
+        width: 29%;
+    }
+    /*-- gallery-grid --*/
+    .gallary-grid .grid figure{
+        min-width: 31%;
+    }
+    /*-- contact us --*/
+    .contact-detail-left{
+        width: 100%;
+    }
+    .contact-detail-right{
+        width: 100%;
+    }
+    /*-- badges-labels --*/
+    .list code{
+        font-size: 12px;
+    }
+    /*-- nav --*/
+    .menu-item-nav{
+        min-height: 150px;
+    }
+    /*-- timeline --*/
+    .site-menu-left .page-content {
+        width: 100%;
+    }
+    /*---- Form Widget ----*/
+    .swMain ul.anchor li a { width:238px;}
+    /*---- Flot-Chart ----*/
+    .site-menu-left .chart-float { height: 330px;}
+    /*---- Pricing-Table ----*/
+    .price-list .price-price { font-size:46px;}
+}
+@media (max-width: 1199px){
+    /*-- dashboard-v2 --*/
+    .site-menu-left .dash-header-section h1 {
+        font-size: 22px;
+        padding-top: 10px;
+    }
+    .site-menu-left .widget-in-box .huge{
+        font-size: 21px;
+    }
+    .site-menu-left .wid-u-info div{
+        font-size: 12px;
+    }
+    .table-clear{
+        clear: both;
+    }
+    /*-- dashboard-v3 --*/
+    .large-table-clear{
+        clear: both;
+    }
+
+    /*-- userlist --*/
+    .site-menu-left .user-details {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .user-details p{
+        font-size: 13px;
+    }
+    .btn-view {
+        font-size: 13px;
+        margin: 5px 0 0;
+        padding: 5px 0;
+        width: 100%;
+    }
+    /*-- gallery --*/
+    .site-menu-left #gallerylist.filter-gallery .grid figure{
+        max-width: 32.2%;
+        min-width: 29%;
+        width: 29%;
+    }
+    /*-- gallery-grid --*/
+    .gallary-grid .grid figure{
+        min-width: 48%;
+    }
+    /*-- badges-labels --*/
+    .list code{
+        font-size: 14px;
+    }
+    /*-- message --*/
+    .app-message .chat-message .page-left-side{
+        width: 280px;
+    }
+    .app-message .chat-message .page-main-content{
+        margin-right: 290px !important;
+    }
+    /*-- Pagination --*/
+    .pagination-gap li a{
+        margin: 0;
+    }
+    .site-menu-left .cd-pagination.no-space.move-buttons li a{
+        padding: 0.8em 9px;
+    }
+    /*-- nav --*/
+    .site-menu-left .nav-box-content .nav li a{
+        padding: 10px 14px;
+    }
+    /*---- Static-Widget ----*/
+    .site-menu-left .static-box { padding:20px;}
+    /*---- Blog-Widget ----*/
+    .site-menu-left .cover blockquote { font-size:18px;}
+    .site-menu-left .widgett-actions a { margin-right:2px;}
+    .site-menu-left .blog-widget .widgett-left { position:relative !important; width:100% !important; height:40% !important;}
+    .site-menu-left .widgett-left + .widgett-body { margin-left:0% !important; width:100% !important;}
+    /*---- Flot-Chart----*/
+    .site-menu-left #menu-button .btn { margin-right:5px !important;}
+    /*---- Ajax-Datable----*/
+    .site-menu-left .input-small { width: 110px !important;}
+    .site-menu-left .table-group-actions { float: left !important; margin-top: 10px;}
+    /*---- Ribbon Page ----*/
+    .site-menu-left .ribbon-box{ margin:0 0px 30px;}
+    .site-menu-left .contain-ribbon { padding:0 30px;}
+    .site-menu-left .contain-ribbon:first-child { padding:30px 30px 0 30px;}
+    .site-menu-left .last-box-ribbon { padding:0px 30px 30px 30px;}
+    /*---- Alert Page ----*/
+    .site-menu-left .style-alert { width: 97%;}
+    .site-menu-left .alert-icon-box { width: 98%;}
+    /*---- Pricing Page ----*/
+    .site-menu-left .bg-in-title, .site-menu-left .price-table, .site-menu-left .bg-in-head { margin: auto; width: 640px;}
+
+}
+@media (max-width: 991px) {
+    /*-- dashboard-v3 --*/
+    .dashboard3.site-menu-left .main-content{
+        margin-top: 46px;
+    }
+
+    /*-- dashboard-v2 --*/
+    .site-menu-left .main-content{
+        margin-top: 46px;
+    }
+    .site-menu-left .dash-header-section h1{
+        font-size: 25px;
+    }
+    .site-menu-left .widget-in-box .huge {
+        font-size: 30px;
+    }
+    .site-menu-left .wid-u-info div{
+        font-size: 14px;
+    }
+
+    /*-- gallery --*/
+    .site-menu-left #gallerylist.filter-gallery .grid figure{
+        left: 0 !important;
+        max-width: 0;
+        min-width: 45%;
+        position: relative !important;
+        width: 0;
+        top: 0 !important;
+    }
+    .contact-col{
+        display: block;
+    }
+    .contact-btn .btn {
+        padding: 7px 8px;
+    }
+    .tab-content.tab-padding-contact.background-contact {
+        padding: 5px 0;
+    }
+    #CarouselCaptions .carousel-inner h3{
+        font-size: 20px;
+    }
+    /*-- badges-labels --*/
+    .list code{
+        font-size: 12px;
+    }
+    /*-- progress_bars.html --*/
+    .site-menu-left .pie_progress{
+        width: 145px;
+    }
+    /*-- message --*/
+    .site-menu-left .chat-message{
+        background: none;
+    }
+    .site-menu-left .app-message .chat-message .page-left-side{
+        width: 100%;
+        position: relative;
+
+    }
+    .site-menu-left .app-message .chat-message .page-main-content{
+        margin-right: 0 !important;
+        width: 100%;
+        padding: 0;
+    }
+    .header-left-title{
+        width: 45%;
+    }
+    /*-- header --*/
+    .site-menu-left .nav.navbar-right{
+        padding-right: 0;
+    }
+    /*-- nav --*/
+    .site-menu-left .nav-tab .nav li a{
+        padding: 10px 7px;
+    }
+    .site-menu-left .navbar-brand { left:55%;}
+    /*---- Social-Widget ----*/
+    .site-menu-left .social-widget h3 { font-size:22px;}
+    .site-menu-left .social-follow > ul > li { padding:0px 12px;}
+    .site-menu-left .social-follow1 ul li a { padding:12px;}
+    .site-menu-left .social-follow1 ul li a { padding:12px;}
+    .site-menu-left .avatar-lg80 { width: 60px !important;}
+    .site-menu-left .social-widget .name-profile { font-size:28px;}
+    .site-menu-left .widgett-info h3 { margin-top:7px !important;}
+    /*---- Flot-Chart----*/
+    .site-menu-left .chart-float { height: 270px;}
+    /*---- Form-wizzard----*/
+    .site-menu-left .form-wizard.wizard-vertical > ol { width:45%;}
+    .site-menu-left .form-wizard.wizard-vertical > div { width:52%;}
+    .site-menu-left .swMain ul.anchor li { width: 100%; padding-right:0px;}
+    .site-menu-left .swMain ul.anchor li a { width:100%;}
+    .site-menu-left .wizard-center { padding:0;}
+    .site-menu-left .wizard-title { font-size: 17px; font-weight: bold;}
+    /*---- Ribbon Page ----*/
+    .site-menu-left .flat-ribbon-margin { margin: 0 20px 20px !important;}
+    /*---- Alert Page ----*/
+    .site-menu-left .alert-icon-box { width: 97%;}
+    .site-menu-left .social-alert-box { width: 100%;}
+    .site-menu-left .style-alert { width: 93%;}
+    /*---- Pricing Page ----*/
+    .site-menu-left .bg-in-title, .site-menu-left .price-table, .site-menu-left .bg-in-head { width: 420px;}
+    .site-menu-left .price-table .price-price { font-size: 40px;}
+    .site-menu-left .price-table .price-title { font-size: 16px;}
+    .site-menu-left .pricing-title-text p { left:89%;}
+    .site-menu-left .top-description { font-size:17px;}
+    .site-menu-left .list-title, h4.list-title { font-size:15px;}
+}
+@media (max-width: 767px) {
+    /*-- dashboard-v2 --*/
+    .site-menu-left .dash-header-section h1{
+        padding-top: 0px;
+        text-align: center;
+    }
+    .dashboard2 .dash-content-header-media .dash-header-section{
+        padding: 15px 0 25px 0;
+    }
+    .dashboard2 .main-dash .animation-hatch{
+        text-align: center;
+    }
+    .dashboard2 .dash-content-header-media {
+        height: 190px;
+    }
+
+    /*-- dashboard-v1 --*/
+    .site-menu-left.dashboard .first-icon-main.bottomspacing{
+        padding-top: 0;
+    }
+    /*-- gallery --*/
+    .site-menu-left #gallerylist.filter-gallery .grid figure{
+        min-width: 100%;
+    }
+    /*-- gallery-grid --*/
+    .gallary-grid .grid figure{
+        min-width: 100%;
+    }
+
+    /*-- mailbox-read-more --*/
+    body.site-menu-left{
+        background: none;
+    }
+
+    /*-- message --*/
+    .site-menu-left.sticky-chat-box .app-message .chat-message .page-left-side{
+        position: fixed;
+    }
+    /*---- Form-wizzard----*/
+    .site-menu-left .form-wizard.wizard-vertical > ol { width:auto;}
+    .site-menu-left .form-wizard.wizard-vertical > div { width:auto;}
+    /*---- Flot-Chart----*/
+    .site-menu-left .chart-float { height: 250px;}
+    /*---- Ribbon Page ----*/
+    .site-menu-left .flat-ribbon-margin { margin: 0 30px 20px !important;}
+    /*---- Pricing Page ----*/
+    .site-menu-left .bg-in-title, .site-menu-left .price-table, .site-menu-left .bg-in-head { width: 360px;}
+    .site-menu-left .price-table .price-price { font-size: 48px;}
+    .site-menu-left .pricing-title-text p { left:72%;}
+    .site-menu-left .pricing-right-title { height: 375px;}
+}
+@media (max-width: 479px) {
+    /*-- dashboard-v2 --*/
+    .dashboard2 .dash-content-header-media {
+        height: 160px;
+    }
+    .site-menu-left .panel-title { font-size:17px;}
+    /*---- Blog-Widget ----*/
+    .site-menu-left .cover blockquote { font-size:17px;}
+    /*---- Social-Widget ----*/
+    .site-menu-left .social-follow > ul > li { padding:0px 20px;}
+    .site-menu-left .social-follow1 ul li a { padding:20px;}
+    .site-menu-left .social-follow1 ul li a { padding:20px;}
+    .site-menu-left .avatar-lg80 { width: 80px !important;}
+    .site-menu-left .social-widget .name-profile { font-size:32px;}
+    .site-menu-left .widgett-info h3 { margin-top:20px !important;}
+    /*---- Ribbon Page ----*/
+    .site-menu-left .contain-ribbon { padding:0 15px;}
+    .site-menu-left .contain-ribbon:first-child { padding:15px 15px 0 15px;}
+    .site-menu-left .last-box-ribbon { padding:0px 15px 15px 15px;}
+    /*---- Pricing Page ----*/
+    .site-menu-left .bg-in-title, .site-menu-left .price-table, .site-menu-left .bg-in-head { width: 100%;}
+}
