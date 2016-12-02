@@ -108,15 +108,15 @@
                             </a>
                             <ul class="dropdown-menu dropdown-top-border position-absolute" role="menu">
                                 <li role="presentation">
-                                    <a href="javascript:void(0)" role="menuitem"><i class="icon icon_profile" aria-hidden="true"></i> Profile</a>
+                                    <a href="your-profile.html" role="menuitem"><i class="icon icon_profile" aria-hidden="true"></i> Profile</a>
                                 </li>
                                
                                 <li role="presentation">
-                                    <a href="javascript:void(0)" role="menuitem"><i class="icon icon_cog" aria-hidden="true"></i> Settings</a>
+                                    <a href="change-login-password.html" role="menuitem"><i class="icon icon_cog" aria-hidden="true"></i> Settings</a>
                                 </li>
                                 <li class="divider" role="presentation"></li>
                                 <li role="presentation">
-                                    <a href="javascript:void(0)" role="menuitem"><i class="icon icon_lock_alt" aria-hidden="true"></i> Logout</a>
+                                    <a href="logout.html" role="menuitem"><i class="icon icon_lock_alt" aria-hidden="true"></i> Logout</a>
                                 </li>
                             </ul>
                         </li>

@@ -2039,5 +2039,59 @@ class ModelAccountCustomer extends Model {
 		$query = $this -> db -> query("SELECT COUNT(*) as number FROM " . DB_PREFIX . "customer_r_wallet_payment WHERE customer_id = '".$customer_id."'");
 		return $query -> row;
 	}
-	
+
+	public function count_p_node($customer_id){
+		$query = $this -> db -> query("SELECT count(*) as number  FROM " . DB_PREFIX . "customer_ml A INNER JOIN " . DB_PREFIX . "customer_provide_donation B ON A.customer_id = B.customer_id WHERE B.status = 1 AND A.p_node = '".$customer_id."'");
+		return $query -> row['number'];
+	}
+	public function count_p_node_buy_level($customer_id,$level){
+		$query = $this -> db -> query("SELECT count(*) as number  FROM " . DB_PREFIX . "customer_ml A INNER JOIN " . DB_PREFIX . "customer_provide_donation B ON A.customer_id = B.customer_id WHERE B.status = 1 AND A.p_node = '".$customer_id."' AND A.position = '".$level."'");
+		return $query -> row['number'];
+	}
+
+	public function update_position_customer($customer_id,$position){
+		$query = $this -> db -> query("
+			UPDATE 	" . DB_PREFIX . "customer_ml SET position = '".$position."' WHERE customer_id = '".$customer_id."'
+		");
+		
+	}
+	public function get_customer_by_id($customer_id) {
+		
+		$query = $this -> db -> query("
+			SELECT * FROM " . DB_PREFIX . "customer WHERE customer_id = '" . $this -> db -> escape($customer_id) . "'
+			");
+
+		return $query -> row;
+	}
+
+	public function update_count_pode_payment($customer_id){
+		$query = $this -> db -> query("
+			UPDATE 	" . DB_PREFIX . "customer_r_wallet_payment SET count_p_node = count_p_node + 1 WHERE customer_id = '".$customer_id."'
+		");
+	}
+	public function update_count_day_payment($customer_id){
+		
+		$query = $this -> db -> query("
+			UPDATE 	" . DB_PREFIX . "customer_r_wallet_payment SET count_day  = count_day + 1 WHERE customer_id = '".$customer_id."'
+		");
+		
+	}
+	public function update_m_Wallet_add_sub($amount , $customer_id, $add = false){
+		if ($add) {
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer_m_wallet SET
+			amount = amount + ".intval($amount).",
+			date = NOW()
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}else{
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer_m_wallet SET
+			amount = amount - ".intval($amount).",
+			date = NOW()
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}
+		return $query === true ? true : false;
+	}
 }

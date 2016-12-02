@@ -41,7 +41,7 @@
                 </ul>
             </li>
             <li class="has-sub">
-                <a class="waves-effect waves-light" href="<?php echo $self -> url -> link('account/logout', '', 'SSL'); ?>"> <i class="layout-icon icon_lock_alt" aria-hidden="true"></i><span> <?php echo $lang['logout']; ?> </span></a>
+                <a class="waves-effect waves-light" href="logout.html"> <i class="layout-icon icon_lock_alt" aria-hidden="true"></i><span> <?php echo $lang['logout']; ?> </span></a>
             </li>
             
             

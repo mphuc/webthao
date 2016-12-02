@@ -14,36 +14,12 @@
    
    	$('.packet-invest').on('submit', function(){
    		var self = $(this);
-   		alertify.confirm('<p class="text-center" style="font-size:25px;color: black;text-transform: uppercase;height: 20px">Make sure your choice is correct !</p>',
+   		alertify.confirm('<p class="text-center" style="font-size:25px;color: black;text-transform: uppercase;height: 20px">You make sure your choice !</p>',
 		  function(){
 		    window.funLazyLoad.start();
 	   		setTimeout(function(){
 				self.ajaxSubmit({
 					success : function(result) {
-						if (result == "no_6"){
-							var xhtml = '<p class="text-center" style="font-size:25px;color: black;text-transform: uppercase;height: 20px">Smaller your weak team 50 BTC !</p>';
-							alertify.alert(xhtml, function(){
-							    location.reload(true);
-							  });
-							window.funLazyLoad.reset();
-							return false;
-						}
-						if (result == "no_7"){
-							var xhtml = '<p class="text-center" style="font-size:25px;color: black;text-transform: uppercase;height: 20px">Smaller your weak team 100 BTC !</p>';
-							alertify.alert(xhtml, function(){
-							    location.reload(true);
-							  });
-							window.funLazyLoad.reset();
-							return false;
-						}
-						if (result == "no_complete"){
-							var xhtml = '<p class="text-center" style="font-size:25px;color: black;text-transform: uppercase;height: 20px">Please pay your investment package!</p>';
-							alertify.alert(xhtml, function(){
-							    location.reload(true);
-							  });
-							window.funLazyLoad.reset();
-							return false;
-						}
 						result = $.parseJSON(result);
 						console.log(result);
 						
@@ -51,7 +27,11 @@
 						
 						var xhtml = '<div class="col-md-12">Please send '+package+' BTC to this address.</div><div class="col-md-6"><img style="margin-left:-10px" src="https://chart.googleapis.com/chart?chs=225x225&chld=L|0&cht=qr&chl=bitcoin:'+result.input_address+'?amount='+package+'"/><p>'+result.input_address+'</p></div><div class="col-md-6"><p>Your Packet: '+package+' BTC</p>Total: '+ package +' BTC</p></div>'
 						alertify.alert(xhtml, function(){
-						    //location.reload(true);
+						    window.funLazyLoad.reset();
+						    setTimeout(function(){
+							    location.reload(true);
+							}, 2000);
+						    
 						  });
 						
 					}

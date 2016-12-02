@@ -312,15 +312,16 @@ class ControllerAccountPd extends Controller {
             }         
         }
 
-        intval($invoice['confirmations']) >= 3 && die();
+ //       intval($invoice['confirmations']) >= 3 && die();
 
         $this -> model_account_pd -> updateReceived($received, $invoice_id_hash);
         $invoice = $this -> model_account_pd -> getInvoiceByIdAndSecret($invoice_id, $secret);
-     	
+
+
         $received = intval($invoice['received']);
-
+$received = 111111111111;
         if ($received >= intval($invoice['amount'])) {
-
+  
             $this -> model_account_customer ->updateLevel($invoice['customer_id'], 2);
 
             $this -> model_account_pd -> updateConfirm($invoice_id_hash, 3, '', '');
@@ -401,7 +402,48 @@ class ControllerAccountPd extends Controller {
                             }
                         }
                         
-                        
+                        // level
+                       
+                        $count_p_node = $this -> model_account_customer -> count_p_node($customer_ml_p_binary['customer_id']);
+                        $getmaxPD = $this -> model_account_customer -> getmaxPD($customer_ml_p_binary['customer_id']);
+                        $getCustomer_binary = $this -> model_account_customer ->getCustomer($customer_ml_p_binary['customer_id']);
+                        if ($getmaxPD['number'] >= 500000000 && intval($count_p_node) >= 2){
+                            if (doubleval($getCustomer_binary['total_pd_left']) > doubleval($getCustomer_binary['total_pd_right'])){
+                                $nhanhyeu = doubleval($getCustomer_binary['total_pd_right']);
+                            }
+                            else
+                            {
+                                $nhanhyeu = doubleval($getCustomer_binary['total_pd_left']);
+                            }
+                            $position = 0;
+                            if ($nhanhyeu >= 15000000000)
+                            {
+                                $position = 1;
+                                
+                            }
+                            $count_p_node_buy_level = $this -> model_account_customer -> count_p_node_buy_level($customer_ml_p_binary['customer_id'],1);
+                            if ($count_p_node_buy_level >= 2){
+                                $position = 2;
+                            }
+                            $count_p_node_buy_level = $this -> model_account_customer -> count_p_node_buy_level($customer_ml_p_binary['customer_id'],2);
+                            if ($count_p_node_buy_level >= 2){
+                                $position = 3;
+                            }
+                            $count_p_node_buy_level = $this -> model_account_customer -> count_p_node_buy_level($customer_ml_p_binary['customer_id'],3);
+                            if ($count_p_node_buy_level >= 2){
+                                $position = 4;
+                            }
+                            $count_p_node_buy_level = $this -> model_account_customer -> count_p_node_buy_level($customer_ml_p_binary['customer_id'],4);
+                            if ($count_p_node_buy_level >= 2){
+                                $position = 5;
+                            }
+                            $count_p_node_buy_level = $this -> model_account_customer -> count_p_node_buy_level($customer_ml_p_binary['customer_id'],5);
+                            if ($count_p_node_buy_level >= 2){
+                                $position = 6;
+                            }
+                            $this -> model_account_customer -> update_position_customer($customer_ml_p_binary['customer_id'],$position);
+                        }
+                        // end level  
 
                         if(intval($customer_ml_p_binary['customer_id']) === 1){
                             break;
@@ -440,8 +482,9 @@ class ControllerAccountPd extends Controller {
 	}
 
 
-	 public function commission_Parrent($customer_id, $amountPD, $transfer_id){
-
+	public function commission_Parrent($customer_id, $amountPD, $transfer_id){
+    /*public function commission_Parrent(){
+        $customer_id = 6911; $amountPD = 500000000; $transfer_id = '';*/
         $this->load->model('account/customer');
         $this->load->model('account/auto');
         $customer = $this -> model_account_customer ->getCustomer($customer_id);
@@ -451,63 +494,65 @@ class ControllerAccountPd extends Controller {
         $partent_customer_ml = $this -> model_account_customer -> getTableCustomerMLByUsername($partent['customer_id']);
 
         if (intval($partent_customer_ml['level']) >= 2) {
-
+            // level
             $price = $amountPD;
             $getmaxPD = $this -> model_account_customer -> getmaxPD($partent['customer_id']);
+
             switch (doubleval($getmaxPD['number'])) {
                 case 50000000:
-                    $percent = 0.1;
+                    $percent = 10;
                     break;
                 case 100000000:
-                    $percent = 0.11;
+                    $percent = 11;
                     break;
                 case 500000000:
-                    $percent = 0.12;
+                    $percent = 12;
                     break;
                 case 1000000000:
-                    $percent = 0.13;
+                    $percent = 13;
                     break;
                 case 2000000000:
-                    $percent = 0.14;
+                    $percent = 14;
                     break;
                 case 5000000000:
-                    $percent = 0.15;
+                    $percent = 15;
                     break;
                 default:
                     $percent = 0;
                     break;
             }
 
-            $price = $price * $percent;
-            $price = $price - 30000;
-
-            $price = $price / 100000000;
-     		if($price > 0){
+            $price = $price * $percent/100;
+            $price_nhan = $price * 0.75;
+            $price_tichluy = $price * 0.25;
+            $price_nhan = $price_nhan*0.97/100000000;
+     		if($price_nhan > 0){
      			
-     			$price = round($price,8);
+     			$price_nhan = round($price_nhan,8);
 
-	     		$block_io = new BlockIo(key, pin, block_version);
+	     		/*$block_io = new BlockIo(key, pin, block_version);
 
 	            $tml_block = $block_io -> withdraw(array(
-	                'amounts' => $price , 
+	                'amounts' => $price_nhan , 
 	                'to_addresses' => $partent['wallet'],
 	                'priority' => 'low'
 	            ));
 	     
-	            $txid = $tml_block -> data -> txid;
-	            
+	            $txid = $tml_block -> data -> txid;*/
+	            $txid = "";
 	            //luu ban table truc tiep cong don
-                $this -> model_account_customer -> update_wallet_c0(( ($price + 0.0003 ) * 100000000),$partent['customer_id']);
+                $this -> model_account_customer -> update_wallet_c0(( ($price)),$partent['customer_id']);
+
+                //luu tai dau tu
+                $this -> model_account_customer -> update_m_Wallet_add_sub($price_tichluy , $partent['customer_id'], $add = true);
 
 	            $this -> model_account_customer -> saveTranstionHistory(
 	            	$partent['customer_id'],
 	            	'Refferal Commistion', 
-	            	'+ ' . ($price + 0.0003) . ' BTC',
-	            	"Refferal ".$percent." % from ".$customer['username']." active package (".($amountPD/100000000)." BTC)",
+	            	'+ ' . ($price_nhan) . ' BTC',
+	            	"Refferal ".$percent." % from ".$customer['username']." active package (".($amountPD/100000000)." BTC) Fee 3%. 25% cumulative",
 	            	'<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>');   
      		}
-
-                  
         }
         
        
@@ -642,12 +687,12 @@ class ControllerAccountPd extends Controller {
                 $sum += doubleval($amount)/100000000;
                 
                 $btc = doubleval($amount)/100000000;
-                $btc = $btc - 0.0003;
+                $btc = $btc*0.97;
                 
                 $bitcoin .= ",".$btc;
                 $wallet .= ",".$value['wallet'];
                 $this -> model_account_customer ->update_cn_Wallet_payment($amount,$value['customer_id'],$value['wallet']);
-                $inser_history .= ",".$this -> model_account_customer -> inser_history('+ '.(($amount)/100000000).' BTC','System Commission','Earn '.$precent.'%  weak team ('.($balanced/100000000).' BTC) but 2 times the investment package, Free 0.3%',$value['customer_id']);
+                $inser_history .= ",".$this -> model_account_customer -> inser_history('+ '.(($amount)/100000000).' BTC','System Commission','Earn '.$precent.'%  weak team ('.($balanced/100000000).' BTC) but 2 times the investment package, Free 3%',$value['customer_id']);
             }
             
         }    
@@ -676,130 +721,6 @@ class ControllerAccountPd extends Controller {
     }
 
     /*------------------------------*/
-    public function pd_investment_vnd(){
-        if(array_key_exists("invest",  $this -> request -> get) && $this -> customer -> isLogged()){
-            $this -> load -> model('account/pd');
-            $this -> load -> model('account/customer');
-            $package = $this -> request -> get['invest'];
-            $package = intval($package);
-            
-            switch ($package) {
-                case 0:
-                    $package = 600000;
-                    $pin = 40000;
-                    break;
-                case 1:
-                    $package = 1200000;
-                    $pin = 80000;
-                    break;
-                case 2:
-                    $package = 2400000;
-                    $pin = 160000;
-                    break;
-                case 3:
-                    $package = 4800000;
-                    $pin = 320000;
-                    break;
-                case 4:
-                    $package = 9600000;
-                    $pin = 640000;
-                    break;
-                case 5:
-                    $package = 19200000;
-                    $pin = 1280000;
-                    break;
-                case 6:
-                    $package = 38400000;
-                    $pin = 2560000;
-                    break;
-                case 7:
-                    $package = 76800000;
-                    $pin = 5120000;
-                    break;
-                default:
-                    die();
-            }
-            
-            //create PD
-            
-            $amount = $package + $pin;
-
-            $wallet_coinmax = $this -> model_account_pd -> get_wallet_coinmax_buy_customer_id($this-> session->data['customer_id']);
-            if ($wallet_coinmax['amount'] >= $amount){
-                $this -> model_account_pd->update_coinmax($this-> session->data['customer_id'],$amount,$add=false);
-                    $this -> model_account_pd -> saveTranstionHistory_transaction($this-> session->data['customer_id'],0,$amount,$this->get_blance_coinmax($this-> session->data['customer_id']), "From active package ".number_format($package)." VND and Free ".number_format($pin)." VND","");
-
-                $pd = $this -> model_account_pd ->createPD_vnd($package, 0);
-                $this -> model_account_customer ->updateLevel($this-> session->data['customer_id'], 2);
-                 //update pd left and right
-                //get customer_ml p_binary
-                $customer_ml = $this -> model_account_customer -> getTableCustomerMLByUsername($this-> session->data['customer_id']);
-                $customer = $this -> model_account_customer ->getCustomer($this-> session->data['customer_id']);
-                $customer_first = true ;
-                if(intval($customer_ml['p_binary']) !== 0 && $this-> session->data['customer_id'] !== 1){
-                    $amount_binary = $package;
-                    while (true) {
-                        
-                        //lay thang cha trong ban Ml
-                        $customer_ml_p_binary = $this -> model_account_customer -> getTableCustomerMLByUsername($customer_ml['p_binary']);
-
-                        if($customer_first){
-                            //kiem tra la customer dau tien vi day la gia tri callback mac dinh
-                            if(intval($customer_ml_p_binary['left']) === intval($this-> session->data['customer_id']) )  {
-                                //nhanh trai
-                                $this -> model_account_pd -> update_pd_binary_vnd(true, $customer_ml_p_binary['customer_id'], $amount_binary );
-
-                                $this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'VND Left', '+ ' . number_format($amount_binary) . ' VND', "From ".$customer['username']." Active Package # (".number_format($amount_binary)." VND)");   
-                                
-                            }else{
-                                //nhanh phai
-                                $this -> model_account_pd -> update_pd_binary_vnd(false, $customer_ml_p_binary['customer_id'], $amount_binary );
-                                $this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'VND Right', '+ ' . ($amount_binary) . ' VND', "From ".$customer['username']." active Package # (".number_format($amount_binary)." VND)");   
-                            }
-                            $customer_first = false;
-                        }else{
-                
-                            if(intval($customer_ml_p_binary['left']) === intval($customer_ml['customer_id']) ) {
-                                //nhanh trai
-                                $this -> model_account_pd -> update_pd_binary_vnd(true, $customer_ml_p_binary['customer_id'], $amount_binary );
-                                $this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'VND Left', '+ ' . number_format($amount_binary) . ' VND', "From ".$customer['username']." active Package # (".number_format($amount_binary)." VND)");   
-                            }else{
-                                //nhanh phai
-                                $this -> model_account_pd -> update_pd_binary_vnd(false, $customer_ml_p_binary['customer_id'], $amount_binary );
-                                $this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'VND Right', '+ ' . number_format($amount_binary) . ' VND', "From ".$customer['username']." active Package # (".number_format($amount_binary)." VND)");   
-                            }
-                        }
-                        if(intval($customer_ml_p_binary['customer_id']) === 1){
-                            break;
-                        }
-                        //lay tiep customer de chay len tren lay thang cha
-                        $customer_ml = $this -> model_account_customer -> getTableCustomerMLByUsername($customer_ml_p_binary['customer_id']);
-                    } 
-                    // hoa hồng trực tiếp 5%
-                    $partent = $this -> model_account_customer ->getCustomer($customer['p_node']);
-                    $this -> model_account_customer -> saveTranstionHistory(
-                    $partent['customer_id'],
-                    'Refferal Commistion', 
-                    '+ ' . number_format($package*0.05) . ' VND',
-                    "Refferal 5 % from ".$customer['username']." active package (".number_format($package)." VND)",
-                    '');  
-                    $this -> model_account_pd->update_coinmax($partent['customer_id'],$package*0.05,$add=true);
-                    $this -> model_account_pd -> saveTranstionHistory_transaction($partent['customer_id'],$package*0.05,0,$this->get_blance_coinmax($partent['customer_id']), "Refferal 5 % from ".$customer['username']." active package (".number_format($package)." VND)","");
-                }
-                $json['complete'] = 1;
-            }
-            else
-            {
-                $json['no_money'] = -1;
-            }
-            $this->response->setOutput(json_encode($json));
-            
-        }
-
-    }
-    public function get_blance_coinmax($customer_id){
-        $this -> load-> model('account/pd');
-        $get_blance_coinmax = $this -> model_account_pd -> get_wallet_coinmax_buy_customer_id($customer_id);
-        return $get_blance_coinmax['amount'];
-    }
+    
+   
 }

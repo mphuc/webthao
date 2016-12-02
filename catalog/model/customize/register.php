@@ -377,7 +377,8 @@ public function addCustomer_auto($data){
 		
 		$query = $this -> db -> query("INSERT INTO " . DB_PREFIX . "customer_code_active SET 
 			customer_id = '" . (int)$customer_id . "',
-			code_active = '".$code."'
+			code_active = '".$code."',
+			status = 1
 			
 			");
 		return $query;

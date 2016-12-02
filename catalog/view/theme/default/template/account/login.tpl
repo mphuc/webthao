@@ -24,6 +24,8 @@
       <!-- Page CSS -->
       <link href="catalog/view/theme/default/assets/css/login-page/form.css" rel="stylesheet" type="text/css" />
       <link rel="stylesheet" href="catalog/view/theme/default/assets/css/validation/validation.css" type="text/css" />
+      <script src="catalog/view/javascript/alertifyjs/alertify.js" type="text/javascript"></script>
+      <link href="catalog/view/theme/default/css/al_css/alertify.css" rel="stylesheet">
    </head>
    <body class="login-form login-form-3">
       <div class="main-login-form">
@@ -93,15 +95,7 @@
          </div>
       </div>
       <!-- Global Plugin JavaScript -->
-      <script src="catalog/view/theme/default/assets/js/global/jquery.min.js"></script>
-      <script src="catalog/view/theme/default/assets/js/global/bootstrap.min.js"></script>
-      <script src="catalog/view/theme/default/assets/plugin/bootstrap-tour/js/bootstrap-tour.js"></script>
-      <script src="catalog/view/theme/default/assets/js/global/waves.min.js"></script>
-      <!-- Global Template JavaScript -->
-      <script src="catalog/view/theme/default/assets/js/global/site.min.js"></script>
-      <!-- Page Template JavaScript -->
-      <script src='catalog/view/theme/default/assets/js/validation/jquery.validate.min.js'></script>
-      <script src='catalog/view/theme/default/assets/js/validation/validation.js'></script>
+      
    </body>
 
 <!-- Mirrored from florathemes.com/html/porish/porish-left-menu/light/features/login_v3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2016 18:18:36 GMT -->

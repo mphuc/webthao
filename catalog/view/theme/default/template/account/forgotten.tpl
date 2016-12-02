@@ -67,16 +67,7 @@
       </div>
     </div>
     <!-- Global Plugin JavaScript -->
-    <script src="catalog/view/theme/default/assets/js/global/jquery.min.js"></script>
-    <script src="catalog/view/theme/default/assets/js/global/bootstrap.min.js"></script>
-    <script src="catalog/view/theme/default/assets/plugin/bootstrap-tour/js/bootstrap-tour.js"></script>
-    <script src="catalog/view/theme/default/assets/js/global/waves.min.js"></script>
-    <script src="catalog/view/theme/default/assets/js/switchery/jQuery.switchery.min.js"></script>
-    <!-- Global Template JavaScript -->
-    <script src="catalog/view/theme/default/assets/js/global/site.min.js"></script>
-    <!-- Page Template JavaScript -->
-    <script src='catalog/view/theme/default/assets/js/validation/jquery.validate.min.js'></script>
-    <script src='catalog/view/theme/default/assets/js/validation/validation.js'></script>
+    
   </body>
 
 

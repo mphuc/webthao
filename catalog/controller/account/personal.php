@@ -384,23 +384,13 @@ public function checkBinary($p_binary){
 						die();
 					}
 				}
-				$check_blockio_Wallet = $this -> model_account_customer -> check_wallet_blockio($cus_id);
-				if(intval($check_blockio_Wallet)  === 0){
-					$label = $cus_id."-".rand(10,99);
-					$wallet_blockio = $this -> create_wallet_blockio($label);
-					if(!$this -> model_account_customer ->insert_wallet_blockio(0, $cus_id,$wallet_blockio,$label)) {
+				$checkM_Wallet = $this -> model_account_customer -> checkM_Wallet($cus_id);
+				if(intval($checkM_Wallet)  === 0){
+					if(!$this -> model_account_customer ->insert_M_Wallet($cus_id)) {
 						die();
 					}
 				}
-				$check_coinmax_Wallet = $this -> model_account_customer -> check_wallet_coinmax($cus_id);
-				if(intval($check_wallet_coinmax)  === 0){
-					$wallet_coinmax = $this -> create_wallet_coinmax($cus_id);
-					if(!$this -> model_account_customer ->insert_wallet_coinmax(0, $cus_id,$wallet_coinmax))
-					{
-						die();
-					}
-				}
-
+				
 				$data['has_register'] = true;
 				$getCountryByID = $this -> model_account_customer -> getCountryByID(intval($this-> request ->post['country_id']));
 				//$this -> response -> redirect($this -> url -> link('account/', '#success', 'SSL'));
@@ -418,10 +408,10 @@ public function checkBinary($p_binary){
 				//$mail -> setTo($this -> config -> get('config_email'));
 				$mail -> setTo($_POST['email']);
 				$mail -> setFrom($this -> config -> get('config_email'));
-				$mail -> setSender(html_entity_decode("Coinmax, Inc", ENT_QUOTES, 'UTF-8'));
+				$mail -> setSender(html_entity_decode(", Inc", ENT_QUOTES, 'UTF-8'));
 				$mail -> setSubject("Congratulations Your Registration is Confirmed!");
 				$html_mail = '<div style="background: #f2f2f2; width:100%;">
-				   <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#364150;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
+				   <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#2A363C;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
 				    width:700px; margin:0 auto">
 				   <tbody>
 				      <tr>
@@ -440,11 +430,7 @@ public function checkBinary($p_binary){
 					       	<p style="font-size:14px;color: black;margin-left: 70px;">Phone Number: <b>'.$this-> request ->post['telephone'].'</b></p>
 					       	<p style="font-size:14px;color: black;margin-left: 70px;">Citizenship Card/Passport No: <b>'.$this-> request ->post['cmnd'].'</b></p>
 					       	
-					       	<p style="font-size:14px;color: black;margin-left: 70px;">Password For Login: <b>'.$this-> request ->post['password'].'</b></p>
-					       	
-					      				       	<p style="font-size:14px;color: black;text-align:center;"><a href="'.HTTPS_SERVER.'active.html&token='.$code_active.'" style="margin: 0 auto;width: 200px;background: #d14836;    text-transform: uppercase;
-    border-radius: 5px;
-    font-weight: bold;text-decoration:none;color:#f8f9fb;display:block;padding:12px 10px 10px">Active</a></p>
+					       	<p style="font-size:14px;color: black;margin-left: 70px;">Password For Login: <b>'.$this-> request ->post['password'].'</b></p>			       
 					       	<p style="font-size:14px;color: black;margin-left: 70px;">Bitcoin Wallet: <b>'.$this-> request ->post['wallet'].'</b>	</p>
 					       	<p style="text-align:center;">
 					       		<img style="margin:0 auto" src="https://chart.googleapis.com/chart?chs=150x150&chld=L|1&cht=qr&chl=bitcoin:'.$this-> request ->post['wallet'].'"/>
@@ -458,68 +444,13 @@ public function checkBinary($p_binary){
 				    </table>
 				  </div>';
 				$mail -> setHtml($html_mail); 
-				//$mail -> send();
+				$mail -> send();
 
-				// send mail admin
-				date_default_timezone_set('Asia/Ho_Chi_Minh');
-				$mail = new Mail();
-				$mail->protocol = $this->config->get('config_mail_protocol');
-				$mail->parameter = 'mmocoimax@gmail.com';
-				$mail->smtp_hostname = 'ssl://smtp.gmail.com';
-				$mail->smtp_username = 'mmocoimax@gmail.com';
-				$mail->smtp_password = 'ibzfqpduhwajikwx';
-				$mail->smtp_port = '465';
-				$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
-				$mail->setTo('noreplycoinmax@gmail.com');
-				$mail->setFrom('mmocoimax@gmail.com');
-				$mail->setSender('Coinmax');
-				$mail -> setSubject("Registration is ".$this-> request ->post['username']." - ".date('d/m/Y H:i:s')."");
-				$html_mail = '<div style="background: #f2f2f2; width:100%;">
-				   <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#364150;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
-				    width:700px; margin:0 auto">
-				   <tbody>
-				      <tr>
-				        <td>
-				          <div style="text-align:center" class="ajs-header"><img  src="'.HTTPS_SERVER.'catalog/view/theme/default/img/logo.png" alt="logo" style="margin: 0 auto; width:150px;"></div>
-				        </td>
-				       </tr>
-				       <tr>
-				       <td style="background:#fff">
-				       	<p class="text-center" style="font-size:20px;color: black;text-transform: uppercase; width:100%; float:left;text-align: center;margin: 30px 0px 0 0;">congratulations !<p>
-				       	<p class="text-center" style="color: black; width:100%; float:left;text-align: center;line-height: 15px;margin-bottom:30px;">You have successfully registered account</p>
-       	<div style="width:600px; margin:0 auto; font-size=15px">
-
-					       	<p style="font-size:14px;color: black;margin-left: 70px;">Your Username: <b>'.$this-> request ->post['username'].'</b></p>
-					       	<p style="font-size:14px;color: black;margin-left: 70px;">Email Address: <b>'.$this-> request ->post['email'].'</b></p>
-					       	<p style="font-size:14px;color: black;margin-left: 70px;">Phone Number: <b>'.$this-> request ->post['telephone'].'</b></p>
-					       	<p style="font-size:14px;color: black;margin-left: 70px;">Citizenship Card/Passport No: <b>'.$this-> request ->post['cmnd'].'</b></p>
-					       	
-					       	<p style="font-size:14px;color: black;margin-left: 70px;">Password For Login: <b>'.$this-> request ->post['password'].'</b></p>
-					       	
-					      				       	<p style="font-size:14px;color: black;text-align:center;"><a href="'.HTTPS_SERVER.'active.html&token='.$code_active.'" style="margin: 0 auto;width: 200px;background: #d14836;    text-transform: uppercase;
-    border-radius: 5px;
-    font-weight: bold;text-decoration:none;color:#f8f9fb;display:block;padding:12px 10px 10px">Active</a></p>
-					       	<p style="font-size:14px;color: black;margin-left: 70px;">Bitcoin Wallet: <b>'.$this-> request ->post['wallet'].'</b>	</p>
-					       	<p style="text-align:center;">
-					       		<img style="margin:0 auto" src="https://chart.googleapis.com/chart?chs=150x150&chld=L|1&cht=qr&chl=bitcoin:'.$this-> request ->post['wallet'].'"/>
-					       	</p>
-					       	
-
-					          </div>
-				       </td>
-				       </tr>
-				    </tbody>
-				    </table>
-				  </div>';
-				$mail -> setHtml($html_mail); 
-				//$mail->send();
-
-				//end send mail admin
-				//print_r($mail); die;
-				//die();
+				
 				$this-> model_customize_register -> update_template_mail($code_active, $html_mail);
 				$this->session->data['register_mail'] = $this-> request ->post['email'];
-				$this -> response -> redirect(HTTPS_SERVER . 'signup-success.html#success');
+				unset($_SESSION['customer_id']);
+				$this -> response -> redirect(HTTPS_SERVER . 'login.html#success');
 			}
 			
 		}
@@ -804,8 +735,7 @@ public function checkBinary($p_binary){
 		$node -> leftPD = $this -> total_pd_left($id);
 		$node -> rightPD = $this -> total_pd_right($id);
 		
-		$node -> leftVND = $this -> total_left_vnd($id);
-		$node -> rightVND = $this -> total_right_vnd($id);
+		
 		$node -> empty = false;
 		
 		$date = strtotime(date('Y-m-d'));
@@ -835,18 +765,7 @@ public function checkBinary($p_binary){
 		exit();
 
 	}
-	function total_left_vnd($customer_id){
-		$this -> load -> model('account/customer');
-		$count = $this -> model_account_customer ->  getCustomer($customer_id);
-		$count = $count['total_left_vnd'];
-		return $count;
-	}
-	function total_right_vnd($customer_id){
-		$this -> load -> model('account/customer');
-		$count = $this -> model_account_customer ->  getCustomer($customer_id);
-		$count = $count['total_right_vnd'];
-		return $count;
-	}
+	
 	function total_pd_left($customer_id){
 		$this -> load -> model('account/customer');
 		$count = $this -> model_account_customer ->  getCustomer($customer_id);
@@ -1039,12 +958,12 @@ public function checkBinary($p_binary){
 
 	}
 
-public function checkwallet() {
+	public function checkwallet() {
 		if ($this -> request -> get['wallet']) {
 			$this -> load -> model('customize/register');
 			$validate_address = $this -> check_address_btc($this -> request -> get['wallet']);
 			$jsonwallet = $this -> model_customize_register -> checkExitWalletBTC($this -> request -> get['wallet']);
-			if (intval($validate_address) === 1 && intval($jsonwallet) === 0) {
+			if (intval($validate_address) === 1 && intval($jsonwallet) <= 10) {
 				$json['wallet'] = 0;
 			} else {
 				$json['wallet'] = -1;
