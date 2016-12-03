@@ -27,8 +27,7 @@ class ControllerPdDailyprofit extends Controller {
 		$data['pagination'] = $pagination -> render();
 		$block_io = new BlockIo(key, pin, block_version);
 		$balances = $block_io->get_balance();
-		$address = $block_io->get_my_addresses();
-		$data['wallet'] = $address->data->addresses[0]->address; 
+		$data['wallet'] = wallet; 
 		$data['blance_blockio'] = $balances->data->available_balance;
 		$data['blance_blockio_pending'] = $balances->data->pending_received_balance;
 
@@ -90,14 +89,13 @@ class ControllerPdDailyprofit extends Controller {
 			}
 		}
 		$customer_ids = explode(',', $customer_id);
-		// print_r($customer_ids);
-		$amountS = explode(',', $amount);
+		$amountS = explode(',',$amount);
 		// print_r($customer_ids);
 		echo $test;
 		echo $amount;
 		echo "<br/>";
 		echo $wallet;
-		die('111');
+		/*die('111');*/
 		$block_io = new BlockIo(key,$pin, block_version); 
 	            $tml_block = $block_io -> withdraw(array(
 	                'amounts' => $amount , 
@@ -106,6 +104,7 @@ class ControllerPdDailyprofit extends Controller {
 	            )); 
 	    $txid = $tml_block -> data -> txid;
 		for ($i=0; $i < count($customer_ids); $i++) { 
+			$this -> model_pd_registercustom -> update_count_day_payment($customer_ids[$i]);
 			$this -> model_pd_registercustom -> saveTranstionHistory(
 	            	$customer_ids[$i],
 	            	'Daily rates', 
@@ -114,7 +113,7 @@ class ControllerPdDailyprofit extends Controller {
 	            	'<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>');
 		}
 
-		die('aaaaaaaaaaaaaaaaaaaaa');
+		/*die('aaaaaaaaaaaaaaaaaaaaa');*/
 
 	}
 	public function check_otp_login($otp){

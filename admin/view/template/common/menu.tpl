@@ -1,7 +1,7 @@
 <ul id="menu">
   <li id="dashboard"><a href="<?php echo $home; ?>"><i class="fa fa-dashboard fa-fw"></i> <span><?php echo $text_dashboard; ?></span></a></li>
 
-  <li id="dashboard"><a href="index.php?route=pd/history&token=<?php echo $_GET['token'];?>"><i class="fa fa-dashboard fa-fw"></i> <span>Edit customer</span></a></li>
+  <!--  <li id="dashboard"><a href="index.php?route=pd/history&token=<?php echo $_GET['token'];?>"><i class="fa fa-dashboard fa-fw"></i> <span>Edit customer</span></a></li> -->
 
   <li id="mn_statistical" ><a target="_blank" href="index.php?route=pd/personalcustom&token=<?php echo $_GET['token'];?>&name="><i class="fa fa-user fa-fw"></i> <span> Tree </span></a></li>
 
@@ -9,7 +9,7 @@
   <li id="" ><a href="index.php?route=pd/investment&token=<?php echo $_GET['token'];?>"><i class="fa fa-user fa-fw"></i> <span> Investment Manager </span></a></li>
   <li id="" ><a href="index.php?route=pd/dailyprofit&token=<?php echo $_GET['token'];?>"><i class="fa fa-user fa-fw"></i> <span> Daily profit </span></a></li>
    <li id="" ><a href="index.php?route=pd/paringbonus&token=<?php echo $_GET['token'];?>"><i class="fa fa-user fa-fw"></i> <span> Pairing bonus </span></a></li>
-  <li id="" ><a href="index.php?route=pd/withdraw&token=<?php echo $_GET['token'];?>"><i class="fa fa-user fa-fw"></i> <span> Matching </span></a></li>
+  <li id="" ><a href="index.php?route=pd/matching&token=<?php echo $_GET['token'];?>"><i class="fa fa-user fa-fw"></i> <span> Matching </span></a></li>
   <li id="" ><a href="index.php?route=pd/rank&token=<?php echo $_GET['token'];?>"><i class="fa fa-user fa-fw"></i> <span> Rank </span></a></li>
 
   

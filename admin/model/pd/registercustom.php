@@ -362,11 +362,7 @@ class ModelPdRegistercustom extends Model {
 			WHERE customer_id = '" . $customer_id . "'");
 		return $query;
 	}
-	public function get_customer_ml(){
-		$query = $this -> db -> query("SELECT customer_id FROM `sm_customer_ml` 
-			WHERE `left` = 0  OR `right` = 0 ORDER BY `date_added` ASC LIMIT 1");
-		return $query -> row;
-	}
+	
 
 	public function update_customer_ml($customer_id, $p_node, $id_p_binary){
 		
@@ -1214,7 +1210,7 @@ class ModelPdRegistercustom extends Model {
 		return $query;
 	}
 	public function getCustomer_commission() {
-		$query = $this -> db -> query("SELECT A.customer_id,A.total_pd_left,A.total_pd_right,A.wallet,A.username,B.level FROM " . DB_PREFIX . "customer A INNER JOIN " . DB_PREFIX . "customer_ml B ON A.customer_id=B.customer_id WHERE total_pd_left > 0 AND total_pd_right > 0");
+		$query = $this -> db -> query("SELECT A.customer_id,A.total_pd_left,A.total_pd_right,A.wallet,A.username,B.level FROM " . DB_PREFIX . "customer A INNER JOIN " . DB_PREFIX . "customer_ml B ON A.customer_id=B.customer_id WHERE total_pd_left > 0 AND total_pd_right > 0 ");
 		return $query -> rows;
 	}
 	public function getmaxPD($id_customer){
@@ -1272,5 +1268,91 @@ class ModelPdRegistercustom extends Model {
 		
 		}
 		return $query === true ? true : false;
+	}
+	public function update_count_day_payment($customer_id){
+		
+		$query = $this -> db -> query("
+			UPDATE 	" . DB_PREFIX . "customer_r_wallet_payment SET count_day  = count_day + 1 WHERE customer_id = '".$customer_id."'
+		");
+		
+	}
+
+	public function delete_form_cn_payment(){
+		$query = $this -> db -> query("
+			TRUNCATE " . DB_PREFIX . "customer_cn_wallet_payment
+			
+		");
+		
+	}
+	public function delete_form_cn(){
+		$query = $this -> db -> query("
+			TRUNCATE " . DB_PREFIX . "customer_cn_wallet
+			
+		");
+		
+	}
+	public function get_customer_ml($customer_id){
+		$query =  $this -> db -> query("
+			SELECT * FROM " . DB_PREFIX . "customer_ml
+					WHERE customer_id = ".$customer_id."");
+		return $query -> row;
+	}
+	public function update_cn_Wallet($amount,$customer_id){
+		$query = $this -> db -> query("
+		INSERT ". DB_PREFIX ."customer_cn_wallet SET
+			amount = ".doubleval($amount).",
+			customer_id = '".doubleval($customer_id)."'
+		");
+		return $query;
+	}
+	public function get_all_cn_payment(){
+		$query = $this -> db -> query("
+			SELECT * FROM " . DB_PREFIX . "customer_cn_wallet_payment
+			
+		");
+		return $query -> rows;
+	}
+	public function get_all_cn(){
+		$query = $this -> db -> query("
+			SELECT SUM((A.amount)/ 100000000) AS amount,A.customer_id,B.wallet FROM " . DB_PREFIX . "customer_cn_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id
+		");
+		return $query -> rows;
+	}
+	public function count_all_cn_show(){
+		$query = $this -> db -> query("
+			SELECT count(*) as number FROM " . DB_PREFIX . "customer_cn_wallet 
+		");
+		return $query -> row;
+	}
+	public function get_all_cn_show($limit,$offset){
+		$query = $this -> db -> query("
+			SELECT A.*,B.wallet,B.username FROM " . DB_PREFIX . "customer_cn_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id LIMIT ".$limit."
+			OFFSET ".$offset."
+		");
+		return $query -> rows;
+	}
+	public function get_all_cn_show_all(){
+		$query = $this -> db -> query("
+			SELECT A.*,B.wallet,B.username FROM " . DB_PREFIX . "customer_cn_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id 
+		");
+		return $query -> rows;
+	}
+	public function update_total_pd_left($amount, $cus_id){
+		$query = $this -> db -> query("
+		UPDATE ". DB_PREFIX ."customer SET
+			total_pd_left = '".$amount."'
+			WHERE customer_id = '".$cus_id."'
+		");
+		return $query;
+	
+	}
+	public function update_total_pd_right($amount, $cus_id){
+		$query = $this -> db -> query("
+		UPDATE ". DB_PREFIX ."customer SET
+			total_pd_right = '".$amount."'
+			WHERE customer_id = '".$cus_id."'
+		");
+		return $query;
+	
 	}
 }

@@ -11,6 +11,7 @@
 <meta name="keywords" content="<?php echo $keywords; ?>" />
 <?php } ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="icon" href="../catalog/view/theme/default/img/logo_favi.png">
 <script type="text/javascript" src="view/javascript/jquery/jquery-2.1.1.min.js"></script>
 <script src="view/javascript/jquery/jquery.easyui.min.js" type="text/javascript"></script>
 <script src="view/javascript/jquery/jquery-ui.js" type="text/javascript"></script>

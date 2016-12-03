@@ -26,8 +26,7 @@ class ControllerPdRank extends Controller {
 		$data['code_all'] =  $this-> model_pd_registercustom->get_all_rank_all();
 		$block_io = new BlockIo(key, pin, block_version);
 		$balances = $block_io->get_balance();
-		$address = $block_io->get_my_addresses();
-		$data['wallet'] = $address->data->addresses[0]->address; 
+		$data['wallet'] = wallet; 
 		$data['blance_blockio'] = $balances->data->available_balance;
 		$data['blance_blockio_pending'] = $balances->data->pending_received_balance;
 
@@ -79,6 +78,9 @@ class ControllerPdRank extends Controller {
 		$test = '';
 		$bitcoin = '';
 		$inser_history = '';
+		$amount_tai = "";
+        $amount_tra = "";
+        
 		foreach ($get_all_rank_all as $key => $value) {
 			switch (intval($value['position'])) {
                   case 1:
@@ -107,9 +109,12 @@ class ControllerPdRank extends Controller {
             $btc_tai = round(doubleval($amount)*0.25,8);
             $bitcoin .= ",".$btc_tra;
             $wallet .= ",".$value['wallet'];
+
+            $customer_id .= ','. $value['customer_id'];
+            $amount_tra .= ",".round(doubleval($amount)*0.75*0.97,8);
+			$amount_tai .= ",".round(doubleval($amount)*0.25,8);
+
             $test .= $btc_tra." -------- ".$value['wallet']." --------- ".$value['customer_id']."------".$amount."<br/>";
-			 $this -> model_pd_registercustom -> update_m_Wallet_add_sub($btc_tai*100000000 , $value['customer_id'], $add = true);
-            $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($btc_tra).' BTC','Rank Commission','Free 3%. 25% cumulative ',$value['customer_id']);
 		}
 			echo  $test;
 		    echo "<br>";
@@ -118,8 +123,13 @@ class ControllerPdRank extends Controller {
 		    echo $bitcoin;
 		    echo "<br>";
 		    echo $wallet;
-		    die;
-		    /*
+
+		    $customer_ids = explode(',', substr($customer_id,1));
+			$amount_tras = explode(',',substr($amount_tra,1));
+			$amount_tais = explode(',',substr($amount_tai,1));
+
+		    
+		   
 		    $block_io = new BlockIo(key, $pin, block_version); 
 
 		    $tml_block = $block_io -> withdraw(array(
@@ -131,9 +141,11 @@ class ControllerPdRank extends Controller {
 		    $txid = $tml_block -> data -> txid;
 
 		    $url = '<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>';
-			$this ->model_pd_registercustom->update_transhistory(substr($inser_history,1),$url)
-		    */
-
+		    for ($i=0; $i < count($customer_ids); $i++) { 
+		    	 $this -> model_pd_registercustom -> update_m_Wallet_add_sub($amount_tais[$i]*100000000 , $customer_ids[$i], $add = true);
+		    	 $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($amount_tras[$i]).' BTC','Rank Commission','Received '.$amount_tras[$i].' BTC from Rank Commission. Free 3%. 25% cumulative ',$customer_ids[$i]);
+		    }
+		    $this ->model_pd_registercustom->update_transhistory(substr($inser_history,1),$url);
 	}
 
 	public function check_otp_login($otp){
