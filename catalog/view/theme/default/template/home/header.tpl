@@ -29,7 +29,7 @@
         <div class="container">
             <div class="logo pull-left">
                 <a href="index-2.html">
-                    <img src="catalog/view/theme/default/images/logo.png" alt="Awesome Image" />
+                    <img src="catalog/view/theme/default/images/logo_home.png" alt="Awesome Image" />
                 </a>
             </div>
             <div class="header-right-info pull-right clearfix">
