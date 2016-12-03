@@ -852,3 +852,11 @@ span.btn.btn-default.btn-tree {
     float: left;
     width: 100%;
 }
+.navbar-brand-logo.navbar-brand-logo-normal{
+    height: 50px !important;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.site-menu-left .navbar-brand,.site-menu-left.left-menu-icon:not(.site-menu-top) .main-header .navbar-brand{
+    padding: 0px !important;
+}

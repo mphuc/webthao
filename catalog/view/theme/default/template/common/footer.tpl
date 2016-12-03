@@ -1,10 +1,10 @@
 
         <footer class="main-footer">
             <div class="footer-copyright">
-                © 2016 <a href="dashboard_v1.html">Porish</a>
+                © 2016 <a href="home.html">sfccoin.com</a>
             </div>
             <div class="footer-right-text">
-                All Rights Reserved.
+                Smart financial connections
             </div>
         </footer>
        

@@ -12,19 +12,19 @@
         if ($(window).width() > 767) {
             if ($("body").hasClass("left-menu-icon") != "") {
                 if ($("body").hasClass("site-menu-top") == "") {
-                    if (secondLevelLocation == "dashboard_v1.html" || secondLevelLocation == "dashboard_v2.html" || secondLevelLocation == "dashboard_v3.html" || secondLevelLocation == "" || secondLevelLocation == "dashboard_left_menu.html" || secondLevelLocation == "dashboard_left_top.html") {
-                        $(".navbar-brand img").attr("src", "assets/images/logo1.png");
+                    if (secondLevelLocation == "index.html" || secondLevelLocation == "index.html" || secondLevelLocation == "dashboard_v3.html" || secondLevelLocation == "" || secondLevelLocation == "dashboard_left_menu.html" || secondLevelLocation == "dashboard_left_top.html") {
+                        $(".navbar-brand img").attr("src", "catalog/view/theme/default/img/logo.png");
                     } else {
-                        $(".navbar-brand img").attr("src", "../assets/images/logo1.png");
+                        $(".navbar-brand img").attr("src", "catalog/view/theme/default/img/logo_res.png");
                     }
                 }
                 $(".sidebar-menu .has-sub").removeClass("active");
                 $(".sidebar-menu .has-sub ul").removeClass("show");
             } else {
-                if (secondLevelLocation == "dashboard_v1.html" || secondLevelLocation == "dashboard_v2.html" || secondLevelLocation == "dashboard_v3.html" || secondLevelLocation == "" || secondLevelLocation == "dashboard_left_menu.html" || secondLevelLocation == "dashboard_left_top.html") {
+                if (secondLevelLocation == "index.html" || secondLevelLocation == "index.html" || secondLevelLocation == "dashboard_v3.html" || secondLevelLocation == "" || secondLevelLocation == "dashboard_left_menu.html" || secondLevelLocation == "dashboard_left_top.html") {
                     $(".navbar-brand img").attr("src", "assets/images/logo.png");
                 } else {
-                    $(".navbar-brand img").attr("src", "../assets/images/logo.png");
+                    $(".navbar-brand img").attr("src", "catalog/view/theme/default/img/logo.png");
                 }
             }
         }

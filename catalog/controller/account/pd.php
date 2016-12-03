@@ -73,113 +73,7 @@ class ControllerAccountPd extends Controller {
 		return $countDayPD['number'] > 0 ? 1 : 2;
 	}
 
-	public function payconfirm() {
-		function myCheckLoign($self) {
-			return $self -> customer -> isLogged() ? true : false;
-		};
-
-		function myConfig($self) {
-			$self -> load -> model('account/customer');
-			$self -> document -> addScript('catalog/view/javascript/countdown/jquery.countdown.min.js');
-			$self -> document -> addScript('catalog/view/javascript/pd/countdown.js');
-		};
-
-		!$this -> request -> get['token'] && $this -> response -> redirect($this -> url -> link('account/dashboard', '', 'SSL'));
-		!call_user_func_array("myCheckLoign", array($this)) && $this -> response -> redirect($this -> url -> link('/login.html'));
-		call_user_func_array("myConfig", array($this));
-
-		//language
-		$this -> load -> model('account/customer');
-		$getLanguage = $this -> model_account_customer -> getLanguage($this -> session -> data['customer_id']);
-		$language = new Language($getLanguage);
-		$language -> load('account/pd');
-		$data['lang'] = $language -> data;
-		$data['getLanguage'] = $getLanguage;
-
-		$getPDCustomer = $this -> model_account_customer -> getPDByCustomerIDAndToken($this -> session -> data['customer_id'], $this -> request -> get['token']);
-
-		$getPDCustomer['number'] == 0 && $this -> response -> redirect($this -> url -> link('account/dashboard', '', 'SSL'));
-		$getPDCustomer = null;
-
-		$server = $this -> request -> server['HTTPS'] ? $server = $this -> config -> get('config_ssl') : $server = $this -> config -> get('config_url');
-		$data['base'] = $server;
-		$data['self'] = $this;
-		$data['pd_id'] = $this -> request -> get['token'];
-
-		$data['PdUser'] = $this -> model_account_customer -> getPDConfirm($this -> request -> get['token']);
-
-		$data['wallet'] = $this -> config -> get('config_wallet');
-		if (file_exists(DIR_TEMPLATE . $this -> config -> get('config_template') . '/template/account/pay_confirm.tpl')) {
-			$this -> response -> setOutput($this -> load -> view($this -> config -> get('config_template') . '/template/account/pay_confirm.tpl', $data));
-		} else {
-			$this -> response -> setOutput($this -> load -> view('default/template/account/pay_confirm.tpl', $data));
-		}
-
-	}
-
-	public function PayconfirmSubmit() {
-		
-		function myCheckLoign($self) {
-			return $self -> customer -> isLogged() ? true : false;
-		};
-		function myConfig($self) {
-			$self -> load -> model('account/customer');
-			$self -> load -> model('account/pd');
-		};
-		//method to call function
-
-		!call_user_func_array("myCheckLoign", array($this)) && $this -> response -> redirect($this -> url -> link('/login.html'));
-		call_user_func_array("myConfig", array($this));
-		!array_key_exists('amount', $this -> request -> get) && $this -> response -> redirect($this -> url -> link('/login.html'));
-		//language
-
-		//check count customer
-		$count_invoice = $this -> model_account_pd -> countPD($this -> session -> data['customer_id']);
-
-		$count_invoice = $count_invoice['number'];
-		$data['notCreate'] = false;
-
-		if ($count_invoice > 5)
-			$data['notCreate'] = true;
-		//save invoice
-		if (!$data['notCreate']) {
-			$secret = substr(hash_hmac('ripemd160', hexdec(crc32(md5(microtime()))), 'secret'), 0, 16);
-
-			$transferId = $this->request->get['transferid'];
-			$amount = $this->request->get['amount'];
-			$callback = "";
-			$invoice_id = $this -> model_account_pd -> saveInvoice($this -> session -> data['customer_id'], $secret, $amount,$transferId,$callback);
-
-			$invoice_id === -1 && die('Server error , Please try again !!!!');
-			$invoice_id_hash = hexdec(crc32(md5($invoice_id)));
-			//create API Blockchainapi.org
-			//$my_address = $this -> request -> get['wallet'];
-			$my_address = '13i8NozB6uZRGgKMLrMoza9rZumqYuHGPV';
-
-			//$my_address = '1Lhq2QCtt8TZNcAv9oSY1ng8WRE3VTwnHs';
-			$my_callback_url = HTTPS_SERVER . 'index.php?route=account/pd/callback&invoice_id=' . $invoice_id_hash . '&secret=' . $secret;
-			$api_base = 'https://blockchainapi.org/api/receive';
-			$response = $api_base . '?method=create&address=' . $my_address . '&callback=' . urlencode($my_callback_url);
-			$fcontents = implode('', file($response));
-			$object = json_decode($fcontents);
-			//update input address and fee_percent
-			!$this -> model_account_pd -> updateInaddressAndFree($invoice_id, $invoice_id_hash, $object -> input_address, $object -> fee_percent, $object -> destination) && die('Server Error !!!!');
-			$data['wallet'] = $object -> input_address;
-			//setup and check show qr code
-			$data['bitcoin'] = $amount;
-			!intval($data['bitcoin']) && $this -> response -> redirect($this -> url -> link('/login.html'));
-			$data['bitcoin'] = intval($data['bitcoin']);
-		       $data['self'] = $this;
-            $json['link'] = HTTPS_SERVER . 'invoice&invoice_hash=' . $invoice_id_hash;
-            
-            $this->response->setOutput(json_encode($json));
-        } else {
-            $data['invoice'] = $this->model_account_pd->getAllInvoiceByCustomer_notCreateOrder($this->session->data['customer_id']);
-            $json['link']    = HTTPS_SERVER . 'index.php?route=account/pd/show_invoice_pending';
-            $this->response->setOutput(json_encode($json));
-        }
-
-	}
+	
 
 	public function show_invoice_pending()
     {
@@ -312,14 +206,14 @@ class ControllerAccountPd extends Controller {
             }         
         }
 
- //       intval($invoice['confirmations']) >= 3 && die();
+        intval($invoice['confirmations']) >= 3 && die();
 
         $this -> model_account_pd -> updateReceived($received, $invoice_id_hash);
+
         $invoice = $this -> model_account_pd -> getInvoiceByIdAndSecret($invoice_id, $secret);
 
-
         $received = intval($invoice['received']);
-$received = 111111111111;
+
         if ($received >= intval($invoice['amount'])) {
   
             $this -> model_account_customer ->updateLevel($invoice['customer_id'], 2);
@@ -331,7 +225,7 @@ $received = 111111111111;
 
             $pd_tmp_pd = $this -> model_account_pd -> getPD($invoice['transfer_id']);
             $pd_tmp_ = $pd_tmp_pd['filled'];
-            switch ($pd_tmp_) {
+            switch (doubleval($pd_tmp_)) {
                 case 50000000:
                     $percent_r_payment = 0.02;
                     break;

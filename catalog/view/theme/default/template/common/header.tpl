@@ -12,7 +12,7 @@
       <meta name="keywords" content="<?php echo $keywords; ?>"/>
       <?php } ?>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link rel="icon" href="catalog/view/theme/default/img/logo.png">
+      <link rel="icon" href="catalog/view/theme/default/img/logo_favi.png">
       <script src="catalog/view/javascript/jquery/underscorejs/underscorejs.js" type="text/javascript"></script>
       <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
       <script src="catalog/view/javascript/jquery/jquery.easyui.min.js" type="text/javascript"></script>
@@ -83,8 +83,8 @@
       <div class="main-header navbar navbar-default navbar-fixed-top navbar-inverse navbar-mega">
             <div class="navbar-header">
                 <!--  Template Logo -->
-                <a class="navbar-brand" href="dashboard_v1.html">
-                    <img class="navbar-brand-logo navbar-brand-logo-normal" src="assets/images/logo.png" title="Porish" alt="logo">
+                <a class="navbar-brand" href="home.html">
+                    <img class="navbar-brand-logo navbar-brand-logo-normal" src="catalog/view/theme/default/img/logo.png" title="Porish" alt="logo">
                 </a>
                 <div>
                     <button class="button-menu-mobile open-left waves-effect">

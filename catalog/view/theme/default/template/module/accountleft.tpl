@@ -51,7 +51,7 @@
     <div class="clearfix"></div>
     <!--  Help Box -->
     <div class="sitebar-footer">
-        <a href="features/login.html" data-placement="top" data-toggle="tooltip" data-original-title="Login">
+        <!-- <a href="features/login.html" data-placement="top" data-toggle="tooltip" data-original-title="Login">
             <i class="icon  icon_lock-open_alt" aria-hidden="true"></i>
         </a>
         <a href="features/register.html" data-placement="top" data-toggle="tooltip" data-original-title="Register">
@@ -62,6 +62,6 @@
         </a>
         <a href="features/mailbox.html" data-placement="top" data-toggle="tooltip" data-original-title="Mail">
             <i class="icon icon_mail_alt" aria-hidden="true"></i>
-        </a>
+        </a> -->
     </div>
 </div>

@@ -32,7 +32,7 @@
          <div class="content-login">
             <div class="logo-title logo-login2">
                <!-- Template Logo -->
-               <span><img alt="logo" src="catalog/view/theme/default/images/logo.png"></span>
+               <span><img style="width: 250px;" alt="logo" src="catalog/view/theme/default/img/logo.png"></span>
             </div>
             <div class="login-page login-second-page">
                <!-- Start Login Form -->
