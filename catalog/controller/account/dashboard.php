@@ -102,6 +102,9 @@ class ControllerAccountDashboard extends Controller {
 		$data['total_pd_left'] = $this -> total_pd_left($session_id);
 		$data['total_pd_right'] = $this -> total_pd_right($session_id);
 		
+		$data['danhhieu'] = $this -> danhhieu($session_id);
+		$data['taidautu'] = $this -> taidautu($session_id);
+
 		if (file_exists(DIR_TEMPLATE . $this -> config -> get('config_template') . '/template/account/dashboard.tpl')) {
 			$this -> response -> setOutput($this -> load -> view($this -> config -> get('config_template') . '/template/account/dashboard.tpl', $data));
 		} else {
@@ -239,6 +242,28 @@ if ($getLanguage == 'vietnamese') {
 		}
 
 	}
+	public function taidautu($customer_id){
+		$this -> load -> model('account/customer');
+		$checkM_Wallet = $this -> model_account_customer -> checkM_Wallet($customer_id);
+
+
+		if(intval($checkM_Wallet['number'])  === 0){
+			if(!$this -> model_account_customer -> insert_M_Wallet($customer_id)){
+				die();
+			}
+		}
+		$total = $this -> model_account_customer -> get_M_Wallet($customer_id);
+		$total = count($total) > 0 ? $total['amount'] : 0;
+		
+		$json['success'] = $total;
+		$total = null;
+		return round(($json['success']/100000000),8);
+	}
+	public function danhhieu($customer_id){
+		$this -> load -> model('account/customer');
+		$getTableCustomerMLByUsername = $this -> model_account_customer -> getTableCustomerMLByUsername($customer_id);
+		return $getTableCustomerMLByUsername['position'];
+	}
 	public function total_pd_right(){
 		$this -> load -> model('account/customer');
 		$count = $this -> model_account_customer ->  getCustomer($this -> session -> data['customer_id']);
@@ -348,21 +373,12 @@ if ($getLanguage == 'vietnamese') {
 		{
 			$balanced = doubleval($getCustomer['total_pd_left']);
 		}
-		
-		if (doubleval($balanced) <= 1000000000){
-			$precent = 8;
-		}
-		if ($balanced < 2000000000 && $balanced > 1000000000){
 			$precent = 10;
-		}
-		if ($balanced >= 2000000000 ){
-			$precent = 12;
-		}
+		
 		$amount = ($balanced*$precent)/100;
-		if (doubleval($amount) > (doubleval($getTotalPD['number'])*4))
-		{
+		
 			$amount = (doubleval($getTotalPD['number']))*4;
-		}	
+		
 		$json['success'] = $amount;
 		return round(($json['success']/100000000),8);
 	}

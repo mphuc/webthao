@@ -860,3 +860,6 @@ span.btn.btn-default.btn-tree {
 .site-menu-left .navbar-brand,.site-menu-left.left-menu-icon:not(.site-menu-top) .main-header .navbar-brand{
     padding: 0px !important;
 }
+.ajs-header img{
+    margin: 20px auto;
+}

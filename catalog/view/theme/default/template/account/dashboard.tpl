@@ -77,6 +77,49 @@
                     </div>
                 </div>     
                    
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="box box-block bg-white tile tile-1 mb-2">
+                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
+                        <div class="t-content">
+                            <h6 class=" mb-1">Appellation</h6>
+                            <h1 class="mb-1"><?php
+                            switch ($danhhieu) {
+                                case 1:
+                                    $ten = "Gold";
+                                    break;
+                                case 2:
+                                    $ten = "Ruby";
+                                    break;
+                                case 3:
+                                    $ten = "Emeral";
+                                    break;
+                                case 4:
+                                    $ten = "Diamond";
+                                    break;
+                                case 5:
+                                    $ten = "Blue Diamond";
+                                    break;
+                                case 6:
+                                    $ten = "Black Diamond";
+                                    break;
+                                default:
+                                    $ten = "Not level";
+                                    break;
+                            }
+                            ?></p></h1>
+                            <h1 class="mb-1"><?php echo $ten; ?></p></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="box box-block bg-white tile tile-1 mb-2">
+                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
+                        <div class="t-content">
+                            <h6 class=" mb-1">Reinvestment</h6>
+                            <h1 class="mb-1"><?php echo $taidautu; ?> BTC</p></h1>
+                        </div>
+                    </div>
+                </div>
                 <h3 style="margin-top: 30px; float: left;width: 100%" class="text-center">List Investment</h3>    
 
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">

@@ -52,6 +52,274 @@
          <?php } ?>
 
          </div>
+          <h3 style="margin-top: 30px; float: left;width: 100%" class="text-center">List Investment</h3>    
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="bg-white widget widgett-shadow">
+                        <?php $packet = $self -> check_packet_pd (50000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
+                        <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
+                            <div class="card-action">
+                                <span class="sparkline-bar2">0.5 BTC</span>
+                            </div>
+                            <div class="widget-font-20 clearfix text-center">
+                                90 Days
+                            </div>
+                            <div class="widget-font-20 clearfix text-center">
+                                2% Daily
+                            </div>
+                        </div>
+                        <div class="widgets-top-padding padding-30 padding-bottom-10">
+                            <div class="row no-space">
+                                <div class="col-xs-12 text-center">
+                                    <p><span class="icon md-circle circle-success"></span>90 Days: 0.9 BTC + 0.5 BTC</p>
+                                    <p class="margin-bottom-10">
+                                        <span class="icon md-circle circle-blue"></span>Daily profit: 0.01 BTC
+                                    </p>
+                                </div>
+                                
+                                <div class="card-action">
+                                    <?php if (count($packet) === 0) {?>
+                                    <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
+                                        <input type="hidden" name="invest" value="50000000">
+                                        <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
+                                    </form>
+                                    <?php } else {?>
+                                    <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
+                                        <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
+                                        <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
+                                    </form>
+                                    <?php } ?>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="bg-white widget widgett-shadow">
+                            <?php $packet = $self -> check_packet_pd (100000000) ;?>
+                        <?php $class = ""; if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
+                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
+                                <div class="card-action">
+                                    <span class="sparkline-bar2">1 BTC</span>
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    90 Days
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.1% Daily
+                                </div>
+                            </div>
+                            <div class="widgets-top-padding padding-30 padding-bottom-10">
+                                <div class="row no-space">
+                                    <div class="col-xs-12 text-center">
+                                        <p><span class="icon md-circle circle-success"></span>90 Days: 1.89 BTC +1 BTC </p>
+                                        <p class="margin-bottom-10">
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.021 BTC
+                                        </p>
+                                        
+                                    </div>
+                                    
+                                    <div class="card-action">
+                                        <?php if (count($packet) === 0) {?>
+                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="100000000">
+                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
+                                        </form>
+                                        <?php } else {?>
+                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
+                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
+                                        </form>
+                                        <?php } ?>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="bg-white widget widgett-shadow">
+                            <?php $packet = $self -> check_packet_pd (500000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
+                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
+                                <div class="card-action">
+                                    <span class="sparkline-bar2">5 BTC</span>
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    90 Days
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.2% Daily
+                                </div>
+                            </div>
+                            <div class="widgets-top-padding padding-30 padding-bottom-10">
+                                <div class="row no-space">
+                                    <div class="col-xs-12 text-center">
+                                        <p><span class="icon md-circle circle-success"></span>90 Days: 9.9 BTC + 5 BTC </p>
+                                        <p class="margin-bottom-10">
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.11 BTC
+                                        </p>
+                                        
+                                    </div>
+                                    
+                                    <div class="card-action">
+                                        <?php if (count($packet) === 0) {?>
+                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="500000000">
+                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
+                                        </form>
+                                        <?php } else {?>
+                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
+                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
+                                        </form>
+                                        <?php } ?>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="bg-white widget widgett-shadow">
+                            <?php $packet = $self -> check_packet_pd (1000000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
+                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
+                                <div class="card-action">
+                                    <span class="sparkline-bar2">10 BTC</span>
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    90 Days
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.3% Daily
+                                </div>
+                                
+                            </div>
+                            <div class="widgets-top-padding padding-30 padding-bottom-10">
+                                <div class="row no-space">
+                                    <div class="col-xs-12 text-center">
+                                        <p><span class="icon md-circle circle-success"></span>90 Days: 20.07 BTC + 10 BTC </p>
+                                        <p class="margin-bottom-10">
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.23 BTC
+                                        </p>
+                                       
+                                    </div>
+                                    
+                                    <div class="card-action">
+                                        <?php if (count($packet) === 0) {?>
+                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="1000000000">
+                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
+                                        </form>
+                                        <?php } else {?>
+                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
+                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
+                                        </form>
+                                        <?php } ?>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="bg-white widget widgett-shadow">
+                            <?php $packet = $self -> check_packet_pd (2000000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
+                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
+                                <div class="card-action">
+                                    <span class="sparkline-bar2">20 BTC</span>
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    90 Days
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.4% Daily
+                                </div>
+                            </div>
+                            <div class="widgets-top-padding padding-30 padding-bottom-10">
+                                <div class="row no-space">
+                                    <div class="col-xs-12 text-center">
+                                        <p><span class="icon md-circle circle-success"></span>90 Days: 43.2 BTC + 10 BTC </p>
+                                        <p class="margin-bottom-10">
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 0.24 BTC
+                                        </p>
+                                       
+                                    </div>
+                                    
+                                    <div class="card-action">
+                                        <?php if (count($packet) === 0) {?>
+                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="2000000000">
+                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
+                                        </form>
+                                        <?php } else {?>
+                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
+                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
+                                        </form>
+                                        <?php } ?>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="bg-white widget widgett-shadow">
+                            <?php $packet = $self -> check_packet_pd (5000000000) ;?>
+                        <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
+                            <div class="bg-info white padding-30 padding-bottom-20 <?php echo $class ?>">
+                                <div class="card-action">
+                                    <span class="sparkline-bar2">50 BTC</span>
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    90 Days
+                                </div>
+                                <div class="widget-font-20 clearfix text-center">
+                                    2.5% Daily
+                                </div>
+                            </div>
+                            <div class="widgets-top-padding padding-30 padding-bottom-10">
+                                <div class="row no-space">
+                                    <div class="col-xs-12 text-center">
+                                        <p><span class="icon md-circle circle-success"></span>90 Days: 112.5 BTC + 50 BTC </p>
+                                        <p class="margin-bottom-10">
+                                            <span class="icon md-circle circle-blue"></span>Daily profit: 1.25 BTC
+                                        </p>
+                                        
+                                    </div>
+                                    
+                                    <div class="card-action">
+                                        <?php if (count($packet) === 0) {?>
+                                        <form method="GET" class="packet-invest" action="<?php echo $self->url->link('account/pd/pd_investment', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="5000000000">
+                                            <button class="btn btn-default animated-btn effects-four waves-effect waves-light">Upgrade Now</button>
+                                        </form>
+                                        <?php } else {?>
+                                        <form method="GET" class="packet-invoide" action="<?php echo $self->url->link('account/pd/packet_invoide', '', 'SSL'); ?>">
+                                            <input type="hidden" name="invest" value="<?php echo $packet['pd_number'] ?>">
+                                            <button class="btn btn-sm btn-warning animated-btn effects-four waves-effect waves-light">Reviews</button>
+                                        </form>
+                                        <?php } ?>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                   
+
       </div>
    </div>
 </div>
