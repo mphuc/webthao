@@ -35,7 +35,7 @@
                     <div class="col-md-4 col-sm-6 col-md-push-4">
                         <div class="footer-widget contact-widget">
                             <h3 class="title">Contact Form</h3>
-                            <form action="http://hasan.themexlab.com/category/business/factory-doctor/factory-doctor-html/inc/sendemail.php" class="contact-form" id="footer-cf">
+                            <form action="" class="contact-form" id="footer-cf">
                                 <input type="text" name="name" placeholder="Full Name">
                                 <input type="text" name="email" placeholder="Email Address">
                                 <textarea name="message" placeholder="Your Message"></textarea>
