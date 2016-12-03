@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="bootstrap material admin template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Forgot Password | Website</title>
+    <title>Forgot Password | Smart financial connections</title>
     <!-- Favicons -->
     
     <!-- Google Fonts -->
