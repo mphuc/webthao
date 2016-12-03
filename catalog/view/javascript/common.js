@@ -472,7 +472,7 @@ $(document).delegate('.agree', 'click', function(e) {
 })(window.jQuery);
 
 $(function(){
-	$('title').text($('title').text() + ' | Coinmax');
+	$('title').text($('title').text() + ' | Smart financial connections');
 	$('.goog-te-gadget img').hide();
 });
 

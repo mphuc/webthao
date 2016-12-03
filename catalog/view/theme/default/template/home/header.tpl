@@ -6,7 +6,7 @@
 <!-- Mirrored from hasan.themexlab.com/category/business/factory-doctor/factory-doctor-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Dec 2016 04:37:28 GMT -->
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Home | Smart financial connections</title>
     <!--Favicon-->
     <link rel="icon" href="catalog/view/theme/default/img/logo_favi.png">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">

@@ -192,7 +192,7 @@ echo $header; ?>
                
                </div>
 
-            </div> <div class="text-center"><p>Copyrights © 2016 All Rights Reserved by Coinmax., Inc</p></div>
+            </div> <div class="text-center"><p>Copyrights © 2016 All Rights Reserved by Smart financial connections., Inc</p></div>
          </div>
          
       </form>
