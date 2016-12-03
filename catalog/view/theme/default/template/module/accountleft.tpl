@@ -9,7 +9,7 @@
                 
             </li>
             <li class="has-sub">
-                <a class="waves-effect waves-light" href="investment-detail.html"> <i class="layout-icon icon_menu-square_alt2" aria-hidden="true"></i><span> Investment </span></a>
+                <a class="waves-effect waves-light" href="investment.html"> <i class="layout-icon icon_menu-square_alt2" aria-hidden="true"></i><span> Investment </span></a>
             </li>
             <li class="has-sub">
                 <a class="waves-effect waves-light" href="refferal"> <i class="layout-icon icon_ul" aria-hidden="true"></i><span> Refferals </span></a>
