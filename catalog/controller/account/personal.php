@@ -963,7 +963,7 @@ public function checkBinary($p_binary){
 			$this -> load -> model('customize/register');
 			$validate_address = $this -> check_address_btc($this -> request -> get['wallet']);
 			$jsonwallet = $this -> model_customize_register -> checkExitWalletBTC($this -> request -> get['wallet']);
-			if (intval($validate_address) === 1 && intval($jsonwallet) == 0) {
+			if (intval($validate_address) === 1 && intval($jsonwallet) == 0)   {
 				$json['wallet'] = 0;
 			} else {
 				$json['wallet'] = -1;
