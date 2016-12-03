@@ -14,6 +14,7 @@ if (!defined('DIR_APPLICATION')) {
 }
 require_once('SpeedSMSAPI.php');
 //VirtualQMOD
+require_once('../filter.php');
 require_once('../vqmod/vqmod.php');
 VQMod::bootup();
 

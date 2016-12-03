@@ -10,7 +10,7 @@
             <div class="panel panel-color panel-primary" style="background:#fff !important; border:1px solid #cecece;">
             <div class="heade-login text-center">
               <a href="">
-                  COINMAX.BIZ
+                 Smart financial connections
                </a>
             </div>
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">

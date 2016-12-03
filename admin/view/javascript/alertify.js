@@ -45,7 +45,7 @@
             position:'bottom-right'
         },
         glossary:{
-            title:'AlertifyJS',
+            title:'<img src="view/images/logo.png" alt="logo" style=" width:150px;">',
             ok: 'OK',
             cancel: 'Cancel',
             acccpt: 'Accept',
@@ -353,7 +353,7 @@
                 content: '<div class="ajs-content"></div>',
                 footer: '<div class="ajs-footer"></div>',
                 buttons: { primary: '<div class="ajs-primary ajs-buttons"></div>', auxiliary: '<div class="ajs-auxiliary ajs-buttons"></div>' },
-                button: '<button class="ajs-button"></button>',
+                button: '<button class="btn btn-default ajs-btn"></button>',
                 resizeHandle: '<div class="ajs-handle"></div>',
             },
             //common class names

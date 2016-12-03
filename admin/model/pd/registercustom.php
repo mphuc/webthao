@@ -173,17 +173,7 @@ class ModelPdRegistercustom extends Model {
 			WHERE customer_id = '".$customer_id."'
 		");
 	}
-	/*public function saveTranstionHistory($customer_id, $wallet, $text_amount, $system_decsription){
-		$query = $this -> db -> query("
-			INSERT INTO ".DB_PREFIX."customer_transaction_history SET
-			customer_id = '".$customer_id."',
-			wallet = '".$wallet."',
-			text_amount = '".$text_amount."',
-			system_decsription = '".$system_decsription."',
-			date_added = NOW()
-		");
-		return $query;
-	}*/
+	
 	public function getCustomerCustom($customer_id) {
 		$query = $this -> db -> query("SELECT c.username, c.firstname, c.telephone,c.p_node, c.customer_id ,c.package, ml.level FROM ". DB_PREFIX ."customer AS c
 				JOIN ". DB_PREFIX ."customer_ml AS ml
@@ -928,14 +918,35 @@ class ModelPdRegistercustom extends Model {
 		");
 		return $query -> rows;
 	}
-	public function get_all_code($limit, $offset){
+	public function get_all_invesment($limit, $offset){
 
 		$query = $this -> db -> query("
-			SELECT *
-			FROM  ".DB_PREFIX."customer_deposit
+			SELECT A.*,B.username,B.wallet
+			FROM  ".DB_PREFIX."customer_provide_donation A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id WHERE A.status = 1
 			ORDER BY date_added DESC
 			LIMIT ".$limit."
 			OFFSET ".$offset."
+		");
+		
+		return $query -> rows;
+	}
+	public function get_all_rank($limit, $offset){
+
+		$query = $this -> db -> query("
+			SELECT A.*,B.username,B.wallet
+			FROM  ".DB_PREFIX."customer_ml A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id WHERE A.position > 0
+			
+			LIMIT ".$limit."
+			OFFSET ".$offset."
+		");
+		
+		return $query -> rows;
+	}
+	public function get_all_rank_all(){
+
+		$query = $this -> db -> query("
+			SELECT A.*,B.username,B.wallet
+			FROM  ".DB_PREFIX."customer_ml A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id WHERE A.position > 0
 		");
 		
 		return $query -> rows;
@@ -949,11 +960,11 @@ class ModelPdRegistercustom extends Model {
 		");
 		return $query -> row;
 	}
-	public function get_all_withdraw($limit, $offset){
+	public function get_all_dailyprofix($limit, $offset){
 
 		$query = $this -> db -> query("
-			SELECT *
-			FROM  ".DB_PREFIX."customer_withdraw 
+			SELECT A.*,B.username
+			FROM  ".DB_PREFIX."customer_r_wallet_payment A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id
 			ORDER BY date_added DESC
 			LIMIT ".$limit."
 			OFFSET ".$offset."
@@ -961,19 +972,66 @@ class ModelPdRegistercustom extends Model {
 		
 		return $query -> rows;
 	}
-	public function get_count_code(){
+	public function get_all_paringbonus($limit, $offset){
+
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer WHERE total_pd_left > 0 AND total_pd_right > 0
+			
+			LIMIT ".$limit."
+			OFFSET ".$offset."
+		");
+		
+		return $query -> rows;
+	}
+	public function get_all_paringbonus_all(){
+
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer WHERE total_pd_left > 0 AND total_pd_right > 0
+		");
+		
+		return $query -> rows;
+	}
+	public function get_all_dailyprofix_all(){
+
+		$query = $this->db->query("
+			SELECT  SUM((rpm.amount)/ 100000000) AS amount, rpm.addres_wallet AS addres_wallet, rpm.customer_id 
+			FROM sm_customer_r_wallet_payment AS rpm
+			WHERE count_day <= 90
+			GROUP BY(rpm.addres_wallet) 
+		");
+		return $query->rows;
+	}
+	public function get_count_investment(){
 
 		$query = $this -> db -> query("
 			SELECT count(*) as number
-			FROM  ".DB_PREFIX."customer_deposit 
+			FROM  ".DB_PREFIX."customer_provide_donation WHERE status = 1
 		");
 		return $query -> row;
 	}
-	public function get_count_withdraw(){
+	public function get_count_rank(){
 
 		$query = $this -> db -> query("
 			SELECT count(*) as number
-			FROM  ".DB_PREFIX."customer_withdraw 
+			FROM  ".DB_PREFIX."customer_ml WHERE position > 0
+		");
+		return $query -> row;
+	}
+	public function get_count_dailyprofix(){
+
+		$query = $this -> db -> query("
+			SELECT count(*) as number
+			FROM  ".DB_PREFIX."customer_r_wallet_payment 
+		");
+		return $query -> row;
+	}
+	public function get_count_paringbonus(){
+
+		$query = $this -> db -> query("
+			SELECT count(*) as number
+			FROM  ".DB_PREFIX."customer WHERE total_pd_left > 0 AND total_pd_right > 0
 		");
 		return $query -> row;
 	}
@@ -1030,6 +1088,26 @@ class ModelPdRegistercustom extends Model {
 		$query = $this -> db -> query("
 			SELECT *
 			FROM  ".DB_PREFIX."customer_transfer_list
+			ORDER BY date_added DESC
+			LIMIT ".$limit."
+			OFFSET ".$offset."
+		");
+		
+		return $query -> rows;
+	}
+	public function get_count_history_vnd(){
+
+		$query = $this -> db -> query("
+			SELECT count(*) as number
+			FROM  ".DB_PREFIX."customer_transaction_history_transaction where system_decsription LIKE '%from transaction VND%'
+		");
+		return $query -> row;
+	}
+	public function get_all_history_vnd($limit, $offset){
+
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer_transaction_history_transaction where system_decsription LIKE '%from transaction VND%'
 			ORDER BY date_added DESC
 			LIMIT ".$limit."
 			OFFSET ".$offset."
@@ -1095,40 +1173,8 @@ class ModelPdRegistercustom extends Model {
 			");
 		return  $query -> row;
 	}
-	public function saveTranstionHistory($customer_id, $amount_add, $amount_sub,$amount_existence, $system_decsription, $tranfer_id){
-		$query = $this -> db -> query("
-			INSERT INTO ".DB_PREFIX."customer_transaction_history_transaction SET
-			customer_id = '".$customer_id."',
-			amount_add = '".$amount_add."',
-			amount_sub = '".$amount_sub."',
-			amount_existence = '".$amount_existence."',
-			system_decsription = '".$system_decsription."',
-			tranfer_id = '".$tranfer_id."',
-			date_added = NOW()
-		");
-		$id = $this->db->getLastId();
-		$update = $this -> db -> query("UPDATE " . DB_PREFIX . "customer_transaction_history_transaction SET
-			tranfer_number = '".hexdec(crc32($id)).rand(10,99)."'
-			WHERE id = '".$id."'
-		");
-	}
-	public function saveTranstionHistory_admin($customer_id, $amount_add, $amount_sub, $system_decsription){
-		$query = $this -> db -> query("
-			INSERT INTO ".DB_PREFIX."customer_transaction_history_transaction_admin SET
-			customer_id = '".$customer_id."',
-			amount_add = '".$amount_add."',
-			amount_sub = '".$amount_sub."',
-			system_decsription = '".$system_decsription."',
-			date_added = NOW(),
-			ip = '".$_SERVER['REMOTE_ADDR']."',
-			name_pc = '".gethostbyaddr($_SERVER['REMOTE_ADDR'])."'
-		");
-		$id = $this->db->getLastId();
-		$update = $this -> db -> query("UPDATE " . DB_PREFIX . "customer_transaction_history_transaction_admin SET
-			tranfer_number = '".hexdec(crc32($id)).rand(10,99)."'
-			WHERE id = '".$id."'
-		");
-	}
+	
+	
 	public function get_wallet_coinmax_buy_customer_id($customer_id){
 		$query = $this -> db -> query("
 			SELECT *
@@ -1153,5 +1199,78 @@ class ModelPdRegistercustom extends Model {
 				status = 8
 				WHERE customer_id = '".$customer_id."'
 			");
+	}
+
+	public function saveTranstionHistory($customer_id, $wallet, $text_amount, $system_decsription, $url = ''){
+		$query = $this -> db -> query("
+			INSERT INTO ".DB_PREFIX."customer_transaction_history SET
+			customer_id = '".$customer_id."',
+			wallet = '".$wallet."',
+			text_amount = '".$text_amount."',
+			system_decsription = '".$system_decsription."',
+			url = '".$url."',
+			date_added = NOW()
+		");
+		return $query;
+	}
+	public function getCustomer_commission() {
+		$query = $this -> db -> query("SELECT A.customer_id,A.total_pd_left,A.total_pd_right,A.wallet,A.username,B.level FROM " . DB_PREFIX . "customer A INNER JOIN " . DB_PREFIX . "customer_ml B ON A.customer_id=B.customer_id WHERE total_pd_left > 0 AND total_pd_right > 0");
+		return $query -> rows;
+	}
+	public function getmaxPD($id_customer){
+		$query = $this -> db -> query("
+			SELECT max(filled) AS number
+			FROM  ".DB_PREFIX."customer_provide_donation
+			WHERE customer_id = '".$this -> db -> escape($id_customer)."'
+		");
+
+		return $query -> row;
+	}
+	public function update_cn_Wallet_payment($amount,$customer_id,$addres_wallet){
+		$query = $this -> db -> query("
+		INSERT ". DB_PREFIX ."customer_cn_wallet_payment SET
+			amount = ".doubleval($amount).",
+			customer_id = '".doubleval($customer_id)."',
+			status = 0,
+			date_added =NOW(),
+			addres_wallet = '".$addres_wallet."'
+		");
+		return $query;
+	}
+	public function inser_history($text_amount, $wallet,$system_decsription,$customer_id){
+		$query = $this -> db -> query("
+			INSERT INTO ". DB_PREFIX . "customer_transaction_history SET
+			text_amount = '".$text_amount."',
+			date_added = NOW(),
+			wallet = '".$wallet."',
+			system_decsription = '".$system_decsription."',
+			customer_id = '".$customer_id."'
+		");
+		return $this->db->getLastId();
+	}
+	public function update_transhistory($ids,$url){
+		$query = $this -> db -> query("
+			UPDATE " . DB_PREFIX . "customer_transaction_history
+				SET url = '".$url."' WHERE id IN (".$ids.")
+		");
+		return $query;
+	}
+	public function update_m_Wallet_add_sub($amount , $customer_id, $add = false){
+		if ($add) {
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer_m_wallet SET
+			amount = amount + ".intval($amount).",
+			date = NOW()
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}else{
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer_m_wallet SET
+			amount = amount - ".intval($amount).",
+			date = NOW()
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}
+		return $query === true ? true : false;
 	}
 }

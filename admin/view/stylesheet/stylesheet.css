@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 30px;
-	color: #006f98;
+	color: #053636;
 	display: inline-block;
 	margin-bottom: 15px;
 }
@@ -130,8 +130,8 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	float: left;
 	display: inline-block;
 	cursor: pointer;
-	    color: #006f98;
-    border-right: 1px solid #006f98;
+	    color: #053636;
+    border-right: 1px solid #053636;
 	margin-top: 160px;
 }
 #profile {
@@ -213,7 +213,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	}
 #menu > li {
 	position: relative;
-	background-color: #039BD3;
+	background-color: #053636;
 	/*background: #40c5fe;*/
 }
 #menu li a {
@@ -234,7 +234,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	border-bottom: 1px solid #585858;
 }
 #menu > li > a:hover {
-	background-color: #006f98 ;
+	background-color: #053636 ;
 	color: #fff;
 	
 }
@@ -248,7 +248,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 #menu li li a:hover {
 	color: #fff;
 	/*background-color: #3f85fe;*/
-	background-color: #006f98;
+	background-color: #053636;
 }
 #menu li li a:before {
 	content: "\f101";
@@ -264,7 +264,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 #menu > li.active > a {
 	color: #fff;
 	/*background: #3f85fe;*/
-	background: #006f98;
+	background: #053636;
 }
 #menu li.active li a {
 	color: #fff;
@@ -285,7 +285,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	top: 0px;
 	width: 210px;
 	/*background-color: #1f5dc0;*/
-	background-color: #039BD3;
+	background-color: #053636;
 	visibility: hidden;
 }
 #menu li ul {
@@ -570,7 +570,7 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
 	margin-bottom: 15px;
 	border-radius: 3px;
 	/*background-color: #279FE0;*/
-	background-color: #039BD3;
+	background-color: #053636;
 	color: #FFFFFF;
 	transition: all 1s;
 }
@@ -585,7 +585,7 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
 	padding: 5px 8px;
 	text-transform: uppercase;
 	/*background-color: #1E91CF;*/
-	background-color: #006f98;
+	background-color: #023131;
 	color: #FFF;
 }
 .tile .tile-heading .pull-right {
