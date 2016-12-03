@@ -5,11 +5,11 @@
 	define('url_cmexchange','url_cmexchange');
 	define('url_financial','url_financial');
 
-	define('DIR_HOST', 'C:\xampp\htdocs\webthao/');
+	define('DIR_HOST', '/var/www/html/sfccoin.com/');
 	// HTTP
-	define('HTTP_SERVER', 'http://localhost/webthao/');
+	define('HTTP_SERVER', 'http://sfccoin.com/');
 	// HTTPS
-	define('HTTPS_SERVER', 'http://localhost/webthao/');
+	define('HTTPS_SERVER', 'http://sfccoin.com/');
 
 	// DIR
 	define('DIR_APPLICATION', DIR_HOST. 'catalog/');
@@ -27,9 +27,9 @@
 	// DB
 	define('DB_DRIVER', 'mysqli');
 	define('DB_HOSTNAME', 'localhost');
-	define('DB_USERNAME', 'root');
-	define('DB_PASSWORD', '');
-	define('DB_DATABASE', 'coinmax');
+	define('DB_USERNAME', 'sfccoin');
+	define('DB_PASSWORD', 'EmWY4ZUXUpqcqQEd');
+	define('DB_DATABASE', 'sfccoin');
 	define('DB_PORT', '3306');
 	define('DB_PREFIX', 'sm_');
 
@@ -40,7 +40,7 @@
 
 	// INVESMENT
 	define('key', '1c8d-162b-1d84-4fe0');
-	define('pin', 'XiKPHb1AvJeaJ1F3pGw6gr11dDt23432412423LJJAN');
+	define('pin', '1c8d-162b-1d84-4fe0');
 	define('block_version', '2');
 	define('wallet', '38Lg6yUsiEPaHDh33DLxeULnbpexSsm89E');
 	
