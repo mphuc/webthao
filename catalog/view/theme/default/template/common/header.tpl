@@ -25,6 +25,7 @@
       <!--- ###################  -->
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300%7CRaleway:400,300%7CRoboto:400,700,300%7CLato' rel='stylesheet' type='text/css' />
         <!--  Icon CSS -->
+      <link rel="stylesheet" href="catalog/view/theme/default/stylesheet/fakeloader.css" />
      <link rel="stylesheet" href="catalog/view/theme/default/assets/css/global/iconstyle.css" />
      <link rel="stylesheet" href="catalog/view/theme/default/assets/fonts/material-design/material-design.min.css" />
      <link rel="stylesheet" href="catalog/view/theme/default/assets/css/login-page/form.css" />
@@ -69,7 +70,7 @@
       <script src="<?php echo $script; ?>" type="text/javascript"></script>
       <?php } ?>
       <?php echo $google_analytics; ?>
-      <script type="text/javascript"> window.funLazyLoad={start:function(){$("#fakeloader").fakeLoader({timeToHide:99999999999,zIndex:"999",spinner:"spinne1",bgColor:"rgba(0,0,0,0.5)"})},reset:function(){$("#fakeloader").hide()},show:function(){$("#fakeloader").show()}};
+      <script type="text/javascript"> window.funLazyLoad={start:function(){$("#fakeloader").fakeLoader({timeToHide:99999999999,zIndex:"999",spinner:"spinne1",bgColor:"rgba(0,0,0,0.8)"})},reset:function(){$("#fakeloader").hide()},show:function(){$("#fakeloader").show()}};
          (function($) { $(function() { $("#scroller").simplyScroll({frameRate:'20'}); }); })(jQuery)
              
       </script>
