@@ -471,7 +471,7 @@ class ControllerAccountPd extends Controller {
 			$pd = $this -> model_account_customer ->createPD($package, 0);
 
 			//create invoide
-			$secret = substr(hash_hmac('ripemd160', hexdec(crc32(md5(microtime()))), 'secret'), 0, 16);
+			$secret = substr(hash_hmac('ripemd160', hexdec(crc32(md5(microtime()))), 'secret'), 0, 20);
 
 			$amount = $package;
 
@@ -483,11 +483,11 @@ class ControllerAccountPd extends Controller {
 			$wallet = $block_io->get_new_address();
 
             $my_wallet = $wallet -> data -> address;         
-            $call_back = 'https://www1.coinmax.biz/callback.html?invoice=' . $invoice_id_hash . '_' . $secret;
+            $call_back = 'https://sfccoin.com/callback.html?invoice=' . $invoice_id_hash . '_' . $secret;
 
             $reatime = $block_io -> create_notification(
                 array(
-                    'url' => 'https://www1.coinmax.biz/callback.html?invoice=' . $invoice_id_hash . '_' . $secret , 
+                    'url' => 'https://sfccoin.com/callback.html?invoice=' . $invoice_id_hash . '_' . $secret , 
                     'type' => 'address', 
                     'address' => $my_wallet
                 )

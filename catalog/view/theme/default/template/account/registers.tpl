@@ -147,7 +147,7 @@ $self -> document -> setTitle('Register User');
               <button style="margin: 0 auto" type="submit" class="btn btn-info mobile-btn-login btn-sign waves-effect waves-dark">Register</button>
             </div>
             
-                  <div class="text-center"><p>Copyrights © 2016 All Rights Reserved by domain</p></div>
+                  <div class="text-center"><p>Copyrights © 2016 All Rights Reserved by Sfccoin.com</p></div>
             </div>
                   
          <?php } else { ?>
