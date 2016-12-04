@@ -522,11 +522,7 @@ class ControllerAccountPd extends Controller {
         }else
         {
         $json['input_address'] = $package['input_address'];
-
-
-
         $json['amount'] =  $package['amount_inv'];
-        $json['pin'] = $package['amount_inv'] - $package['pd_amount'];
         $json['package'] = $package['pd_amount'];
         $json['received'] =  $package['received'];
         }
