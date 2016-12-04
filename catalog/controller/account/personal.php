@@ -408,7 +408,7 @@ public function checkBinary($p_binary){
 				//$mail -> setTo($this -> config -> get('config_email'));
 				$mail -> setTo($_POST['email']);
 				$mail -> setFrom($this -> config -> get('config_email'));
-				$mail -> setSender(html_entity_decode(", Inc", ENT_QUOTES, 'UTF-8'));
+				$mail -> setSender(html_entity_decode("Smart Financial Connections", ENT_QUOTES, 'UTF-8'));
 				$mail -> setSubject("Congratulations Your Registration is Confirmed!");
 				$html_mail = '<div style="background: #f2f2f2; width:100%;">
 				   <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#2A363C;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;

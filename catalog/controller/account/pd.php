@@ -54,7 +54,6 @@ class ControllerAccountPd extends Controller {
 		//get all PD
 		$data['pd_all'] = $this -> model_account_customer ->getPD($this -> session -> data['customer_id']);
 		
-        $data['pds_vnd'] = $this -> model_account_pd -> getPDById_vnd($this -> session -> data['customer_id'], $limit, $start);
        
 		if (file_exists(DIR_TEMPLATE . $this -> config -> get('config_template') . '/template/account/pd.tpl')) {
 			$this -> response -> setOutput($this -> load -> view($this -> config -> get('config_template') . '/template/account/pd.tpl', $data));
