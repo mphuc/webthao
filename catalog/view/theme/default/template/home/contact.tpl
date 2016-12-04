@@ -6,7 +6,7 @@
                 <div class="col-md-12 sec-title colored text-center">
                     <h2>Contact Us</h2>
                     <ul class="breadcumb">
-                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><i class="fa fa-angle-right"></i></li>
                         <li><span>Contact Us</span></li>
                     </ul>
@@ -18,8 +18,7 @@
     <section class="contact-content sec-padding">
         <div class="container">
             <div class="sec-title text-center">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    <br> the industry's standard dummy text ever since the 1500s, when an unknownto </p>
+                <p>Contact us. we are ready to assist you anytime </p>
             </div>
            
             <div class="row">
@@ -73,7 +72,7 @@
                             </div>
                             <div class="content-box">
                                 <h4>Email</h4>
-                                <p>info@somecompanyname.com, otheremail@gmail.com</p>
+                                <p>noreply@sfccoin.com</p>
                             </div>
                         </li>
                     </ul>

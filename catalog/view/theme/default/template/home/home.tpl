@@ -3,8 +3,8 @@
       <div id="slider1" class="rev_slider"  data-version="5.0">
          <ul>
             <li data-transition="parallaxvertical">
-               <img src="catalog/view/theme/default/home/img/slides/1.jpg"  alt=""  width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-               <div class="tp-caption sfl tp-resizeme thm-banner-h1 blue-bg" 
+               <img src="catalog/view/theme/default/images/Jetstar's_first_787_on_the_production_line_(9132370198).jpg"  alt=""  width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
+               <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
                     data-x="left" data-hoffset="0" 
                     data-y="top" data-voffset="209" 
                     data-whitespace="nowrap"
@@ -12,9 +12,9 @@
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="500">
-                  Find The Best
+                  Smart financial connections
                 </div>
-               <div class="tp-caption sfr tp-resizeme thm-banner-h1 heavy black-bg" 
+               <div class="tp-caption sfr tp-resizeme thm-banner-h1 heavy" 
                     data-x="left" data-hoffset="0" 
                     data-y="top" data-voffset="263" 
                     data-whitespace="nowrap"
@@ -22,7 +22,7 @@
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="1000">
-                  Service For Your Industry
+                  Profiting easily
                 </div>
                <div class="tp-caption sfb tp-resizeme thm-banner-h3" 
                     data-x="left" data-hoffset="0" 
@@ -52,7 +52,7 @@
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="2300">
-                  <a href="#" class="thm-btn">Call us Today</a>
+                  <a href="login.html" class="thm-btn">Invest Now</a>
                 </div>
                <div class="tp-caption sfr tp-resizeme" 
                     data-x="left" data-hoffset="185" 
@@ -62,44 +62,44 @@
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="2600">
-                  <a href="#" class="thm-btn inverse">Learn More</a>
+                  <a href="login.html" class="thm-btn inverse">Learn More</a>
                 </div>
             </li>
             <li data-transition="parallaxvertical">
-               <img src="catalog/view/theme/default/home/img/slides/2.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+               <img src="catalog/view/theme/default/images/1026213022.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
                <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
                     data-x="left" data-hoffset="0" 
-                    data-y="top" data-voffset="225" 
+                    data-y="top" data-voffset="209" 
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;" 
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="500">
-                  Find The Best
+                  Smart financial connections
                 </div>
                <div class="tp-caption sfr tp-resizeme thm-banner-h1 heavy" 
                     data-x="left" data-hoffset="0" 
-                    data-y="top" data-voffset="280" 
+                    data-y="top" data-voffset="263" 
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;" 
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="1000">
-                  Service For Your Industry
+                  Profiting easily
                 </div>
                <div class="tp-caption sfb tp-resizeme thm-banner-h3" 
                     data-x="left" data-hoffset="0" 
-                    data-y="top" data-voffset="353" 
+                    data-y="top" data-voffset="341" 
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;" 
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="1500">
-                  We Serve Better than Any Other
+                  <span class="">We Serve Better than Any Other</span>
                 </div>
                <div class="tp-caption sfb tp-resizeme thm-banner-p" 
                     data-x="left" data-hoffset="0" 
-                    data-y="top" data-voffset="404" 
+                    data-y="top" data-voffset="393" 
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;" 
                     data-transform_in="o:0" 
@@ -109,23 +109,150 @@
                 </div>
                <div class="tp-caption sfl tp-resizeme" 
                     data-x="left" data-hoffset="0" 
-                    data-y="top" data-voffset="474" 
+                    data-y="top" data-voffset="465" 
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;" 
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="2300">
-                  <a href="#" class="thm-btn">Call us Today</a>
+                  <a href="login.html" class="thm-btn">Invest Now</a>
                 </div>
                <div class="tp-caption sfr tp-resizeme" 
                     data-x="left" data-hoffset="185" 
-                    data-y="top" data-voffset="474" 
+                    data-y="top" data-voffset="465" 
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;" 
                     data-transform_in="o:0" 
                     data-transform_out="o:0" 
                     data-start="2600">
-                  <a href="#" class="thm-btn inverse">Learn More</a>
+                  <a href="login.html" class="thm-btn inverse">Learn More</a>
+                </div>
+            </li>
+            
+            <li data-transition="parallaxvertical">
+               <img src="catalog/view/theme/default/images/Boeing787_Dreamliner.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+               <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="209" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="500">
+                  Smart financial connections
+                </div>
+               <div class="tp-caption sfr tp-resizeme thm-banner-h1 heavy" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="263" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="1000">
+                  Profiting easily
+                </div>
+               <div class="tp-caption sfb tp-resizeme thm-banner-h3" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="341" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="1500">
+                  <span class="">We Serve Better than Any Other</span>
+                </div>
+               <div class="tp-caption sfb tp-resizeme thm-banner-p" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="393" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="2000">
+                  Not sure what is going on, come in Today for a Symptom <br>Check up, There are many kind of process!!
+                </div>
+               <div class="tp-caption sfl tp-resizeme" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="465" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="2300">
+                  <a href="login.html" class="thm-btn">Invest Now</a>
+                </div>
+               <div class="tp-caption sfr tp-resizeme" 
+                    data-x="left" data-hoffset="185" 
+                    data-y="top" data-voffset="465" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="2600">
+                  <a href="login.html" class="thm-btn inverse">Learn More</a>
+                </div>
+            </li>
+            <li data-transition="parallaxvertical">
+               <img src="catalog/view/theme/default/images/889f669c8fcfead0c43cd0114bd65cd5.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+               <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="209" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="500">
+                  Smart financial connections
+                </div>
+               <div class="tp-caption sfr tp-resizeme thm-banner-h1 heavy" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="263" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="1000">
+                  Profiting easily
+                </div>
+               <div class="tp-caption sfb tp-resizeme thm-banner-h3" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="341" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="1500">
+                  <span class="">We Serve Better than Any Other</span>
+                </div>
+               <div class="tp-caption sfb tp-resizeme thm-banner-p" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="393" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="2000">
+                  Not sure what is going on, come in Today for a Symptom <br>Check up, There are many kind of process!!
+                </div>
+               <div class="tp-caption sfl tp-resizeme" 
+                    data-x="left" data-hoffset="0" 
+                    data-y="top" data-voffset="465" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="2300">
+                  <a href="login.html" class="thm-btn">Invest Now</a>
+                </div>
+               <div class="tp-caption sfr tp-resizeme" 
+                    data-x="left" data-hoffset="185" 
+                    data-y="top" data-voffset="465" 
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;" 
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0" 
+                    data-start="2600">
+                  <a href="login.html" class="thm-btn inverse">Learn More</a>
                 </div>
             </li>
          </ul>
@@ -134,7 +261,7 @@
     <section class="call-to-action home-one">
         <div class="container-fluid">
             <div class="clearfix">
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/home/img/call-to-action/left-box-bg.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg);">
                     <div class="single-call-to-action open-hours">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -142,8 +269,8 @@
                             </div>
                         </div>
                         <div class="content-box">
-                            <h3 class="title">Chemical Research</h3>
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet. <span>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span> </p>
+                            <h3 class="title">Car manufacturing</h3>
+                            <p>Sfccoin is a financial group's investment and development industry Automobile Manufacturers</span> </p>
                         </div>
                     </div>
                 </div>
@@ -156,11 +283,11 @@
                         </div>
                         <div class="content-box">
                             <h3 class="title">Petroleum And Gas</h3>
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet. <span>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span> </p>
+                            <p>Sfccoin is a financial group's investment and development industry Petroleum And Gas</span> </p>
                         </div>
                     </div>
                 </div>
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/home/img/call-to-action/right-box-bg.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/con-so-kinh-ngac-ve-nha-may-boeing-khong-lo-hinh-10.jpg);">
                     <div class="single-call-to-action">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -168,8 +295,8 @@
                             </div>
                         </div>
                         <div class="content-box">
-                            <h3 class="title">Mechanical Process</h3>
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet. <span>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span> </p>
+                            <h3 class="title">Aircraft production</h3>
+                            <p>Sfccoin is a financial group's investment and development industry Aircraft production</span> </p>
                         </div>
                     </div>
                 </div>
@@ -182,13 +309,13 @@
                 <div class="col-md-12 col-lg-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <img class="full-width tp-mb2" src="catalog/view/theme/default/home/img/about/1.jpg" alt="">
+                            <img class="full-width tp-mb2" src="catalog/view/theme/default/images/889f669c8fcfead0c43cd0114bd65cd5.jpg" alt="">
                         </div>
                         <div class="col-md-6 tp-pr1 tp-pr-zs15 tp-mb-zs10">
-                            <img class="full-width" src="catalog/view/theme/default/home/img/about/2.jpg" alt="">
+                            <img class="full-width" src="catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg" alt="">
                         </div>
                         <div class="col-md-6 tp-pl1 tp-pl-zs15">
-                            <img class="full-width " src="catalog/view/theme/default/home/img/about/3.jpg" alt="">
+                            <img class="full-width " src="catalog/view/theme/default/images/con-so-kinh-ngac-ve-nha-may-boeing-khong-lo-hinh-10.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -196,12 +323,12 @@
                     <div class="full-sec-content md-text-center tp-mt-zm30">
                         <div class="sec-title style-two tp-mb20">
                             <h4 class="text-uppercase color-theme tp-mt20">Who we are</h4>
-                            <h2 class="text-uppercase color-theme">Welcome to Website<span class="color-black">site</span></h2>
+                            <h2 class="text-uppercase color-theme">Welcome to Sfccoin<span class="color-black">.com</span></h2>
                             <span class="decor">
                         <span class="inner"></span>
                             </span>
                         </div>
-                        <p class="tp-mb30">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet laaoree, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                        <p class="tp-mb30">Sfccoin has many years of experience in financial investment.</p>
                         <div class=" tp-mt50 tp-mb30 tp-mb-zxs0">
                             <ul class="welcome-feature">
                                 <li class="">
@@ -246,7 +373,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <p style="font-size: 18px;" class="tp-mb30 color-theme">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet do.</p>
+                        <p style="font-size: 18px;" class="tp-mb30 color-theme">The typical investment sectors such as automobile manufacturing, oil and gas, aircraft, boats ...</p>
                         <a class="thm-btn btn-black tp-mr10" href="about.html">About Us</a>
                         <a class="thm-btn" href="about.html">Our Services</a>
                     </div>
@@ -265,9 +392,9 @@
                 <div class="welcome-wrp col-lg-4 col-md-4 col-sm-4 col-xs-12 tp-p0">
                     <div class="services-wlc">
                         <div class="content">
-                            <h3 class="color-theme title fw-b">The our services</h3>
+                            <h3 class="color-theme title fw-b">The investment package our</h3>
                             <p>We provide you with investment packages at various levels. You can choose for themselves the investment package fit your wallet.</p>
-                            <a class="color-light-white font-size-18 fw-b" href="#">All Services <i class="fa fa-arrow-circle-right"></i></a>
+                            <a class="color-light-white font-size-18 fw-b" href="#" style="margin-bottom: 10px; display: none">All Services <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -368,7 +495,7 @@
                                 <div class="img-thumb">
                                     <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
-                                </div>
+                                
                                 <div class="content">
                                     <h4 class="title"><a href="#">50 BTC</a></h4>
                                 </div>
@@ -407,7 +534,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Experience <span class="color-theme">Skills</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>Sfccoin has many years of experience</p>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +547,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Guarantee <span class="color-theme">Services</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>Absolute safety.</p>
                                 </div>
                             </div>
                         </div>
@@ -433,7 +560,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Expert <span class="color-theme">Worker</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>Team of experienced workers.</p>
                                 </div>
                             </div>
                         </div>
@@ -446,7 +573,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Customer <span class="color-theme">Support</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>There is a team of customer support 24/7.</p>
                                 </div>
                             </div>
                         </div>
@@ -459,7 +586,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Online <span class="color-theme">Pay</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>Investment and interest paid each day.</p>
                                 </div>
                             </div>
                         </div>
@@ -472,7 +599,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Trusted <span class="color-theme">Work</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>Your reliable place to invest.</p>
                                 </div>
                             </div>
                         </div>
@@ -485,7 +612,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Quality <span class="color-theme">Work</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>Higher profitability by recruiting players.</p>
                                 </div>
                             </div>
                         </div>
@@ -498,7 +625,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Low <span class="color-theme">Cost</span></h3>
-                                    <p>Lorem ipsum dolor sit amet Quis, consectetur adipisicing elit.</p>
+                                    <p>Providing appropriate investment packages.</p>
                                 </div>
                             </div>
                         </div>
@@ -511,7 +638,7 @@
                      <span class="inner"></span>
                         </span>
                     </div>
-                    <form class="appointment-form" action="#">
+                    <form class="appointment-form" action="#" method="POST">
                         <div class="row">
                             <div class="col-sm-6 tp-pr5 tp-pr-zx15">
                                 <div class="form-group">
@@ -531,12 +658,13 @@
                             <div class="col-sm-6 tp-pl5 tp-pl-zx15">
                                 <div class="form-group">
                                     <select class="form-control" name="category">
-                                        <option value="" selected="selected">Select Category</option>
-                                        <option value="Excellent Services">Excellent Services</option>
-                                        <option value="Landscape Design">Chemical Research</option>
-                                        <option value="Rubbish Removal">Metal Engineering</option>
-                                        <option value="Garden Care">Power & Energy</option>
-                                        <option value="Other">Other</option>
+                                        <option value="" selected="selected">Select packages</option>
+                                        <option value="Excellent Services">0.5 BTC</option>
+                                        <option value="Landscape Design">1 BTC</option>
+                                        <option value="Rubbish Removal">5 BTC</option>
+                                        <option value="Garden Care">10 BTC</option>
+                                        <option value="Other">20 BTC</option>
+                                        <option value="Other">50 BTC</option>
                                     </select>
                                 </div>
                             </div>
@@ -637,16 +765,16 @@
         <div class="container">
             <div class="sec-title text-center">
                 <h2 class="color-white">Working Gallery</h2>
-                <p class="color-white">Lorem ipsum is a dummy text it will use for subtitle here</p>
+                <p class="color-white">The typical image</p>
                 <span class="decor"><span class="inner"></span></span>
             </div>
             <!--Carousel-->
             <div class="gallery-slider gallery-slider-carousel">
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-1.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/home/img/gallery/gallery-1.jpg" alt=""></a>
+                        <a href="catalog/view/theme/default/images/0728N-Kawasaki-Heavy_article_main_image.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/AS9100-Boeing-767.jpg" alt=""></a>
                     </figure>
-                    <a href="catalog/view/theme/default/home/img/gallery/gallery-1.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
+                    <a href="catalog/view/theme/default/images/AS9100-Boeing-767.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
                     <div class="item-caption">
                         <h4><strong>CLEAN &amp; PAINT</strong></h4>
                         <p>Mercedes Benz Company Car</p>
@@ -654,7 +782,7 @@
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-2.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/home/img/gallery/gallery-2.jpg" alt=""></a>
+                        <a href="catalog/view/theme/default/images/" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/Aircraft-Production-Inspector-Resume1.jpg" alt=""></a>
                     </figure>
                     <a href="catalog/view/theme/default/home/img/gallery/gallery-2.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
                     <div class="item-caption">
@@ -664,7 +792,7 @@
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-3.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/home/img/gallery/gallery-3.jpg" alt=""></a>
+                        <a href="catalog/view/theme/default/images/Figure7Boeing.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/autóipar.jpg" alt=""></a>
                     </figure>
                     <a href="catalog/view/theme/default/home/img/gallery/gallery-3.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
                     <div class="item-caption">
@@ -674,7 +802,7 @@
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-4.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/home/img/gallery/gallery-4.jpg" alt=""></a>
+                        <a href="catalog/view/theme/default/home/img/gallery/gallery-4.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/wOJNc.png" alt=""></a>
                     </figure>
                     <a href="catalog/view/theme/default/home/img/gallery/gallery-4.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
                     <div class="item-caption">
@@ -684,7 +812,7 @@
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-5.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/home/img/gallery/gallery-5.jpg" alt=""></a>
+                        <a href="catalog/view/theme/default/home/img/gallery/gallery-5.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/bmw_production_plant_0671-1024x698.jpg" alt=""></a>
                     </figure>
                     <a href="catalog/view/theme/default/home/img/gallery/gallery-5.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
                     <div class="item-caption">
@@ -694,7 +822,7 @@
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-6.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/home/img/gallery/gallery-6.jpg" alt=""></a>
+                        <a href="catalog/view/theme/default/home/img/gallery/gallery-6.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/january-05.jpg" alt=""></a>
                     </figure>
                     <a href="catalog/view/theme/default/home/img/gallery/gallery-6.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
                     <div class="item-caption">
@@ -705,137 +833,6 @@
             </div>
         </div>
     </section>
-    <section class="sec-padding testimonials-wrapper">
-        <div class="container">
-            <div class="sec-title colored text-center">
-                <h2>Testimonials</h2>
-                <span class="decor">
-               <span class="inner"></span>
-                </span>
-            </div>
-            <div class="testimonaials-carousel owl-carousel owl-theme">
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-testimonaials">
-                        <div class="qoute-box">
-                            <i class="qoute">“</i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
-                        <h3>Roberto Carlos</h3>
-                        <span>Senior Worker</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     
 <?php echo $self->load->controller('home/page/footer'); ?>    

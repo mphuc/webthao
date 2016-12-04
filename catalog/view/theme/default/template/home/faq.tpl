@@ -24,66 +24,80 @@
                         <!--Block-->
                         <li class="block">
                             <div class="acc-btn active">
-                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Lorem ipsum dolor sit amet, an eripuit laboramus sententiae duo lorem sio?</div>
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> What is Sfccoin?</div>
                             <div class="acc-content current">
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, ea vel quem nullam, adhuc vituperata mea ei, verear regione ornatus ius ut. Saperet adipisci forensibus quo at, eam in ridens nonumes. Placerat eleifend recteque ea mei, vim mazim meliore dissentiet ea. Qui ea suas utinam indoctum, ex usu ceteros comprehensam, labores facilisis</p>
-                                    <p>eu mea. Adhuc mucius ancillae ut vix, pri id quod enim inciderint, ludus reformidans eam te. Nostro praesent inciderint pri eu, ea facilis facilisi cum, ancilla gloriatur id vim. No his accumsan suavitate, movet splendide philosophia at vim.Eu eum paulo salutatus. Eu ubique maiestatis sea, pri legimus fabellas ex, no inimicus lorem ipsum is a dummy text</p>
+                                    <p>Sfccoin Is a financial company transnational</p>
+                                    <p>As a company for investment firms to make a profit</p>
                                 </div>
                             </div>
                         </li>
                         <!--Block-->
                         <li class="block">
                             <div class="acc-btn">
-                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Lorem ipsum dolor sit amet, eu est delectus theophrastus consectetuer, sanctus delectus?</div>
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> What is the Advantages of joining with Sfccoin invesment?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, ea vel quem nullam, adhuc vituperata mea ei, verear regione ornatus ius ut. Saperet adipisci forensibus quo at, eam in ridens nonumes. Placerat eleifend recteque ea mei, vim mazim meliore dissentiet ea. Qui ea suas utinam indoctum, ex usu ceteros comprehensam, labores facilisis</p>
-                                    <p>eu mea. Adhuc mucius ancillae ut vix, pri id quod enim inciderint, ludus reformidans eam te. Nostro praesent inciderint pri eu, ea facilis facilisi cum, ancilla gloriatur id vim. No his accumsan suavitate, movet splendide philosophia at vim.Eu eum paulo salutatus. Eu ubique maiestatis sea, pri legimus fabellas ex, no inimicus lorem ipsum is a dummy text</p>
+                                    <p>investment and profit</p>
+                                    <p>We are committed to provide profitable investment products for our clients.</p>
                                 </div>
                             </div>
                         </li>
                         <!--Block-->
                         <li class="block">
                             <div class="acc-btn">
-                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Amet ipsum dolor sit amet, ius cu nonumy eripuit, sed legimus similique in, stet fiona lipsum?</div>
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> How can i Invest with Sfccoin?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, ea vel quem nullam, adhuc vituperata mea ei, verear regione ornatus ius ut. Saperet adipisci forensibus quo at, eam in ridens nonumes. Placerat eleifend recteque ea mei, vim mazim meliore dissentiet ea. Qui ea suas utinam indoctum, ex usu ceteros comprehensam, labores facilisis</p>
-                                    <p>eu mea. Adhuc mucius ancillae ut vix, pri id quod enim inciderint, ludus reformidans eam te. Nostro praesent inciderint pri eu, ea facilis facilisi cum, ancilla gloriatur id vim. No his accumsan suavitate, movet splendide philosophia at vim.Eu eum paulo salutatus. Eu ubique maiestatis sea, pri legimus fabellas ex, no inimicus lorem ipsum is a dummy text</p>
+                                    <p>Investment has been made easy, First you will need to open your personal account and login to your unique members dashboard and you can make your first deposit.</p>
                                 </div>
                             </div>
                         </li>
                         <!--Block-->
                         <li class="block">
                             <div class="acc-btn">
-                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Lorem ipsum dolor sit amet, an eripuit laboramus sententiae duo lorem sio?</div>
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> I forgot my password what should i do??</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, ea vel quem nullam, adhuc vituperata mea ei, verear regione ornatus ius ut. Saperet adipisci forensibus quo at, eam in ridens nonumes. Placerat eleifend recteque ea mei, vim mazim meliore dissentiet ea. Qui ea suas utinam indoctum, ex usu ceteros comprehensam, labores facilisis</p>
-                                    <p>eu mea. Adhuc mucius ancillae ut vix, pri id quod enim inciderint, ludus reformidans eam te. Nostro praesent inciderint pri eu, ea facilis facilisi cum, ancilla gloriatur id vim. No his accumsan suavitate, movet splendide philosophia at vim.Eu eum paulo salutatus. Eu ubique maiestatis sea, pri legimus fabellas ex, no inimicus lorem ipsum is a dummy text</p>
+                                    <p>Our system is automatic, if you forgot your password you can recover your account using our password recovery option, just fill up your email address and answer the security question and you can proceed with your password reset.</p>
                                 </div>
                             </div>
                         </li>
                         <!--Block-->
                         <li class="block">
                             <div class="acc-btn">
-                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Lorem ipsum dolor sit amet, eu est delectus theophrastus consectetuer, sanctus delectus?</div>
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div>Who can participate in your program and do you accept investors from all countries?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, ea vel quem nullam, adhuc vituperata mea ei, verear regione ornatus ius ut. Saperet adipisci forensibus quo at, eam in ridens nonumes. Placerat eleifend recteque ea mei, vim mazim meliore dissentiet ea. Qui ea suas utinam indoctum, ex usu ceteros comprehensam, labores facilisis</p>
-                                    <p>eu mea. Adhuc mucius ancillae ut vix, pri id quod enim inciderint, ludus reformidans eam te. Nostro praesent inciderint pri eu, ea facilis facilisi cum, ancilla gloriatur id vim. No his accumsan suavitate, movet splendide philosophia at vim.Eu eum paulo salutatus. Eu ubique maiestatis sea, pri legimus fabellas ex, no inimicus lorem ipsum is a dummy text</p>
+                                    <p>Any individual or corporation from any country globally may open an account with us.</p>
                                 </div>
                             </div>
                         </li>
                         <!--Block-->
                         <li class="block">
                             <div class="acc-btn">
-                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Amet ipsum dolor sit amet, ius cu nonumy eripuit, sed legimus similique in, stet fiona lipsum?</div>
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> How long does it take for my deposit to be added to my account?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, ea vel quem nullam, adhuc vituperata mea ei, verear regione ornatus ius ut. Saperet adipisci forensibus quo at, eam in ridens nonumes. Placerat eleifend recteque ea mei, vim mazim meliore dissentiet ea. Qui ea suas utinam indoctum, ex usu ceteros comprehensam, labores facilisis</p>
-                                    <p>eu mea. Adhuc mucius ancillae ut vix, pri id quod enim inciderint, ludus reformidans eam te. Nostro praesent inciderint pri eu, ea facilis facilisi cum, ancilla gloriatur id vim. No his accumsan suavitate, movet splendide philosophia at vim.Eu eum paulo salutatus. Eu ubique maiestatis sea, pri legimus fabellas ex, no inimicus lorem ipsum is a dummy text</p>
+                                    <p>How long does it take for my deposit to be added to my account?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="block">
+                            <div class="acc-btn">
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Is my Initial Investment/Capital is returned?</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <p>All Principal on our Daily plan will be return, Our Expiry Plan does not return the principal deposit, since your principal is already compounded on your income.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="block">
+                            <div class="acc-btn">
+                                <div class="icon-outer"><span class="icon fa icon-minus flaticon-line"></span> <span class="icon icon-plus flaticon-signs"></span></div> Are my earnings on calendar days?</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <p>No, earning not on calendar days.?</p>
                                 </div>
                             </div>
                         </li>

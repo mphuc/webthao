@@ -132,10 +132,10 @@
             </div>
         </div>
     </section>
-    <section class="call-to-action home-one" style="margin-bottom: 40px;">
+    <section class="call-to-action home-one">
         <div class="container-fluid">
             <div class="clearfix">
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/home/img/call-to-action/left-box-bg.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg);">
                     <div class="single-call-to-action open-hours">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -143,8 +143,8 @@
                             </div>
                         </div>
                         <div class="content-box">
-                            <h3 class="title">Chemical Research</h3>
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet. <span>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span> </p>
+                            <h3 class="title">Car manufacturing</h3>
+                            <p>Sfccoin is a financial group's investment and development industry Automobile Manufacturers</span> </p>
                         </div>
                     </div>
                 </div>
@@ -157,11 +157,11 @@
                         </div>
                         <div class="content-box">
                             <h3 class="title">Petroleum And Gas</h3>
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet. <span>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span> </p>
+                            <p>Sfccoin is a financial group's investment and development industry Petroleum And Gas</span> </p>
                         </div>
                     </div>
                 </div>
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/home/img/call-to-action/right-box-bg.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/con-so-kinh-ngac-ve-nha-may-boeing-khong-lo-hinh-10.jpg);">
                     <div class="single-call-to-action">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -169,8 +169,8 @@
                             </div>
                         </div>
                         <div class="content-box">
-                            <h3 class="title">Mechanical Process</h3>
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet. <span>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span> </p>
+                            <h3 class="title">Aircraft production</h3>
+                            <p>Sfccoin is a financial group's investment and development industry Aircraft production</span> </p>
                         </div>
                     </div>
                 </div>
