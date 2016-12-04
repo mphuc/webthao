@@ -247,3 +247,9 @@ catalog/language/english/error/not_found.php
 catalog/view/theme/default/template/error/not_found.tpl
 catalog/controller/account/news.php
 catalog/view/theme/default/template/account/news.tpl
+catalog/controller/account/transaction_history.php
+catalog/language/english/account/transaction.php
+catalog/view/theme/default/template/account/transaction_history.tpl
+catalog/view/theme/default/template/account/transaction_history_binary.tpl
+catalog/controller/account/logout.php
+catalog/controller/account/edit.php
