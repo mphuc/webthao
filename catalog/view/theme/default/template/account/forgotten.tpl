@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300%7CRaleway:400,300%7CRoboto:400,700,300%7CLato' rel='stylesheet' type='text/css' />
     <!-- Icon CSS -->
-    <link rel="icon" href="catalog/view/theme/default/img/logo.png">
+    <link rel="icon" href="catalog/view/theme/default/img/logo_favi.png">
     <link rel="stylesheet" href="catalog/view/theme/default/assets/css/global/iconstyle.css" />
     <!-- Global plugin CSS -->
     <link rel="stylesheet" href="catalog/view/theme/default/assets/css/global/bootstrap.min.css" />

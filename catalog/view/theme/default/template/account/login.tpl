@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
       <title>Login | Smart financial connections</title>
       <!-- Favicons -->
-      <link rel="icon" href="catalog/view/theme/default/img/logo.png">
+      <link rel="icon" href="catalog/view/theme/default/img/logo_favi.png">
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300%7CRaleway:400,300%7CRoboto:400,700,300%7CLato' rel='stylesheet' type='text/css' />
       <!-- Icon CSS -->
       <link rel="stylesheet" href="catalog/view/theme/default/assets/css/global/iconstyle.css" />
