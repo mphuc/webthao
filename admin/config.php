@@ -27,12 +27,13 @@
 	define('DB_DRIVER', 'mysqli');
 
 	define('DB_HOSTNAME', 'localhost');
-	define('DB_USERNAME', 'sfccoin');
-	define('DB_PASSWORD', 'EmWY4ZUXUpqcqQEd');
-	define('DB_DATABASE', 'sfccoin');
+	define('DB_USERNAME', 'sfccoin.com');
+	define('DB_PASSWORD', 'F3pGw6gr1dDtvJeaJ1F3pGw6grqLJJANcb81g92dx2342314**');
+	define('DB_DATABASE', 'sfccoin.com');
 	define('DB_PORT', '3306');
 	define('DB_PREFIX', 'sm_');
-
+	
+	
 
 	require_once '../block_io/lib/block_io.php';
 	define('key', '523a-30aa-fd22-b9ac');
