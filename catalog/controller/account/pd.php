@@ -423,7 +423,7 @@ class ControllerAccountPd extends Controller {
      			
      			$price_nhan = round($price_nhan,8);
 
-	     		/*$block_io = new BlockIo(key, pin, block_version);
+	     		$block_io = new BlockIo(key, pin, block_version);
 
 	            $tml_block = $block_io -> withdraw(array(
 	                'amounts' => $price_nhan , 
@@ -431,8 +431,8 @@ class ControllerAccountPd extends Controller {
 	                'priority' => 'low'
 	            ));
 	     
-	            $txid = $tml_block -> data -> txid;*/
-	            $txid = "";
+	            $txid = $tml_block -> data -> txid;
+	            
 	            //luu ban table truc tiep cong don
                 $this -> model_account_customer -> update_wallet_c0(( ($price)),$partent['customer_id']);
 
