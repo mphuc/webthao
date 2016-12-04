@@ -45,7 +45,7 @@
    	});
 
    	$('.packet-invoide').on('submit', function(){
-   		alert("1111111");
+   		
    		var self = $(this);
 	    window.funLazyLoad.start();
    		setTimeout(function(){

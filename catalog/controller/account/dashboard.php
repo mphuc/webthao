@@ -377,8 +377,6 @@ if ($getLanguage == 'vietnamese') {
 		
 		$amount = ($balanced*$precent)/100;
 		
-			$amount = (doubleval($getTotalPD['number']))*4;
-		
 		$json['success'] = $amount;
 		return round(($json['success']/100000000),8);
 	}

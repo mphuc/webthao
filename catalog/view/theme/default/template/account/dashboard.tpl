@@ -63,7 +63,7 @@
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Volume - Left </h6>
-                            <h1 class="mb-1"><?php echo $total_pd_left; ?></p></h1>
+                            <h1 class="mb-1"><?php echo $total_pd_left; ?> BTC</p></h1>
                         </div>
                     </div>
                 </div> 
@@ -72,7 +72,7 @@
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Volume - Right </h6>
-                            <h1 class="mb-1"><?php echo $total_pd_right; ?></p></h1>
+                            <h1 class="mb-1"><?php echo $total_pd_right; ?> BTC</p></h1>
                         </div>
                     </div>
                 </div>     
