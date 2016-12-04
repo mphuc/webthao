@@ -867,3 +867,8 @@ span.btn.btn-default.btn-tree {
 .site-menu-left .left-side-menu {
     margin-top: 22px;
 }
+@media (max-width: 767px){
+    .site-menu-left .left-side-menu {
+         margin-top: 0px; 
+    }
+}
