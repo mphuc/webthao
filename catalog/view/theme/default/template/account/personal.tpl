@@ -46,9 +46,9 @@
               
               </div>
               <div class="detail-icon" style="margin-top: 50px;">
-                          <img src="catalog/view/theme/default/stylesheet/icons/2.png" width="40px">- New User
-                          <img src="catalog/view/theme/default/stylesheet/icons/6.png" width="40px"> - User Active
-                         <img src="catalog/view/theme/default/stylesheet/icons/3.png" width="40px"> - Add New User
+                          <img src="catalog/view/theme/default/stylesheet/icons/2.png" width="30px">- New User
+                          <img src="catalog/view/theme/default/stylesheet/icons/6.png" width="30px"> - User Active
+                         <img src="catalog/view/theme/default/stylesheet/icons/3.png" width="45px"> - Add New User
                         </div>
             </div>
           </div>

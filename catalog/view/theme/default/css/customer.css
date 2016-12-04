@@ -608,10 +608,11 @@
 }
 .personal-tree .type-1 {
     background: url(icons/2.png) center center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
     color: transparent!important;
     position: relative;
-    top: -30px
+    top: -30px;
+    left: -5px;
 }
 .personal-tree .type-2,
 .personal-tree .type-add {
@@ -621,11 +622,11 @@
 }
 .personal-tree .type-2 {
     background: url(icons/6.png) center center no-repeat;
-    background-size: 40px
+    background-size: 30px
 }
 .personal-tree .type-add {
     background: url(icons/3.png) center center no-repeat;
-    background-size: 40px
+    background-size: 45px
 }
 span.btn.btn-default.btn-tree {
     border-radius: 40px
