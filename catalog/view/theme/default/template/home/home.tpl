@@ -368,6 +368,7 @@
                                 <div class="img-thumb">
                                     <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
+                                </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">50 BTC</a></h4>
                                 </div>
