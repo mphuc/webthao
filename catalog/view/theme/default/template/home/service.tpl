@@ -6,7 +6,7 @@
                 <div class="col-md-12 sec-title colored text-center">
                     <h2>Services</h2>
                     <ul class="breadcumb">
-                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="">Home</a></li>
                         <li><i class="fa fa-angle-right"></i></li>
                         <li><span>Services</span></li>
                     </ul>
@@ -19,126 +19,115 @@
         <div class="container">
             <div class="row">
                 <div class="services-content style2">
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="service-box">
                             <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/1.jpg" alt="">
+                                <img src="catalog/view/theme/default/images/ima_btc1.jpg" alt="">
                             </div>
                             <div class="content">
-                                <h4 class="title"><a href="#">Excellent Services</a></h4>
+                                <h4 class="title"><a href="#">0.5 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
+                                <p>90 Days</p>
+                                <p>2 % Daily</p>
+                                <p>90 Days: 0.9 BTC + 0.5 BTC</p>
+                                <p>Daily profit: 0.01 BTC</p>
+                                <a class="value" href="#"> Start From <span class="service-price">0.5 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="service-box">
                             <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/2.jpg" alt="">
+                                <img src="catalog/view/theme/default/images/ima_btc1.jpg" alt="">
                             </div>
                             <div class="content">
-                                <h4 class="title"><a href="#">Chemical Research</a></h4>
+                                <h4 class="title"><a href="#">1 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
+                                <p>90 Days</p>
+                                <p>2.1 % Daily</p>
+                                <p>90 Days: 1.89 BTC +1 BTC</p>
+                                <p>Daily profit: 0.021 BTC</p>
+                                <a class="value" href="#"> Start From <span class="service-price">1 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="service-box">
                             <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/3.jpg" alt="">
+                                <img src="catalog/view/theme/default/images/ima_btc1.jpg" alt="">
                             </div>
                             <div class="content">
-                                <h4 class="title"><a href="#">Metal Engineering</a></h4>
+                                <h4 class="title"><a href="#">5 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
+                                <p>90 Days</p>
+                                <p>2.2 % Daily</p>
+                                <p>90 Days: 9.9 BTC + 5 BTC</p>
+                                <p>Daily profit: 0.11 BTC</p>
+                                <a class="value" href="#"> Start From <span class="service-price">5 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="service-box">
                             <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/4.jpg" alt="">
+                                <img src="catalog/view/theme/default/images/ima_btc1.jpg" alt="">
                             </div>
                             <div class="content">
-                                <h4 class="title"><a href="#">Mechanical Service</a></h4>
+                                <h4 class="title"><a href="#">10 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
+                                <p>90 Days</p>
+                                <p>2.3 % Daily</p>
+                                <p>90 Days: 20.07 BTC + 10 BTC</p>
+                                <p>Daily profit: 0.23 BTC</p>
+                                <a class="value" href="#"> Start From <span class="service-price">10 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="service-box">
                             <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/5.jpg" alt="">
+                                <img src="catalog/view/theme/default/images/ima_btc1.jpg" alt="">
                             </div>
                             <div class="content">
-                                <h4 class="title"><a href="#">Petroleum & Gas</a></h4>
+                                <h4 class="title"><a href="#">20 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
+                                <p>90 Days</p>
+                                <p>2.4 % Daily</p>
+                                <p>90 Days: 43.2 BTC + 10 BTC</p>
+                                <p>Daily profit: 0.24 BTC</p>
+                                <a class="value" href="#"> Start From <span class="service-price">20 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="service-box">
                             <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/6.jpg" alt="">
+                                <img src="catalog/view/theme/default/images/ima_btc1.jpg" alt="">
                             </div>
                             <div class="content">
-                                <h4 class="title"><a href="#">Power Controling</a></h4>
+                                <h4 class="title"><a href="#">50 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
+                                <p>90 Days</p>
+                                <p>2.5 % Daily</p>
+                                <p>90 Days: 112.5 BTC + 50 BTC</p>
+                                <p>Daily profit: 1.25 BTC</p>
+                                <a class="value" href="#"> Start From <span class="service-price">50 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 hidden-md">
-                        <div class="service-box">
-                            <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/7.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="#">Factory Process</a></h4>
-                            </div>
-                            <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
-                                <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 hidden-md">
-                        <div class="service-box">
-                            <div class="img-thumb">
-                                <img src="catalog/view/theme/default/home/img/services/8.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="#">Agricultural</a></h4>
-                            </div>
-                            <div class="overlay">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid labore cum, sit quae deleniti placeat.</p>
-                                <a class="value" href="#"> Start From <span class="service-price">$45</span></a>
-                                <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

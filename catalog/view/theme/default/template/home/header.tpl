@@ -41,10 +41,10 @@
                     </div>
                     <div class="content">
                         <h3>EMAIL</h3>
-                        <p>companyname@mail.com</p>
+                        <p>noreply@sfccoin.com</p>
                     </div>
                 </div>
-                <div class="single-header-info">
+                <!-- <div class="single-header-info">
                     <div class="icon-box">
                         <div class="inner-box">
                             <i class="flaticon-telephone"></i>
@@ -54,7 +54,7 @@
                         <h3>Call Now</h3>
                         <p><b>(732) 803-010-03</b></p>
                     </div>
-                </div>
+                </div> -->
                 <div class="single-header-info">
                     
                 </div>

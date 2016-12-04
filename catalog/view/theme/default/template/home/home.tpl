@@ -276,7 +276,7 @@
                         <div class="item">
                             <div class="service-box">
                                 <div class="img-thumb">
-                                    <img src="catalog/view/theme/default/home/img/services/1.jpg" alt="">
+                                    <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">0.5 BTC</a></h4>
@@ -294,7 +294,7 @@
                         <div class="item">
                             <div class="service-box">
                                 <div class="img-thumb">
-                                    <img src="catalog/view/theme/default/home/img/services/2.jpg" alt="">
+                                    <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">1 BTC</a></h4>
@@ -312,7 +312,7 @@
                         <div class="item">
                             <div class="service-box">
                                 <div class="img-thumb">
-                                    <img src="catalog/view/theme/default/home/img/services/3.jpg" alt="">
+                                    <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">5 BTC</a></h4>
@@ -330,7 +330,7 @@
                         <div class="item">
                             <div class="service-box">
                                 <div class="img-thumb">
-                                    <img src="catalog/view/theme/default/home/img/services/4.jpg" alt="">
+                                    <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">10 BTC</a></h4>
@@ -348,7 +348,7 @@
                         <div class="item">
                             <div class="service-box">
                                 <div class="img-thumb">
-                                    <img src="catalog/view/theme/default/home/img/services/4.jpg" alt="">
+                                    <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">20 BTC</a></h4>
@@ -366,7 +366,7 @@
                         <div class="item">
                             <div class="service-box">
                                 <div class="img-thumb">
-                                    <img src="catalog/view/theme/default/home/img/services/4.jpg" alt="">
+                                    <img src="catalog/view/theme/default/images/ima_btc.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">50 BTC</a></h4>
