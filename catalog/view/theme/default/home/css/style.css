@@ -2030,6 +2030,7 @@ li {
     display: block;
     width: 100%;
     height: auto;
+    height: 200px;
 }
 
 .gallery-section .overlay {
@@ -4381,4 +4382,9 @@ li {
     border-top: 1px solid #ddd;
     font-size: 14px;
     color: #8e979f;
+}
+.style-three .single-service-home {
+    margin-bottom: 30px;
+    min-height: 61px;
+    max-height: 61px;
 }

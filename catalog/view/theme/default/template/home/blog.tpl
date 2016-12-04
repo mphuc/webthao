@@ -6,7 +6,7 @@
                 <div class="col-md-12 sec-title colored text-center">
                     <h2>Blog Page</h2>
                     <ul class="breadcumb">
-                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><i class="fa fa-angle-right"></i></li>
                         <li><span>Blog Page</span></li>
                     </ul>
@@ -21,7 +21,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog-post tp-mb60">
                         <div class="img-box">
-                            <img src="catalog/view/theme/default/home/img/blog/1.jpg" alt="">
+                            <img src="catalog/view/theme/default/images/889f669c8fcfead0c43cd0114bd65cd5.jpg" alt="">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -54,7 +54,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog-post tp-mb60">
                         <div class="img-box">
-                            <img src="catalog/view/theme/default/home/img/blog/2.jpg" alt="">
+                            <img src="catalog/view/theme/default/images/0728N-Kawasaki-Heavy_article_main_image.jpg" alt="">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -87,7 +87,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog-post tp-mb60">
                         <div class="img-box">
-                            <img src="catalog/view/theme/default/home/img/blog/3.jpg" alt="">
+                            <img src="catalog/view/theme/default/images/1026213022.jpg" alt="">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -120,7 +120,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog-post tp-mb60">
                         <div class="img-box">
-                            <img src="catalog/view/theme/default/home/img/blog/1.jpg" alt="">
+                            <img src="catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg" alt="">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -153,7 +153,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog-post tp-mb60">
                         <div class="img-box">
-                            <img src="catalog/view/theme/default/home/img/blog/2.jpg" alt="">
+                            <img src="catalog/view/theme/default/images/Aircraft-Production-Inspector-Resume1.jpg" alt="">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -186,7 +186,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog-post tp-mb60">
                         <div class="img-box">
-                            <img src="catalog/view/theme/default/home/img/blog/3.jpg" alt="">
+                            <img src="catalog/view/theme/default/images/autóipar.jpg" alt="">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">

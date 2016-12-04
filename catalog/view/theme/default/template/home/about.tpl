@@ -6,7 +6,7 @@
                 <div class="col-md-12 sec-title colored text-center">
                     <h2>About Us</h2>
                     <ul class="breadcumb">
-                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><i class="fa fa-angle-right"></i></li>
                         <li><span>About Us</span></li>
                     </ul>
@@ -28,9 +28,9 @@
                         </div>
                         <h3>We Provide Most Proffesional Service <br>Since 1978</h3>
                         <br>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem loremIpsum has been the industry's </p>
+                        <p>The company was established many years and have a lot of experience in the field of financial investments</p>
                         <br>
-                        <p>since the 1500s, when an un known printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+                        <p>After 10 years of establishment, the company has expanded the relationship with other large companies in the financial sector such as automobile manufacturing, petroleum Bases, aircraft manufacturers ...</p>
                     </div>
                 </div>
                 <div class="col-md-7 hidden-md text-right">
