@@ -295,7 +295,7 @@
 /* menu responsive styles */
 
 @media (max-width: 768px) {
-	.navigation {position: relative;}
+	.navigation {position: relative;float: left !important;;}
 	.navigation .nav-header {display: none;position: absolute;top: 100%;left:0;width: 400px;background: #262F36;z-index: 9999;height: 200px;overflow:hidden;overflow-y: scroll;}
 	.navigation .nav-footer {display: block;}
 	.navigation .nav-footer button {width: 40px;height: 40px;background: #fbca00;color: #fff;border: none;outline: none;font-size: 18px;margin: 15px 0;}
