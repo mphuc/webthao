@@ -139,3 +139,11 @@ catalog/view/theme/default/template/common/footer.tpl
 catalog/controller/account/pd.php
 catalog/language/english/account/pd.php
 catalog/view/theme/default/template/account/pd.tpl
+admin/language/english/common/login.php
+admin/controller/common/header.php
+admin/language/english/common/header.php
+admin/view/template/common/header.tpl
+admin/controller/common/footer.php
+admin/language/english/common/footer.php
+admin/view/template/common/footer.tpl
+admin/view/template/common/login.tpl
