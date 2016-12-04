@@ -27,7 +27,7 @@
         <!--  Icon CSS -->
      <link rel="stylesheet" href="catalog/view/theme/default/assets/css/global/iconstyle.css" />
      <link rel="stylesheet" href="catalog/view/theme/default/assets/fonts/material-design/material-design.min.css" />
-     <link id="site-color" rel="stylesheet" href="catalog/view/theme/default/assets/css/login-page/form.css" />
+     <link rel="stylesheet" href="catalog/view/theme/default/assets/css/login-page/form.css" />
      <link rel="stylesheet" href="catalog/view/theme/default/assets/fonts/font-awasome/font-awesome.min.css" />
      <!-- Global plugin CSS -->
      <link class="nor-css" rel="stylesheet" href="catalog/view/theme/default/assets/css/global/bootstrap.min.css" />
