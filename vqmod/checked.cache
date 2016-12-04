@@ -233,3 +233,11 @@ catalog/model/customize/register.php
 catalog/view/theme/default/template/account/login.tpl
 catalog/model/account/address.php
 catalog/model/account/activity.php
+catalog/controller/account/transaction_history.php
+catalog/language/english/account/transaction.php
+catalog/view/theme/default/template/account/transaction_history.tpl
+catalog/view/theme/default/template/account/transaction_history_binary.tpl
+catalog/view/theme/default/template/account/transaction_history_reffernal.tpl
+catalog/model/account/auto.php
+catalog/controller/account/logout.php
+catalog/controller/account/edit.php
