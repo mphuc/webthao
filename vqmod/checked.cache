@@ -228,3 +228,8 @@ catalog\view\theme\default\template\account\personal.tpl
 catalog\model\customize\country.php
 catalog\view\theme\default\template\account\registers.tpl
 >>>>>>> 55e67ff5fc0d212054c13fd00769bfbe234715b9
+catalog/controller/account/login.php
+catalog/model/customize/register.php
+catalog/view/theme/default/template/account/login.tpl
+catalog/model/account/address.php
+catalog/model/account/activity.php

@@ -6,6 +6,7 @@ $self -> document -> setTitle('Register User');
       display: none;
     }
  </style>
+ 
 <div class="login-form page-login-image">
    <div class="main-login-form register-page">
          <div class="content-login">
