@@ -1,7 +1,7 @@
----------- Date: 2016-08-20 06:06:12 ~ IP : 171.249.91.157 ----------
-REQUEST URI : /bitwonder/index.php?route=account/login
+---------- Date: 2016-12-03 19:39:03 ~ IP : ::1 ----------
+REQUEST URI : /webthao/login.html
 MOD DETAILS:
-   modFile   : D:\xampp\htdocs\bitwonder\vqmod/xml/news.xml
+   modFile   : C:\xampp\htdocs\webthao\vqmod/xml/news.xml
    id        : News
    version   : OC 2.x
    vqmver    : 2.0.0
@@ -11,7 +11,7 @@ File Name    : catalog/view/theme/*/template/common/footer.tpl(0)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
 
 MOD DETAILS:
-   modFile   : D:\xampp\htdocs\bitwonder\vqmod/xml/simple_blog_catalog.xml
+   modFile   : C:\xampp\htdocs\webthao\vqmod/xml/simple_blog_catalog.xml
    id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
    version   : 1.4.x and 1.5.x
    vqmver    : 2.4.0

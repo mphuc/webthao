@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <h2>Contact Form</h2>
-                    <form action="http://hasan.themexlab.com/category/business/factory-doctor/factory-doctor-html/inc/sendemail.php" class="contact-form row" id="contact-page-contact-form">
+                    <form action="" class="contact-form row" id="contact-page-contact-form">
                         <div class="col-md-6">
                             <input type="text" name="name" placeholder="Name">
                             <input type="text" name="email" placeholder="Email">
