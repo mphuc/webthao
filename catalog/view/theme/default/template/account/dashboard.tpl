@@ -5,7 +5,7 @@
             <div class="row">
                 <!-- Start Box Section -->
                 <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
+                    <div class="box box-block bg-blue tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Total Investment</h6>
@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
+                    <div class="box box-block bg-blue tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Daily profit</h6>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
+                    <div class="box box-block bg-blue tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Pairing bonus</h6>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
+                    <div class="box box-block bg-blue tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Refferal bonus</h6>
@@ -78,7 +78,7 @@
                 </div>     
                    
                 <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
+                    <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Appellation</h6>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
+                    <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Reinvestment</h6>

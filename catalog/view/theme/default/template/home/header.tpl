@@ -23,50 +23,18 @@
     <!-- Preloader -->
     <div class="preloader"></div>
 
-    
-    <!-- /.top-bar -->
-    <header class="header">
-        <div class="container">
-            <div class="logo pull-left">
-                <a href="index-2.html">
-                    <img src="catalog/view/theme/default/images/logo_home.png" alt="Awesome Image" />
-                </a>
-            </div>
-            <div class="header-right-info pull-right clearfix">
-                <div class="single-header-info">
-                    <div class="icon-box">
-                        <div class="inner-box">
-                            <i class="flaticon-interface"></i>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h3>EMAIL</h3>
-                        <p>noreply@sfccoin.com</p>
-                    </div>
-                </div>
-                <div class="single-header-info">
-                    <div class="icon-box">
-                        <div class="inner-box">
-                            <i class="flaticon-telephone"></i>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h3>Call Now</h3>
-                        <p><b>(732) 803-010-03</b></p>
-                    </div>
-                </div>
-                <div class="single-header-info">
-                    
-                </div>
-            </div>
-        </div>
-    </header>
+   
     <!-- /.header -->
     <nav class="mainmenu-area stricky">
         <div class="container">
+             <h1 class="logo">
+                <a href="#"><img src="catalog/view/theme/default/img/logo.png" alt=""></a>
+            </h1>
             <div class="navigation pull-right">
                 <div class="nav-header">
+
                     <ul>
+                        <li><a href=""></a></li>
                         <li><a href="index.html">Home</a>
                         </li>
                         <li><a href="about.html">About</a></li>

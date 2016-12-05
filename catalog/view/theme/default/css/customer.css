@@ -10,16 +10,20 @@
     padding: 0px 10px;
 }
 .box {
-    background: #006064 !important;
+    background: #e28c0e !important;
     position: relative;
     display: block;
     margin-bottom: 0.75rem;
 
     border: 1px solid rgba(0, 0, 0, 0.125);
     overflow: hidden;
-    border: 5px solid rgba(255, 255, 255, 0.70);
+    border: 2px solid rgba(255, 255, 255, 0.70);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.06) inset;
     transition: all 0.5s ease;
+}
+.col-lg-3, .col-md-6, .col-xs-12{
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .box h1{
     color: #fff;
@@ -872,4 +876,11 @@ span.btn.btn-default.btn-tree {
     .site-menu-left .left-side-menu {
          margin-top: 0px; 
     }
+}
+
+.bg-blue{
+    background: #105d5d !important;
+}
+.bg-red{
+    background: #e2330b !important;
 }
