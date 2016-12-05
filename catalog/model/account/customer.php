@@ -1,7 +1,59 @@
 <?php
 class ModelAccountCustomer extends Model {
 	
+	public function get_count_customer_signup($id_customer){
+		$query = $this -> db -> query("
+			SELECT COUNT(*) as number FROM  ".DB_PREFIX."customer
+			WHERE p_node = '".$this -> db -> escape($id_customer)."' AND check_signup = 2
+		");
+		return $query -> row['number'];
+	}
+	public function get_all_customer_p_binary($id_user) {
+		$listId = '';
+		$query = $this -> db -> query("
+			SELECT c.username AS name, c.customer_id AS code FROM ". DB_PREFIX ."customer AS c
+			JOIN ". DB_PREFIX ."customer_ml AS ml
+			ON ml.customer_id = c.customer_id
+			WHERE ml.p_binary = ". $id_user ."");
+		$array_id = $query -> rows;
+		foreach ($array_id as $item) {
+			$listId .= ',' . $item['name'];
+			$listId .= $this -> get_all_customer_p_binary($item['code']);
+		}
+		return $listId;
+	}
+	public function getCustomer_IN_ML($customer_id){
 
+		$query = $this -> db -> query("SELECT * FROM sm_customer_ml WHERE customer_id = ".$customer_id."");
+		return $query -> row;
+	}
+	public function get_customer_Id_by_username($username) {
+		
+		$query = $this -> db -> query("
+			SELECT customer_id FROM " . DB_PREFIX . "customer WHERE username = '" . $username . "'
+			");
+
+		return $query -> row;
+	}
+	public function count_p_binary($p_binary){
+		$query = $this -> db -> query("
+			SELECT `left`,`right` FROM ". DB_PREFIX ."customer_ml WHERE `customer_id` ='".$p_binary."' AND status <> -1
+		");
+		return $query -> row;
+	}
+	public function getUserName() {
+		$query = $this -> db -> query("SELECT username FROM " . DB_PREFIX . "customer WHERE customer_id = '" . $this -> session -> data['customer_id'] . "'");
+
+		return $query -> row['username'];
+	}
+	public function get_all_customer_signup($id_customer){
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer
+			WHERE p_node = '".$this -> db -> escape($id_customer)."' AND check_signup = 2
+		");
+		return $query -> rows;
+	}
 	public function update_R_Wallet_add($amount, $customer_id, $wallet){
 		
 			$query = $this -> db -> query("
