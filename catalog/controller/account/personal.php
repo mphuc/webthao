@@ -734,7 +734,8 @@ public function checkBinary($p_binary){
 
 		$node -> leftPD = $this -> total_pd_left($id);
 		$node -> rightPD = $this -> total_pd_right($id);
-		
+		$node -> totalPD = $this -> total_pd($id);
+		$node -> maxPD = $this -> max_pd($id);
 		
 		$node -> empty = false;
 		
@@ -791,7 +792,43 @@ public function checkBinary($p_binary){
 		// return $total;
 
 	}
+	public function total_pd($customer_id){
+		$this -> load -> model('account/customer');
+		$count = $this -> model_account_customer ->  getTotalPD($customer_id);
+		$count = $count['number'] / 100000000;
 
+		return $count;
+	}
+	public function max_pd($customer_id){
+		$this -> load -> model('account/customer');
+		$count = $this -> model_account_customer ->  getmax_PD($customer_id);
+		$count = $count['number'] / 100000000;
+		switch (doubleval($count)) {
+			case 0.5:
+				$package = 1;
+				break;
+			case 1:
+				$package = 2;
+				break;
+			case 5:
+				$package = 3;
+				break;
+			case 10:
+				$package = 4;
+				break;
+			case 20:
+				$package = 5;
+				break;
+			case 50:
+				$package = 6;
+				break;
+			default:
+				$package = 0;
+				break;
+		}
+
+		return $package;
+	}
 	public function total_pd_right($customer_id){
 		$this -> load -> model('account/customer');
 		$count = $this -> model_account_customer ->  getCustomer($customer_id);
@@ -850,6 +887,8 @@ public function checkBinary($p_binary){
 				if($left->fl<5){
 					$left -> leftPD = $this -> total_pd_left($left->id);
 					$left -> rightPD = $this -> total_pd_right($left->id);
+					$left -> totalPD = $this -> total_pd($left->id);
+					$left -> maxPD = $this -> max_pd($left->id);
 					$this->getBinaryChild_binary($left);
 				}
 
@@ -882,6 +921,8 @@ public function checkBinary($p_binary){
 			if($right->fl<5){
 				$right -> leftPD = $this -> total_pd_left($right->id);
 				$right -> rightPD = $this -> total_pd_right($right->id);
+				$right -> totalPD = $this -> total_pd($right->id);
+				$right -> maxPD = $this -> max_pd($right->id);
 				$this->getBinaryChild_binary($right);
 			}
 			else $right->children = 1;
