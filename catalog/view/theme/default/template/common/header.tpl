@@ -77,7 +77,17 @@
       <script src="catalog/view/javascript/jquery.form.min.js" type="text/javascript"></script><script src="catalog/view/javascript/alertifyjs/alertify.js" type="text/javascript"></script>
       <link href="catalog/view/theme/default/css/al_css/alertify.css" rel="stylesheet">
       <script src="catalog/view/javascript/changeLang.js" type="text/javascript"></script><script type="text/javascript" src="catalog/view/javascript/bxslider/jquery.bxslider.js"></script>
-      <!--  <script type="text/javascript"> $(function(){$("html").niceScroll({cursorwidth:"15px",cursorcolor:"blue"})}); </script> -->
+     <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/58456da63d413a0ca09e4845/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
    </head>
    <body class="dashboard3 site-menu-left">
       <div id="fakeloader"></div>
