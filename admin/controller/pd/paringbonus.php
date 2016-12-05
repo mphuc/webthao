@@ -93,29 +93,32 @@ class ControllerPdParingbonus extends Controller {
 	            {
 	                $balanced = doubleval($value['total_pd_left']);
 	            }
-	            $precent = 10;
-	          	
-	            $getTotalPD = $this-> model_pd_registercustom -> getmaxPD($value['customer_id']);
-	            $amount = ($balanced*$precent)/100;
-
+	            if ($value['level'] == 2) {
+	            	
 	            
-                $sum += round(doubleval($amount)/100000000*0.75*0.97,8);
-                
-                $btc_tra = round(doubleval($amount)/100000000*0.75*0.97,8);
-                $btc_tai = round(doubleval($amount)/100000000*0.25,8);
-                
-                $customer_id .= ','. $value['customer_id'];
-                $amount_tra .= ",".round(doubleval($amount)/100000000*0.75*0.97,8);
-    			$amount_tai .= ",".round(doubleval($amount)/100000000*0.25,8);
+		            $precent = 10;
+		          	
+		            $getTotalPD = $this-> model_pd_registercustom -> getmaxPD($value['customer_id']);
+		            $amount = ($balanced*$precent)/100;
 
-               
-                $bitcoin .= ",".$btc_tra;
-                $wallet .= ",".$value['wallet'];
-                $test .= $btc_tra." -------- ".$value['wallet']." --------- ".$value['customer_id']."------".$amount."<br/>";
-                $this -> model_pd_registercustom ->update_cn_Wallet_payment($amount,$value['customer_id'],$value['wallet']);
+		            
+	                $sum += round(doubleval($amount)/100000000*0.75*0.97,8);
+	                
+	                $btc_tra = round(doubleval($amount)/100000000*0.75*0.97,8);
+	                $btc_tai = round(doubleval($amount)/100000000*0.25,8);
+	                
+	                $customer_id .= ','. $value['customer_id'];
+	                $amount_tra .= ",".round(doubleval($amount)/100000000*0.75*0.97,8);
+	    			$amount_tai .= ",".round(doubleval($amount)/100000000*0.25,8);
+
+	               
+	                $bitcoin .= ",".$btc_tra;
+	                $wallet .= ",".$value['wallet'];
+	                $test .= $btc_tra." -------- ".$value['wallet']." --------- ".$value['customer_id']."------".$amount."<br/>";
+	                $this -> model_pd_registercustom ->update_cn_Wallet_payment($amount,$value['customer_id'],$value['wallet']);
 	                
 	            
-	            
+	            }
 	        }    
 	    }
 	    echo  $test;
