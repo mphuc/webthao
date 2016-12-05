@@ -884,3 +884,7 @@ span.btn.btn-default.btn-tree {
 .bg-red{
     background: #e2330b !important;
 }
+h6.mb-1 {
+    color: #fff !important;
+    font-size: 16px;
+}
