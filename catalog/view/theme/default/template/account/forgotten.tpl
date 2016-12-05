@@ -47,8 +47,8 @@
             <div class="input-box">
               <div class="left-icon-forgot"><i class="icon icon_mail"></i></div>
               <div class="textbox-forgot">
-              <img class="img_capcha" style="float: left; height: 45px;" src="captcha_code.php"/>
-              <input style="width: 65%; margin-left: px; float: right" autocomplete="off" type="text" name="capcha" placeholder="Capcha" id="input-password" value="" class="form-control" />
+              <img class="img_capcha" style="float: right; height: 45px;" src="captcha_code.php"/>
+              <input style="width: 49%; margin-left: px; float: left" autocomplete="off" type="text" name="capcha" placeholder="Capcha" id="input-password" value="" class="form-control" />
               </div>
             </div>
 
@@ -56,6 +56,11 @@
               <div class="col-sm-6 for-left-btn">
                 <a class="btn" href="<?php echo $back; ?>.html">GO BACK</a>
               </div>
+               <?php if ($error_warning) { ?>
+               <div class="text-warning"><i class="fa fa-exclamation-circle"></i>
+                  <?php echo $error_warning; ?>
+               </div>
+               <?php } ?>
               <div class="col-sm-6 for-right-btn submit">
                 <button class="btn btn-info btn-sign waves-effect waves-light" type="submit">RESET</button>
               </div>

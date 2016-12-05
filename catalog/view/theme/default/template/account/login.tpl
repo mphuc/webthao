@@ -59,8 +59,9 @@
                   <div class="input-box input-box-login2">
                      <div class="left-icon-login btn-info"><i class="icon icon_key"></i></div>
                      <div class="textbox-login">
-                        <img class="img_capcha" style="float: left; height: 40px;" src="captcha_code.php"/>
-                        <input style="width: 65%; margin-left: px; float: right" autocomplete="off" type="text" name="capcha" placeholder="Capcha" id="input-password" value="" class="form-control" />
+                        
+                        <input style="width: 56%; margin-left: px; float: left" autocomplete="off" type="text" name="capcha" placeholder="Capcha" id="input-password" value="" class="form-control" />
+                        <img class="img_capcha" style="float: right; height: 40px;" src="captcha_code.php"/>
                      </div>
                   </div>
                   <div class="bottom-login">

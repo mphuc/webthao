@@ -828,7 +828,8 @@ span.btn.btn-default.btn-tree {
         position: relative;
         padding-left: 50%;
         white-space: normal;
-        text-align: left
+        text-align: left;
+        word-break: break-word;
     }
     #no-more-tables td:before {
         position: absolute;
