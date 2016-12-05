@@ -55,6 +55,12 @@ class ControllerAccountRefferal extends Controller {
 		$data['base'] = $server;
 		$data['self'] = $this;
 
+		$customer = $this -> model_account_customer-> getCustomer($this -> session -> data['customer_id']);
+
+		$Hash = $customer['customer_code'];	
+		
+		$data['customer_code'] = $Hash;
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/refferal.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/refferal.tpl', $data));
 		} else {

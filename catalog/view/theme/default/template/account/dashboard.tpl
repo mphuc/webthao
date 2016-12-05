@@ -2,6 +2,26 @@
 <div class="main-content">
     <div class="page-content container-fluid">
         <div class="main-dashboard">
+            <?php if (intval($user) > 0) {  ?>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="" style="
+    padding: 22px;
+">
+                   <div class="header-left-panel">
+          <!--  Title Page -->
+          <h1 class="page-title">New User Register</h1>
+          <!--  Breadcrumb Section -->
+      </div>
+                    <div class="">
+                        <u>Please follow this link to view details:</u> <a href="user.html" class="btn btn-danger btn-lg">View Detail</a>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+
+        </div>
+        <?php } ?>
             <div class="row">
                 <!-- Start Box Section -->
                 <div class="col-lg-3 col-md-6 col-xs-12">

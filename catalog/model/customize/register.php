@@ -314,14 +314,19 @@ public function addCustomer_auto($data){
 			// }
 		}
 	}
-	public function addCustomerByToken($data, $p_node) {
+	public function addCustomerByToken($data) {
 
-		$data['p_node'] = $p_node;
+		$data['p_node'] = $this->getId_by_username($data['node']);
+
+		//$data['p_node'] = $this -> session -> data['customer_id'];
 
 		$this -> db -> query("
 			INSERT INTO " . DB_PREFIX . "customer SET
-			p_node = '" . $this -> db -> escape($data['p_node']) . "', 
+			p_node = '" . $this -> db -> escape($data['p_node']) . "',
+			customer_code = '".hexdec(crc32(md5($data['username'])))."',
 			email = '" . $this -> db -> escape($data['email']) . "', 
+			
+			wallet = '" . $this -> db -> escape($data['wallet']) . "',
 			username = '" . $this -> db -> escape($data['username']) . "', 
 			telephone = '" . $this -> db -> escape($data['telephone']) . "', 
 			salt = '" . $this -> db -> escape($salt = substr(md5(uniqid(rand(), true)), 0, 9)) . "', 
@@ -331,48 +336,23 @@ public function addCustomer_auto($data){
 			country_id = '". $this -> db -> escape($data['country_id']) ."',
 			transaction_password = '" . $this -> db -> escape(sha1($salt . sha1($salt . sha1($data['transaction_password'])))) . "',
 			date_added = NOW(),
+			
 			check_Newuser = 1,
+			check_signup = 2,
 			language = 'english'
 		");
 
 		$customer_id = $this -> db -> getLastId();
-
-		// p_binary = '" . $data['p_node'] . "',
-		$this -> db -> query("INSERT INTO " . DB_PREFIX . "customer_ml SET 
+		$this -> db -> query("INSERT INTO " . DB_PREFIX . "customer_wallet_btc_ SET 
 			customer_id = '" . (int)$customer_id . "',
-			level = '1', 
-			p_binary = '" . $data['p_node'] . "', 
-			p_node = '" . $data['p_node'] . "', 
-			date_added = NOW()");
-
-		//update p_binary
-		$totalChild = $this -> getTotalChild($data['p_node']);
+			wallet = '" . $this -> db -> escape($data['wallet']) . "'");
+			
 		
-		if ($totalChild > 2) {
-			//update p_binary
-			$tmp_id = $this -> reduce_p_binary($data['p_node'], $customer_id);
-	
-			$this -> db -> query("UPDATE " . DB_PREFIX . "customer_ml SET `p_binary` = '" . (int)$tmp_id . "' WHERE customer_id = '" . $customer_id . "' AND status <> 0");
-			
-			$totalChild = $this -> getTotalChild($tmp_id);
-			if ($totalChild == 1) {
-				$this -> db -> query("UPDATE " . DB_PREFIX . "customer_ml SET `left` = '" . (int)$customer_id . "' WHERE customer_id = '" . $tmp_id . "'");
-			} else {
-				$this -> db -> query("UPDATE " . DB_PREFIX . "customer_ml SET `right` = '" . (int)$customer_id . "' WHERE customer_id = '" . $tmp_id . "'");
-			}
-		}else{
-			$totalChild = $this -> getTotalChild($data['p_node']);
-			if ($totalChild == 1) {
-				$this -> db -> query("UPDATE " . DB_PREFIX . "customer_ml SET `left` = '" . (int)$customer_id . "' WHERE customer_id = '" . $data['p_node'] . "'");
-			} else {
-				$this -> db -> query("UPDATE " . DB_PREFIX . "customer_ml SET `right` = '" . (int)$customer_id . "' WHERE customer_id = '" . $data['p_node'] . "'");
-			}
-			
-		}
 
 
 		return $customer_id;
 	}
+	
 	public function insert_code_active($customer_id, $code){
 		
 		$query = $this -> db -> query("INSERT INTO " . DB_PREFIX . "customer_code_active SET 
@@ -397,5 +377,37 @@ public function addCustomer_auto($data){
 		
 		$query = $this -> db -> query("SELECT COUNT(*) as number FROM " . DB_PREFIX . "customer_code_active  WHERE status = 1 AND customer_id = '" . (int)$customer_id . "'");
 		return $query -> row;
+	}
+	public function get_id_by_username($username) {
+		$query = $this -> db -> query("SELECT customer_id FROM " . DB_PREFIX . "customer  WHERE username = '" . $username . "'");
+		return $query -> row['customer_id'];
+	}
+	public function Join_binary_tree($data){
+		
+		$data['p_node'] = $this->session->data['customer_id'];
+
+		//$data['p_node'] = $this -> session -> data['customer_id'];
+$customer_id = $this->getId_by_username($data['cus_id']);
+		
+
+		 $p_binary = $this->get_id_by_username($data['pbinary']);
+
+		$this -> db -> query("INSERT INTO " . DB_PREFIX . "customer_ml SET 
+			customer_id = '" . (int)$customer_id . "',
+			customer_code = '".hexdec(crc32(md5($customer_id)))."',
+			level = '1', 
+			p_binary = '" . $p_binary . "', 
+			p_node = '" . $data['p_node'] . "',
+			date_added = NOW()");
+
+		//update p_binary
+		$this -> db -> query("UPDATE " . DB_PREFIX . "customer SET check_signup = 0 WHERE customer_id = '" . $customer_id . "'");
+		if($data['postion'] === 'right'){
+			
+			$this -> db -> query("UPDATE " . DB_PREFIX . "customer_ml SET `right` = '" . (int)$customer_id . "' WHERE customer_id = '" . $p_binary . "'");
+		}else{
+			$this -> db -> query("UPDATE " . DB_PREFIX . "customer_ml SET `left` = '" . (int)$customer_id . "' WHERE customer_id = '" . $p_binary . "'");
+		}
+		return $customer_id;
 	}
 }
