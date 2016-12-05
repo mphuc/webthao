@@ -77,7 +77,7 @@
                     </div>
                 </div>     
                    
-                <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
@@ -111,12 +111,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="box box-block bg-red tile tile-1 mb-2">
+                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
+                        <div class="t-content">
+                            <h6 class=" mb-1">Matching Bonus</h6>
+                            <h1 class="mb-1">0 BTC</p></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Reinvestment</h6>
                             <h1 class="mb-1"><?php echo $taidautu; ?> BTC</p></h1>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="box box-block bg-red tile tile-1 mb-2">
+                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
+                        <div class="t-content">
+                            <h6 class=" mb-1">Total Sfccoin</h6>
+                            <h1 class="mb-1">0 BTC</p></h1>
                         </div>
                     </div>
                 </div>
