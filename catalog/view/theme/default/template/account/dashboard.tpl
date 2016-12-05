@@ -162,7 +162,7 @@
                     <div class="bg-white widget widgett-shadow">
                         <?php $packet = $self -> check_packet_pd (50000000) ;?>
                         <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
-                        <div class="bg-info bg-blue white padding-30 padding-bottom-20 <?php echo $class ?>">
+                        <div class="bg-info bg-yl white padding-30 padding-bottom-20 <?php echo $class ?>">
                             <div class="card-action">
                                 <span class="sparkline-bar2">0.5 BTC</span>
                             </div>
@@ -205,7 +205,7 @@
                         <div class="bg-white widget widgett-shadow">
                             <?php $packet = $self -> check_packet_pd (100000000) ;?>
                         <?php $class = ""; if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
-                            <div class="bg-info bg-blue white padding-30 padding-bottom-20 <?php echo $class ?>">
+                            <div class="bg-info bg-bl white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
                                     <span class="sparkline-bar2">1 BTC</span>
                                 </div>
@@ -249,7 +249,7 @@
                         <div class="bg-white widget widgett-shadow">
                             <?php $packet = $self -> check_packet_pd (500000000) ;?>
                         <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
-                            <div class="bg-info bg-blue white padding-30 padding-bottom-20 <?php echo $class ?>">
+                            <div class="bg-info bg-bls white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
                                     <span class="sparkline-bar2">5 BTC</span>
                                 </div>
@@ -293,7 +293,7 @@
                         <div class="bg-white widget widgett-shadow">
                             <?php $packet = $self -> check_packet_pd (1000000000) ;?>
                         <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
-                            <div class="bg-info bg-blue white padding-30 padding-bottom-20 <?php echo $class ?>">
+                            <div class="bg-info bg-gr white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
                                     <span class="sparkline-bar2">10 BTC</span>
                                 </div>
@@ -338,7 +338,7 @@
                         <div class="bg-white widget widgett-shadow">
                             <?php $packet = $self -> check_packet_pd (2000000000) ;?>
                         <?php $class = "";if(count($packet) > 0) if (intval($packet['status']) === 1) $class = "active";?>
-                            <div class="bg-info bg-blue white padding-30 padding-bottom-20 <?php echo $class ?>">
+                            <div class="bg-info bg-grs white padding-30 padding-bottom-20 <?php echo $class ?>">
                                 <div class="card-action">
                                     <span class="sparkline-bar2">20 BTC</span>
                                 </div>

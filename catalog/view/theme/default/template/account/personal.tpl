@@ -5,7 +5,7 @@
     <div class="page-header">
       <div class="header-left-panel">
           <!--  Title Page -->
-          <h1 class="page-title">Row Tree</h1>
+          <h1 class="page-title">Downline Tree</h1>
           <!--  Breadcrumb Section -->
       </div>
     </div>
