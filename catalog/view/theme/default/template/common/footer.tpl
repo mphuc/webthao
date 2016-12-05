@@ -14,7 +14,7 @@
    
    	$('.packet-invest').on('submit', function(){
    		var self = $(this);
-   		alertify.confirm('<p class="text-center" style="font-size:25px;color: black;text-transform: uppercase;height: 20px">You make sure your choice !</p>',
+   		alertify.confirm('<p class="text-center" style="font-size:25px;color: black;text-transform: uppercase;height: 40px">You make sure your choice !</p>',
 		  function(){
 		    window.funLazyLoad.start();
 	   		setTimeout(function(){
