@@ -9,10 +9,10 @@
           <div class="panel-heading">
             <h3 class="panel-title">New user Register</h3>
           </div>
-          <div class="panel-body">
+          <div class="panel-body" style=" margin-top: 25px; ">
             <div class="">
-                        <u>Please follow this link to view details:</u> <a href="user.html" class="btn btn-danger">View Detail</a>
-                    </div>
+                <u>Please follow this link to view details:</u> <a href="user.html" class="btn btn-danger">View Detail</a>
+            </div>
           </div>
         </div>
             </div>
