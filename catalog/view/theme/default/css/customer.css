@@ -616,7 +616,7 @@
     color: transparent!important;
     position: relative;
     top: -30px;
-    left: -5px;
+    left: 0px;
 }
 .personal-tree .type-2,
 .personal-tree .type-add {
@@ -631,6 +631,34 @@
 .personal-tree .type-add {
     background: url(icons/3.png) center center no-repeat;
     background-size: 45px
+}
+.personal-tree .package-0,.personal-tree .package-undefined{
+    background: url('icons/packe0.png') center center no-repeat;
+    background-size: 35px
+}
+.personal-tree .package-1{
+     background: url('icons/packe1.png') center center no-repeat;
+    background-size: 35px
+}
+.personal-tree .package-2{
+     background: url('icons/packe2.png') center center no-repeat;
+    background-size: 35px
+}
+.personal-tree .package-3{
+     background: url('icons/packe3.png') center center no-repeat;
+    background-size: 35px
+}
+.personal-tree .package-4{
+     background: url('icons/packe4.png') center center no-repeat;
+    background-size: 35px
+}
+.personal-tree .package-5{
+     background: url('icons/packe5.png') center center no-repeat;
+    background-size: 35px
+}
+.personal-tree .package-6{
+     background: url('icons/packe6.png') center center no-repeat;
+    background-size: 35px
 }
 span.btn.btn-default.btn-tree {
     border-radius: 40px
