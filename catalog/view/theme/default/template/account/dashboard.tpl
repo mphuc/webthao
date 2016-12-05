@@ -135,7 +135,7 @@
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Total Sfccoin</h6>
-                            <h1 class="mb-1">0 BTC</p></h1>
+                            <h1 class="mb-1">0 SFC</p></h1>
                         </div>
                     </div>
                 </div>
