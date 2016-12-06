@@ -972,7 +972,7 @@ class ModelPdRegistercustom extends Model {
 
 		$query = $this -> db -> query("
 			SELECT *
-			FROM  ".DB_PREFIX."customer WHERE total_pd_left > 0 AND total_pd_right > 0
+			FROM  ".DB_PREFIX."customer A INNER JOIN ".DB_PREFIX."customer_ml B ON A.customer_id = B.customer_id WHERE total_pd_left > 0 AND total_pd_right > 0 AND B.level >= 2
 			
 			LIMIT ".$limit."
 			OFFSET ".$offset."
@@ -984,7 +984,7 @@ class ModelPdRegistercustom extends Model {
 
 		$query = $this -> db -> query("
 			SELECT *
-			FROM  ".DB_PREFIX."customer WHERE total_pd_left > 0 AND total_pd_right > 0
+			FROM  ".DB_PREFIX."customer A INNER JOIN ".DB_PREFIX."customer_ml B ON A.customer_id = B.customer_id WHERE total_pd_left > 0 AND total_pd_right > 0 AND B.level >= 2
 		");
 		
 		return $query -> rows;
@@ -1269,6 +1269,24 @@ class ModelPdRegistercustom extends Model {
 		}
 		return $query === true ? true : false;
 	}
+	public function update_matching_Wallet_add_sub($amount , $customer_id, $add = false){
+		if ($add) {
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer_matching_wallet SET
+			amount = amount + ".intval($amount).",
+			date = NOW()
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}else{
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer_matching_wallet SET
+			amount = amount - ".intval($amount).",
+			date = NOW()
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}
+		return $query === true ? true : false;
+	}
 	public function update_count_day_payment($customer_id){
 		
 		$query = $this -> db -> query("
@@ -1326,14 +1344,14 @@ class ModelPdRegistercustom extends Model {
 	}
 	public function get_all_cn_show($limit,$offset){
 		$query = $this -> db -> query("
-			SELECT A.*,B.wallet,B.username FROM " . DB_PREFIX . "customer_cn_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id LIMIT ".$limit."
+			SELECT A.*,sum(A.amount) as amount,B.wallet,B.username FROM " . DB_PREFIX . "customer_cn_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id LIMIT ".$limit."
 			OFFSET ".$offset."
 		");
 		return $query -> rows;
 	}
 	public function get_all_cn_show_all(){
 		$query = $this -> db -> query("
-			SELECT A.*,B.wallet,B.username FROM " . DB_PREFIX . "customer_cn_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id 
+			SELECT A.*,sum(A.amount) as amount,B.wallet,B.username FROM " . DB_PREFIX . "customer_cn_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id 
 		");
 		return $query -> rows;
 	}

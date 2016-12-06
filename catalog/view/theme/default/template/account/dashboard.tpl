@@ -103,28 +103,35 @@
                             switch ($danhhieu) {
                                 case 1:
                                     $ten = "Gold";
+                                    $btcoin = 1;
                                     break;
                                 case 2:
                                     $ten = "Ruby";
+                                    $btcoin = 2;
                                     break;
                                 case 3:
                                     $ten = "Emeral";
+                                    $btcoin = 4;
                                     break;
                                 case 4:
                                     $ten = "Diamond";
+                                    $btcoin = 6;
                                     break;
                                 case 5:
                                     $ten = "Blue Diamond";
+                                    $btcoin = 8;
                                     break;
                                 case 6:
                                     $ten = "Black Diamond";
+                                    $btcoin = 10;
                                     break;
                                 default:
                                     $ten = "Not level";
+                                    $btcoin = 0;
                                     break;
                             }
-                            ?></p></h1>
-                            <h1 class="mb-1"><?php echo $ten; ?></p></h1>
+                            ?><p></h1>
+                            <h1 class="mb-1"><span class="pull-left"><?php echo $ten; ?></span><span class="pull-right"><?php echo $btcoin ?> BTC</span></p></h1>
                         </div>
                     </div>
                 </div>

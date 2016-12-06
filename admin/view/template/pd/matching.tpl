@@ -121,7 +121,7 @@
         html += '<p style="margin-top:30px;font-size:16px"></p>';
         html += '</div>';
         alertify.alert(html, function(){
-           location.reload(true);
+           //location.reload(true);
         });
     }
 </script>
