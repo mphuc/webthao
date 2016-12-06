@@ -28,6 +28,7 @@
                     <li><a class="waves-effect waves-light" href="everyday-profit.html">Daily Profit</a></li>
                     <li><a class="waves-effect waves-light" href="binary-profit.html">Pairing Bonus</a></li>
                     <li><a class="waves-effect waves-light" href="refferal-profit.html">Refferal Profit</a></li>
+                    <li><a class="waves-effect waves-light" href="matching-profit.html">Matching Profit</a></li>
                 </ul>
             </li>
             <li class="has-sub">

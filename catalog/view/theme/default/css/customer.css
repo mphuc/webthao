@@ -170,8 +170,12 @@
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
     width: 120px;
+    background: #105d5d;
 }
-
+.ribbon-design.red{
+    background: #ef0e0e !important;
+}
+            
 .deposite .deposite_title{
     font-weight: 600;   
 }
@@ -197,13 +201,13 @@
     height: 88px;
     overflow: hidden;
     position: absolute;
-    right: 20px;
+    right: 7px;
     top: 5px;
     width: 85px;
 }
 
 .red, .status.offline > i, .mail-list > li > .title > span > .offline, .toggle-switch span:before, .actionBar > a.buttonDisabled, .friend-list li > span.offline:before, .error-page ul > li:before, .full-report > ul li:hover > span {
-    background: #ff604f;
+    background: #cecece;
     color: #fff;
 }
 .ajs-header{
@@ -911,6 +915,7 @@ span.btn.btn-default.btn-tree {
 }
 .bg-red{
     background: #e2330b !important;
+    min-height: 100px;
 }
 h6.mb-1 {
     color: #fff !important;

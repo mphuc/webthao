@@ -3615,7 +3615,7 @@ figure.effect-layla:hover img {
     display: block;
     padding: 30px;
     font-size: 18px;
-    color: #424242;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -4326,7 +4326,7 @@ a:focus, a:hover {
     overflow: hidden;
     z-index: 1;
     
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    /* text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2); */
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -4643,6 +4643,7 @@ a:focus, a:hover {
 .animated-btn.btn-border-success {
     border: 2px solid #5cb85c !important;
     color: #5cb85c !important;
+    background: none;
 }
 
 .animated-btn.btn-border-success:after {
@@ -4668,6 +4669,7 @@ a:focus, a:hover {
 .animated-btn.btn-border-warning {
     border: 2px solid #f0ad4e !important;
     color: #f0ad4e !important;
+    background: none;
 }
 
 .animated-btn.btn-border-warning:after {

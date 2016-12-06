@@ -596,6 +596,25 @@ li {
     .navigation .nav-header .dropdown a button {
         display: none;
     }
+    .js-toggle-left-slidebar{
+        display: none;
+    }
+    
+}
+@media (max-width: 769px) {
+    .js-toggle-left-slidebar{
+        background: #fbca00;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        z-index: 9999;
+        top: -51px;
+        left: 0px;
+    }
+    .nav>li {
+        border: 1px solid #d4dede;
+        padding-left: 20px;
+    }
 }
 
 

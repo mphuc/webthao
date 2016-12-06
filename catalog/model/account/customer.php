@@ -962,6 +962,28 @@ class ModelAccountCustomer extends Model {
 		
 		return $query -> rows;
 	}
+	public function getTotalHistory_matching($customer_id){
+		$query = $this -> db -> query("
+			SELECT count(*) AS number 
+			FROM ".DB_PREFIX."customer_transaction_history
+			WHERE customer_id = '".intval($customer_id)."' AND wallet = 'Matching Commission'
+		");
+
+		return $query -> row;
+	}
+	public function getTransctionHistory_matching($id_customer, $limit, $offset){
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer_transaction_history
+			WHERE customer_id = '".$this -> db -> escape($id_customer)."' AND wallet = 'Matching Commission' 
+			ORDER BY date_added DESC
+			LIMIT ".$limit."
+			OFFSET ".$offset."
+		");
+		
+		return $query -> rows;
+	}
+
 	public function getTotalHistory_binary($customer_id){
 		$query = $this -> db -> query("
 			SELECT count(*) AS number 

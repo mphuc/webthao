@@ -17,28 +17,49 @@
     <!-- responsive stylesheet -->
     <link rel="stylesheet" href="catalog/view/theme/default/home/css/theme-settings.css">
     <link rel="stylesheet" href="catalog/view/theme/default/home/css/responsive.css">
+    <link rel="stylesheet" href="catalog/view/theme/default/style1/js/slidebars.css"> 
+    <script src="catalog/view/theme/default/style1/js/slidebars.js"></script>
 </head>
 
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/58456da63d413a0ca09e4845/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/58456da63d413a0ca09e4845/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+
 </script>
 
-<body>
+<body data-spy="scroll" data-target="#main-navbar" id="top" >
     <!-- Preloader -->
     <div class="preloader"></div>
+    <div off-canvas="slidebar-1 left reveal responsive">
+      <div class="clearfix"></div>
+        <div class="top_menu_responsive"></div>
 
+        <ul class="nav navbar-nav navbar-right">
+          
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">F.A.Q</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
    
     <!-- /.header -->
-    <nav class="mainmenu-area stricky">
-        <div class="container">
+<div class="" canvas="container">
+    <nav class="mainmenu-area stricky" >
+        <div class="container" >
+   
+
              <h1 class="logo">
                 <a href="#"><img src="catalog/view/theme/default/img/logo.png" alt=""></a>
             </h1>
@@ -46,7 +67,6 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="nav-header">
 
                     <ul>
-                        <li><a href=""></a></li>
                         <li><a href="index.html">Home</a>
                         </li>
                         <li><a href="about.html">About</a></li>
@@ -57,11 +77,12 @@ s0.parentNode.insertBefore(s1,s0);
                         <li><a href="login.html">Login</a></li>
                     </ul>
                 </div>
-                <div class="nav-footer">
-                    <button><i class="fa fa-bars"></i></button>
+                <div class="" >
+                    <i style="" class="fa fa-bars navbar-toggle collapsed js-toggle-left-slidebar"></i>
                 </div>
             </div>
             
         </div>
     </nav>
     <!-- /.mainmenu-area -->
+    
