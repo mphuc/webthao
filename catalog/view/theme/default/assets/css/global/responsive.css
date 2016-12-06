@@ -106,6 +106,9 @@
         width:100% !important;
         margin-left: 0px !important;
     }
+    .table-bordered{
+        border: none !important;
+    }
 }
 @media only screen and (min-width: 981px) and (max-width:1200px) {
     .utmenu-list li a .arrow:after{ display:none !important; }
