@@ -22,7 +22,7 @@
             </div>
            
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <h2>Contact Form</h2>
                     <form action="" class="contact-form row" id="contact-page-contact-form">
                         <div class="col-md-6">
@@ -38,7 +38,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <h2>Address</h2>
                     <ul class="contact-info">
                         <li>
@@ -76,7 +76,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

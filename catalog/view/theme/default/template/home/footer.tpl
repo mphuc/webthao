@@ -90,6 +90,7 @@
     <script type="text/javascript" src="catalog/view/theme/default/home/revolution/js/extensions/revolution.extension.video.min.js"></script>
     <!-- thm custom script -->
     <script src="catalog/view/theme/default/home/js/custom.js"></script>
+    <script src="catalog/view/theme/default/style1/js/scripts.js"></script>
 </body>
 
 

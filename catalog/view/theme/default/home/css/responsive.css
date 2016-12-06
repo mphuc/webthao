@@ -40,7 +40,6 @@
 	.logo { 
 	   float: none !important;
 	   text-align: center;
-	   padding-bottom: 30px;
 	}
 	.mainmenu-area .search-box {
 	  width: 100%;
@@ -69,9 +68,16 @@
 	  padding: 40px 7px;
 	  min-height: 267px;
 	}
+	.navigation.pull-right{
+		width: 100%;
+		text-align: center;
+	}
+	.navigation .nav-header > ul > li > a{
+		padding-top: 0px;
+	}
 }
 @media (max-width: 1024px) {
-	.logo{float: none !important;text-align: center;padding-bottom: 30px;}
+	.logo{float: none !important;text-align: center;}
 	.header-right-info {float: none !important;padding-left: 10%;}
 	.navigation .nav-header > ul > li > a {padding: 23px 12px;}
 	.single-call-to-action .content-box p br {display: none;}
@@ -97,6 +103,9 @@
 	}
 	.navigation .nav-header > ul > li > a {
 	  padding: 23px 11px;
+	}
+	.navigation .nav-header > ul > li > a{
+		padding-top: 0px;
 	}
 	.single-call-to-action {
 	  min-height: auto;
@@ -197,6 +206,19 @@
 	.header-right-info .single-header-info:last-child .thm-btn {
 	  margin: 37px 20px 0;
 	}
+	.thm-btn{
+		padding: 12px 19px;
+	}
+	.services-content .service-box .img-thumb img {
+	    max-height: 100%;
+	    width: 189px;
+	    height: 230px;
+	    margin: 0 auto;
+	    margin-bottom: 61px;
+	}
+	.services-content .service-box .img-thumb img{
+		min-height: 230px;
+	}
 }
 @media (max-width: 767px) {
 	.single-header-info .modal-dialog.style-one {margin: 30px 15px !important;width: auto;}
@@ -211,6 +233,9 @@
 	.footer.style2 .container {margin-left: auto;margin-right: auto;max-width: 400px;}
 	.footer.bg-style .footer-widget.contact-widget {margin-bottom: 0;}
 	.xs-col5-center {display: block;float: none;margin-left: auto;margin-right: auto;max-width: 500px;}
+	.accordion-box.style-two .block .acc-btn {
+	    font-size: 15px;
+	}
 }
 @media (max-width: 600px) {
 	.home-appointment-form {margin: 0;}
@@ -230,7 +255,7 @@
 	.fact-counter-wrapper h2 br {display: none;}
 	.team-carousel .owl-controls {top: -70px;}
 	.gallery-section .slide-item {width: 100%}
-	.single-blog-post {width: 85%;margin-left: auto;margin-right: auto;}
+	.single-blog-post {width: 100%;margin-left: auto;margin-right: auto;}
 	.footer-widget {width: 80%;margin-left: auto;margin-right: auto;}
 	.home-appointment-form .form-grp .single-form {width: 100%;}
 	.home-appointment-form .form-grp .single-form input {width: 100%;}
@@ -273,6 +298,25 @@
 		margin-right: auto;
 		max-width: 50%;
 	}
+	.sec-title h2{
+		font-size: 25px;
+	}
+	.fact-counter-wrapper h2{
+		font-size: 21px;
+	}
+	.about-content.full-sec h3{
+		font-size: 19px;
+	}
+	.services-content.style2{
+		text-align: center;
+	}
+	.services-content.style2 img{
+		min-height: 190px !important;
+		height: 190px !important;
+		margin-top: 30px !important;
+		margin-bottom: 80px !important;
+	}
+
 }
 @media (max-width: 375px) {
 	.single-header-info {float: none;text-align: center;padding: 0;}
