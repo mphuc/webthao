@@ -106,9 +106,7 @@
         width:100% !important;
         margin-left: 0px !important;
     }
-    .table-bordered{
-        border: none !important;
-    }
+   
 }
 @media only screen and (min-width: 981px) and (max-width:1200px) {
     .utmenu-list li a .arrow:after{ display:none !important; }
@@ -4934,7 +4932,7 @@
     .panel-title{
         font-size: 18px;
         padding: 15px;
-        border-bottom: solid 1px #F0F0F0;
+       
         margin-bottom: 15px;
     }
     .panel-structure .nav.nav-tabs li{

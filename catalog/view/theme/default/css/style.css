@@ -1850,6 +1850,7 @@ ul#suggesstion-box li:hover {
         background: #fff;
         margin: 0!important
     }
+
 }
 .none_chart .panel {
     border: none!important
@@ -1903,7 +1904,9 @@ div#charts {
     .account-register .panel-body {
         padding: 15px
     }
+
 }
+
 .bg-binary {
     background-color: rgba(247, 176, 62, .77);
     padding: 20px 0
@@ -2407,6 +2410,7 @@ header {
     #frm_login {
         padding: 20px
     }
+    
 }
 form#register-account {
    /* margin-top: 80px*/
