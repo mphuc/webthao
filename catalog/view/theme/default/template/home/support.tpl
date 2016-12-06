@@ -3,9 +3,9 @@
   
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Coinmax | Mining</title>
-      <meta name="description" content="Coinmax | Cloud Mining">
-      <meta name="author" content="Coinmax">
+      <title> | </title>
+      <meta name="description" content=" | Cloud Mining">
+      <meta name="author" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <link rel="shortcut icon" href="catalog/view/theme/default/fre/images/favicon.ico">
       <!-- Plugins CSS files -->

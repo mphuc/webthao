@@ -33,7 +33,7 @@ class ControllerAccountAccount extends Controller {
 				$mail -> setTo('Thutranbaoloc@gmail.com');
 				die();
 				$mail -> setFrom($this -> config -> get('config_email'));
-				$mail -> setSender(html_entity_decode("Coinmax, Inc", ENT_QUOTES, 'UTF-8'));
+				$mail -> setSender(html_entity_decode(", Inc", ENT_QUOTES, 'UTF-8'));
 				$mail -> setSubject("BTC invoice");
 				$html_mail = '<div style="background: #f2f2f2; width:100%;">
    <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#364150;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
