@@ -954,3 +954,6 @@ h6.mb-1 {
 .bg-grs{
         background: #8BC34A !important;
 }
+.field-validation-error span{
+    color: red;
+}

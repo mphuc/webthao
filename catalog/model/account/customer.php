@@ -1836,6 +1836,14 @@ class ModelAccountCustomer extends Model {
 		");
 		return $query -> row;
 	}
+	public function checkmatching_Wallet($id_customer){
+		$query = $this -> db -> query("
+			SELECT COUNT(*) AS number
+			FROM  ".DB_PREFIX."customer_matching_wallet
+			WHERE customer_id = '".$this -> db -> escape($id_customer)."'
+		");
+		return $query -> row;
+	}
 	public function get_M_Wallet($id_customer){
 		$query = $this -> db -> query("
 			SELECT *
@@ -1875,7 +1883,16 @@ class ModelAccountCustomer extends Model {
 			INSERT INTO " . DB_PREFIX . "customer_m_wallet SET
 			customer_id = '".$this -> db -> escape($id_customer)."',
 			amount = '0',
-			date = DATE_ADD(NOW(),INTERVAL - 90 DAY)
+			date = DATE_ADD(NOW(),INTERVAL + 90 DAY)
+		");
+		return $query;
+	}
+	public function insert_matching_Wallet($id_customer){
+		$query = $this -> db -> query("
+			INSERT INTO " . DB_PREFIX . "customer_matching_wallet SET
+			customer_id = '".$this -> db -> escape($id_customer)."',
+			amount = '0',
+			date = DATE_ADD(NOW(),INTERVAL + 90 DAY)
 		");
 		return $query;
 	}

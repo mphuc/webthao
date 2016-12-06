@@ -372,6 +372,8 @@ public function checkBinary($p_binary){
 			if (intval($check_p_binary['number']) === 2) {
 				die('Error');
 			}else{
+				$get_customer_Id_by_username = $this -> model_account_customer-> get_customer_Id_by_username($_POST['username']);
+				count($get_customer_Id_by_username) > 0 && die();
 				$tmp = $this -> model_customize_register -> addCustomer_custom($this->request->post);
 
 				$cus_id= $tmp;
@@ -385,12 +387,17 @@ public function checkBinary($p_binary){
 					}
 				}
 				$checkM_Wallet = $this -> model_account_customer -> checkM_Wallet($cus_id);
-				if(intval($checkM_Wallet)  === 0){
+				if(intval($checkM_Wallet['number'])  === 0){
 					if(!$this -> model_account_customer ->insert_M_Wallet($cus_id)) {
 						die();
 					}
 				}
-				
+				$checkmatching_Wallet = $this -> model_account_customer -> checkmatching_Wallet($cus_id);
+				if(intval($checkmatching_Wallet['number'])  === 0){
+					if(!$this -> model_account_customer ->insert_matching_Wallet($cus_id)) {
+						die();
+					}
+				}
 				$data['has_register'] = true;
 				$getCountryByID = $this -> model_account_customer -> getCountryByID(intval($this-> request ->post['country_id']));
 				//$this -> response -> redirect($this -> url -> link('account/', '#success', 'SSL'));
