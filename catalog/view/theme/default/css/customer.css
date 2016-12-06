@@ -908,7 +908,25 @@ span.btn.btn-default.btn-tree {
     .site-menu-left .left-side-menu {
          margin-top: 0px; 
     }
+    .table-bordered{
+        border: none !important;
+    }
+    .undefined_node {
+        left: 130%!important;
+    }
+    #tab-binary{
+        overflow-x: scroll;
+    }
+    #updateProfile,#frmChangePassword{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
+.undefined_node {
+    left: 50%;
+    position: absolute;
+}
+@media (max-width: 768px)
 
 .bg-blue{
     background: #105d5d !important;
