@@ -128,11 +128,11 @@ class ControllerPdParingbonus extends Controller {
 	    echo $bitcoin;
 	    echo "<br>";
 	    echo $wallet;
-
+	    
 	    $customer_ids = explode(',', substr($customer_id,1));
 		$amount_tras = explode(',',substr($amount_tra,1));
 		$amount_tais = explode(',',substr($amount_tai,1));
-		
+			
 	    
 	    $block_io = new BlockIo(key, $pin, block_version); 
 
