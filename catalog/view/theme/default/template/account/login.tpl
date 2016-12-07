@@ -26,6 +26,13 @@
       <link rel="stylesheet" href="catalog/view/theme/default/assets/css/validation/validation.css" type="text/css" />
       <script src="catalog/view/javascript/alertifyjs/alertify.js" type="text/javascript"></script>
       <link href="catalog/view/theme/default/css/al_css/alertify.css" rel="stylesheet">
+         <!-- Start Alexa Certify Javascript -->
+      <script type="text/javascript">
+      _atrk_opts = { atrk_acct:"cBVho1IW1810N8", domain:"sfccoin.com",dynamic: true};
+      (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+      </script>
+      <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=cBVho1IW1810N8" style="display:none" height="1" width="1" alt="" /></noscript>
+      <!-- End Alexa Certify Javascript -->  
    </head>
    <body class="login-form login-form-3">
       <div class="main-login-form">
