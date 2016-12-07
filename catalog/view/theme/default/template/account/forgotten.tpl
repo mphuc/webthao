@@ -24,6 +24,13 @@
     <!-- Page CSS -->
     <link href="catalog/view/theme/default/assets/css/forgot-page/forgot.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="catalog/view/theme/default/assets/css/validation/validation.css" type="text/css" />
+    <!-- Start Alexa Certify Javascript -->
+  <script type="text/javascript">
+  _atrk_opts = { atrk_acct:"cBVho1IW1810N8", domain:"sfccoin.com",dynamic: true};
+  (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+  </script>
+  <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=cBVho1IW1810N8" style="display:none" height="1" width="1" alt="" /></noscript>
+  <!-- End Alexa Certify Javascript -->  
   </head>
   <body class="page-forgot page-forgot-image">
     <div class="main-forgot-pass">
