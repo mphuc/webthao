@@ -36,7 +36,7 @@
 	
 
 	require_once '../block_io/lib/block_io.php';
-	define('key', '523a-30aa-fd22-b9ac');
+	define('key', '630b-4c7b-bc37-5ce2');
 	define('pin', '');
 	define('block_version', '2');
-	define('wallet', '3Eaggy4ArUpbki29f5PuyyyXNLrUaVFffZ');
+	define('wallet', '3AdPiRKLNSHZ3MkLiEC5286LEhch8vtMKC');
