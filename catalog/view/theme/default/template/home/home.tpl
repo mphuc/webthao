@@ -815,63 +815,39 @@
             <div class="gallery-slider gallery-slider-carousel">
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/images/0728N-Kawasaki-Heavy_article_main_image.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/AS9100-Boeing-767.jpg" alt=""></a>
+                        <img src="catalog/view/theme/default/images/AS9100-Boeing-767.jpg" alt="">
                     </figure>
-                    <a href="catalog/view/theme/default/images/AS9100-Boeing-767.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
-                    <div class="item-caption">
-                        <h4><strong>CLEAN &amp; PAINT</strong></h4>
-                        <p>Mercedes Benz Company Car</p>
-                    </div>
+                    
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/images/" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/Aircraft-Production-Inspector-Resume1.jpg" alt=""></a>
+                        <img src="catalog/view/theme/default/images/Aircraft-Production-Inspector-Resume1.jpg" alt="">
                     </figure>
-                    <a href="catalog/view/theme/default/home/img/gallery/gallery-2.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
-                    <div class="item-caption">
-                        <h4><strong>CLEAN &amp; PAINT</strong></h4>
-                        <p>Mercedes Benz Company Car</p>
-                    </div>
+                    
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/images/Figure7Boeing.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/autóipar.jpg" alt=""></a>
+                        <img src="catalog/view/theme/default/images/autóipar.jpg" alt="">
                     </figure>
-                    <a href="catalog/view/theme/default/home/img/gallery/gallery-3.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
-                    <div class="item-caption">
-                        <h4><strong>CLEAN &amp; PAINT</strong></h4>
-                        <p>Mercedes Benz Company Car</p>
-                    </div>
+                   
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-4.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/wOJNc.png" alt=""></a>
+                        <img src="catalog/view/theme/default/images/wOJNc.png" alt="">
                     </figure>
-                    <a href="catalog/view/theme/default/home/img/gallery/gallery-4.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
-                    <div class="item-caption">
-                        <h4><strong>CLEAN &amp; PAINT</strong></h4>
-                        <p>Mercedes Benz Company Car</p>
-                    </div>
+                    
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-5.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/bmw_production_plant_0671-1024x698.jpg" alt=""></a>
+                        <img src="catalog/view/theme/default/images/bmw_production_plant_0671-1024x698.jpg" alt="">
                     </figure>
-                    <a href="catalog/view/theme/default/home/img/gallery/gallery-5.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
-                    <div class="item-caption">
-                        <h4><strong>CLEAN &amp; PAINT</strong></h4>
-                        <p>Mercedes Benz Company Car</p>
-                    </div>
+                    
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <a href="catalog/view/theme/default/home/img/gallery/gallery-6.jpg" class="lightbox-image" title="Awsome Title Here"><img src="catalog/view/theme/default/images/january-05.jpg" alt=""></a>
+                        <img src="catalog/view/theme/default/images/january-05.jpg" alt="">
                     </figure>
-                    <a href="catalog/view/theme/default/home/img/gallery/gallery-6.jpg" class="overlay lightbox-image" title="Awsome Title Here"></a>
-                    <div class="item-caption">
-                        <h4><strong>CLEAN &amp; PAINT</strong></h4>
-                        <p>Mercedes Benz Company Car</p>
-                    </div>
+                   
                 </article>
             </div>
         </div>
