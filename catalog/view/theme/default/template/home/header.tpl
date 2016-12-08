@@ -49,15 +49,15 @@
         <div class="top_menu_responsive"></div>
 
         <ul class="nav navbar-nav navbar-right">
-          
-                        <li><a href="index.html">Home</a>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="faq.html">F.A.Q</a></li>
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="login.html">Login</a></li>
+            <li><a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">F.A.Q</a></li>
+            <li><a href="sfccoin.html">Sfccoin</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
       </div>
    
@@ -79,6 +79,7 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="faq.html">F.A.Q</a></li>
+                        <li><a href="sfccoin.html">Sfccoin</a></li>
                         <li><a href="service.html">Service</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="login.html">Login</a></li>
