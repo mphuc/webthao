@@ -193,7 +193,7 @@
                 </div>
             </li>
             <li data-transition="parallaxvertical">
-               <img src="catalog/view/theme/default/images/889f669c8fcfead0c43cd0114bd65cd5.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+               <img src="catalog/view/theme/default/images/Figure7Boeing.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
                <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
                     data-x="left" data-hoffset="0" 
                     data-y="top" data-voffset="209" 
@@ -258,6 +258,7 @@
          </ul>
       </div>
    </section>
+
     <section class="call-to-action home-one">
         <div class="container-fluid">
             <div class="clearfix">
@@ -303,13 +304,55 @@
             </div>
         </div>
     </section>
+    <section class="services-wide">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <div class="thumb-holder">
+                            <img class="img-responsive" src="catalog/view/theme/default/images/Blockchain-Logo-Blue6.png" alt="">
+                        </div>
+                        <a href="#"><div class="down-content">
+                            <h4>Blockchain</h4>
+                            <div class="line-dec"></div>
+                            <p>Bitcoin is a form of digital currency, created and held electronically. No one controls it.</p>
+                        </div></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <a href="#"><div class="down-content">
+                            <h4>Tradecoin</h4>
+                            <div class="line-dec"></div>
+                            <p>Trade coins are coins minted by a government, but not necessarily current within the territory of the issuing country.</p>
+                        </div></a>
+                        <div class="thumb-holder">
+                            <img class="img-responsive" src="catalog/view/theme/default/images/bittrex_1_elmodaes_ir_baner.png" alt="">
+                        </div>                                  
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <div class="thumb-holder">
+                            <img class="img-responsive" src="catalog/view/theme/default/images/logo_home.png" alt="">
+                        </div>
+                        <a href=""><div class="down-content">
+                            <h4>Sfccoin</h4>
+                            <div class="line-dec"></div>
+                            <p>Sfcoin is currency  being developed in sfccoin and used for trading around the community sfcoin</p>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="sec-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <img class="full-width tp-mb2" src="catalog/view/theme/default/images/889f669c8fcfead0c43cd0114bd65cd5.jpg" alt="">
+                            <img class="full-width tp-mb2" src="catalog/view/theme/default/images/Figure7Boeing.jpg" alt="">
                         </div>
                         <div class="col-md-6 tp-pr1 tp-pr-zs15 tp-mb-zs10">
                             <img class="full-width" src="catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg" alt="">

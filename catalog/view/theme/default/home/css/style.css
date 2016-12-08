@@ -4359,8 +4359,8 @@ li {
     color: #8e979f;
 }
 .style-three .single-service-home {
-    margin-bottom: 30px;
-    min-height: 65px;
+    margin-bottom: 10px;
+    min-height: 83px;
     
 }
 
@@ -4372,4 +4372,19 @@ li {
     z-index: 9999;
     margin-bottom: 0;
 }
-
+section.services-wide{
+    margin-top: 30px;
+}
+section.services-wide .service-item .down-content {
+    padding: 25px 30px;
+    background-color: #f4f4f4;
+}
+section.services-wide .service-item img{
+    padding: 30px;
+    margin: 0 auto;
+}
+section.services-about-page .service-item {
+    background-color: #2c2f36;
+    text-align: center;
+    padding: 30px;
+}

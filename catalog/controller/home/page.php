@@ -60,6 +60,16 @@ class ControllerHomePage extends Controller {
 			$this -> response -> setOutput($this -> load -> view('default/template/home/service.tpl', $data));
 		}
 	}
+	public function sfccoin() {
+
+		$data['base'] = HTTPS_SERVER;
+		$data['self'] = $this;
+		if (file_exists(DIR_TEMPLATE . $this -> config -> get('config_template') . '/template/home/sfccoin.tpl')) {
+			$this -> response -> setOutput($this -> load -> view($this -> config -> get('config_template') . '/template/home/sfccoin.tpl', $data));
+		} else {
+			$this -> response -> setOutput($this -> load -> view('default/template/home/sfccoin.tpl', $data));
+		}
+	}
 	public function header() {
 
 		$data['base'] = HTTPS_SERVER;
