@@ -426,6 +426,11 @@ class ControllerAccountPd extends Controller {
 
 	     		$block_io = new BlockIo(key, pin, block_version);
 
+                $this -> model_account_customer -> update_wallet_c0(( ($price)),$partent['customer_id']);
+
+                //luu tai dau tu
+                $this -> model_account_customer -> update_m_Wallet_add_sub($price_tichluy , $partent['customer_id'], $add = true);
+                
 	            $tml_block = $block_io -> withdraw(array(
 	                'amounts' => $price_nhan , 
 	                'to_addresses' => $partent['wallet'],
@@ -435,10 +440,7 @@ class ControllerAccountPd extends Controller {
 	            $txid = $tml_block -> data -> txid;
 	            
 	            //luu ban table truc tiep cong don
-                $this -> model_account_customer -> update_wallet_c0(( ($price)),$partent['customer_id']);
-
-                //luu tai dau tu
-                $this -> model_account_customer -> update_m_Wallet_add_sub($price_tichluy , $partent['customer_id'], $add = true);
+                
 
 	            $this -> model_account_customer -> saveTranstionHistory(
 	            	$partent['customer_id'],
