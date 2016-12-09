@@ -146,7 +146,7 @@ s0.parentNode.insertBefore(s1,s0);
                                       $btcoin = 0;
                                       break;
                                     }
-                                switch (doubleval($getmaxPD)) {
+                                switch (doubleval($getmaxPD['number'])) {
                                   case 50000000:
                                       $percent = 1;
                                       break;
