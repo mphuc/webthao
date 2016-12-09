@@ -119,7 +119,7 @@ s0.parentNode.insertBefore(s1,s0);
                             <!--  Profile Section -->
                             <a class="navbar-avatar dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" role="button">
                                 <span class="avatar avatar-online">
-                                    <img src="catalog/view/theme/default/images/20150831_55e46ad551392.png" alt="Profile Image">
+                                    <img src="catalog/view/theme/default/css/icons/packe<?php print_r($customer['position']); ?>.png" alt="Profile Image">
                                     <i></i>
                                 </span>
                                  <?php print_r($customer['username']); ?>

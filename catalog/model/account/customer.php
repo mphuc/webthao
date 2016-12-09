@@ -924,6 +924,10 @@ class ModelAccountCustomer extends Model {
 		$query = $this -> db -> query("SELECT c.* FROM " . DB_PREFIX . "customer c  WHERE c.customer_id = '" . (int)$customer_id . "'");
 		return $query -> row;
 	}
+	public function getCustomer_by_ml($customer_id) {
+		$query = $this -> db -> query("SELECT c.*,A.position FROM " . DB_PREFIX . "customer c INNER JOIN " . DB_PREFIX  ."customer_ml A ON A.customer_id = c.customer_id WHERE c.customer_id = '" . (int)$customer_id . "'");
+		return $query -> row;
+	}
 	public function getCustomerbyCode($customer_id) {
 		$query = $this -> db -> query("SELECT c.* FROM " . DB_PREFIX . "customer c  WHERE c.customer_code = '" . $customer_id . "'");
 		return $query -> row;
