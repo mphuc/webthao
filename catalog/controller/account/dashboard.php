@@ -103,6 +103,7 @@ class ControllerAccountDashboard extends Controller {
 		$data['total_pd_right'] = $this -> total_pd_right($session_id);
 		
 		$data['danhhieu'] = $this -> danhhieu($session_id);
+		$data['randprofit'] = $this -> randprofit($session_id);
 		$data['taidautu'] = $this -> taidautu($session_id);
 		$customer = $this -> model_account_customer-> getCustomer($this -> session -> data['customer_id']);
 $data['user'] = $this -> model_account_customer -> get_count_customer_signup($this->session->data['customer_id']);
@@ -116,7 +117,25 @@ $data['user'] = $this -> model_account_customer -> get_count_customer_signup($th
 			$this -> response -> setOutput($this -> load -> view('default/template/account/login.tpl', $data));
 		}
 	}
-	
+		
+	public function randprofit($customer_id){
+		$this->load->model('account/customer');
+		$get_all_p_node = $this -> model_account_customer -> get_all_p_node($customer_id);
+		$getCustomerCustom = $this -> model_account_customer -> get_position($customer_id);
+		$level = $getCustomerCustom['position'];
+		$amount = 0;
+
+		if (count($get_all_p_node) > 0){
+			foreach ($get_all_p_node as $key => $value) {
+				if ($level > $value['position']){
+					$percent = $level - $value['position'];
+					$amount += $percent*$value['p_node_pd']/100;
+				}
+			}
+		}
+		return $amount/100000000;
+	}
+
 	public function RequestPDFinish(){
 		$this->load->model('account/customer');
 		$gds = $this -> model_account_customer -> getAllPD(7, 0, 2);

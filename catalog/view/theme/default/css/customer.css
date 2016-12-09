@@ -957,3 +957,7 @@ h6.mb-1 {
 .field-validation-error span{
     color: red;
 }
+.box.box-block.bg-blue {
+    
+        background: #053636 !important
+}

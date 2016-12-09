@@ -2221,4 +2221,33 @@ class ModelAccountCustomer extends Model {
 		}
 		return $query === true ? true : false;
 	}
+
+	public function get_all_p_node($customer_id){
+
+		$query = $this -> db -> query("
+			SELECT A.*,B.p_node_pd
+			FROM  ".DB_PREFIX."customer_ml A INNER JOIN  ".DB_PREFIX."customer B ON A.customer_id = B.customer_id WHERE A.p_node = '".$customer_id."'
+		");
+		
+		return $query -> rows;
+	}
+
+	public function get_rank_customer_id($customer_id){
+
+		$query = $this -> db -> query("
+			SELECT A.*,B.username,B.wallet,B.p_node_pd
+			FROM  ".DB_PREFIX."customer_ml A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id WHERE B.p_node_pd > 0 WHERE A.customer_id = '".$customer_id."'
+		");
+		
+		return $query -> row;
+	}
+	public function get_position($customer_id){
+
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer_ml WHERE customer_id = '".$customer_id."'
+		");
+		
+		return $query -> row;
+	}
 }

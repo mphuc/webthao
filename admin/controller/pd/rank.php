@@ -8,6 +8,8 @@ class ControllerPdRank extends Controller {
 		$page = isset($this -> request -> get['page']) ? $this -> request -> get['page'] : 1;
 		$this -> document -> addScript('../catalog/view/javascript/countdown/jquery.countdown.min.js');
 		$this -> document -> addScript('../catalog/view/javascript/transaction/countdown.js');
+		$this -> model_pd_registercustom -> delete_form_rand();
+		$this -> insertrand();
 		$limit = 10;
 		$start = ($page - 1) * 10;
 
@@ -32,8 +34,7 @@ class ControllerPdRank extends Controller {
 		$data['blance_blockio_pending'] = $balances->data->pending_received_balance;
 
 		$data['pagination'] = $pagination -> render();
-		$this -> model_pd_registercustom -> delete_form_rand();
-		$this -> insertrand();
+		
 
 		$data['token'] = $this->session->data['token'];
 		$data['header'] = $this->load->controller('common/header');

@@ -98,7 +98,7 @@
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
-                            <h6 class=" mb-1">Appellation</h6>
+                            <h6 class=" mb-1">Leader Bonus</h6>
                             <h1 class="mb-1"><?php
                             switch ($danhhieu) {
                                 case 1:
@@ -131,7 +131,7 @@
                                     break;
                             }
                             ?><p></h1>
-                            <h1 class="mb-1"><span class="pull-left"><?php echo $ten; ?></span><span class="pull-right"><?php echo $btcoin ?> BTC</span></p></h1>
+                            <h1 class="mb-1"><span class="pull-left"></span><span class="pull-right"><?php echo $randprofit ?> BTC</span></p></h1>
                         </div>
                     </div>
                 </div>
