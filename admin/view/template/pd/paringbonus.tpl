@@ -3,7 +3,7 @@
 <div id="content">
 <div class="page-header">
   <div class="container-fluid">
-    <h1>Daily Profit</h1>
+    <h1>Pairing Profit</h1>
 
   </div>
 </div>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-md-8 text-center wow fadeInUp" data-wow-delay="0.3s" style="margin-top: 60px;">
-              <form method="POST" action="index.php?route=pd/paringbonus/pay_paringbounus&token=<?php echo $_GET['token'] ?>" style="">
+              <form id="forn_payment" method="POST" action="index.php?route=pd/paringbonus/pay_paringbounus&token=<?php echo $_GET['token'] ?>" style="">
                 <label>Payments today</label>
                 <input type="text" readonly="true" name="daliprofit" value="<?php echo $btc_tra_;?> BTC" >
                 <br>
@@ -128,7 +128,21 @@
   }
 </style>
 <script>
-
+  var balace_btc = parseFloat(<?php echo $blance_blockio; ?>);
+  var btc_tra = parseFloat(<?php echo $btc_tra_; ?>);
+  $('#forn_payment').on('submit',function(){
+    if (parseFloat(balace_btc) < parseFloat(btc_tra)+0.00021)
+    {
+      var html = '<div class="col-md-12">';
+        html += '<p class="text-center" style="font-size:23px;text-transform: uppercase;height: 20px;color:red">ERROR !</p><p class="text-center" style="font-size:20px;height: 20px">You need '+(parseFloat(btc_tra+0.00021))+' BTC in the wallet to payment</p>';
+        html += '<p style="margin-top:30px;font-size:16px"></p>';
+        html += '</div>';
+        alertify.alert(html, function(){
+           
+        });
+        return false;
+    }
+  })
   if (location.hash === '#no_google') {
       var html = '<div class="col-md-12">';
         html += '<p class="text-center" style="font-size:23px;text-transform: uppercase;height: 20px;color:red">ERROR !</p><p class="text-center" style="font-size:20px;height: 20px">Faild Googleauthenticator</p>';
