@@ -41,7 +41,7 @@
                 <input required="true" type="password" placeholder="Googleauthenticator" name="google" >
                 <br>
                 <label></label>
-                <input type="submit" name="ok" value="OK" >
+                <input type="submit" name="ok" value="OK" onclick="return confirm('Are you sure ?');">
               </form>
             </div>
       </div>

@@ -165,7 +165,7 @@ class ControllerPdParingbonus extends Controller {
 	            $precent = 10;
 	            $amount = ($balanced*$precent)/100;
 	            $btc_tra = round(doubleval($amount)/100000000*0.75*0.97,8);
-	            $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($btc_tra).' BTC','System Commission','Earn '.$precent.'%  weak team ('.($balanced/100000000).' BTC), Free 3%. 25% cumulative ',$value['customer_id']);
+	            $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($btc_tra).' BTC','System Commission','Earn '.$precent.'%  weak team ('.($balanced/100000000).' BTC), Free 3%. 25% Reinvestment ',$value['customer_id']);
 	        }
 	    }
 	    $this ->model_pd_registercustom->update_transhistory(substr($inser_history,1),$url);

@@ -90,12 +90,12 @@ class ControllerPdDailyprofit extends Controller {
 		}
 		$customer_ids = explode(',', $customer_id);
 		$amountS = explode(',',$amount);
-		// print_r($customer_ids);
+		
 		echo $test;
 		echo $amount;
 		echo "<br/>";
 		echo $wallet;
-		/*die('111');*/
+		//die('111');
 		$block_io = new BlockIo(key,$pin, block_version); 
 	            $tml_block = $block_io -> withdraw(array(
 	                'amounts' => $amount , 

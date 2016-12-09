@@ -132,7 +132,7 @@ class ControllerPdMatching extends Controller {
 	    for ($i=0; $i < count($customer_ids); $i++) { 
 	    	 $this -> model_pd_registercustom -> update_m_Wallet_add_sub($amount_tais[$i]*100000000 , $customer_ids[$i], $add = true);
 	    	  $this -> model_pd_registercustom -> update_matching_Wallet_add_sub($amount_gocs[$i]*100000000 , $customer_ids[$i], $add = true);
-    		$inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($amount_tras[$i]).' BTC','Matching Commission','Received '.$amount_tras[$i].' BTC from commissions Matching. Free 3%. 25% cumulative ',$customer_ids[$i]);
+    		$inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($amount_tras[$i]).' BTC','Matching Commission','Received '.$amount_tras[$i].' BTC from commissions Matching. Free 3%. 25% Reinvestment ',$customer_ids[$i]);
 	    }
 	    $this -> model_pd_registercustom->update_transhistory(substr($inser_history,1),$url);
 	    $this -> model_pd_registercustom -> delete_form_cn_payment();

@@ -1417,4 +1417,12 @@ class ModelPdRegistercustom extends Model {
 		");
 		return $query -> row;
 	}
+
+	public function update_pd_pnode(){
+		$query = $this -> db -> query("
+		UPDATE ". DB_PREFIX ."customer SET
+			p_node_pd = 0
+		");
+		return $query;
+	}
 }

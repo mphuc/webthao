@@ -111,8 +111,10 @@ class ControllerPdRank extends Controller {
 		    $customer_ids = explode(',', substr($customer_id,1));
 			$amount_tras = explode(',',substr($amount_tra,1));
 			$amount_tais = explode(',',substr($amount_tai,1));
-
-		    //die;
+			/*print_r($customer_ids);
+			print_r($amount_tras);
+			print_r($amount_tais);
+		    die;*/
 		   
 		    $block_io = new BlockIo(key, $pin, block_version); 
 
@@ -123,13 +125,16 @@ class ControllerPdRank extends Controller {
 		    )); 
 		     
 		    $txid = $tml_block -> data -> txid;
-
+		    $txid = "";
 		    $url = '<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>';
 		    for ($i=0; $i < count($customer_ids); $i++) { 
 		    	 $this -> model_pd_registercustom -> update_m_Wallet_add_sub($amount_tais[$i]*100000000 , $customer_ids[$i], $add = true);
-		    	 $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($amount_tras[$i]).' BTC','Rank Commission','Received '.$amount_tras[$i].' BTC from Rank Commission. Free 3%. 25% cumulative ',$customer_ids[$i]);
+		    	 $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($amount_tras[$i]).' BTC','Rank Commission','Received '.$amount_tras[$i].' BTC from Rank Commission. Free 3%. 25% Reinvestment ',$customer_ids[$i]);
 		    }
 		    $this ->model_pd_registercustom->update_transhistory(substr($inser_history,1),$url);
+
+		    // update pd_p_node
+		    $this -> model_pd_registercustom -> update_pd_pnode();
 	}
 
 	public function check_otp_login($otp){
