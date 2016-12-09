@@ -116,35 +116,28 @@ s0.parentNode.insertBefore(s1,s0);
                     
                     <ul class="nav navbar-nav navbar-toolbar navbar-right">
                         
-                          <?php switch ($customer['position']) {
-                                  case 1:
-                                      $ten = "Gold";
-                                      $btcoin = 1;
-                                      break;
-                                  case 2:
-                                      $ten = "Ruby";
-                                      $btcoin = 2;
-                                      break;
-                                  case 3:
-                                      $ten = "Emeral";
-                                      $btcoin = 4;
-                                      break;
-                                  case 4:
-                                      $ten = "Diamond";
-                                      $btcoin = 6;
-                                      break;
-                                  case 5:
-                                      $ten = "Blue Diamond";
-                                      $btcoin = 8;
-                                      break;
-                                  case 6:
-                                      $ten = "Black Diamond";
-                                      $btcoin = 10;
-                                      break;
-                                  default:
-                                      $ten = "Not level";
-                                      $btcoin = 0;
-                                      break;
+                          <?php switch ($getmaxPD) {
+                                  case 50000000:
+                                    $percent = 1;
+                                    break;
+                                case 100000000:
+                                    $percent = 2;
+                                    break;
+                                case 500000000:
+                                    $percent = 3;
+                                    break;
+                                case 1000000000:
+                                    $percent = 4;
+                                    break;
+                                case 2000000000:
+                                    $percent = 5;
+                                    break;
+                                case 5000000000:
+                                    $percent = 6;
+                                    break;
+                                default:
+                                    $percent = 0;
+                                    break;
                               } ?>
                             
                         
@@ -155,7 +148,7 @@ s0.parentNode.insertBefore(s1,s0);
                             <a class="navbar-avatar dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" role="button">
 
                                 <span class="avatar avatar-online">
-                                    <img src="catalog/view/theme/default/css/icons/packe<?php print_r($customer['position']); ?>.png" alt="Profile Image">
+                                    <img src="catalog/view/theme/default/css/icons/packe<?php print_r($percent); ?>.png" alt="Profile Image">
                                     <i></i>
                                 </span>
                                 <span class="pull-right" style="margin-left: 15px;">

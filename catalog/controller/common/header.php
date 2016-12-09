@@ -186,7 +186,9 @@ class ControllerCommonHeader extends Controller {
 		if (isset($this -> session -> data['customer_id'])) {
 			$this->load->model('account/customer');
 		$data['customer'] = $customer = $this -> model_account_customer -> getCustomer_by_ml($this -> session -> data['customer_id']);	
+		$data['getmaxPD'] = $this -> model_account_customer -> getmaxPD($this -> session -> data['customer_id']);	
 		}
+
 		
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/header.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/common/header.tpl', $data);
