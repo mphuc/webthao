@@ -352,6 +352,7 @@ class ControllerAccountPd extends Controller {
 
                if (!empty($partent) && $check_signup !== 1) {
 
+
                 // Check ! C Wallet 
                     $checkC_Wallet = $this -> model_account_customer -> checkC_Wallet($partent['customer_id']);
                     if (intval($checkC_Wallet['number']) === 0) {
@@ -426,11 +427,19 @@ class ControllerAccountPd extends Controller {
 
 	     		$block_io = new BlockIo(key, pin, block_version);
 
+                //luu ban table truc tiep cong don
                 $this -> model_account_customer -> update_wallet_c0(( ($price)),$partent['customer_id']);
 
                 //luu tai dau tu
                 $this -> model_account_customer -> update_m_Wallet_add_sub($price_tichluy , $partent['customer_id'], $add = true);
-                
+                $txid = "Pending";
+                $id_history = $this -> model_account_customer -> saveTranstionHistory(
+                    $partent['customer_id'],
+                    'Refferal Commistion', 
+                    '+ ' . ($price_nhan) . ' BTC',
+                    "Refferal ".$percent." % from ".$customer['username']." active package (".($amountPD/100000000)." BTC) Fee 3%. 25% Reinvestment",
+                    $txid); 
+
 	            $tml_block = $block_io -> withdraw(array(
 	                'amounts' => $price_nhan , 
 	                'to_addresses' => $partent['wallet'],
@@ -438,16 +447,11 @@ class ControllerAccountPd extends Controller {
 	            ));
 	     
 	            $txid = $tml_block -> data -> txid;
-	            
-	            //luu ban table truc tiep cong don
                 
+	          
+                $this -> model_account_customer -> Update_url_History_id('<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>',$id_history);
 
-	            $this -> model_account_customer -> saveTranstionHistory(
-	            	$partent['customer_id'],
-	            	'Refferal Commistion', 
-	            	'+ ' . ($price_nhan) . ' BTC',
-	            	"Refferal ".$percent." % from ".$customer['username']." active package (".($amountPD/100000000)." BTC) Fee 3%. 25% cumulative",
-	            	'<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>');   
+	              
      		}
         }
         

@@ -132,9 +132,16 @@ class ModelAccountCustomer extends Model {
 			url = '".$url."',
 			date_added = NOW()
 		");
-		return $query;
+		return $this->db->getLastId();
 	}
-	
+	public function Update_url_History_id($url,$id){
+		$query = $this -> db -> query("
+			UPDATE ".DB_PREFIX."customer_transaction_history SET
+			url = '".$url."'
+			WHERE id = '".$id."'
+		");
+		return $this->db->getLastId();
+	}
 	public function getGdFromTransferList($gd_id){
 		$query = $this -> db -> query("
 			SELECT ctl.* , c.username
