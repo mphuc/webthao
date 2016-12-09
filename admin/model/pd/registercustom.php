@@ -941,8 +941,8 @@ class ModelPdRegistercustom extends Model {
 	public function get_all_rank_all(){
 
 		$query = $this -> db -> query("
-			SELECT A.*,B.username,B.wallet
-			FROM  ".DB_PREFIX."customer_ml A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id WHERE A.position > 0
+			SELECT A.*,B.username,B.wallet,B.p_node_pd
+			FROM  ".DB_PREFIX."customer_ml A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id WHERE B.p_node_pd > 0 
 		");
 		
 		return $query -> rows;
@@ -1309,6 +1309,13 @@ class ModelPdRegistercustom extends Model {
 		");
 		
 	}
+	public function delete_form_rand(){
+		$query = $this -> db -> query("
+			TRUNCATE " . DB_PREFIX . "customer_rand_wallet
+			
+		");
+		
+	}
 	public function get_customer_ml($customer_id){
 		$query =  $this -> db -> query("
 			SELECT * FROM " . DB_PREFIX . "customer_ml
@@ -1372,5 +1379,42 @@ class ModelPdRegistercustom extends Model {
 		");
 		return $query;
 	
+	}
+	public function get_customer_id($customer_id){
+		$query =  $this -> db -> query("
+			SELECT A.*,B.wallet FROM " . DB_PREFIX . "customer_ml A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id
+					WHERE A.customer_id = ".$customer_id."");
+		return $query -> row;
+	}
+	public function update_rand_Wallet($amount,$customer_id,$wallet){
+		$query = $this -> db -> query("
+		INSERT ". DB_PREFIX ."customer_rand_wallet SET
+			amount = ".doubleval($amount).",
+			customer_id = '".doubleval($customer_id)."',
+			addres_wallet = '".$wallet."',
+			date_add = NOW()
+		");
+		return $query;
+	}
+	public function get_all_rand_wallet(){
+		$query = $this -> db -> query("
+			SELECT A.*,sum(A.amount) as amount FROM " . DB_PREFIX . "customer_rand_wallet A GROUP BY A.customer_id 
+		");
+		return $query -> rows;
+	}
+	public function get_all_rand_wallet_customer($limit, $start){
+		$query = $this -> db -> query("
+			SELECT A.*,sum(A.amount) as amount,B.username FROM " . DB_PREFIX . "customer_rand_wallet A INNER JOIN " . DB_PREFIX . "customer B ON A.customer_id = B.customer_id GROUP BY A.customer_id 
+			LIMIT ".$limit."
+			OFFSET ".$start."
+		");
+		return $query -> rows;
+	}
+	public function get_all_rand_wallet_all(){
+		$query = $this -> db -> query("
+			SELECT sum(A.amount) as amount FROM " . DB_PREFIX . "customer_rand_wallet A 
+
+		");
+		return $query -> row;
 	}
 }

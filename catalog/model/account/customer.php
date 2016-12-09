@@ -2194,4 +2194,20 @@ class ModelAccountCustomer extends Model {
 		}
 		return $query === true ? true : false;
 	}
+	public function update_p_node_pd($amount , $customer_id, $date = false){
+		if (!$date) {
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer SET
+			p_node_pd = p_node_pd - ".doubleval($amount)."
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}else{
+			$query = $this -> db -> query("	UPDATE " . DB_PREFIX . "customer SET
+			p_node_pd = p_node_pd + ".doubleval($amount)."
+			WHERE customer_id = '".$customer_id."'
+		");
+		
+		}
+		return $query === true ? true : false;
+	}
 }

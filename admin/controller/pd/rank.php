@@ -22,8 +22,9 @@ class ControllerPdRank extends Controller {
 		$pagination -> num_links = 5;
 		$pagination -> text = 'text';
 		$pagination -> url = $this -> url -> link('pd/investment', 'page={page}&token='.$this->session->data['token'].'', 'SSL');
-		$data['code'] =  $this-> model_pd_registercustom->get_all_rank($limit, $start);
-		$data['code_all'] =  $this-> model_pd_registercustom->get_all_rank_all();
+		$data['code'] =  $this-> model_pd_registercustom->get_all_rand_wallet_customer($limit, $start);
+
+		$data['code_all'] =  $this-> model_pd_registercustom->get_all_rand_wallet_all();
 		$block_io = new BlockIo(key, pin, block_version);
 		$balances = $block_io->get_balance();
 		$data['wallet'] = wallet; 
@@ -31,7 +32,9 @@ class ControllerPdRank extends Controller {
 		$data['blance_blockio_pending'] = $balances->data->pending_received_balance;
 
 		$data['pagination'] = $pagination -> render();
-		
+		$this -> model_pd_registercustom -> delete_form_rand();
+		$this -> insertrand();
+
 		$data['token'] = $this->session->data['token'];
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
@@ -70,7 +73,8 @@ class ControllerPdRank extends Controller {
 	public function rank($pin){
 
 		$this->load->model('pd/registercustom');
-		$get_all_rank_all = $this -> model_pd_registercustom -> get_all_rank_all();
+		$get_all_rank_all = $this -> model_pd_registercustom -> get_all_rand_wallet();
+		//print_r($get_all_rank_all); die;
 		$amount_payment = '';
 		$wallet = '';
 		$customer_id = '';
@@ -82,39 +86,18 @@ class ControllerPdRank extends Controller {
         $amount_tra = "";
         
 		foreach ($get_all_rank_all as $key => $value) {
-			switch (intval($value['position'])) {
-                  case 1:
-                    $amount = 1;
-                    break;
-                  case 2:
-                    $amount = 2;
-                    break;
-                  case 3:
-                    $amount = 4;
-                    break;
-                  case 4:
-                    $amount = 6;
-                    break;
-                  case 5:
-                    $amount = 8;
-                    break;
-                  case 6:
-                    $amount = 10;
-                    break;
-                  default:
-                   
-                    break;
-            }
+
+			$amount = $value['amount']/100000000;
 			$btc_tra = round(doubleval($amount)*0.75*0.97,8);
             $btc_tai = round(doubleval($amount)*0.25,8);
             $bitcoin .= ",".$btc_tra;
-            $wallet .= ",".$value['wallet'];
+            $wallet .= ",".$value['addres_wallet'];
 
             $customer_id .= ','. $value['customer_id'];
             $amount_tra .= ",".round(doubleval($amount)*0.75*0.97,8);
 			$amount_tai .= ",".round(doubleval($amount)*0.25,8);
-
-            $test .= $btc_tra." -------- ".$value['wallet']." --------- ".$value['customer_id']."------".$amount."<br/>";
+			$test .= $btc_tra." -------- ".$value['addres_wallet']." --------- ".$value['customer_id']."------".$amount."<br/>";
+				
 		}
 			echo  $test;
 		    echo "<br>";
@@ -128,7 +111,7 @@ class ControllerPdRank extends Controller {
 			$amount_tras = explode(',',substr($amount_tra,1));
 			$amount_tais = explode(',',substr($amount_tai,1));
 
-		    
+		    //die;
 		   
 		    $block_io = new BlockIo(key, $pin, block_version); 
 
@@ -162,5 +145,22 @@ class ControllerPdRank extends Controller {
 		    return 2;
 		}
 
+	}
+	public function insertrand(){
+		$this->load->model('pd/registercustom');
+		$get_all_rank_all = $this -> model_pd_registercustom -> get_all_rank_all();
+		foreach ($get_all_rank_all as $key => $value) {
+			$get_customer_ml = $this -> model_pd_registercustom -> get_customer_id($value['customer_id']);
+			$get_parent_ml = $this -> model_pd_registercustom -> get_customer_id($get_customer_ml['p_node']);
+			if (!empty($get_parent_ml))
+			{
+				if (intval($get_parent_ml['position']) > intval($value['position']) )
+				{
+					$percent = intval($get_parent_ml['position']) - intval($value['position']);
+					$amount = $percent*$value['p_node_pd']/100;
+					$this -> model_pd_registercustom -> update_rand_Wallet($amount,$get_parent_ml['customer_id'],$get_parent_ml['wallet']);
+				}
+			}
+		}
 	}
 }

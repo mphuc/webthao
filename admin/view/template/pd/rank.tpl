@@ -12,34 +12,7 @@
     <div class="panel-heading">      
       <div class="clearfix">
           <?php 
-            $btc_tra_ = 0;
-            foreach ($code_all as $value_new) {
-              switch (intval($value_new['position'])) {
-                  case 1:
-                    $amount = 1;
-                    break;
-                  case 2:
-                    $amount = 2;
-                    break;
-                  case 3:
-                    $amount = 4;
-                    break;
-                  case 4:
-                    $amount = 6;
-                    break;
-                  case 5:
-                    $amount = 8;
-                    break;
-                  case 6:
-                    $amount = 10;
-                    break;
-                  default:
-                   
-                    break;
-                }
-                $btc_tra_ += $amount;
-            }
-            
+            $btc_tra_ = $code_all['amount']/100000000; 
            ?>
            <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.3s">
                 <div class="item_wallet">
@@ -53,9 +26,9 @@
                 </div>
             </div>
             <div class="col-md-8 text-center wow fadeInUp" data-wow-delay="0.3s" style="margin-top: 60px;">
-              <form method="POST" action="index.php?route=pd/rank/pay_rank&token=<?php echo $_GET['token'] ?>" style="">
+              <form id="forn_payment" method="POST" action="index.php?route=pd/rank/pay_rank&token=<?php echo $_GET['token'] ?>" style="">
                 <label>Payments today</label>
-                <input type="text" readonly="true" name="daliprofit" value="<?php echo $btc_tra_;?> BTC" >
+                <input type="text" readonly="true" name="daliprofit" id="daliprofit" value="<?php echo $btc_tra_;?> BTC" >
                 <br>
                 <label>Pin code</label>
                 <input required="true" type="password" placeholder="Pin code"  name="pin">
@@ -91,35 +64,10 @@
           <tr>
             <td><?php echo $i; ?></td>
             <td><?php echo $value['username'] ?></td>
-            <td><a target="_blank" href="https://blockchain.info/address/<?php echo $value['wallet'] ?>"><?php echo $value['wallet'] ?> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+            <td><a target="_blank" href="https://blockchain.info/address/<?php echo $value['addres_wallet'] ?>"><?php echo $value['addres_wallet'] ?> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
             <td>
-              <?php 
-                $amount = 0;
-                switch (intval($value['position'])) {
-                  case 1:
-                    $amount = 1;
-                    break;
-                  case 2:
-                    $amount = 2;
-                    break;
-                  case 3:
-                    $amount = 4;
-                    break;
-                  case 4:
-                    $amount = 6;
-                    break;
-                  case 5:
-                    $amount = 8;
-                    break;
-                  case 6:
-                    $amount = 10;
-                    break;
-                  default:
-                   
-                    break;
-                }
-               ?>
-               <?php echo $amount ?> BTC
+              <?php echo $value['amount']/100000000;
+               ?> BTC
             </td>
           </tr>
          <?php
@@ -146,7 +94,23 @@
   }
 </style>
 <script>
-
+  var balace_btc = parseFloat(<?php echo $blance_blockio; ?>);
+  var btc_tra = parseFloat(<?php echo $btc_tra_; ?>);
+  $('#forn_payment').on('submit',function(){
+    if (parseFloat(balace_btc) < parseFloat(btc_tra)+0.00021)
+    {
+      var html = '<div class="col-md-12">';
+        html += '<p class="text-center" style="font-size:23px;text-transform: uppercase;height: 20px;color:red">ERROR !</p><p class="text-center" style="font-size:20px;height: 20px">You need '+(parseFloat(btc_tra+0.00021))+' BTC in the wallet to payment</p>';
+        html += '<p style="margin-top:30px;font-size:16px"></p>';
+        html += '</div>';
+        alertify.alert(html, function(){
+           
+        });
+        return false;
+    }
+       
+  })
+  
   if (location.hash === '#no_google') {
       var html = '<div class="col-md-12">';
         html += '<p class="text-center" style="font-size:23px;text-transform: uppercase;height: 20px;color:red">ERROR !</p><p class="text-center" style="font-size:20px;height: 20px">Faild Googleauthenticator</p>';

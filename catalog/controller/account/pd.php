@@ -254,7 +254,6 @@ class ControllerAccountPd extends Controller {
             $customer = $this -> model_account_customer ->getCustomer($invoice['customer_id']);
             
             $this -> model_account_customer -> update_R_Wallet_add($pd_tmp_,$invoice['customer_id'], $customer['wallet']);
-      
 
             $check_signup = intval($customer['check_signup']);
 
@@ -361,14 +360,16 @@ class ControllerAccountPd extends Controller {
                         }
                     }
 
-                    // if (intval($partent['active_tree']) === 1) {
-                     $customer = $this -> model_account_customer ->getCustomer($invoice['customer_id']);
-	                //$percent = floatval($this -> config -> get('config_percentcommission'));
+                    // update pd_pnode
+                     $this -> model_account_customer -> update_p_node_pd($pd_tmp_pd['filled'],$partent['customer_id'],true);
+
+                    $customer = $this -> model_account_customer ->getCustomer($invoice['customer_id']);
+	                   
 	                
 	                $amountPD = intval($pd_tmp_pd['filled']);
 
 	                $this->commission_Parrent($invoice['customer_id'], $amountPD, $invoice['transfer_id']);
-                    // }
+                  
                }
            }
 
