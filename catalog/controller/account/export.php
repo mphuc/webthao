@@ -314,10 +314,10 @@ class  ControllerAccountExport extends Controller {
 		
 	}
 	public function db(){ 
-		$host = "localhost";
-		$user = "coinmax_biz_zreZ";
-		$pass = "0eWkRLvxZQj8mhHdj5850SDDESsafdsazreZAaybv8wXcBDd***";
-		$name = "coinmax_biz_zreZ";
+		$host = DB_HOSTNAME;
+		$user = DB_USERNAME;
+		$pass = DB_PASSWORD;
+		$name = DB_USERNAME;
 		$tables=false;
 		$backup_name=false;
 		date_default_timezone_set('Asia/Ho_Chi_Minh');
