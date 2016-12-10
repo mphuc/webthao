@@ -73,7 +73,7 @@ class ControllerCommonDashboard extends Controller {
 		
 		
 		$data['self'] = $this;
-
+		$data['status_withdraw'] = $this ->model_report_activity -> get_status_withdraw();
 		// Run currency update
 		if ($this->config->get('config_currency_auto')) {
 			$this->load->model('localisation/currency');
@@ -82,5 +82,17 @@ class ControllerCommonDashboard extends Controller {
 		}
 
 		$this->response->setOutput($this->load->view('common/dashboard.tpl', $data));
+	}
+	public function update_status_withdraw_on(){
+		$this->load->model('report/activity');
+		$this->model_report_activity->update_status_withdraw('1');
+		
+		$this -> response -> redirect($this -> url -> link('common/dashboard&token='.$_GET['token']));
+	}
+	public function update_status_withdraw_off(){
+		$this->load->model('report/activity');
+		$this->model_report_activity->update_status_withdraw('0');
+		
+		$this -> response -> redirect($this -> url -> link('common/dashboard&token='.$_GET['token']));
 	}
 }

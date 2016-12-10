@@ -107,4 +107,15 @@ class ModelReportActivity extends Model {
 		}
 		return $total;
 	}
+
+	public function get_status_withdraw() {
+		$sql = "SELECT *  FROM " . DB_PREFIX . "setting WHERE code = 'status_withdraw'";
+		$query = $this->db->query($sql);
+
+		return $query->row;
+	}
+	public function update_status_withdraw($status) {
+		$sql = "UPDATE " . DB_PREFIX . "setting SET value = '".$status."' WHERE code = 'status_withdraw'";
+		$query = $this->db->query($sql);
+	}
 }

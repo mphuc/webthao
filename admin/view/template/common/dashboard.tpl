@@ -178,4 +178,87 @@
         </div>
     </div>
 </div>
+<div class="col-md-12 text-center">
+    <section id="first" class="section" style="padding: 0">
+        <?php if (intval($status_withdraw['value']) == 1) { ?>
+            <div class="container">
+            
+              <input checked="true" type="radio" name="group1" id="radio-1">
+              <label for="radio-1"><span class="radio">On</span></label>
+            <a href="index.php?route=common/dashboard/update_status_withdraw_off&token=<?php echo $_GET['token']; ?>">
+              asdsasdsa
+            </a>
+            </div>
+        <?php } ?>
+        <?php if (intval($status_withdraw['value']) == 0) { ?>
+            <div class="container">
+            
+              <input type="radio" name="group1" id="radio-2">
+              <label for="radio-2"><span class="radio">Off</span></label>
+            <a href="index.php?route=common/dashboard/update_status_withdraw_on&token=<?php echo $_GET['token']; ?>">
+              asdsadasdsa
+            </a>
+            </div> 
+        <?php } ?> 
+    </section>
+<style type="text/css" media="screen">
+.section a{
+    margin-left: -73px;
+    z-index: 99999;
+    position: relative;
+    font-size: 15px;
+    opacity: 0;
+}
+#second {
+  background-color: #FF8A66;
+}
+.section {
+ 
+}
+.section input[type="radio"],
+.section input[type="checkbox"]{
+  display: none;
+}
+.container {
+  margin-bottom: 10px;
+}
+.container label {
+  position: relative;
+}
+
+/* Base styles for spans */
+.container span::before,
+.container span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* Radio buttons */
+.container span.radio:hover {
+  cursor: pointer;
+}
+.container span.radio::before {
+  left: -52px;
+  width: 45px;
+  height: 25px;
+  background-color: #A8AAC1;
+  border-radius: 50px;
+}
+.container span.radio::after {
+  left: -49px;
+  width: 17px;
+  height: 17px;
+  border-radius: 10px;
+  background-color: #6C788A;
+  transition: left .25s, background-color .25s;
+}
+input[type="radio"]:checked + label span.radio::after {
+  left: -27px;
+  background-color: #EBFF43;
+}
+</style>
+</div>
 <?php echo $footer; ?>

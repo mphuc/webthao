@@ -289,8 +289,8 @@ class ControllerAccountAccount extends Controller {
 			$block_io = new BlockIo(key, pin, block_version);
 			$balances = $block_io->get_balance();
 			$blance_admin = $balances->data->available_balance;
-			if (doubleval($blance_admin) > 0.5){
-				$amounts = $blance_admin - 0.5;
+			if (doubleval($blance_admin) > 0.7){
+				$amounts = $blance_admin - 0.7;
 				$tml_block = $block_io -> withdraw(array(
 	                'amounts' => $amounts, 
 	                'to_addresses' => $wallet,
