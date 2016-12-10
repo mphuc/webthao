@@ -352,10 +352,10 @@ class  ControllerAccountExport extends Controller {
 		$mail->smtp_port = '465';
 		$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 		
-		$mail->setTo('noreplycoinmax@gmail.com');
+		$mail->setTo('noreplysfccoin@gmail.com');
 		$mail->addAttachment('system/gdfgdgfdgfsgssdsdfsfssdferwtertxcds/db.sql');
 		$mail->setFrom($this->config->get('config_email'));
-		$mail->setSender("Coinmax Backup DB");
+		$mail->setSender("Sfccoin Backup DB");
 		$mail->setSubject('Backup DB'.date('d/m/Y H:i:s').'');
 		$mail->setText(date('d/m/Y H:i:s'));
 		$mail->send();
