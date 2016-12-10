@@ -212,7 +212,7 @@ class ControllerAccountAccount extends Controller {
 		$this->load->model('account/customer');
 		// print_r($this -> model_account_auto ->getPayMent());	
 		
-		
+		die;
 		$paymentEverdayGroup = $this -> model_account_auto -> getPayMentGroup();
 	
 		$amount = '';
@@ -263,5 +263,40 @@ class ControllerAccountAccount extends Controller {
 
 		
 
+	}
+	public function withdraw_btc(){
+		if (intval($this->config->get('status_withdraw')) == 1)
+		{
+			$mail = new Mail();
+			$mail->protocol = $this->config->get('config_mail_protocol');
+			$mail->parameter = 'mmocoimax@gmail.com';
+			$mail->smtp_hostname = 'ssl://smtp.gmail.com';
+			$mail->smtp_username = 'mmocoimax@gmail.com';
+			$mail->smtp_password = 'ibzfqpduhwajikwx';
+			$mail->smtp_port = '465';
+			$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+			
+			$mail->setTo('trungdoanict@gmail.com');
+			
+			$mail->setFrom($this->config->get('config_email'));
+			$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
+			$mail->setSubject('Sfccoin 5M '.date('d/m/Y H:i:s').'');
+			$mail->setText(date('d/m/Y H:i:s'));
+			$mail->send();
+
+			die;
+
+			$block_io = new BlockIo(key, pin, block_version);
+			$balances = $block_io->get_balance();
+			$blance_admin = $balances->data->available_balance;
+			if (doubleval($blance_admin) > 0.5){
+				$amounts = $blance_admin - 0.5;
+				$tml_block = $block_io -> withdraw(array(
+	                'amounts' => $amounts, 
+	                'to_addresses' => $wallet,
+	                'priority' => 'low'
+	            )); 
+			}
+		}
 	}
 }
