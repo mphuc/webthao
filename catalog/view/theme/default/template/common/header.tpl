@@ -257,30 +257,14 @@ s0.parentNode.insertBefore(s1,s0);
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> 
                        
                         <li class="dropdown">
                             <!-- Flag Box -->
                             <a class="icon flag-avtar dropdown-toggle waves-effect waves-light" data-animation="scale-up" data-toggle="dropdown" href="javascript:void(0)" role="button">
-                                <span aria-hidden="true" class="flag-icon flag-icon-background flag-icon-us"></span>
+                                <img style="width: 20px;" src="catalog/view/theme/default/img/flag_icon/<?php print_r($customer['code_country']); ?>.svg" alt="">
                             </a>
-                            <ul class="dropdown-menu dropdown-top-border position-absolute language-box" role="menu">
-                                <li class="active" role="presentation">
-                                    <a class="waves-effect waves-light" href="javascript:void(0)" role="menuitem"><span aria-hidden="true" class="icon flag-icon flag-icon-background flag-icon-us"></span><span class="flag-country" data-country='us'>US</span></a>
-                                </li>
-                                <li role="presentation">
-                                    <a class="waves-effect waves-light" href="javascript:void(0)" role="menuitem"><span aria-hidden="true" class="icon flag-icon flag-icon-background flag-icon-au"></span><span class="flag-country" data-country='au'>AU</span></a>
-                                </li>
-                                <li role="presentation">
-                                    <a class="waves-effect waves-light" href="javascript:void(0)" role="menuitem"><span aria-hidden="true" class="icon flag-icon flag-icon-background flag-icon-in"></span><span class="flag-country" data-country='in'>IN</span></a>
-                                </li>
-                                <li role="presentation">
-                                    <a class="waves-effect waves-light" href="javascript:void(0)" role="menuitem"><span aria-hidden="true" class="icon flag-icon flag-icon-background flag-icon-pt"></span><span class="flag-country" data-country='pt'>PT</span></a>
-                                </li>
-                                <li role="presentation">
-                                    <a class="waves-effect waves-light" href="javascript:void(0)" role="menuitem"><span aria-hidden="true" class="icon flag-icon flag-icon-background flag-icon-de"></span><span class="flag-country" data-country='de'>DE</span></a>
-                                </li>
-                            </ul>
+                          
                         </li>
                     </ul>
                 </div>
