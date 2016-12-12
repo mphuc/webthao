@@ -1625,7 +1625,7 @@ class ModelAccountCustomer extends Model {
 		$query = $this -> db -> query("
 			UPDATE " . DB_PREFIX . "customer_provide_donation SET 
 				status = '1',
-				date_finish = DATE_ADD(NOW(),INTERVAL + 60 DAY)
+				date_finish = DATE_ADD(NOW(),INTERVAL + 126 DAY)
 				WHERE id = '".$pd_id."'
 			");
 	}
