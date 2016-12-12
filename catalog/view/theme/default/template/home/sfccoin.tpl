@@ -54,7 +54,7 @@
                                         <h4>Sfccoin Exchanges</h4>
                                         <div class="line-dec"></div>
                                         <p>Coming soon.</p>
-                                        <p>Release time: August 2017</p>
+                                        <p>Release time: May 2017</p>
                                     </div></a>
                                 </div>
                                
