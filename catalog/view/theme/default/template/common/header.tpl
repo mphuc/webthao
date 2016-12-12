@@ -262,7 +262,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <li class="dropdown">
                             <!-- Flag Box -->
                             <a class="icon flag-avtar dropdown-toggle waves-effect waves-light" data-animation="scale-up" data-toggle="dropdown" href="javascript:void(0)" role="button">
-                                <img style="width: 20px;" src="catalog/view/theme/default/img/flag_icon/<?php print_r($customer['code_country']); ?>.svg" alt="">
+                                <img style="width: 20px;" src="catalog/view/theme/default/img/flag_icon/<?php echo strtolower($customer['code_country']); ?>.svg" alt="">
                             </a>
                           
                         </li>
