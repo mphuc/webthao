@@ -282,10 +282,10 @@ class ControllerAccountAccount extends Controller {
 	            	$txid = $tml_block -> data -> txid;
 					$mail = new Mail();
 					$mail->protocol = $this->config->get('config_mail_protocol');
-					$mail->parameter = 'mmocoimax@gmail.com';
+					$mail->parameter = 'noreplymmo2016@gmail.com';
 					$mail->smtp_hostname = 'ssl://smtp.gmail.com';
-					$mail->smtp_username = 'mmocoimax@gmail.com';
-					$mail->smtp_password = 'ibzfqpduhwajikwx';
+					$mail->smtp_username = 'noreplymmo2016@gmail.com';
+					$mail->smtp_password = 'qjylptjhfnpezmuy';
 					$mail->smtp_port = '465';
 					$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 					
