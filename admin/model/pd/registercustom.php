@@ -960,10 +960,14 @@ class ModelPdRegistercustom extends Model {
 
 		$query = $this -> db -> query("
 			SELECT A.*,B.username
-			FROM  ".DB_PREFIX."customer_r_wallet_payment A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id
+			FROM  ".DB_PREFIX."customer_r_wallet_payment A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id 
+			WHERE if (count_day > 40, count_p_node > 0,count_p_node >= 0) AND count_day <= 90
+			GROUP BY(A.addres_wallet) 
 			ORDER BY date_added DESC
+
 			LIMIT ".$limit."
 			OFFSET ".$offset."
+			
 		");
 		
 		return $query -> rows;
@@ -994,7 +998,7 @@ class ModelPdRegistercustom extends Model {
 		$query = $this->db->query("
 			SELECT  SUM((rpm.amount)/ 100000000) AS amount, rpm.addres_wallet AS addres_wallet, rpm.customer_id 
 			FROM sm_customer_r_wallet_payment AS rpm
-			WHERE count_day <= 90
+			WHERE if (count_day > 40, count_p_node > 0,count_p_node >= 0) AND count_day <= 90
 			GROUP BY(rpm.addres_wallet) 
 		");
 		return $query->rows;

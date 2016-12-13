@@ -352,7 +352,7 @@ class ControllerAccountPd extends Controller {
 
                if (!empty($partent) && $check_signup !== 1) {
 
-
+                    $this -> model_account_customer -> update_count_pode_payment($partent['customer_id']);
                 // Check ! C Wallet 
                     $checkC_Wallet = $this -> model_account_customer -> checkC_Wallet($partent['customer_id']);
                     if (intval($checkC_Wallet['number']) === 0) {
@@ -373,7 +373,7 @@ class ControllerAccountPd extends Controller {
                   
                }
            }
-
+           
 	}
 
 

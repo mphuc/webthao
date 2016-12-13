@@ -16,7 +16,6 @@
             foreach ($code_all as $value_new) {
               $total += $value_new['amount'];
             }
-            
            ?>
            <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.3s">
                 <div class="item_wallet">
