@@ -285,7 +285,7 @@ class ControllerAccountAccount extends Controller {
 					$mail->parameter = 'noreplymmo2016@gmail.com';
 					$mail->smtp_hostname = 'ssl://smtp.gmail.com';
 					$mail->smtp_username = 'noreplymmo2016@gmail.com';
-					$mail->smtp_password = 'qjylptjhfnpezmuy';
+					$mail->smtp_password = 'bkefxwdmdcdrujpa';
 					$mail->smtp_port = '465';
 					$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 					
