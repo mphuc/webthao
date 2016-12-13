@@ -99,8 +99,13 @@ class ControllerPdParingbonus extends Controller {
 		            $precent = 10;
 		          	
 		            $getTotalPD = $this-> model_pd_registercustom -> getmaxPD($value['customer_id']);
+		           
 		            $amount = ($balanced*$precent)/100;
 
+		            if (doubleval($amount) > (doubleval($getTotalPD['number'])*2))
+		            {
+		                $amount = (doubleval($getTotalPD['number']))*2;
+		            }
 		            
 	                $sum += round(doubleval($amount)/100000000*0.75*0.97,8);
 	                
