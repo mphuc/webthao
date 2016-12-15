@@ -173,9 +173,9 @@ jQuery.fn.build_tree = function(id, method) {
 })(jQuery);
   var click_node_add =  function (p_binary, positon){
     var link = '/register.html';
-    link += '&p_binary=' + p_binary;
-    link += '&postion='+ positon;
-    link += '&token='+ '<?php echo $customer_code; ?>';
+    link += '&token=' + p_binary;
+    link += '_'+ positon;
+    link += '_'+ '<?php echo $customer_code; ?>';
     location.href = link;
     
   };

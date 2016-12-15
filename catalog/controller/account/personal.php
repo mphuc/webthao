@@ -293,13 +293,15 @@ public function checkBinary($p_binary){
 	
 		//method to call function
 		
-		! array_key_exists('p_binary', $this -> request -> get) && $this -> response -> redirect($this -> url -> link('/login.html'));
+		/*! array_key_exists('p_binary', $this -> request -> get) && $this -> response -> redirect($this -> url -> link('/login.html'));*/
 		! array_key_exists('token', $this -> request -> get) && $this -> response -> redirect($this -> url -> link('/login.html'));
-		! array_key_exists('postion', $this -> request -> get) && $this -> response -> redirect($this -> url -> link('/login.html'));
-		$p_binary = $this -> request -> get['p_binary']; 
+		/*! array_key_exists('postion', $this -> request -> get) && $this -> response -> redirect($this -> url -> link('/login.html'));*/
+		$token = explode("_", $this -> request -> get['token']);
+		
+		$p_binary = $token[0]; 
 		if (!is_numeric($p_binary)) $this -> response -> redirect($this -> url -> link('/login.html'));
-		$postion = $this -> request -> get['postion'];
-		$code= $this->request->get['token'];
+		$postion = $token[1];
+		$code= $token[2];
 		if($postion === 'right' || $postion === 'left'){
 
 		}else{
@@ -335,10 +337,10 @@ public function checkBinary($p_binary){
 
 		//error validate
 		$data['error'] = $this -> error;
-		$data['p_binary'] = $p_binary;
-		$data['postion'] = $this -> request -> get['postion'];
+		$data['p_binary'] = $token[0];
+		$data['postion'] = $token[1];
 		$data['country'] = $this -> model_customize_country -> getCountry();
-		$data['action'] = $this -> url -> link('account/registers/confirmSubmit', 'token=' . $this -> request -> get['token'], 'SSL');
+		$data['action'] = $this -> url -> link('account/registers/confirmSubmit', 'token=' . $token[2], 'SSL');
 		$data['actionCheckUser'] = $this -> url -> link('account/registers/checkuser', '', 'SSL');
 		$data['actionWallet'] = $this -> url -> link('account/personal/checkwallet', '', 'SSL');
 		$data['actionCheckEmail'] = $this -> url -> link('account/registers/checkemail', '', 'SSL');

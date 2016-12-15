@@ -27,11 +27,12 @@ $self -> document -> setTitle('Register User');
          <input type="hidden" name="postion" value="<?php echo $postion ?>">
          <?php } ?>
          <?php 
-            if(intval($self -> checkBinaryLeft($self->request->get['p_binary'], $self->request->get['postion'])) === 1) { ?>
+            $token = explode("_", $self -> request -> get['token']);
+            if(intval($self -> checkBinaryLeft($token[0], $token[1])) === 1) { ?>
             <div class="input-box">
                <div class="left-icon-login btn-info"><i class="icon icon_profile"></i></div>
                <div class="textbox-login">
-                  <input type="hidden" name="node" value="<?php echo $self->request->get['token']; ?>">
+                  <input type="hidden" name="node" value="<?php echo $token[2]; ?>">
                   <input class="form-control" placeholder="Your Username" name="username" id="username" value="" data-link="<?php echo $actionCheckUser; ?>">
                   <span id="user-error" class="field-validation-error" style="display: none;">
                      <span>Please enter user name</span>
@@ -42,7 +43,7 @@ $self -> document -> setTitle('Register User');
             <div class="input-box">
                <div class="left-icon-login btn-info"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                <div class="textbox-login">
-                  <input type="hidden" name="node" value="<?php echo $self->request->get['token']; ?>">
+                  <input type="hidden" name="node" value="<?php echo $token[2]; ?>">
                   <input class="form-control" placeholder="Email Address" name="email" id="email" data-link="<?php echo $actionCheckEmail; ?>">
                   <span id="email-error" class="field-validation-error" style="display: none;">
                      <span id="Email-error">Please enter Email Address</span>
