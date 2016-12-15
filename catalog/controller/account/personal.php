@@ -808,7 +808,7 @@ public function checkBinary($p_binary){
 		return $count;
 	}
 	public function sponsor($customer_id){
-		if ($customer_id == 1)
+		if ($customer_id == 0)
 		{
 			return "SFCCOIN";
 		}
