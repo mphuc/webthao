@@ -90,6 +90,7 @@ jQuery.fn.show_tree = function(node) {
     var html = '<div class=\''+line_class+'\'></div>';
 // onclick=\'click_node('+node.id+')\' value=\''+node.id+'\'
     x_p = "<p>Username: "+node.username+"<p>";
+    x_p += "<p>Sponsor: "+node.sponsor+"<p>";
     // x_p += "<p>Email: "+node.email+"<p>";
     // x_p += "<p>Phone: "+node.telephone+"<p>";
     x_p += "<p>Date: "+node.date_added+"<p>";
