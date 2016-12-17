@@ -17,7 +17,12 @@
             <li class="has-sub">
                 <a class="waves-effect waves-light" href="column-tree.html"> <i class="layout-icon icon_flowchart" aria-hidden="true"></i><span> Column Tree </span></a>
             </li>
-           
+           <li class="has-sub">
+                <a href="user.html" class="waves-effect waves-light">
+                    <i class="layout-icon icon_flowchart" aria-hidden="true"></i>
+                    <span class="mm-text ">New User</span>
+                </a>
+            </li>
             <li class="has-sub">
                 <a class="waves-effect waves-light" href="news.html"> <i class="layout-icon icon_book_alt" aria-hidden="true"></i><span> New </span></a>
             </li>
