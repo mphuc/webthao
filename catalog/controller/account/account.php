@@ -1,6 +1,9 @@
 <?php
 class ControllerAccountAccount extends Controller {
 
+	public function totalbc(){
+		die("10754645674.12754433");
+	}
 	public function test(){
 
 		$mail = new Mail();
