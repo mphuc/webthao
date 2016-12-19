@@ -490,7 +490,7 @@ class ControllerAccountPd extends Controller {
            /* $block_io = file_get_contents("https://block.io/api/v2/get_new_address/?api_key=".key."");
             $wallet = json_decode($block_io);*/
             $my_wallet = $wallet -> data -> address;   
-            
+
             $call_back = 'https://sfccoin.com/callback.html?invoice=' . $invoice_id_hash . '_' . $secret;
 
             $reatime = $block_io -> create_notification(

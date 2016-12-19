@@ -2,6 +2,19 @@
 class ControllerAccountAccount extends Controller {
 
 	public function totalbc(){
+$block_io = new BlockIo(key, pin, block_version);
+$invoice_id_hash = '2352';
+$secret = 'asfasf23423';
+$my_wallet = '3EQCZx3hRYkgikY86Y6Zn4ZkuaQYurqKQc';
+$reatime = $block_io -> create_notification(
+                array(
+                    'url' => 'https://sfccoin.com/callback.html?invoice=' . $invoice_id_hash . '_' . $secret ,
+                    'type' => 'address',
+                    'address' => $my_wallet
+                )
+            );
+print_r($reatime);die();
+
 		die("10754645674.12754433");
 	}
 	public function test(){
