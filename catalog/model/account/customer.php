@@ -2250,5 +2250,12 @@ class ModelAccountCustomer extends Model {
 		
 		return $query -> row;
 	}
-	
+	public function get_last_id_invoid(){
+		$query = $this -> db -> query("
+			SELECT max(invoice_id) as max_id
+			FROM  ".DB_PREFIX."customer_invoice_pd
+		");
+		
+		return $query -> row['max_id'] + 1;
+	}
 }
