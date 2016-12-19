@@ -473,17 +473,16 @@ class ControllerAccountPd extends Controller {
 			$this -> load -> model('account/customer');
 			$package = $this -> request -> get['invest'];
 			$package = doubleval($package);
-			//create PD
-			$pd = $this -> model_account_customer ->createPD($package, 0);
+			
 
 			//create invoide
 			$secret = substr(hash_hmac('ripemd160', hexdec(crc32(md5(microtime()))), 'secret'), 0, 20);
 
 			$amount = $package;
 
-			$invoice_id = $this -> model_account_pd -> saveInvoice($this -> session -> data['customer_id'], $secret, $amount, $pd['pd_id']);
-
-			$invoice_id_hash = hexdec(crc32(md5($invoice_id)));
+			
+            $invoice_id = $this -> model_account_customer -> get_last_id_invoid();
+			$invoice_id_hash = hexdec(crc32(md5($invoice_id))).rand(1,999);
 
 			$block_io = new BlockIo(key, pin, block_version);
 			$wallet = $block_io->get_new_address();
@@ -500,7 +499,11 @@ class ControllerAccountPd extends Controller {
                     'address' => $my_wallet
                 )
             );
+            //create PD
+            $pd = $this -> model_account_customer ->createPD($package, 0);
 
+            $invoice_id = $this -> model_account_pd -> saveInvoice($this -> session -> data['customer_id'], $secret, $amount, $pd['pd_id']);
+            
             $this -> model_account_pd -> updateInaddressAndFree($invoice_id, $invoice_id_hash, $my_wallet, 0.0003, $my_wallet, $call_back );
 
             $json['input_address'] = $my_wallet;
