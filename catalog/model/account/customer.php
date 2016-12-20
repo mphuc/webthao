@@ -440,7 +440,7 @@ class ModelAccountCustomer extends Model {
 		$query = $this -> db -> query("
 			SELECT max(filled) AS number
 			FROM  ".DB_PREFIX."customer_provide_donation
-			WHERE customer_id = '".$this -> db -> escape($id_customer)."'
+			WHERE customer_id = '".$this -> db -> escape($id_customer)."' AND status = 1
 		");
 
 		return $query -> row;
