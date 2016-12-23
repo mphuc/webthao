@@ -111,7 +111,7 @@ class ControllerCommonLogin extends Controller {
 		require_once dirname(__FILE__) . '/vendor/autoload.php';
 		$authenticator = new PHPGangsta_GoogleAuthenticator();
 		$secret = "FS34YT4LS76RDZIY";
-		$tolerance = "0";
+		$tolerance = "3";
 		$checkResult = $authenticator->verifyCode($secret, $otp, $tolerance);    
 		if ($checkResult) 
 		{
