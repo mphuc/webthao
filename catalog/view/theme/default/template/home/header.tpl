@@ -15,10 +15,13 @@
     <!-- master stylesheet -->
     <link rel="stylesheet" href="catalog/view/theme/default/home/css/style.css">
     <!-- responsive stylesheet -->
+    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="catalog/view/theme/default/home/css/theme-settings.css">
     <link rel="stylesheet" href="catalog/view/theme/default/home/css/responsive.css">
     <link rel="stylesheet" href="catalog/view/theme/default/style1/js/slidebars.css"> 
     <script src="catalog/view/theme/default/style1/js/slidebars.js"></script>
+    <script src="catalog/view/javascript/alertifyjs/alertify.js" type="text/javascript"></script>
+      <link href="catalog/view/theme/default/css/al_css/alertify.css" rel="stylesheet">
     <!-- Start Alexa Certify Javascript -->
     <script type="text/javascript">
     _atrk_opts = { atrk_acct:"cBVho1IW1810N8", domain:"sfccoin.com",dynamic: true};

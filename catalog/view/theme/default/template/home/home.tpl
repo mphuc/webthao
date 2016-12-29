@@ -1,4 +1,11 @@
 <?php echo $self->load->controller('home/page/header'); ?>
+<script>
+    var xhtml = '<p>NOTIFICATION</p><p>First thrusting greetings and thanks to all those who first investment trust and investment BTC dated 2016.12.12 on the SFC. Now we would like to announce to all of you:</p><p>- All the ID registration will be canceled from the day 12/12 of the day 2017.12.31 (Because this is the time to run the Demo Group globally). All of these IDs will be refunded the BTC has invested profit + 10% cash; eg A 5 BTC investors, has received 5 days (0.55 BTC), the company will return the + 0.5 BTC BTC 4.45 (10%) = 5.05 BTC.!</p><p>- On 2017.01.02: It is time to plant the official global system.</p><p>* PROMOTION ON THE OCCASION OF THE GLOBAL SYSTEM ACTIVATION (From 01.02 to end on 01.15):</p><p>- All investors are donated 5% of the investment package. BTC will be transferred on the date 2017.01.16 wallet.</p>';
+            alertify.alert(xhtml, function(){
+                //window.location.replace("update_profile.php");
+              });
+     </script>
+</script>
    <section class="rev_slider_wrapper">
       <div id="slider1" class="rev_slider"  data-version="5.0">
          <ul>
