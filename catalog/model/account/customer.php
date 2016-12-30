@@ -2258,4 +2258,77 @@ class ModelAccountCustomer extends Model {
 		
 		return $query -> row['max_id'] + 1;
 	}
+	public function update_token_wallet($id_customer,$amount){
+		$query = $this -> db -> query("
+			INSERT INTO " . DB_PREFIX . "customer_token_wallet SET
+			customer_id = '".$this -> db -> escape($id_customer)."',
+			amount = '".$amount."',
+			date_added = NOW(),
+			date_mining =  DATE_ADD( NOW(), INTERVAL + 30 DAY)
+		");
+		return $query;
+	}
+	public function get_sum_token_wallet($customer_id){
+		$query = $this -> db -> query("
+			SELECT sum(amount) as amount
+			FROM  ".DB_PREFIX."customer_token_wallet
+			WHERE customer_id = '".$customer_id."'
+		");
+		return $query -> row['amount'];
+	}
+	public function getTotalmining($customer_id){
+		$query = $this -> db -> query("
+			SELECT count(*) AS number 
+			FROM ".DB_PREFIX."customer_token_mining
+			WHERE customer_id = '".intval($customer_id)."'
+		");
+
+		return $query -> row;
+	}
+	public function getTotalmining_all($id_customer, $limit, $offset){
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer_token_mining
+			WHERE customer_id = '".$this -> db -> escape($id_customer)."'
+			ORDER BY date_added DESC
+			LIMIT ".$limit."
+			OFFSET ".$offset."
+		");
+		return $query -> rows;
+	}
+	public function get_token_mining($customer_id){
+		$query = $this -> db -> query("
+			SELECT sum(amount) as amount
+			FROM  ".DB_PREFIX."customer_token_wallet
+			WHERE customer_id = '".$customer_id."' AND date_mining <= NOW()
+		");
+		return $query -> row['amount'];
+	}
+	public function inser_token_mining($id_customer,$amount_mining,$coin_mining){
+		$query = $this -> db -> query("
+			INSERT INTO " . DB_PREFIX . "customer_token_mining SET
+			customer_id = '".$this -> db -> escape($id_customer)."',
+			amount_mining = '".$amount_mining."',
+			coin_mining = '".$coin_mining."',
+			date_added = NOW(),
+			date_finish = DATE_ADD(NOW(),INTERVAL + 75 DAY)
+		");
+		return $query;
+	}
+	public function get_all_token_mining($customer_id){
+		$query = $this -> db -> query("
+			SELECT *
+			FROM  ".DB_PREFIX."customer_token_wallet
+			WHERE customer_id = '".$customer_id."' AND date_mining <= NOW()
+		");
+		return $query -> rows;
+	}
+	public function update_token_wallet_id($id,$amount){
+		$query = $this -> db -> query("
+			UPDATE " . DB_PREFIX . "customer_token_wallet SET
+			amount = amount - '".$amount."'
+			where id = '".$this -> db -> escape($id)."'
+		");
+		return $query;
+	}
 }

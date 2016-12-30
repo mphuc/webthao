@@ -105,6 +105,7 @@ class ControllerAccountDashboard extends Controller {
 		$data['danhhieu'] = $this -> danhhieu($session_id);
 		$data['randprofit'] = $this -> randprofit($session_id);
 		$data['taidautu'] = $this -> taidautu($session_id);
+		$data['wallet_token'] = $this -> model_account_customer -> get_sum_token_wallet($session_id);
 		$customer = $this -> model_account_customer-> getCustomer($this -> session -> data['customer_id']);
 $data['user'] = $this -> model_account_customer -> get_count_customer_signup($this->session->data['customer_id']);
 		$Hash = $customer['customer_code'];	

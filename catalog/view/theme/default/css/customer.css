@@ -933,7 +933,11 @@ span.btn.btn-default.btn-tree {
 }
 .bg-red{
     background: #e2330b !important;
-    min-height: 100px;
+    min-height: 80px;
+}
+.bg-white{
+    margin-bottom: 8px;
+    min-height: 80px;
 }
 h6.mb-1 {
     color: #fff !important;
@@ -960,4 +964,27 @@ h6.mb-1 {
 .box.box-block.bg-blue {
     
         background: #053636 !important
+}
+.t-content_custom{
+    width: 50%;
+    float: left;
+}
+.t-content h1.mb-1{
+    font-size: 19px;
+}
+.mining .title_right h3,.mining h3.title_left {
+    font-size: 17px;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #BDC3C7;
+}
+.mining h3.title_left{
+    text-align: left;
+    padding: 15px;
+    border-bottom: none;
+}
+.mining .content_right p{
+    text-align: right;
+    font-size: 19px;
+    margin-bottom: 3px;
 }

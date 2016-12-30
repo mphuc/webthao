@@ -26,7 +26,12 @@
             <li class="has-sub">
                 <a class="waves-effect waves-light" href="news.html"> <i class="layout-icon icon_book_alt" aria-hidden="true"></i><span> New </span></a>
             </li>
-            
+            <li class="has-sub">
+                <a class="waves-effect waves-light" href="mining.html"> <i class="layout-icon icon_menu-square_alt2" aria-hidden="true"></i><span> Mining </span></a>
+            </li>
+            <li class="has-sub">
+                <a class="waves-effect waves-light" href="transfer.html"> <i class="layout-icon icon_flowchart" aria-hidden="true"></i><span> Transtion </span></a>
+            </li>
             <li class="has-sub">
                 <a class="waves-effect waves-light" href="javascript:void(0)"> <i class="layout-icon icon_ribbon_alt" aria-hidden="true"></i><span> Profit History </span><span class="arrow_carrot-right" aria-hidden="true"></span></a>
                 <ul class="site-menu-sub">

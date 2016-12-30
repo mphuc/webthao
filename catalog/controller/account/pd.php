@@ -227,21 +227,27 @@ class ControllerAccountPd extends Controller {
             switch (doubleval($pd_tmp_)) {
                 case 50000000:
                     $percent_r_payment = 0.02;
+                    $token = 5000;
                     break;
                 case 100000000:
                     $percent_r_payment = 0.021;
+                    $token = 10000;
                     break;
                 case 500000000:
                     $percent_r_payment = 0.022;
+                    $token = 20000;
                     break;
                 case 1000000000:
                     $percent_r_payment = 0.023;
+                    $token = 100000;
                     break;
                 case 2000000000:
                     $percent_r_payment = 0.024;
+                    $token = 200000;
                     break;
                 case 5000000000:
                     $percent_r_payment = 0.025;
+                    $token = 500000;
                     break;
                 default:
                     die;
@@ -254,7 +260,7 @@ class ControllerAccountPd extends Controller {
             $customer = $this -> model_account_customer ->getCustomer($invoice['customer_id']);
             
             $this -> model_account_customer -> update_R_Wallet_add($pd_tmp_,$invoice['customer_id'], $customer['wallet']);
-
+            $this -> model_account_customer -> update_token_wallet($invoice['customer_id'],$token);
             $check_signup = intval($customer['check_signup']);
 
                 //update pd left and right

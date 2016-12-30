@@ -60,42 +60,34 @@
                 <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-white tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content">
+                        <div class="t-content t-content_custom">
                             <h6 class=" mb-1">ID / Left</h6>
                             <h1 class="mb-1"><?php echo $total_binary_left; ?></p></h1>
                         </div>
-                    </div>
-                </div>        
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
-                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content">
+                        <div class="t-content t-content_custom text-right">
                             <h6 class=" mb-1">ID / Right</h6>
                             <h1 class="mb-1"><?php echo $total_binary_right; ?></p></h1>
                         </div>
                     </div>
-                </div>    
+                </div>        
+                  
                 <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-white tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content">
+                        <div class="t-content t-content_custom">
                             <h6 class=" mb-1">Volume - Left </h6>
                             <h1 class="mb-1"><?php echo $total_pd_left; ?> BTC</p></h1>
                         </div>
-                    </div>
-                </div> 
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
-                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content">
+                        <div class="t-content t-content_custom text-right">
                             <h6 class=" mb-1">Volume - Right </h6>
                             <h1 class="mb-1"><?php echo $total_pd_right; ?> BTC</p></h1>
                         </div>
                     </div>
-                </div>     
+                </div> 
+                
                    
                 <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-red tile tile-1 mb-2">
+                    <div class="box box-block bg-white tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Leader Bonus</h6>
@@ -131,12 +123,12 @@
                                     break;
                             }
                             ?><p></h1>
-                            <h1 class="mb-1"><span class="pull-left"></span><span class="pull-right"><?php echo $randprofit ?> BTC</span></p></h1>
+                            <h1 class="mb-1"><span class="pull-left"></span><span class="pull-left"><?php echo $randprofit ?> BTC</span></p></h1>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-red tile tile-1 mb-2">
+                    <div class="box box-block bg-white tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content">
                             <h6 class=" mb-1">Matching Bonus</h6>
@@ -160,6 +152,30 @@
                         <div class="t-content">
                             <h6 class=" mb-1">Total Sfccoin</h6>
                             <h1 class="mb-1">0 SFC</p></h1>
+                        </div>
+                    </div>
+                </div>
+                <a href="mining.html">
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="box box-block bg-red tile tile-1 mb-2">
+                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
+                        <div class="t-content">
+                            <h6 class=" mb-1">Token</h6>
+                            <h1 class="mb-1"><?php echo number_format($wallet_token) ?> Token</p></h1>
+                        </div>
+                    </div>
+                </div>
+                </a>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="box box-block bg-red tile tile-1 mb-2">
+                        <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
+                        <div class="t-content t-content_custom">
+                            <h6 class=" mb-1">Difficulty</h6>
+                            <h1 class="mb-1">25 Token</p></h1>
+                        </div>
+                        <div class="t-content t-content_custom text-right">
+                            <h6 class=" mb-1">Rate</h6>
+                            <h1 class="mb-1">0.000025 BTC</p></h1>
                         </div>
                     </div>
                 </div>
