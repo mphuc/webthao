@@ -48,7 +48,7 @@ $(function() {
 
 
   $('#amount_sfccoin').on('input propertychange',function(){
-    $('#amount_btc').val(parseFloat($('#amount_sfccoin').val())*0.000025);
+    $('#amount_btc').val(parseFloat($('#amount_sfccoin').val())*0.0008);
   });
   $('#amount_token').on('input propertychange',function(){
     $('#amount_btc_token').val(parseFloat($('#amount_token').val())*0.000025);
