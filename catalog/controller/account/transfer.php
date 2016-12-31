@@ -8,14 +8,19 @@ class ControllerAccountTransfer extends Controller {
         };
 
         function myConfig($self){
-            //$self -> document -> addScript('catalog/view/javascript/mining/mining.js');
+            $self -> document -> addScript('catalog/view/javascript/mining/mining.js');
         };
         $data['self'] = $this;
+
         //method to call function
         $this -> load -> model('account/customer');
+        $data['customer'] = $customer = $this -> model_account_customer -> getCustomer($this -> session -> data['customer_id']);
+        $block_io = new BlockIo(key, pin, block_version);
+        $data['amount_blockchain'] =  $block_io->get_address_balance(array('addresses' => $data['customer']['wallet']))->data->available_balance;
+        $data['amount_blockchain_pending'] =  $block_io->get_address_balance(array('addresses' => $data['customer']['wallet']))->data->pending_received_balance;
         $paged = isset($this -> request -> get['page']) ? $this -> request -> get['page'] : 1;
-
-        
+        $data['get_M_Wallet'] = $this -> model_account_customer -> get_M_Wallet($this -> session -> data['customer_id'])['amount'];
+        $data['wallet_token'] = $this -> model_account_customer -> get_sum_token_wallet($this -> session -> data['customer_id']);
         !call_user_func_array("myCheckLoign", array($this)) && $this->response->redirect(HTTPS_SERVER . 'login.html');
         call_user_func_array("myConfig", array($this));  
 

@@ -34,14 +34,137 @@
                            </ul>
                            <div class="tab-content ">
                               <div class="tab-pane active" id="home11" role="tabpanel">
-                                <h3>You do not have enough Sfc coin</h3>
-                                <br>
+                                <div class="col-md-4 col-md-push-2 text-center">
+                                  <div class="item_wallet">
+                                      <h5>Your Sfccoin</h5>
+                                      <div class="box box-block bg-white tile tile-1 mb-2">
+                                          <img src="catalog/view/theme/default/images/sfccoin.png" style="height: 50px;margin-top: 10px;" alt="">
+                                          <div class="t-content">
+                                              
+                                              <h1 class="mb-1" style="margin-top: 10px;">0 Sfccoin<p></p></h1>
+                                          </div>
+                                      </div>
+                                  </div>
+                               </div>     
+                               <div class="col-md-4 col-md-push-2 text-center">
+                                  <div class="item_wallet">
+                                      <h5>Your Balance Wallet</h5>
+                                      <div class="wallet wallet_blockcio">
+                                          <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?php echo $customer['wallet'] ?>" alt="">
+                                      </div>
+                                      <p><?php echo $customer['wallet'] ?></p>
+                                      <p>Amount: <?php echo doubleval(round($amount_blockchain,8)); ?> BTC</p>
+                                      <!-- <p>Amount Pending: <?php //echo doubleval(round($amount_blockchain_pending,8)); ?> BTC</p> -->
+                                  </div>
+                               </div>   
+                               <div class="clearfix"></div> 
+                              <form id="tranfer_cm_btc" style="margin-top: 30px;" action="index.php?route=account/withdraw/submit_my_transaction" method="POST" >
+                                <div class="col-md-2 col-md-push-1 wow fadeInUp" data-wow-delay="0.3s">
+                                  <input autocomplete="off" class="form-control" placeholder="Amount Sfccoin" type="text" name="amount_sfccoin" id="amount_sfccoin">
+                                   <p class="error error_amount_sfccoin">Please enter a amount sfccoin</p>
+                                 
+                                </div>
+                                <div class="col-md-2 col-md-push-1 wow fadeInUp" data-wow-delay="0.3s">
+                                  <input autocomplete="off" data-link="<?php echo $self->url->link('account/withdraw/get_btc_sfccoin'); ?>" class="form-control" readonly="true" placeholder="Amount BTC" type="text" name="amount_btc" id="amount_btc">
+                                </div>
+                                <div class="col-md-3 col-md-push-1  wow fadeInUp" data-wow-delay="0.3s">
+                                  <input readonly="true" autocomplete="off" class="form-control" placeholder="Password Transaction" type="password" name="password_transaction_btc" id="password_transaction_btc">
+                                   <p class="error error_password_transaction_btc">Please enter a Secret answer</p>
+                                  <p class="error error_password_transaction_deal_btc">Password do not macth</p>
+                                </div>
+                                <div class="col-md-2 col-md-push-1  wow fadeInUp" data-wow-delay="0.3s">
+                                 <input class="form-control btn btn-primary" style="    background-color: #337ab7 !important;"  id="" type="submit" value="OK">
+                                </div>
+                                 
+                               </form>
+                                <div class="clearfix"></div>
+                                <br><br>
                                 <p>1 Sfc coin = 0.000025 BTC</p>
+                                <h3 class="text-center">History Withdraw</h3>
+                                <table id="datatable" class="table table-striped table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>No.</th>
+                                      <th>Sfcoin withdraw</th>
+                                      <th>BTC withdraw</th>
+                                      <th>Date withdraw</th>
+                                      <th>Link Transfer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td colspan="5">No data available in table</td>
+                                  </tr>
+                            </tbody>
+                        </table>
                               </div>
                               <div class="tab-pane" id="profile11" role="tabpanel">
-                                 <h3>You do not finish investment package.</h3>
+                                 <div class="col-md-4 col-md-push-2 text-center">
+                                  <div class="item_wallet">
+                                      <h5>Your Reinvestment</h5>
+                                      <div class="box box-block bg-white tile tile-1 mb-2">
+                                          <img src="catalog/view/theme/default/images/logo.png" style="height: 50px;margin-top: 10px;" alt="">
+                                          <div class="t-content">
+                                              
+                                              <h1 class="mb-1" style="margin-top: 10px;"><?php echo $get_M_Wallet/100000000 ?> BTC<p></p></h1>
+                                          </div>
+                                      </div>
+                                  </div>
+                               </div>     
+                               <div class="col-md-4 col-md-push-2 text-center">
+                                  <div class="item_wallet">
+                                      <h5>Your Token</h5>
+                                      <div class="box box-block bg-white tile tile-1 mb-2">
+                                          <img src="catalog/view/theme/default/images/logo.png" style="height: 50px;margin-top: 10px;" alt="">
+                                          <div class="t-content">
+                                              
+                                              <h1 class="mb-1" style="margin-top: 10px;"><?php echo number_format($wallet_token) ?> Token<p></p></h1>
+                                          </div>
+                                      </div>
+                                  </div>
+                               </div>   
+                               <div class="clearfix"></div> 
+                              <form id="tranfer_cm_btc_token" style="margin-top: 30px;" action="index.php?route=account/withdraw/submit_my_transaction" method="POST" >
+                                <div class="col-md-2 col-md-push-1 wow fadeInUp" data-wow-delay="0.3s">
+                                  <input autocomplete="off" class="form-control" placeholder="Amount Token" type="text" name="amount_sfccoin" id="amount_token">
+                                   <p class="error error_amount_sfccoin">Please enter a amount sfccoin</p>
+                                 
+                                </div>
+                                <div class="col-md-2 col-md-push-1 wow fadeInUp" data-wow-delay="0.3s">
+                                  <input autocomplete="off" data-link="<?php echo $self->url->link('account/withdraw/get_btc_sfccoin'); ?>" class="form-control" readonly="true" placeholder="Amount BTC" type="text" name="amount_btc" id="amount_btc_token">
+                                </div>
+                                <div class="col-md-3 col-md-push-1  wow fadeInUp" data-wow-delay="0.3s">
+                                  <input readonly="true" autocomplete="off" class="form-control" placeholder="Password Transaction" type="password" name="password_transaction_btc" id="password_transaction_btc">
+                                   <p class="error error_password_transaction_btc">Please enter a Secret answer</p>
+                                  <p class="error error_password_transaction_deal_btc">Password do not macth</p>
+                                </div>
+                                <div class="col-md-2 col-md-push-1  wow fadeInUp" data-wow-delay="0.3s">
+                                 <input class="form-control btn btn-primary" style="    background-color: #337ab7 !important;"  id="" type="submit" value="OK">
+                                </div>
+                                 
+                               </form>
+                                <div class="clearfix"></div>
+                                <br><br>
+                                <p>1 Token = 0.000025 BTC</p>
+                                <h3 class="text-center">History Buy token</h3>
+                                <table id="datatable" class="table table-striped table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>No.</th>
+                                      <th>Amount token</th>
+                                      <th>BTC buy</th>
+                                      <th>Date withdraw</th>
+                                      
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td colspan="5">No data available in table</td>
+                                  </tr>
+                            </tbody>
+                        </table>
                                  <br>
-                                 <p>1 Token = 0.000025 BTC</p>
+                                 
                               </div>
                               
                            </div>

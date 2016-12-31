@@ -989,3 +989,6 @@ h6.mb-1 {
     font-size: 19px;
     margin-bottom: 3px;
 }
+p.error{
+    display: none;
+}
