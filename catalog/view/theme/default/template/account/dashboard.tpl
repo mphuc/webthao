@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel panel-info">
-          <div class="panel-heading">
+          <div class="panel-heading" style="background: #31708f">
             <h3 class="panel-title">New user Register</h3>
           </div>
           <div class="panel-body" style=" margin-top: 25px; ">
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                
+                <a href="transfer.html">
                  <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
@@ -160,6 +160,7 @@
                         
                     </div>
                 </div>
+                </a>
                 <a href="mining.html">
                 <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
