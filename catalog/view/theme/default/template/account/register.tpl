@@ -99,20 +99,20 @@ $self -> document -> setTitle('Register User');
                </div>
             </div>
    
-            <div class="input-box" style="display: none;">
+            <div class="input-box">
                <div class="left-icon-login btn-info"><i class="icon icon_profile"></i></div>
                <div class="textbox-login">
-                  <input value="123" class="form-control" id="password2" placeholder="Transaction Password" name="transaction_password" type="password">
+                  <input class="form-control" id="password2" placeholder="Transaction Password" name="transaction_password" type="password">
                   <span id="password2-error" class="field-validation-error" style="display: none;">
                      <span>Please enter transaction password</span>
                   </span>
                </div>
             </div>
 
-            <div class="input-box" style="display: none;">
+            <div class="input-box">
                <div class="left-icon-login btn-info"><i class="fa fa-key" aria-hidden="true"></i></div>
                <div class="textbox-login">
-                  <input  value="123" class="form-control valid" placeholder="Repeat Transaction Password" id="confirmpasswordtransaction" type="password">
+                  <input class="form-control valid" placeholder="Repeat Transaction Password" id="confirmpasswordtransaction" type="password">
                   <span id="confirmpasswordtransaction-error" class="field-validation-error" style="display: none;">
                      <span>Repeat Transaction Password is not correct</span>
                   </span>

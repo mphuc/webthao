@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>Smart financial connections</title>
     <!--Favicon-->
-    <link rel="icon" href="catalog/view/theme/default/img/logo_favi.png">
+    <link rel="icon" href="catalog/view/theme/default/images/logo_favi.png">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
