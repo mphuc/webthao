@@ -941,7 +941,7 @@ span.btn.btn-default.btn-tree {
 }
 h6.mb-1 {
     color: #fff !important;
-    font-size: 16px;
+    font-size: 15px;
 }
 .bg-yl{
     background: #e6aa3d !important;
@@ -971,6 +971,7 @@ h6.mb-1 {
 }
 .t-content h1.mb-1{
     font-size: 19px;
+    font-weight: bold;
 }
 .mining .title_right h3,.mining h3.title_left {
     font-size: 17px;

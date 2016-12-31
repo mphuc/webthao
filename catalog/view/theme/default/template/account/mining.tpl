@@ -86,7 +86,7 @@
                         <br>
                         <div class="clearfix" style="margin-top: 20px;"></div>
                         <p>Difficulty: 25 Token / Coin</p>
-                        <p>Time to dig out coin was between 60 to 90 days</p>
+                        <p>Time to dig out coin was between 30 to 45 days</p>
                     </div>
                 </div>
               

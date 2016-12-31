@@ -149,10 +149,15 @@
                  <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content">
+                        <div class="t-content t-content_custom">
                             <h6 class=" mb-1">Total Sfccoin</h6>
-                            <h1 class="mb-1">0 SFC</p></h1>
+                            <h1 class="mb-1">0 SFC</p> </h1>
                         </div>
+                        <div class="t-content_custom">
+                            <h6 class=" mb-1"></h6>
+                            <img class="pull-right" style="width: 50px;" src="catalog/view/theme/default/images/sfccoin.png" alt="">
+                        </div>
+                        
                     </div>
                 </div>
                 <a href="mining.html">
@@ -169,13 +174,13 @@
                 <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content t-content_custom">
+                        <div class="t-content t-content_custom" style="width: 40%">
                             <h6 class=" mb-1">Difficulty</h6>
                             <h1 class="mb-1">25 Token</p></h1>
                         </div>
-                        <div class="t-content t-content_custom text-right">
-                            <h6 class=" mb-1">Rate</h6>
-                            <h1 class="mb-1">0.000025 BTC</p></h1>
+                        <div class="t-content t-content_custom text-right" style="width: 60%">
+                            <h6 class=" mb-1" >Rate</h6>
+                            <h1 class="mb-1" >0.000025 BTC</p></h1>
                         </div>
                     </div>
                 </div>
