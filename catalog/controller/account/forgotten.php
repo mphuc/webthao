@@ -72,8 +72,8 @@ class ControllerAccountForgotten extends Controller {
 			//$mail -> setTo($this -> config -> get('config_email'));
 			$mail -> setTo($customer_info['email']);
 			$mail -> setFrom($this -> config -> get('config_email'));
-			$mail -> setSender(html_entity_decode("Smart Financial Connections", ENT_QUOTES, 'UTF-8'));
-			$mail -> setSubject("Sfccoin - New Password For Login");
+			$mail -> setSender(html_entity_decode("Sfccoin.com", ENT_QUOTES, 'UTF-8'));
+			$mail -> setSubject("Smart Financial Connections - New Password For Login");
 			$html_mail = '<div style="background: #f2f2f2; width:100%;">
 			   <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#2A363C;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
 			    width:700px; margin:0 auto">
@@ -98,7 +98,6 @@ class ControllerAccountForgotten extends Controller {
 			    </table>
 			  </div>';
 			$mail -> setHtml($html_mail); 
-			die;
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			// Add to activity log
@@ -222,8 +221,8 @@ class ControllerAccountForgotten extends Controller {
 			//$mail -> setTo($this -> config -> get('config_email'));
 			$mail -> setTo($customer_info['email']);
 			$mail -> setFrom($this -> config -> get('config_email'));
-			$mail -> setSender(html_entity_decode("Smart Financial Connections", ENT_QUOTES, 'UTF-8'));
-			$mail -> setSubject("Sfccoin - New transaction Password");
+			$mail -> setSender(html_entity_decode("Sfccoin.com", ENT_QUOTES, 'UTF-8'));
+			$mail -> setSubject("Smart Financial Connections - New transaction Password");
 			$html_mail = '<div style="background: #f2f2f2; width:100%;">
 			   <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#2A363C;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
 			    width:700px; margin:0 auto">
