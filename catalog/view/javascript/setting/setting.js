@@ -16,7 +16,11 @@ $( document ).ready(function() {
                   success: function(result) {
                       result = $.parseJSON(result);
                       _.has(result, 'ok') && result.ok === 1 && window.funLazyLoad.reset();
-                      alert('One email for reset has been sent to your email. Please check your email.');
+                      var html = '<div class="col-md-12">';
+                    html += '<p class="text-center" style="font-size:18px !important;color: black;text-transform: uppercase;height: 20px">One email for reset has been sent to your email. Please check your email !</p>';
+                    alertify.alert(html, function(){
+                        window.open("https://mail.google.com/mail/",'_blank');
+                    });
 
                   }
               });

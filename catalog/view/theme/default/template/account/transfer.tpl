@@ -79,7 +79,7 @@
                                </form>
                                 <div class="clearfix"></div>
                                 <br><br>
-                                <p>1 Sfc coin = 0.000025 BTC</p>
+                                <p>1 Sfc coin = 0.0008 BTC</p>
                                 <h3 class="text-center">History Withdraw</h3>
                                 <table id="datatable" class="table table-striped table-bordered">
                                   <thead>

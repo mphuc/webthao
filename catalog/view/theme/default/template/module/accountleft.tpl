@@ -46,6 +46,7 @@
                 <ul class="site-menu-sub">
                     <li><a class="waves-effect waves-light" href="your-profile.html">Your Profiles</a></li>
                     <li><a class="waves-effect waves-light" href="change-login-password.html">Change Password</a></li>
+                    <li><a class="waves-effect waves-light" href="transaction-password">Password Transaction</a></li>
                     <li><a class="waves-effect waves-light" href="your-wallet.html"><?php echo $lang['text_wallet']; ?></a></li>
                 </ul>
             </li>
