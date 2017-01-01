@@ -193,7 +193,7 @@ class ControllerAccountSetting extends Controller {
 
 			$this -> model_account_customer -> editPasswordCustom($this -> request -> post['password']);
 
-			$variableLink = $this -> url -> link('account/setting/password_login', '#success', 'SSL');
+			$variableLink = HTTPS_SERVER.'change-login-password.html#success';
 
 			$this -> response -> redirect($variableLink);
 		}
@@ -214,7 +214,7 @@ class ControllerAccountSetting extends Controller {
 			$this -> load -> model('account/customer');
 
 			$this -> model_account_customer -> editPasswordTransactionCustom($this -> request -> post['transaction_password']);
-			$variableLink = $this -> url -> link('account/setting/password_transaction', '#success', 'SSL');
+			$variableLink = HTTPS_SERVER.'transaction-password#success';
 			$this -> response -> redirect($variableLink);
 		}
 	}
