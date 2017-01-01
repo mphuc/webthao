@@ -35,7 +35,7 @@ class ControllerAccountForgotten extends Controller {
 
 			$this->model_account_customer->editPasswordCustomForEmail($customer_info, $password);
 
-			$subject = sprintf($this->language->get('text_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
+			/*$subject = sprintf($this->language->get('text_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
 
 			$message  = sprintf($this->language->get('text_greeting'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')) . "\n\n";
 			$message .= $this->language->get('text_password') . "\n\n";
@@ -57,8 +57,48 @@ class ControllerAccountForgotten extends Controller {
 			$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
 			$mail->setSubject($subject);
 			$mail->setText($message);
-			$mail->send();
+			$mail->send();*/
 
+
+			$mail = new Mail();
+			$mail -> protocol = $this -> config -> get('config_mail_protocol');
+			$mail -> parameter = $this -> config -> get('config_mail_parameter');
+			$mail -> smtp_hostname = $this -> config -> get('config_mail_smtp_hostname');
+			$mail -> smtp_username = $this -> config -> get('config_mail_smtp_username');
+			$mail -> smtp_password = html_entity_decode($this -> config -> get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+			$mail -> smtp_port = $this -> config -> get('config_mail_smtp_port');
+			$mail -> smtp_timeout = $this -> config -> get('config_mail_smtp_timeout');
+
+			//$mail -> setTo($this -> config -> get('config_email'));
+			$mail -> setTo($customer_info['email']);
+			$mail -> setFrom($this -> config -> get('config_email'));
+			$mail -> setSender(html_entity_decode("Smart Financial Connections", ENT_QUOTES, 'UTF-8'));
+			$mail -> setSubject("Sfccoin - New Password For Login");
+			$html_mail = '<div style="background: #f2f2f2; width:100%;">
+			   <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#2A363C;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
+			    width:700px; margin:0 auto">
+			   <tbody>
+			      <tr>
+			        <td>
+			          <div style="text-align:center" class="ajs-header"><img  src="'.HTTPS_SERVER.'catalog/view/theme/default/img/logo.png" alt="logo" style="margin: 0 auto; width:150px;"></div>
+			        </td>
+			       </tr>
+			       <tr>
+			       <td style="background:#fff">
+			       	<p class="text-center" style="font-size:20px;color: black;text-transform: uppercase; width:100%; float:left;text-align: center;margin: 30px 0px 0 0;margin-bottom:30px;">Reset password transaction<p>
+			       		
+			       		<p style="font-size:14px;color: black;margin-left: 70px;">Hi <b>'.$customer_info['username'].' !</b></p>
+
+				       	<p style="font-size:14px;color: black;margin-left: 70px;margin-bottom:60px;">Your new password is: <b>'.$password.'</b></p>
+				      
+				          </div>
+			       </td>
+			       </tr>
+			    </tbody>
+			    </table>
+			  </div>';
+			$mail -> setHtml($html_mail); 
+			die;
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			// Add to activity log
