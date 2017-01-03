@@ -149,11 +149,12 @@
                  <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content t-content_custom" style="width: 40%">
+                        <div class="t-content t-content_custom" style="width: 50%">
                             <h6 class=" mb-1">Total Sfccoin</h6>
-                            <h1 class="mb-1">0 SFC</p> </h1>
+                            <h1 class="mb-1">0 Sfccoin <!-- <img style="width: 25px; margin-top: -4px;" src="catalog/view/theme/default/images/sfccoin.png" alt=""> --></p> </h1>
+
                         </div>
-                        <div class="t-content t-content_custom text-right" style="width: 60%">
+                        <div class="t-content t-content_custom text-right" style="width: 50%">
                             <h6 class=" mb-1" >Price</h6>
                             <h1 class="mb-1" >0.0008 BTC</p></h1>
                         </div>
