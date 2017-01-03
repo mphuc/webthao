@@ -149,13 +149,13 @@
                  <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content t-content_custom">
+                        <div class="t-content t-content_custom" style="width: 40%">
                             <h6 class=" mb-1">Total Sfccoin</h6>
                             <h1 class="mb-1">0 SFC</p> </h1>
                         </div>
-                        <div class="t-content_custom">
-                            <h6 class=" mb-1"></h6>
-                            <img class="pull-right" style="width: 50px;" src="catalog/view/theme/default/images/sfccoin.png" alt="">
+                        <div class="t-content t-content_custom text-right" style="width: 60%">
+                            <h6 class=" mb-1" >Price</h6>
+                            <h1 class="mb-1" >0.0008 BTC</p></h1>
                         </div>
                         
                     </div>
@@ -165,9 +165,13 @@
                 <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="box box-block bg-red tile tile-1 mb-2">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
-                        <div class="t-content">
-                            <h6 class=" mb-1">Token</h6>
-                            <h1 class="mb-1"><?php echo number_format($wallet_token) ?> Token</p></h1>
+                        <div class="t-content t-content_custom" style="width: 40%">
+                            <h6 class=" mb-1" >Token</h6>
+                            <h1 class="mb-1"><?php echo number_format($wallet_token) ?></p></h1>
+                        </div>
+                        <div class="t-content t-content_custom text-right" style="width: 60%">
+                            <h6 class=" mb-1" >Price</h6>
+                            <h1 class="mb-1" >0.000025 BTC</p></h1>
                         </div>
                     </div>
                 </div>
@@ -179,10 +183,10 @@
                             <h6 class=" mb-1">Difficulty</h6>
                             <h1 class="mb-1">25 Token</p></h1>
                         </div>
-                        <div class="t-content t-content_custom text-right" style="width: 60%">
+                        <!-- <div class="t-content t-content_custom text-right" style="width: 60%">
                             <h6 class=" mb-1" >Rate</h6>
                             <h1 class="mb-1" >0.000025 BTC</p></h1>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <h3 style="margin-top: 30px; float: left;width: 100%" class="text-center">List Investment</h3>    
