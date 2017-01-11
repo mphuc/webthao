@@ -235,7 +235,7 @@ class ControllerAccountPd extends Controller {
                     break;
                 case 500000000:
                     $percent_r_payment = 0.022;
-                    $token = 20000;
+                    $token = 50000;
                     break;
                 case 1000000000:
                     $percent_r_payment = 0.023;
