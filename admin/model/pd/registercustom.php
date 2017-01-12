@@ -959,10 +959,10 @@ class ModelPdRegistercustom extends Model {
 	public function get_all_dailyprofix($limit, $offset){
 
 		$query = $this -> db -> query("
-			SELECT A.*,sum(A.amount) as amount,B.username
+			SELECT A.*,B.username
 			FROM  ".DB_PREFIX."customer_r_wallet_payment A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id 
 			WHERE if (count_day > 40, count_p_node > 0,count_p_node >= 0) AND count_day <= 90
-			GROUP BY(A.addres_wallet) 
+			
 			ORDER BY date_added DESC
 
 			LIMIT ".$limit."
