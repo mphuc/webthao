@@ -246,7 +246,8 @@ jQuery(document).ready(function($) {
 </script>
 <style>
   .username_node{
-      margin-top: -92px; float: left; position: absolute; left: -10px; font-size: 8px;
+     margin-top: -39px; float: left; position: absolute; left: -8px; font-size: 8px; width: 51px; overflow: hidden;
   }
+  
 </style>
 <?php echo $footer; ?>
