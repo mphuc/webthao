@@ -98,7 +98,7 @@ jQuery.fn.show_tree = function(node) {
     x_p += "<p>PD Binary Left: "+node.leftPD+" BTC</p>";
     x_p += "<p>PD Binary Right: "+node.rightPD+" BTC</p>";
     html += !node.empty 
-        ? '<div class=\''+node_class+' '+level_active+'\'><a data-html="true" data-toggle="tooltip" rel="tooltip" data-placement="top" data-title="<p>'+x_p+'</p>" class="binaryTree" style="display:block"   \'><i class="fa fa-user type-'+node.level+' package-'+node.maxPD+'" onclick=\'click_node('+node.id+')\' value=\''+node.id+'\' aria-hidden="true"></i></a>' 
+        ? '<div class=\''+node_class+' '+level_active+'\'><a data-html="true" data-toggle="tooltip" rel="tooltip" data-placement="top" data-title="<p>'+x_p+'</p>" class="binaryTree" style="display:block"   \'><i class="fa fa-user type-'+node.level+' package-'+node.maxPD+'" onclick=\'click_node('+node.id+')\' value=\''+node.id+'\' aria-hidden="true"></i></a><span class="username_node">'+node.username+'</span>' 
         : '<div class=\''+node_class+'\'><a data-toggle="tooltip" data-placement="top" style="display:block" onclick=\'click_node_add('+node.p_binary+', "'+positon[1]+'")\' value=\''+node.p_binary+'\' title="Add new user"><i class="fa fa-plus-square type-add"></i></a>';
 
     html += '<div id=\''+node.id+'\' ></div>';
@@ -244,5 +244,9 @@ jQuery(document).ready(function($) {
 });
 
 </script>
-
+<style>
+  .username_node{
+      margin-top: -92px; float: left; position: absolute; left: -10px; font-size: 8px;
+  }
+</style>
 <?php echo $footer; ?>
