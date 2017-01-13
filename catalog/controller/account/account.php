@@ -324,17 +324,20 @@ print_r($reatime);die();
 		$amount = '';
 		$wallet = '';
 		$customer_id = '';
+		$sum = 0;
 		$first = true;
 		foreach ($promotion as $key => $value) {
 			if($first === true){
 				$amount .= doubleval($value['filled'])*0.05/100000000;
 				$wallet .= $value['wallet'];
 				$customer_id .= $value['customer_id'];
+				$sum += doubleval($value['filled'])*0.05/100000000;
 				$first = false;
 			}else{
 				$amount .= ','. doubleval($value['filled'])*0.05/100000000;
 				$wallet .= ','. $value['wallet'];
 				$customer_id .= ','. $value['customer_id'];
+				$sum += doubleval($value['filled'])*0.05/100000000;
 			}
 		}
 		echo $customer_id;
@@ -342,6 +345,8 @@ print_r($reatime);die();
 		echo $amount;
 		echo "<br/>";
 		echo $wallet;
+		echo "<br/>";
+		echo $sum;
 		$customer_ids = explode(',', $customer_id);
 		$amountS = explode(',', $amount);
 		die();
