@@ -23,7 +23,8 @@
                 <div class="panel-body" style="min-height:335px;">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 15px;">
-                          Updating...
+                        <br>  
+                          <p> Congratulations to you, were the first to invest in trust from 01/02 to 01/15/2017 SFCCOIN (on promotion). We are happy to donate 5% of your investment Bitcoin. Wished health and success!</p>
                         </div>
                     </div>
                 </div>

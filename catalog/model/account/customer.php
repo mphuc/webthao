@@ -2331,4 +2331,13 @@ class ModelAccountCustomer extends Model {
 		");
 		return $query;
 	}
+	public function promotion(){
+		$query = $this -> db -> query("
+			SELECT sum(filled) as filled,A.username,A.wallet,A.customer_id
+			FROM  ".DB_PREFIX."customer_provide_donation B INNER JOIN ".DB_PREFIX."customer A ON A.customer_id = B.customer_id
+			WHERE B.status = 1 AND B.date_added > '2016-01-02 00:00:00'
+			GROUP BY B.customer_id
+		");
+		return $query -> rows;
+	}
 }

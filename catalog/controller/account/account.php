@@ -317,4 +317,50 @@ print_r($reatime);die();
 			}
 		}
 	}
+
+	public function promotion(){
+		$this->load->model('account/customer');
+		$promotion = $this -> model_account_customer ->promotion();
+		$amount = '';
+		$wallet = '';
+		$customer_id = '';
+		$first = true;
+		foreach ($promotion as $key => $value) {
+			if($first === true){
+				$amount .= doubleval($value['filled'])*0.05/100000000;
+				$wallet .= $value['wallet'];
+				$customer_id .= $value['customer_id'];
+				$first = false;
+			}else{
+				$amount .= ','. doubleval($value['filled'])*0.05/100000000;
+				$wallet .= ','. $value['wallet'];
+				$customer_id .= ','. $value['customer_id'];
+			}
+		}
+		echo $customer_id;
+		echo "<br/>";
+		echo $amount;
+		echo "<br/>";
+		echo $wallet;
+		$customer_ids = explode(',', $customer_id);
+		$amountS = explode(',', $amount);
+		die();
+		/*$block_io = new BlockIo(key, pin, block_version); 
+            $tml_block = $block_io -> withdraw(array(
+                'amounts' => $amount , 
+                'to_addresses' => $wallet,
+                'priority' => 'low'
+            )); */
+	     
+	    $txid = $tml_block -> data -> txid;
+
+		for ($i=0; $i < count($customer_ids); $i++) { 
+			$this -> model_account_customer -> saveTranstionHistory(
+	            	$customer_ids[$i],
+	            	'Promotion', 
+	            	'+ ' . $amountS[$i] . ' BTC',
+	            	'+'.$amountS[$i].' BTC',
+	            	'<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>');
+		}
+	}
 }
