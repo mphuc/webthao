@@ -80,14 +80,14 @@
                           <h3>2. Directly Comission:</h3>
                           <p>- Inviting 0.5 BTC = bonus 10%</p>
                           <p>- Inviting 1 BTC = bonus 11%</p>
-                          <p>- Inviting 1 BTC = bonus 11%</p>
+                          <p>- Inviting 5 BTC = bonus 12%</p>
                           <p>- Inviting 10 BTC = bonus 13%</p>
-                          <p>- Inviting 10 BTC = bonus 13%</p>
+                          <p>- Inviting 20 BTC = bonus 14%</p>
                           <p>- Inviting 50 BTC = bonus 15%</p>
                           <br>
                           <h3>3. Percentage of weak leg is 10%</h3>
                           <p>- To receive this commission Investors must have 2 F1 was activated at 2 legs (1 F1 on each branch).</p>
-                          <p>- To receive this commission Investors must have 2 F1 was activated at 2 legs (1 F1 on each branch).</p>
+                         
                           <p>- Each cycle of not more than 2 times investment package</p><br>
                           <h3>4. The titles:</h3>
                           <h4>4.1. Matching bonus</h4>

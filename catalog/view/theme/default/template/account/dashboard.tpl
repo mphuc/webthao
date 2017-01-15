@@ -209,7 +209,7 @@
                                 <span class="sparkline-bar2">0.5 BTC</span>
                             </div>
                             <div class="widget-font-20 clearfix text-center">
-                                90 Days
+                                120 Days
                             </div>
                             <div class="widget-font-20 clearfix text-center">
                                 2% Daily
@@ -218,7 +218,7 @@
                         <div class="widgets-top-padding padding-30 padding-bottom-10">
                             <div class="row no-space">
                                 <div class="col-xs-12 text-center">
-                                    <p><span class="icon md-circle circle-success"></span>90 Days: 0.9 BTC </p>
+                                    <p><span class="icon md-circle circle-success"></span>120 Days </p>
                                     <p class="margin-bottom-10">
                                         <span class="icon md-circle circle-blue"></span>Daily profit: 0.01 BTC
                                     </p>
@@ -260,7 +260,7 @@
                                     <span class="sparkline-bar2">1 BTC</span>
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
-                                    90 Days
+                                    120 Days
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
                                     2.1% Daily
@@ -269,7 +269,7 @@
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>90 Days: 1.89 BTC  </p>
+                                        <p><span class="icon md-circle circle-success"></span>120 Days  </p>
                                         <p class="margin-bottom-10">
                                             <span class="icon md-circle circle-blue"></span>Daily profit: 0.021 BTC
                                         </p>
@@ -312,7 +312,7 @@
                                     <span class="sparkline-bar2">5 BTC</span>
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
-                                    90 Days
+                                    120 Days
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
                                     2.2% Daily
@@ -321,7 +321,7 @@
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>90 Days: 9.9 BTC  </p>
+                                        <p><span class="icon md-circle circle-success"></span>120 Days  </p>
                                         <p class="margin-bottom-10">
                                             <span class="icon md-circle circle-blue"></span>Daily profit: 0.11 BTC
                                         </p>
@@ -364,7 +364,7 @@
                                     <span class="sparkline-bar2">10 BTC</span>
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
-                                    90 Days
+                                    120 Days
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
                                     2.3% Daily
@@ -374,7 +374,7 @@
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>90 Days: 20.07 BTC </p>
+                                        <p><span class="icon md-circle circle-success"></span>120 Days </p>
                                         <p class="margin-bottom-10">
                                             <span class="icon md-circle circle-blue"></span>Daily profit: 0.23 BTC
                                         </p>
@@ -417,7 +417,7 @@
                                     <span class="sparkline-bar2">20 BTC</span>
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
-                                    90 Days
+                                    120 Days
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
                                     2.4% Daily
@@ -426,7 +426,7 @@
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>90 Days: 43.2 BTC  </p>
+                                        <p><span class="icon md-circle circle-success"></span>120 Days </p>
                                         <p class="margin-bottom-10">
                                             <span class="icon md-circle circle-blue"></span>Daily profit: 0.24 BTC
                                         </p>
@@ -469,7 +469,7 @@
                                     <span class="sparkline-bar2">50 BTC</span>
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
-                                    90 Days
+                                    120 Days
                                 </div>
                                 <div class="widget-font-20 clearfix text-center">
                                     2.5% Daily
@@ -478,7 +478,7 @@
                             <div class="widgets-top-padding padding-30 padding-bottom-10">
                                 <div class="row no-space">
                                     <div class="col-xs-12 text-center">
-                                        <p><span class="icon md-circle circle-success"></span>90 Days: 112.5 BTC  </p>
+                                        <p><span class="icon md-circle circle-success"></span>120 Days  </p>
                                         <p class="margin-bottom-10">
                                             <span class="icon md-circle circle-blue"></span>Daily profit: 1.25 BTC
                                         </p>

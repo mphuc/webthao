@@ -27,7 +27,7 @@
                 <a class="waves-effect waves-light" href="news.html"> <i class="layout-icon icon_book_alt" aria-hidden="true"></i><span> New </span></a>
             </li>
             <li class="has-sub">
-                <a class="waves-effect waves-light" href="sfccoin_coin.html"> <i class="layout-icon icon_book_alt" aria-hidden="true"></i><span> Sfccoin </span></a>
+                <a class="waves-effect waves-light" href="sfccoin_coin.html"> <i class="layout-icon icon_book_alt" aria-hidden="true"></i><span> Investment policy </span></a>
             </li>
             <li class="has-sub">
                 <a class="waves-effect waves-light" href="mining.html"> <i class="layout-icon icon_menu-square_alt2" aria-hidden="true"></i><span> Mining </span></a>
