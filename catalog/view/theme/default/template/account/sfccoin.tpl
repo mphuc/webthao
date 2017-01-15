@@ -90,7 +90,7 @@
                           <p>- To receive this commission Investors must have 2 F1 was activated at 2 legs (1 F1 on each branch).</p>
                           <p>- Each cycle of not more than 2 times investment package</p><br>
                           <h3>4. The titles:</h3>
-                          <h5>4.1. Matching bonus</h5>
+                          <h4>4.1. Matching bonus</h4>
                           <p>- The title Gold receives 10% from F1</p>
                           <p>- The title Ruby receives 10% from F1, F2</p>
                           <p>- The title Ruby receives 10% from F1, F2</p>
@@ -98,7 +98,7 @@
                           <p>- The title Blue Diamond receives 10% from F1, F2, F3, F4, F5</p>
                           <p>- The title Black Diamond receives 10% from F1, F2, F3, F4, F5, F6</p>
                           <p>***Note: The commissions are calculated based on the commission of the weak team from F1 to F6</p><br>
-                          <h5>4.2. The system commissions:</h5>
+                          <h4>4.2. The system commissions:</h4>
                           <p>- The title Gold: 0.5%</p>
                           <p>- The title Ruby: 1%</p>
                           <p>- The title Emerald: 2%</p>
@@ -107,7 +107,7 @@
                           <p>- The title Black Diamond: 5%</p>
                           <p>+ Note: The commission on the total revenue received from the system direct to investors after deducting direct sales of the downline members achieve this commission.</p>
                           <br>
-                          <h5>* The titles's qualified:</h5>
+                          <h4>* The titles's qualified:</h4>
                           <p>- Level Gold: The total revenue from weak leg is 150 BTC</p>
                           <p>- Level Ruby: Having 2 F1 achieved title Gold</p>
                           <p>- Level Emerald: Having 2 F1 reaches title Ruby</p>
@@ -115,7 +115,7 @@
                           <p>- Level Blue Diamond: 2 F1 reach title Diamond</p>
                           <p>- Level Black Diamond: having  2 F1 reached</p>
                           <br>
-                          <h5>* How to receive profits & commissions?</h5>
+                          <h4>* How to receive profits & commissions?</h4>
                           <p>- All amounts are payments by Bitcoin.</p>
                           <p>- All the investors receive daily profit from day 1 to day 90 by BTC & day 91 to day 120 by SFC's token. </p>
                           <p>- Receiving automatically through Blockchain wallet with regulations time. Investors do not need to do any action to request the withdraw.</p>
@@ -126,7 +126,7 @@
                           <p>   + Switch on for accumulation: 25%</p>
                           <p>   + Switch on for Blockchain: 75%</p>
                           <p>   + Transaction Fee: 3%</p>
-                          <h5>* SFC's conditions to receive all the commissions:</h5>
+                          <h4>* SFC's conditions to receive all the commissions:</h4>
                           <p>- After 30 days of receiving daily profits, the investor must built one F1 or more than one has a total investment equal to or more BTC's investment package yourself.</p>
                           <p>- If you do not qualify the requirements above, the commission will be calculated as follows:</p>
                           <p>  + Daily profit: decrease 50% profit of investment pack.</p>
