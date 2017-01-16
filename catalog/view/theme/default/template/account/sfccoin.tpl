@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 15px;">
                         <br>  
-                          <h1 class="text-center">SFC's Policy:</h1>
+                          <h1 class="text-center"> Investment policy </h1>
                           <h3>1. Daily profit – 120 active days:</h3>
                           <table id="datatable" class="table table-striped table-bordered">
                             <th>Investment pack</th>

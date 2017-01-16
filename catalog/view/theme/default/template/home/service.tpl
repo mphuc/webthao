@@ -28,9 +28,9 @@
                                 <h4 class="title"><a href="#">0.5 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>90 Days</p>
+                                <p>120 Days</p>
                                 <p>2 % Daily</p>
-                                <p>90 Days: 0.9 BTC + 0.5 BTC</p>
+                                <p>120 Days</p>
                                 <p>Daily profit: 0.01 BTC</p>
                                 <a class="value" href="#"> Start From <span class="service-price">0.5 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
@@ -46,9 +46,9 @@
                                 <h4 class="title"><a href="#">1 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>90 Days</p>
+                                <p>120 Days</p>
                                 <p>2.1 % Daily</p>
-                                <p>90 Days: 1.89 BTC +1 BTC</p>
+                                <p>120 Days</p>
                                 <p>Daily profit: 0.021 BTC</p>
                                 <a class="value" href="#"> Start From <span class="service-price">1 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
@@ -64,9 +64,9 @@
                                 <h4 class="title"><a href="#">5 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>90 Days</p>
+                                <p>120 Days</p>
                                 <p>2.2 % Daily</p>
-                                <p>90 Days: 9.9 BTC + 5 BTC</p>
+                                <p>120 Days</p>
                                 <p>Daily profit: 0.11 BTC</p>
                                 <a class="value" href="#"> Start From <span class="service-price">5 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
@@ -82,9 +82,9 @@
                                 <h4 class="title"><a href="#">10 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>90 Days</p>
+                                <p>120 Days</p>
                                 <p>2.3 % Daily</p>
-                                <p>90 Days: 20.07 BTC + 10 BTC</p>
+                                <p>120 Days</p>
                                 <p>Daily profit: 0.23 BTC</p>
                                 <a class="value" href="#"> Start From <span class="service-price">10 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
@@ -100,9 +100,9 @@
                                 <h4 class="title"><a href="#">20 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>90 Days</p>
+                                <p>120 Days</p>
                                 <p>2.4 % Daily</p>
-                                <p>90 Days: 43.2 BTC + 10 BTC</p>
+                                <p>120 Days</p>
                                 <p>Daily profit: 0.24 BTC</p>
                                 <a class="value" href="#"> Start From <span class="service-price">20 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>
@@ -118,9 +118,9 @@
                                 <h4 class="title"><a href="#">50 BTC</a></h4>
                             </div>
                             <div class="overlay">
-                                <p>90 Days</p>
+                                <p>120 Days</p>
                                 <p>2.5 % Daily</p>
-                                <p>90 Days: 112.5 BTC + 50 BTC</p>
+                                <p>120 Days</p>
                                 <p>Daily profit: 1.25 BTC</p>
                                 <a class="value" href="#"> Start From <span class="service-price">50 BTC</span></a>
                                 <a class="btn-link" href="#">read more <i class="fa fa-arrow-circle-right"></i></a>

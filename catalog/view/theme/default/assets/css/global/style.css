@@ -14271,7 +14271,7 @@ input.styled[type="radio"]:checked + label:after {
     background: white;
 }
 .bg-info{
-    background: #36a9e1 !important;
+    background: #105D60!important
 }
 .bg-success{
     background: #66bb6a;
