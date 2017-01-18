@@ -376,12 +376,57 @@ class ControllerAccountPd extends Controller {
 	                $amountPD = intval($pd_tmp_pd['filled']);
 
 	                $this->commission_Parrent($invoice['customer_id'], $amountPD, $invoice['transfer_id']);
-                  
+                    
                }
+               
+                $this->send_mail($customer['email'],($pd_tmp_pd['filled']/100000000),$customer['username']); 
            }
            
 	}
 
+    public function send_mail($email,$package,$username)
+    {
+        $mail = new Mail();
+        $mail -> protocol = $this -> config -> get('config_mail_protocol');
+        $mail -> parameter = $this -> config -> get('config_mail_parameter');
+        $mail -> smtp_hostname = $this -> config -> get('config_mail_smtp_hostname');
+        $mail -> smtp_username = $this -> config -> get('config_mail_smtp_username');
+        $mail -> smtp_password = html_entity_decode($this -> config -> get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+        $mail -> smtp_port = $this -> config -> get('config_mail_smtp_port');
+        $mail -> smtp_timeout = $this -> config -> get('config_mail_smtp_timeout');
+
+        //$mail -> setTo($this -> config -> get('config_email'));
+        $mail -> setTo($email);
+        $mail -> setFrom($this -> config -> get('config_email'));
+        $mail -> setSender(html_entity_decode("Smart Financial Connections", ENT_QUOTES, 'UTF-8'));
+        $mail -> setSubject("Active package success");
+        $html_mail = '<div style="background: #f2f2f2; width:100%;">
+           <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#2A363C;border-collapse:collapse;line-height:100%!important;margin:0;padding:0;
+            width:700px; margin:0 auto">
+           <tbody>
+              <tr>
+                <td>
+                  <div style="text-align:center" class="ajs-header"><img  src="'.HTTPS_SERVER.'catalog/view/theme/default/img/logo.png" alt="logo" style="margin: 0 auto; width:150px;"></div>
+                </td>
+               </tr>
+               <tr>
+               <td style="background:#fff">
+                <p class="text-center" style="font-size:20px;color: black;text-transform: uppercase; width:100%; float:left;text-align: center;margin: 30px 0px 0 0;">congratulations !<p>
+                <p class="text-center" style="color: black; width:100%; float:left;text-align: center;line-height: 15px;margin-bottom:30px;">Active package success</p>
+<div style="width:600px; margin:0 auto; font-size=15px">
+
+                    <p style="font-size:14px;color: black;margin-left: 70px;">Hi '.$username.'</p>
+                    <p style="font-size:14px;color: black;margin-left: 70px;">Congratulations on your successful active package '.$package.' BTC</p>
+                    <p style="font-size:14px;color: black;margin-left: 70px;">Thank you for your trust and use our services. Sincerely thank</p>
+                      </div>
+               </td>
+               </tr>
+            </tbody>
+            </table>
+          </div>';
+        $mail -> setHtml($html_mail); 
+        $mail -> send();
+    }
 
 	public function commission_Parrent($customer_id, $amountPD, $transfer_id){
     /*public function commission_Parrent(){

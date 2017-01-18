@@ -841,12 +841,10 @@ class ModelAccountCustomer extends Model {
 		$this -> db -> query("UPDATE " . DB_PREFIX . "customer SET account_holder = '". $data_arr['account_holder'] ."',bank_name = '". $data_arr['bank_name'] ."',account_number = '". $data_arr['account_number'] ."',branch_bank = '". $data_arr['branch_bank'] ."' WHERE customer_id = '" . (int)$customer_id . "'");
 		$this -> event -> trigger('post.customer.edit', $customer_id);
 	}
-	public function editCustomerProfile($data) {
-
-		$data_arr = $data;
+	public function editCustomerProfile($data_arr) {
 		$this -> event -> trigger('pre.customer.edit', $data_arr);
 		$customer_id = $this -> customer -> getId();
-		$this -> db -> query("UPDATE " . DB_PREFIX . "customer SET username = '". $data_arr['username'] ."',email = '". $data_arr['email'] ."',telephone = '". $data_arr['telephone'] ."' WHERE customer_id = '" . (int)$customer_id . "'");
+		$this -> db -> query("UPDATE " . DB_PREFIX . "customer SET country_id = '". $data_arr['country_id'] ."',email = '". $data_arr['email'] ."',telephone = '". $data_arr['telephone'] ."' WHERE customer_id = '" . (int)$customer_id . "'");
 		$this -> event -> trigger('post.customer.edit', $customer_id);
 	}
 
@@ -2340,4 +2338,5 @@ class ModelAccountCustomer extends Model {
 		");
 		return $query -> rows;
 	}
+
 }

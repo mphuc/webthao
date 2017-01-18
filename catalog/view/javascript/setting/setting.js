@@ -415,7 +415,7 @@ $( document ).ready(function() {
         _.has(result, 'telephone') && $('#Phone').val(result.telephone);
         _.has(result, 'address_cmnd') && $('#Address').val(result.address_cmnd);
         _.has(result, 'firstname') && $('#fullname').val(result.firstname);
-        _.has(result, 'countryname') && $('#Country').val(result.countryname);
+        
         _.has(result, 'ip') && $('#LastIP').val(result.ip);
         _.has(result, 'date_add_login') && $('#date_add_login').val(result.date_add_login);
         _.has(result, 'date_added') && $('#Date').val(result.date_added);
@@ -462,7 +462,7 @@ $( document ).ready(function() {
 
     var walletCurrent = $('#BitcoinWalletAddress').val();
 
-    $('#updateWallet').on('submit', function(){
+    $('#updateWallet_').on('submit', function(){
         $('#BitcoinWalletAddress-error span').hide().html('');
         $('#BitcoinWalletAddress').parent().removeClass('has-error');
         $('#Password2-error span').hide().html('');
@@ -623,6 +623,96 @@ $( document ).ready(function() {
                         $('#Branchbank-error span').hide().html('');
                         $('#Branchbank').parent().removeClass('has-success');
                     }
+                }
+            }
+        });
+        return false;
+    });
+    $('#updateProfile').on('submit', function(){
+
+        $(this).ajaxSubmit({
+            type : 'POST',
+            beforeSubmit : function(arr, $form, options) {
+                if ($('#Country').val() == ""){
+                    $('#Country').focus();
+                    $('#Country').css({'border':'1px solid red'});
+                    return false;
+                }
+                if ($('#Email').val() == ""){
+                    $('#Email').focus();
+                    $('#Email').css({'border':'1px solid red'});
+                    return false;
+                }
+                if ($('#Phone').val() == ""){
+                    $('#Phone').focus();
+                    $('#Phone').css({'border':'1px solid red'});
+                    return false;
+                }
+                if ($('#password_transaction').val() == ""){
+                    $('#password_transaction').focus();
+                    $('#password_transaction').css({'border':'1px solid red'});
+                    return false;
+                }
+
+            },
+            success : function(result){
+                result = $.parseJSON(result);
+                if (result.complete == 1){
+                    alertify.set('notifier','delay', 100000000);
+                  alertify.set('notifier','position', 'top-right');
+                  alertify.success('Update profile successfull !!!');
+                }
+                if (result.password == -1){
+                    $('#password_transaction').focus();
+                    $('#password_transaction').css({'border':'1px solid red'});
+                    $('#password_transaction').val('');
+                    $('#placeholder').attr('placeholder','Password transaction wrong !')
+                    return false;
+                }
+            }
+        });
+        return false;
+    });
+
+    $('#updateWallet').on('submit', function(){
+
+        $(this).ajaxSubmit({
+            type : 'POST',
+            beforeSubmit : function(arr, $form, options) {
+                if ($('#BitcoinWalletAddress').val() == ""){
+                    $('#BitcoinWalletAddress').focus();
+                    $('#BitcoinWalletAddress').css({'border':'1px solid red'});
+                    return false;
+                }
+               
+                if ($('#Password2').val() == ""){
+                    $('#Password2').focus();
+                    $('#Password2').css({'border':'1px solid red'});
+                    return false;
+                }
+
+            },
+            success : function(result){
+                result = $.parseJSON(result);
+                if (result.complete == 1){
+                    alertify.set('notifier','delay', 100000000);
+                    alertify.set('notifier','position', 'top-right');
+                    alertify.success('Update profile successfull !!!');
+                }
+                if (result.wallet == -1)
+                {
+                    $('#BitcoinWalletAddress').focus();
+                    $('#BitcoinWalletAddress').css({'border':'1px solid red'});
+                   
+                    $('#BitcoinWalletAddress').attr('placeholder','Password transaction wrong !')
+                    return false;
+                }
+                if (result.password == -1){
+                    $('#Password2').focus();
+                    $('#Password2').css({'border':'1px solid red'});
+                    $('#Password2').val('');
+                    $('#Password2').attr('placeholder','Password transaction wrong !')
+                    return false;
                 }
             }
         });

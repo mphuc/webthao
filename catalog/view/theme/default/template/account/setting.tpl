@@ -69,7 +69,7 @@
                               <label class="col-md-3 control-label"><?php echo $lang['text_username'] ?></label>
                               <div class="col-md-6">
                                  <div class="input-group">
-                                    <input class="form-control valid" id="UserName" name='username'  type="text" readonly='true' value="" data-link="<?php echo $self -> url -> link('account/register/checkuser', '', 'SSL'); ?>" />
+                                    <input class="form-control valid" id="UserName" name='username'  type="text" readonly='true' data-link="<?php echo $self -> url -> link('account/register/checkuser', '', 'SSL'); ?>" value="<?php echo $customer['username'] ?>" />
                                     <span id="UserName-error" class="field-validation-error">
                                     <span></span>
                                     </span>
@@ -81,10 +81,17 @@
                               <label class="col-md-3 control-label">Country</label>
                               <div class="col-md-6">
                                  <div class="input-group">
-                                    <input class="form-control valid" id="Country" name='countryname'  type="text" readonly='true' value="" />
-                                    <span id="UserName-error" class="field-validation-error">
-                                    <span></span>
-                                    </span>
+                                    <select id="Country" class="form-control" id="country" name="country_id">
+                                       <option value="">-- Choose your Country --</option>
+                                       <?php foreach ($country as $key=> $value) {
+                                        $country_id = $customer['country_id'];
+                                        ?>
+                                       <option  value="<?php echo $value['id'] ?>" <?php if (intval($value['id']) == intval($country_id)) echo 'selected="selected"'?>>
+                                          <?php echo $value[ 'name'] ?>
+                                       </option>
+                                       <?php } ?>
+                                    </select>
+                                   
                                  </div>
                               </div>
                            </div>
@@ -92,7 +99,7 @@
                               <label class="col-md-3 control-label"><?php echo $lang['text_email'] ?></label>
                               <div class="col-md-6">
                                  <div class="input-group">
-                                    <input class="form-control" data-link="<?php echo $self -> url -> link('account/register/checkemail', '', 'SSL'); ?>" id="Email" name="email" readonly='true' type="text" value=""/>
+                                    <input class="form-control" data-link="<?php echo $self -> url -> link('account/register/checkemail', '', 'SSL'); ?>" id="Email" name="email" type="text" value="<?php echo $customer['email'] ?>"/>
                                     <span id="Email-error" class="field-validation-error">
                                     <span></span>
                                     </span>
@@ -103,7 +110,7 @@
                               <label class="col-md-3 control-label"><?php echo $lang['text_phone'] ?></label>
                               <div class="col-md-6">
                                  <div class="input-group">
-                                    <input data-link="<?php echo $self -> url -> link('account/register/checkphone', '', 'SSL'); ?>" class="form-control" id="Phone" readonly='true' name="telephone" type="text" value=""/>
+                                    <input data-link="<?php echo $self -> url -> link('account/register/checkphone', '', 'SSL'); ?>" class="form-control" id="Phone" name="telephone" type="text" value="<?php echo $customer['telephone'] ?>" />
                                     <span id="Phone-error" class="field-validation-error">
                                     <span></span>
                                     </span>
@@ -111,23 +118,23 @@
                               </div>
                            </div>
                            <div class="form-group">
-                              <label class="col-md-3 control-label">Affiliate Since:</label>
+                              <label class="col-md-3 control-label">Password Transaction</label>
                               <div class="col-md-6">
                                  <div class="input-group">
-                                    <input type="text" id="Date" readonly='true' value="" placeholder="" spellcheck="false" class="form-control sbg info-city">
+                                    <input type="password" name="password_transaction" id="password_transaction"  value="" placeholder="Password Transaction" class="form-control sbg info-city">
+
                                  </div>
                               </div>
                            </div>
-                           <div class="form-group">
-                              <label class="col-md-3 control-label">Last Login IP:</label>
+                          
+                          <div class="form-group">
+                              <label class="col-md-3 control-label"></label>
                               <div class="col-md-6">
                                  <div class="input-group">
-                                   
-                                    <input type="text" id="LastIP" value="" readonly='true' placeholder="" spellcheck="false" class="form-control sbg info-region">
+                                    <input type="submit" id="submit" placeholder="" spellcheck="false"  value="Update Infomation" class="btn btn-success"/>
                                  </div>
                               </div>
                            </div>
-      
                         </form>
                      </div>
                   </div>

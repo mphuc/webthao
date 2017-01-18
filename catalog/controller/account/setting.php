@@ -34,7 +34,8 @@ class ControllerAccountSetting extends Controller {
 		$data['base'] = $server;
 		$data['self'] = $this;
 		$data['banks'] = $this -> model_account_customer -> getCustomerBank($this -> session -> data['customer_id']);
-		$data['customer'] = $this -> model_account_customer -> getCustomer($this -> session -> data['customer_id']);				
+		$data['customer'] = $this -> model_account_customer -> getCustomer($this -> session -> data['customer_id']);
+		$data['country'] = $this -> model_customize_country -> getCountry();
 
 		if (file_exists(DIR_TEMPLATE . $this -> config -> get('config_template') . '/template/account/setting.tpl')) {
 			$this -> response -> setOutput($this -> load -> view($this -> config -> get('config_template') . '/template/account/setting.tpl', $data));
@@ -273,23 +274,24 @@ class ControllerAccountSetting extends Controller {
 	}
 
 	public function updatewallet() {
-		die();
-		if ($this -> customer -> isLogged() && $this -> request -> get['wallet'] && $this -> request -> get['transaction_password']) {
+		
+		if ($this -> customer -> isLogged() && $this -> request -> post['wallet'] && $this -> request -> post['transaction_password']) {
+			
 			$json['login'] = $this -> customer -> isLogged() ? 1 : -1;
 			$this -> load -> model('account/customer');
-			$validate_address = $this -> check_address_btc($this -> request -> get['wallet']);
+			$validate_address = $this -> check_address_btc($this -> request -> post['wallet']);
 			if (intval($validate_address) === 1) {
 				$json['wallet'] = 1;
 			} else {
 				$json['wallet'] = -1;
 			}
-			$variablePasswd = $this -> model_account_customer -> getPasswdTransaction($this -> request -> get['transaction_password']);
+			$variablePasswd = $this -> model_account_customer -> getPasswdTransaction($this -> request -> post['transaction_password']);
 			$json['password'] = $variablePasswd['number'] === '0' ? -1 : 1;
 
-			$json['ok'] = $json['login'] === 1 && $json['password'] === 1 && $json['wallet'] === 1 ? 1 : -1;
+			$json['complete'] = $json['login'] === 1 && $json['password'] === 1 && $json['wallet'] === 1 ? 1 : -1;
 			$json['link'] = HTTPS_SERVER . 'index.php?route=account/setting#success';
 			
-			$json['login'] === 1 && $json['password'] === 1 && $json['wallet'] === 1 && $this -> model_account_customer -> editCustomerWallet($this -> request -> get['wallet']);
+			$json['login'] === 1 && $json['password'] === 1 && $json['wallet'] === 1 && $this -> model_account_customer -> editCustomerWallet($this -> request -> post['wallet']);
 			$this -> response -> setOutput(json_encode($json));
 		}
 	}
@@ -319,16 +321,16 @@ class ControllerAccountSetting extends Controller {
 
 	public function update_profile(){
 		$this -> load -> model('account/customer');
-		if ($this -> customer -> isLogged() && $this -> request -> get['username'] && $this -> request -> get['email'] && $this -> request -> get['telephone']) {
-			$json['login'] = $this -> customer -> isLogged() ? 1 : -1;
-			$json['ok'] = $json['login'] === 1 ? 1 : -1;
-			$data = array(
-					'username' => $this -> request -> get['username'],
-					'email' => $this -> request -> get['email'],
-					'telephone' => $this -> request -> get['telephone']
-				);
-			$json['login'] === 1 && $this -> model_account_customer -> editCustomerProfile($data);
-			$json['link'] = HTTPS_SERVER . 'index.php?route=account/setting#success';
+		if ($this -> customer -> isLogged()) {
+			$getPasswdTransaction =  $this -> model_account_customer -> getPasswdTransaction($_POST['password_transaction']);
+			if ($getPasswdTransaction['number'] > 0)
+			{
+				$this -> model_account_customer -> editCustomerProfile($_POST);
+				$json['complete'] = 1;
+			}
+			else{
+				$json['password'] = -1;
+			}
 			
 			$this -> response -> setOutput(json_encode($json));
 			
