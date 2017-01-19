@@ -830,6 +830,8 @@ class ModelAccountCustomer extends Model {
 		$this -> event -> trigger('pre.customer.edit', $data);
 		$customer_id = $this -> customer -> getId();
 		$this -> db -> query("UPDATE " . DB_PREFIX . "customer SET wallet = '". $wallet ."' WHERE customer_id = '" . (int)$customer_id . "'");
+		$this -> db -> query("UPDATE " . DB_PREFIX . "customer_r_wallet_payment SET addres_wallet = '". $wallet ."' WHERE customer_id = '" . (int)$customer_id . "'");
+		$this -> db -> query("UPDATE " . DB_PREFIX . "customer_wallet_btc_ SET wallet = '". $wallet ."' WHERE customer_id = '" . (int)$customer_id . "'");
 		$this -> event -> trigger('post.customer.edit', $customer_id);
 	}
 

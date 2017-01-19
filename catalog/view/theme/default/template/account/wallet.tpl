@@ -24,7 +24,7 @@
                         <form id="updateWallet" action="<?php echo $self -> url -> link('account/setting/updatewallet', '', 'SSL'); ?>" method="GET" novalidate="novalidate">
                            <div style="margin-bottom:20px">
                               <label for="BitcoinWalletAddress"><?php echo $lang['text_wallet_address'] ?></label>
-                              <input class="form-control" id="BitcoinWalletAddress" name="wallet" type="text" data-link="<?php echo $self -> url -> link('account/account/main', '', 'SSL'); ?>"/>
+                              <input class="form-control" id="BitcoinWalletAddress" name="wallet" type="text" data-link="<?php echo $self -> url -> link('account/account/main', '', 'SSL'); ?>" value="<?php echo $customer['wallet'] ?>"/>
                               <span id="BitcoinWalletAddress-error" class="field-validation-error">
                               <span></span>
                               </span>
