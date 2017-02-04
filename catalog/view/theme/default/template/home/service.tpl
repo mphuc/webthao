@@ -135,7 +135,7 @@
     <section class="call-to-action home-one">
         <div class="container-fluid">
             <div class="clearfix">
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/images1.jpg);">
                     <div class="single-call-to-action open-hours">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="call-to-action-center col-md-4" style="background-image: url(catalog/view/theme/default/home/img/call-to-action/center-box-bg.jpg);">
+                <div class="call-to-action-center col-md-4" style="background-image: url(catalog/view/theme/default/images/images2.jpg);">
                     <div class="single-call-to-action">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/con-so-kinh-ngac-ve-nha-may-boeing-khong-lo-hinh-10.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/images3.jpg);">
                     <div class="single-call-to-action">
                         <div class="icon-box">
                             <div class="inner-box">

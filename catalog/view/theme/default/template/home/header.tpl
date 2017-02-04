@@ -55,7 +55,7 @@
             <li><a href="index.html">Home</a>
             </li>
             <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
+           <!--  <li><a href="blog.html">Blog</a></li> -->
             <li><a href="faq.html">F.A.Q</a></li>
             <li><a href="sfccoin.html">Sfccoin</a></li>
             <li><a href="service.html">Service</a></li>
@@ -80,7 +80,7 @@
                         <li><a href="index.html">Home</a>
                         </li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <!-- <li><a href="blog.html">Blog</a></li> -->
                         <li><a href="faq.html">F.A.Q</a></li>
                         <li><a href="sfccoin.html">Sfccoin</a></li>
                         <li><a href="service.html">Service</a></li>

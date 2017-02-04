@@ -3152,6 +3152,7 @@ li {
     background: url(../img/resources/inner-header-bg.jpg) center center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+    background-position-y: -345px;
 }
 
 .inner-header:before {

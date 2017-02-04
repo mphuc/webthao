@@ -10,7 +10,7 @@
       <div id="slider1" class="rev_slider"  data-version="5.0">
          <ul>
             <li data-transition="parallaxvertical">
-               <img src="catalog/view/theme/default/images/Jetstar's_first_787_on_the_production_line_(9132370198).jpg"  alt=""  width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
+               <img src="catalog/view/theme/default/images/photo_48806.jpg"  alt=""  width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
                <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
                     data-x="left" data-hoffset="0" 
                     data-y="top" data-voffset="209" 
@@ -73,7 +73,7 @@
                 </div>
             </li>
             <li data-transition="parallaxvertical">
-               <img src="catalog/view/theme/default/images/1026213022.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+               <img src="catalog/view/theme/default/images/idb-imza-ve-gong-cumhurbaskani-1.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
                <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
                     data-x="left" data-hoffset="0" 
                     data-y="top" data-voffset="209" 
@@ -137,7 +137,7 @@
             </li>
             
             <li data-transition="parallaxvertical">
-               <img src="catalog/view/theme/default/images/Boeing787_Dreamliner.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+               <img src="catalog/view/theme/default/images/IMG_4557.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
                <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
                     data-x="left" data-hoffset="0" 
                     data-y="top" data-voffset="209" 
@@ -200,7 +200,7 @@
                 </div>
             </li>
             <li data-transition="parallaxvertical">
-               <img src="catalog/view/theme/default/images/Figure7Boeing.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+               <img src="catalog/view/theme/default/images/Foto_05.jpg"  alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
                <div class="tp-caption sfl tp-resizeme thm-banner-h1" 
                     data-x="left" data-hoffset="0" 
                     data-y="top" data-voffset="209" 
@@ -269,7 +269,7 @@
     <section class="call-to-action home-one">
         <div class="container-fluid">
             <div class="clearfix">
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/images1.jpg);">
                     <div class="single-call-to-action open-hours">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -282,7 +282,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="call-to-action-center col-md-4" style="background-image: url(catalog/view/theme/default/home/img/call-to-action/center-box-bg.jpg);">
+                <div class="call-to-action-center col-md-4" style="background-image: url(catalog/view/theme/default/images/images3.jpg);">
                     <div class="single-call-to-action">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -295,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/con-so-kinh-ngac-ve-nha-may-boeing-khong-lo-hinh-10.jpg);">
+                <div class="call-to-action-corner col-md-4" style="background-image: url(catalog/view/theme/default/images/images2.jpg);">
                     <div class="single-call-to-action">
                         <div class="icon-box">
                             <div class="inner-box">
@@ -359,13 +359,13 @@
                 <div class="col-md-12 col-lg-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <img class="full-width tp-mb2" src="catalog/view/theme/default/images/Figure7Boeing.jpg" alt="">
+                            <img class="full-width tp-mb2" src="catalog/view/theme/default/images/idb-imza-ve-gong-cumhurbaskani-1.jpg" alt="">
                         </div>
                         <div class="col-md-6 tp-pr1 tp-pr-zs15 tp-mb-zs10">
-                            <img class="full-width" src="catalog/view/theme/default/images/20150130163424-dong-co-o-to.jpg" alt="">
+                            <img class="full-width" src="catalog/view/theme/default/images/Foto_05.jpg" alt="">
                         </div>
                         <div class="col-md-6 tp-pl1 tp-pl-zs15">
-                            <img class="full-width " src="catalog/view/theme/default/images/con-so-kinh-ngac-ve-nha-may-boeing-khong-lo-hinh-10.jpg" alt="">
+                            <img style="min-height: 190px;" class="full-width " src="catalog/view/theme/default/images/IMG_4557.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -822,40 +822,29 @@
             <div class="gallery-slider gallery-slider-carousel">
                 <article class="slide-item">
                     <figure class="image-box">
-                        <img src="catalog/view/theme/default/images/AS9100-Boeing-767.jpg" alt="">
+                        <img src="catalog/view/theme/default/images/images1.jpg" alt="">
                     </figure>
                     
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <img src="catalog/view/theme/default/images/Aircraft-Production-Inspector-Resume1.jpg" alt="">
+                        <img src="catalog/view/theme/default/images/images2.jpg" alt="">
                     </figure>
                     
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <img src="catalog/view/theme/default/images/autóipar.jpg" alt="">
+                        <img src="catalog/view/theme/default/images/images3.jpg" alt="">
                     </figure>
                    
                 </article>
                 <article class="slide-item">
                     <figure class="image-box">
-                        <img src="catalog/view/theme/default/images/wOJNc.png" alt="">
+                        <img src="catalog/view/theme/default/images/Foto_05.jpg" alt="">
                     </figure>
                     
                 </article>
-                <article class="slide-item">
-                    <figure class="image-box">
-                        <img src="catalog/view/theme/default/images/bmw_production_plant_0671-1024x698.jpg" alt="">
-                    </figure>
-                    
-                </article>
-                <article class="slide-item">
-                    <figure class="image-box">
-                        <img src="catalog/view/theme/default/images/january-05.jpg" alt="">
-                    </figure>
-                   
-                </article>
+                
             </div>
         </div>
     </section>
