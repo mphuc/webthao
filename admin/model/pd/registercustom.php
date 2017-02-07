@@ -1429,4 +1429,28 @@ class ModelPdRegistercustom extends Model {
 		");
 		return $query;
 	}
+
+	public function check_cannhanh2f1($customer_id){
+		$querys = $this -> db -> query("
+			SELECT count(*) as number FROM " . DB_PREFIX . "customer_ml WHERE p_node = '".$customer_id."'
+		");
+		$number =  $querys -> row['number'];
+		if (intval($number) < 2) {
+			return 0;
+		}
+		
+		$query = $this -> db -> query("
+			SELECT * FROM " . DB_PREFIX . "customer_ml WHERE customer_id = '".$customer_id."'
+		");
+		$ml =  $query -> row;
+		if ($ml['left'] == 0 || $ml['right'] == 0)
+		{
+			return 0;
+		}
+		else
+		{
+			return 1;
+		}
+		
+	}
 }

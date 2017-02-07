@@ -93,7 +93,7 @@ class ControllerPdParingbonus extends Controller {
 	            {
 	                $balanced = doubleval($value['total_pd_left']);
 	            }
-	            if ($value['level'] == 2) {
+	            if ($value['level'] == 2 && $this-> check_cannhanh2f1($value['customer_id']) == 1) {
 	            	
 	            
 		            $precent = 10;
@@ -156,21 +156,23 @@ class ControllerPdParingbonus extends Controller {
        
 	        if ((doubleval($value['total_pd_left']) > 0 && doubleval($value['total_pd_right'])) > 0)
 	        {
-	            if (doubleval($value['total_pd_left']) > doubleval($value['total_pd_right'])){
-	                $balanced = doubleval($value['total_pd_right']);
-	                $this -> model_pd_registercustom -> update_total_pd_left(doubleval($value['total_pd_left']) - doubleval($value['total_pd_right']), $value['customer_id']);
-	                $this -> model_pd_registercustom -> update_total_pd_right(0, $value['customer_id']);
-	            }
-	            else
-	            {
-	               $balanced = doubleval($value['total_pd_left']);
-	               $this -> model_pd_registercustom -> update_total_pd_right(doubleval($value['total_pd_right']) - doubleval($value['total_pd_left']), $value['customer_id']);
-	               $this -> model_pd_registercustom -> update_total_pd_left(0, $value['customer_id']);
-	            }
-	            $precent = 10;
-	            $amount = ($balanced*$precent)/100;
-	            $btc_tra = round(doubleval($amount)/100000000*0.75*0.97,8);
-	            $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($btc_tra).' BTC','System Commission','Earn '.$precent.'%  weak team ('.($balanced/100000000).' BTC), Free 3%. 25% Reinvestment ',$value['customer_id']);
+	        	if ($value['level'] == 2 && $this-> check_cannhanh2f1($value['customer_id']) == 1) {
+		            if (doubleval($value['total_pd_left']) > doubleval($value['total_pd_right'])){
+		                $balanced = doubleval($value['total_pd_right']);
+		                $this -> model_pd_registercustom -> update_total_pd_left(doubleval($value['total_pd_left']) - doubleval($value['total_pd_right']), $value['customer_id']);
+		                $this -> model_pd_registercustom -> update_total_pd_right(0, $value['customer_id']);
+		            }
+		            else
+		            {
+		               $balanced = doubleval($value['total_pd_left']);
+		               $this -> model_pd_registercustom -> update_total_pd_right(doubleval($value['total_pd_right']) - doubleval($value['total_pd_left']), $value['customer_id']);
+		               $this -> model_pd_registercustom -> update_total_pd_left(0, $value['customer_id']);
+		            }
+		            $precent = 10;
+		            $amount = ($balanced*$precent)/100;
+		            $btc_tra = round(doubleval($amount)/100000000*0.75*0.97,8);
+		            $inser_history .= ",".$this -> model_pd_registercustom -> inser_history('+ '.($btc_tra).' BTC','System Commission','Earn '.$precent.'%  weak team ('.($balanced/100000000).' BTC), Free 3%. 25% Reinvestment ',$value['customer_id']);
+		        }
 	        }
 	    }
 	    $this ->model_pd_registercustom->update_transhistory(substr($inser_history,1),$url);
@@ -193,5 +195,10 @@ class ControllerPdParingbonus extends Controller {
 		    return 2;
 		}
 
+	}
+
+	public function check_cannhanh2f1($customer_id){
+		$this->load->model('pd/registercustom');
+        return $this -> model_pd_registercustom -> check_cannhanh2f1($customer_id);
 	}
 }

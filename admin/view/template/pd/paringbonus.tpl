@@ -14,16 +14,18 @@
           <?php 
             $btc_tra_ = 0;
             foreach ($code_all as $value_new) {
-              if (doubleval($value_new['total_pd_left']) > doubleval($value_new['total_pd_right'])){
-                $balanced = doubleval($value_new['total_pd_right']); 
+              if ($self-> check_cannhanh2f1($value_new['customer_id'])){
+                if (doubleval($value_new['total_pd_left']) > doubleval($value_new['total_pd_right']) == 1){
+                  $balanced = doubleval($value_new['total_pd_right']); 
+                }
+                else
+                {
+                  $balanced = doubleval($value_new['total_pd_left']);
+                }
+                $precent = 10;
+                $amount = ($balanced*$precent)/100;
+                $btc_tra_ += round(doubleval($amount)/100000000*0.75*0.97,8);
               }
-              else
-              {
-                $balanced = doubleval($value_new['total_pd_left']);
-              }
-              $precent = 10;
-              $amount = ($balanced*$precent)/100;
-              $btc_tra_ += round(doubleval($amount)/100000000*0.75*0.97,8);
             }
             
            ?>
@@ -74,6 +76,7 @@
           $i = 0;
           //print_r($_SESSION); die;
           foreach ($code as $value) {
+            if ($self-> check_cannhanh2f1($value['customer_id'])){
             $i++;
         ?>
           <tr>
@@ -105,7 +108,7 @@
             </td>
           </tr>
          <?php
-          }
+          } }
          ?>
      		</tbody>
      	</table>
