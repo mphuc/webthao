@@ -1449,8 +1449,43 @@ class ModelPdRegistercustom extends Model {
 		}
 		else
 		{
-			return 1;
+			$queryss = $this -> db -> query("
+				SELECT customer_id FROM " . DB_PREFIX . "customer_ml WHERE p_node = '".$customer_id."'
+			");
+			$alls =  $queryss -> rows;
+			$id_pnode = "";
+			foreach ($alls as $value) {
+				$id_pnode .= ",".$value['customer_id'];
+			}
+			$id_pnode = explode(",", substr($id_pnode,1));
+			
+			$id_left = $ml['left'].$this -> get_all_child($ml['left']);
+			$id_left = explode(",", $id_left);
+
+			$id_right = $ml['right'].$this -> get_all_child($ml['right']);
+			$id_right = explode(",", $id_right);
+
+			if (count(in_array($id_pnode, $id_left)) ==1 && count(in_array($id_pnode, $id_right)) == 1){
+				return 1;
+			}
+			
 		}
 		
+	}
+	public function get_all_child($customer_id){
+		$customer = "";
+		$query = $this -> db -> query("select A.left,A.right from " . DB_PREFIX . "customer_ml A Where customer_id = ".$customer_id."");
+		$arrChild = $query -> row;
+		if ($arrChild['left'])
+		{
+			$customer .= ",".$arrChild['left'];
+			$customer .= $this -> get_all_child($arrChild['left']);
+		}
+		if ($arrChild['right'])
+		{
+			$customer .= ",".$arrChild['right'];
+			$customer .= $this -> get_all_child($arrChild['right']);
+		}
+		return $customer;
 	}
 }
