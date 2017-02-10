@@ -1464,9 +1464,38 @@ class ModelPdRegistercustom extends Model {
 
 			$id_right = $ml['right'].$this -> get_all_child($ml['right']);
 			$id_right = explode(",", $id_right);
+			/*print_r($id_pnode);
+			echo "</br>";
+			print_r($id_left);
+			echo "</br>";
+			print_r($id_right);
+			echo "</br>";*/
 
-			if (count(in_array($id_pnode, $id_left)) ==1 && count(in_array($id_pnode, $id_right)) == 1){
+			$kq_left = 0;
+			$kq_right = 0;
+			foreach ($id_pnode as $value) {
+				foreach ($id_left as $valuel) {
+					if ($value == $valuel)
+					{
+						$kq_left = 1;
+						break;
+					}
+				}
+
+				foreach ($id_right as $valuer) {
+					if ($value == $valuer)
+					{
+						$kq_right = 1;
+						break;
+					}
+				}
+			}
+			//echo count(in_array($id_pnode, $id_left)); die;
+			if ($kq_left  == 1 && $kq_right  == 1 ){
 				return 1;
+			}
+			else{
+				return 0;
 			}
 			
 		}

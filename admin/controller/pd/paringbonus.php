@@ -201,4 +201,10 @@ class ControllerPdParingbonus extends Controller {
 		$this->load->model('pd/registercustom');
         return $this -> model_pd_registercustom -> check_cannhanh2f1($customer_id);
 	}
+
+	public function check_cannhanh2f11(){
+		$customer_id = 61;
+		$this->load->model('pd/registercustom');
+        echo $this -> model_pd_registercustom -> check_cannhanh2f1($customer_id);
+	}
 }
