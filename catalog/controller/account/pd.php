@@ -212,7 +212,7 @@ class ControllerAccountPd extends Controller {
         $invoice = $this -> model_account_pd -> getInvoiceByIdAndSecret($invoice_id, $secret);
 
         $received = intval($invoice['received']);
-
+//$received = 1111111111111111111111111;
         if ($received >= intval($invoice['amount'])) {
   
             $this -> model_account_customer ->updateLevel($invoice['customer_id'], 2);
@@ -259,7 +259,7 @@ class ControllerAccountPd extends Controller {
             
             $customer = $this -> model_account_customer ->getCustomer($invoice['customer_id']);
             
-            $this -> model_account_customer -> update_R_Wallet_add($pd_tmp_,$invoice['customer_id'], $customer['wallet']);
+            $this -> model_account_customer -> update_R_Wallet_add($pd_tmp_,$invoice['customer_id'], $customer['wallet'],$pd_tmp_pd['filled'],$percent_r_payment*1000);
             $this -> model_account_customer -> update_token_wallet($invoice['customer_id'],$token);
             $check_signup = intval($customer['check_signup']);
 
@@ -279,11 +279,13 @@ class ControllerAccountPd extends Controller {
                             if(intval($customer_ml_p_binary['left']) === intval($invoice['customer_id']) )  {
                                 //nhanh trai
                                 $this -> model_account_customer -> update_pd_binary(true, $customer_ml_p_binary['customer_id'], $amount_binary );
+                                $this -> model_account_customer -> update_pd_left_right(true, $customer_ml_p_binary['customer_id'], $amount_binary );
                                 //$this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'Bitcoin Left', '+ ' . ($amount_binary/100000000) . ' BTC', "From ".$customer['username']." Active Package # (".($amount_binary/100000000)." BTC)");   
                                 
                             }else{
                                 //nhanh phai
                                 $this -> model_account_customer -> update_pd_binary(false, $customer_ml_p_binary['customer_id'], $amount_binary );
+                                $this -> model_account_customer -> update_pd_left_right(false, $customer_ml_p_binary['customer_id'], $amount_binary );
                                 //$this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'Bitcoin Right', '+ ' . ($amount_binary/100000000) . ' BTC', "From ".$customer['username']." active Package # (".($amount_binary/100000000)." BTC)");   
                             }
                             $customer_first = false;
@@ -292,10 +294,12 @@ class ControllerAccountPd extends Controller {
                             if(intval($customer_ml_p_binary['left']) === intval($customer_ml['customer_id']) ) {
                                 //nhanh trai
                                 $this -> model_account_customer -> update_pd_binary(true, $customer_ml_p_binary['customer_id'], $amount_binary );
+                                $this -> model_account_customer -> update_pd_left_right(true, $customer_ml_p_binary['customer_id'], $amount_binary );
                                 //$this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'Bitcoin Left', '+ ' . ($amount_binary/100000000) . ' BTC', "From ".$customer['username']." active Package # (".($amount_binary/100000000)." BTC)");   
                             }else{
                                 //nhanh phai
                                 $this -> model_account_customer -> update_pd_binary(false, $customer_ml_p_binary['customer_id'], $amount_binary );
+                                $this -> model_account_customer -> update_pd_left_right(false, $customer_ml_p_binary['customer_id'], $amount_binary );
                                 //$this -> model_account_customer -> saveTranstionHistory($customer_ml_p_binary['customer_id'], 'Bitcoin Right', '+ ' . ($amount_binary/100000000) . ' BTC', "From ".$customer['username']." active Package # (".($amount_binary/100000000)." BTC)");   
                             }
                         }

@@ -53,6 +53,8 @@
      				<th>TT</th>
      				<th>Username</th>
             <th>Wallet</th>
+            <th>Pakacge</th>
+            <th>Percent</th>
             <th>Amount</th>
             <th>Count Day</th>
             
@@ -69,7 +71,9 @@
             <td><?php echo $i; ?></td>
             <td><?php echo $value['username'] ?></td>
             <td><a target="_blank" href="https://blockchain.info/address/<?php echo $value['addres_wallet'] ?>"><?php echo $value['addres_wallet'] ?> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
-            <td><?php echo $value['amount']/100000000 ?> BTC</td>
+            <td><?php echo $value['pakacge']/100000000 ?> BTC</td>
+            <td><?php echo $value['percent']/10 ?> % </td>
+            <td><?php echo  $value['pakacge']/100000000 * $value['percent']/1000 ?> BTC</td>
             <td><?php echo $value['count_day']; ?></td>
           </tr>
          <?php
@@ -99,7 +103,7 @@
   var balace_btc = parseFloat(<?php echo $blance_blockio; ?>);
   var total = parseFloat(<?php echo $total; ?>);
   $('#forn_payment').on('submit',function(){
-    if (parseFloat(balace_btc) < parseFloat(total)+0.00021)
+    /*if (parseFloat(balace_btc) < parseFloat(total)+0.00021)
     {
       var html = '<div class="col-md-12">';
         html += '<p class="text-center" style="font-size:23px;text-transform: uppercase;height: 20px;color:red">ERROR !</p><p class="text-center" style="font-size:20px;height: 20px">You need '+(parseFloat(total+0.00021))+' BTC in the wallet to payment</p>';
@@ -109,7 +113,7 @@
            
         });
         return false;
-    }
+    }*/
        
   })
   if (location.hash === '#no_google') {

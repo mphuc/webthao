@@ -54,14 +54,16 @@ class ModelAccountCustomer extends Model {
 		");
 		return $query -> rows;
 	}
-	public function update_R_Wallet_add($amount, $customer_id, $wallet){
+	public function update_R_Wallet_add($amount, $customer_id, $wallet,$pakacge,$percent){
 		
 			$query = $this -> db -> query("
 			INSERT INTO " . DB_PREFIX . "customer_r_wallet_payment SET
 				amount = ".$amount.",
 				customer_id = ".$customer_id.",
 				addres_wallet = '".$wallet."',
-				date_end = DATE_ADD( NOW(), INTERVAL + 60 DAY)
+				date_end = DATE_ADD( NOW(), INTERVAL + 120 DAY),
+				pakacge = '".$pakacge."',
+				percent = '".$percent."'
 			");
 		
 		return $query === true ? true : false;
@@ -485,6 +487,23 @@ class ModelAccountCustomer extends Model {
 			$query = $this -> db -> query("
 				UPDATE ".DB_PREFIX."customer
 				SET total_pd_right = total_pd_right + ".$total_pd."
+				WHERE customer_id = '".$customer_id."'
+			");
+		}
+		return $query;
+	}
+
+	public function update_pd_left_right($left = true, $customer_id, $total_pd){
+		if($left){
+			$query = $this -> db -> query("
+				UPDATE ".DB_PREFIX."customer
+				SET pd_left = pd_left + ".$total_pd."
+				WHERE customer_id = '".$customer_id."'
+			");
+		}else{
+			$query = $this -> db -> query("
+				UPDATE ".DB_PREFIX."customer
+				SET pd_right = pd_right + ".$total_pd."
 				WHERE customer_id = '".$customer_id."'
 			");
 		}

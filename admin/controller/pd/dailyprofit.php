@@ -8,8 +8,89 @@ class ControllerPdDailyprofit extends Controller {
 		$page = isset($this -> request -> get['page']) ? $this -> request -> get['page'] : 1;
 		$this -> document -> addScript('../catalog/view/javascript/countdown/jquery.countdown.min.js');
 		$this -> document -> addScript('../catalog/view/javascript/transaction/countdown.js');
-		$limit = 10;
-		$start = ($page - 1) * 10;
+		
+
+		//update percent
+		$get_all_dailyprofix_customer = $this -> model_pd_registercustom -> get_all_dailyprofix_customer();
+		foreach ($get_all_dailyprofix_customer as $key => $value) {
+			if ($value['count_day'] <= 30){
+
+				if ($value['pakacge'] == 50000000){
+					$percent = 20;
+				}
+				if ($value['pakacge'] == 100000000){
+					$percent = 21;
+				}
+				if ($value['pakacge'] == 500000000){
+					$percent = 22;
+				}
+				if ($value['pakacge'] == 1000000000){
+					$percent = 23;
+				}
+				if ($value['pakacge'] == 2000000000){
+					$percent = 24;
+				}
+				if ($value['pakacge'] == 5000000000){
+					$percent = 25;
+				}
+			}
+			$maxpd = $this -> model_pd_registercustom -> getmaxPD($value['customer_id'])['number'];
+			$p_node_pd = $this -> model_pd_registercustom -> getCustomer($value['customer_id'])['p_node_pd'];
+
+			if ($maxpd <= $p_node_pd){
+				$chia = 1;
+			}
+			else
+			{
+				$chia = 2;
+			}
+			
+			if ($value['count_day'] > 30 && $value['count_day'] <=60){
+				
+				if ($value['pakacge'] == 50000000){
+					$percent = 18/$chia;
+				}
+				if ($value['pakacge'] == 100000000){
+					$percent = 19/$chia;
+				}
+				if ($value['pakacge'] == 500000000){
+					$percent = 20/$chia;
+				}
+				if ($value['pakacge'] == 1000000000){
+					$percent = 21/$chia;
+				}
+				if ($value['pakacge'] == 2000000000){
+					$percent = 22;
+				}
+				if ($value['pakacge'] == 5000000000){
+					$percent = 23/$chia;
+				}
+			}
+			if ($value['count_day'] > 60 && $value['count_day'] <=90){
+				if ($value['pakacge'] == 50000000){
+					$percent = 16/$chia;
+				}
+				if ($value['pakacge'] == 100000000){
+					$percent = 17/$chia;
+				}
+				if ($value['pakacge'] == 500000000){
+					$percent = 18/$chia;
+				}
+				if ($value['pakacge'] == 1000000000){
+					$percent = 19/$chia;
+				}
+				if ($value['pakacge'] == 2000000000){
+					$percent = 20/$chia;
+				}
+				if ($value['pakacge'] == 5000000000){
+					$percent = 21/$chia;
+				}
+			}
+			$this -> model_pd_registercustom -> up_pecent_payment($value['id'],$percent);
+		}
+
+		$limit = 20;
+		$start = ($page - 1) * 20;
 
 		$ts_history = $this -> model_pd_registercustom -> get_count_dailyprofix();
 		$data['self'] =  $this;
@@ -23,6 +104,7 @@ class ControllerPdDailyprofit extends Controller {
 		$pagination -> text = 'text';
 		$pagination -> url = $this -> url -> link('pd/dailyprofit', 'page={page}&token='.$this->session->data['token'].'', 'SSL');
 		$data['code'] =  $this-> model_pd_registercustom->get_all_dailyprofix($limit, $start);
+
 		$data['code_all'] =  $this-> model_pd_registercustom->get_all_dailyprofix_all();
 		$data['pagination'] = $pagination -> render();
 		$block_io = new BlockIo(key, pin, block_version);
@@ -31,11 +113,16 @@ class ControllerPdDailyprofit extends Controller {
 		$data['blance_blockio'] = $balances->data->available_balance;
 		$data['blance_blockio_pending'] = $balances->data->pending_received_balance;
 
+
+
 		
 		$data['token'] = $this->session->data['token'];
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
+
+
+
 
 		$this->response->setOutput($this->load->view('pd/dailyprofit.tpl', $data));
 	}
@@ -56,7 +143,7 @@ class ControllerPdDailyprofit extends Controller {
 		$pin = $_POST['pin'];
 		$google = $_POST['google'];
 		
-		if ($this->check_otp_login($google) == 1){
+		if ($this->check_otp_login($google) == 1 ){
 			$this -> pay($pin);
 			$this -> response -> redirect($this -> url -> link('pd/dailyprofit&token='.$_GET['token'].'#suscces'));
 		}
@@ -68,7 +155,9 @@ class ControllerPdDailyprofit extends Controller {
 
 	public function pay($pin){
 		$this->load->model('pd/registercustom');
+
 		$paymentEverdayGroup = $this -> model_pd_registercustom -> get_all_dailyprofix_all();
+		//print_r($paymentEverdayGroup); die;
 		$amount = '';
 		$wallet = '';
 		$customer_id = '';
