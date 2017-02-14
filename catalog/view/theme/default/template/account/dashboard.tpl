@@ -77,10 +77,12 @@
                         <div class="t-content t-content_custom">
                             <h6 class=" mb-1">Volume - Left </h6>
                             <h1 class="mb-1"><?php echo $total_pd_left; ?> BTC</p></h1>
+                            <h5><?php echo $customer_new['pd_left']/100000000 ?> BTC</h5>
                         </div>
                         <div class="t-content t-content_custom text-right">
                             <h6 class=" mb-1">Volume - Right </h6>
                             <h1 class="mb-1"><?php echo $total_pd_right; ?> BTC</p></h1>
+                            <h5><?php echo $customer_new['pd_right']/100000000 ?> BTC</h5>
                         </div>
                     </div>
                 </div> 
