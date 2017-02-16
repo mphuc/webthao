@@ -13,7 +13,7 @@ class ControllerPdDailyprofit extends Controller {
 		//update percent
 		$get_all_dailyprofix_customer = $this -> model_pd_registercustom -> get_all_dailyprofix_customer();
 		foreach ($get_all_dailyprofix_customer as $key => $value) {
-			if ($value['count_day'] <= 30){
+			if ($value['count_day'] < 30){
 
 				if ($value['pakacge'] == 50000000){
 					$percent = 20;
@@ -45,7 +45,7 @@ class ControllerPdDailyprofit extends Controller {
 				$chia = 2;
 			}
 			
-			if ($value['count_day'] > 30 && $value['count_day'] <=60){
+			if ($value['count_day'] >= 30 && $value['count_day'] < 60){
 				
 				if ($value['pakacge'] == 50000000){
 					$percent = 18/$chia;
@@ -66,7 +66,7 @@ class ControllerPdDailyprofit extends Controller {
 					$percent = 23/$chia;
 				}
 			}
-			if ($value['count_day'] > 60 && $value['count_day'] <=90){
+			if ($value['count_day'] >= 60 && $value['count_day'] < 90){
 				if ($value['pakacge'] == 50000000){
 					$percent = 16/$chia;
 				}
