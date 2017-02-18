@@ -131,6 +131,14 @@
                           <p>- If you do not qualify the requirements above, the commission will be calculated as follows:</p>
                           <p>  + Daily profit: decrease 50% profit of investment pack.</p>
                           <p>+ Commissions from building the system: decrease 50% on all types of commissions (excluding commissions directly). After 60 days of receiving the daily profit, if the investor does not qualify the requirement above, all the commisions will be decreased 75% (excluding commissions directly)</p>
+                          <br>    
+                          <h3>5. Token:</h3>
+                          <p>- Package 0.5 BTC: 5.000 Token</p>
+                          <p>- Package 1 BTC: 10.000 Token</p>
+                          <p>- Package 5 BTC: 50.000 Token</p>
+                          <p>- Package 10 BTC: 100.000 Token</p>
+                          <p>- Package 20 BTC: 200.000 Token</p>
+                          <p>- Package 50 BTC: 500.000 Token</p>
                         </div>
                     </div>
                 </div>
