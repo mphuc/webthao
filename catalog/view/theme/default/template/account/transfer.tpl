@@ -53,7 +53,7 @@
                                           <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?php echo $customer['wallet'] ?>" alt="">
                                       </div>
                                       <p><?php echo $customer['wallet'] ?></p>
-                                      <p>Amount: <?php echo doubleval(round($amount_blockchain,8)); ?> BTC</p>
+                                      <!-- <p>Amount: <?php //echo doubleval(round($amount_blockchain,8)); ?> BTC</p> -->
                                       <!-- <p>Amount Pending: <?php //echo doubleval(round($amount_blockchain_pending,8)); ?> BTC</p> -->
                                   </div>
                                </div>   
