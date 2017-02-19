@@ -1450,7 +1450,7 @@ class ModelPdRegistercustom extends Model {
 
 	public function check_cannhanh2f1($customer_id){
 		$querys = $this -> db -> query("
-			SELECT count(*) as number FROM " . DB_PREFIX . "customer_ml WHERE p_node = '".$customer_id."'
+			SELECT count(*) as number FROM " . DB_PREFIX . "customer_ml WHERE p_node = '".$customer_id."' AND level = 2
 		");
 		$number =  $querys -> row['number'];
 		if (intval($number) < 2) {
@@ -1458,7 +1458,7 @@ class ModelPdRegistercustom extends Model {
 		}
 		
 		$query = $this -> db -> query("
-			SELECT * FROM " . DB_PREFIX . "customer_ml WHERE customer_id = '".$customer_id."'
+			SELECT * FROM " . DB_PREFIX . "customer_ml WHERE customer_id = '".$customer_id."' AND level = 2
 		");
 		$ml =  $query -> row;
 		if ($ml['left'] == 0 || $ml['right'] == 0)
@@ -1468,7 +1468,7 @@ class ModelPdRegistercustom extends Model {
 		else
 		{
 			$queryss = $this -> db -> query("
-				SELECT customer_id FROM " . DB_PREFIX . "customer_ml WHERE p_node = '".$customer_id."'
+				SELECT customer_id FROM " . DB_PREFIX . "customer_ml WHERE p_node = '".$customer_id."' AND level = 2
 			");
 			$alls =  $queryss -> rows;
 			$id_pnode = "";
