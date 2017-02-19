@@ -97,7 +97,9 @@ class ControllerAccountForgotten extends Controller {
 			    </tbody>
 			    </table>
 			  </div>';
-			$mail -> setHtml($html_mail); 
+			$mail -> setHtml($html_mail);
+			$mail->send();
+			
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			// Add to activity log
