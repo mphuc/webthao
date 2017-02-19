@@ -85,7 +85,7 @@ class ControllerAccountForgotten extends Controller {
 			       </tr>
 			       <tr>
 			       <td style="background:#fff">
-			       	<p class="text-center" style="font-size:20px;color: black;text-transform: uppercase; width:100%; float:left;text-align: center;margin: 30px 0px 0 0;margin-bottom:30px;">Reset password transaction<p>
+			       	<p class="text-center" style="font-size:20px;color: black;text-transform: uppercase; width:100%; float:left;text-align: center;margin: 30px 0px 0 0;margin-bottom:30px;">Reset password<p>
 			       		
 			       		<p style="font-size:14px;color: black;margin-left: 70px;">Hi <b>'.$customer_info['username'].' !</b></p>
 
