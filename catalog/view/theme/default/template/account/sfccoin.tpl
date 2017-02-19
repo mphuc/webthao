@@ -93,8 +93,8 @@
                           <h4>4.1. Matching bonus</h4>
                           <p>- The title Gold receives 10% from F1</p>
                           <p>- The title Ruby receives 10% from F1, F2</p>
-                          <p>- The title Ruby receives 10% from F1, F2</p>
-                          <p>- The title Ruby receives 10% from F1, F2</p>
+                          <p>- The title Emerald receives 10% from F1, F2, F3</p>
+                          <p>- The title Diamond receives 10% from F1, F2, F3, F4</p>
                           <p>- The title Blue Diamond receives 10% from F1, F2, F3, F4, F5</p>
                           <p>- The title Black Diamond receives 10% from F1, F2, F3, F4, F5, F6</p>
                           <p>***Note: The commissions are calculated based on the commission of the weak team from F1 to F6</p><br>
@@ -113,7 +113,7 @@
                           <p>- Level Emerald: Having 2 F1 reaches title Ruby</p>
                           <p>- Level Diamond: Having 2 F1 reaches title Emeral</p>
                           <p>- Level Blue Diamond: 2 F1 reach title Diamond</p>
-                          <p>- Level Black Diamond: having  2 F1 reached</p>
+                          <p>- Level Black Diamond: 2 F1 reach title Blue Diamond</p>
                           <br>
                           <h4>* How to receive profits & commissions?</h4>
                           <p>- All amounts are payments by Bitcoin.</p>
