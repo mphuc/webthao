@@ -72,7 +72,7 @@
                 </div>        
                   
                 <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="box box-block bg-white tile tile-1 mb-2">
+                    <div class="box box-block bg-white tile tile-1 mb-2" style="padding-top: 0px;">
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content t-content_custom">
                             <h6 class=" mb-1">Volume - Left </h6>

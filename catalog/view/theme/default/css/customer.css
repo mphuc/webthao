@@ -933,11 +933,13 @@ span.btn.btn-default.btn-tree {
 }
 .bg-red{
     background: #e2330b !important;
-    min-height: 80px;
+        min-height: 102px;
+            padding-top: 12px;
 }
 .bg-white{
     margin-bottom: 8px;
         min-height: 102px;
+            padding-top: 12px;
 }
 h6.mb-1 {
     color: #fff !important;
@@ -962,8 +964,9 @@ h6.mb-1 {
     color: red;
 }
 .box.box-block.bg-blue {
-    
-        background: #053636 !important
+        min-height: 102px;
+        background: #053636 !important;
+            padding-top: 12px;
 }
 .t-content_custom{
     width: 50%;
