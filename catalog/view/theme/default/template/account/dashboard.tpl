@@ -193,7 +193,7 @@
                     </div>
                 </div>
                 <h3 style="margin-top: 30px; float: left;width: 100%" class="text-center">List Investment</h3>    
-
+                
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="bg-white widget widgett-shadow">
                         <?php $packet = $self -> check_packet_pd (50000000) ;?>
