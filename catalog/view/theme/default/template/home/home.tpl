@@ -1,11 +1,34 @@
 <?php echo $self->load->controller('home/page/header'); ?>
 <script>
-    /*var xhtml = '<p>Congratulations to you, were the first to invest in trust from 01/02 to 01/15/2017 SFCCOIN (on promotion). We are happy to donate 5% of your investment Bitcoin. Wished health and success!!</p><br/><p>NOTIFICATION</p><p>First thrusting greetings and thanks to all those who first investment trust and investment BTC dated 2016.12.12 on the SFC. Now we would like to announce to all of you:</p><p>- All the ID registration will be canceled from the day 12/12 of the day 2017.12.31 (Because this is the time to run the Demo Group globally). All of these IDs will be refunded the BTC has invested profit + 10% cash; eg A 5 BTC investors, has received 5 days (0.55 BTC), the company will return the + 0.5 BTC BTC 4.45 (10%) = 5.05 BTC.!</p><p>- On 2017.01.02: It is time to plant the official global system.</p><p>* PROMOTION ON THE OCCASION OF THE GLOBAL SYSTEM ACTIVATION (From 01.02 to end on 01.15):</p><p>- All investors are donated 5% of the investment package. BTC will be transferred on the date 2017.01.16 wallet.</p>';
+    var xhtml = '<h1 class="text-center" id="eff1">Promotion</h1><div lass="text-center"  id="eff4">The date 01/3/2017 to 03/31/2017 Promotion</div><p style="margin-top:30px" class="eff5">- Direct Sales 10 BTC: 1 iwatch 2</p><p style="margin-top:10px" class="eff5">- Direct Sales 20 BTC: 1 Ipad Air 2 64GB</p><p style="margin-top:10px" class="eff5">- Direct Sales 30 BTC: 1 Iphone 7 128GB</p><p style="margin-top:10px" class="eff5">- Direct Sales 40 BTC: Iphone 7 Plus 128GB</p><br><p style="margin-top:10px" class="eff5">- Achieving the rank of Gold:  Iphone 7 + Ipad Air 2 + 3 BTC</p><p style="margin-top:10px" class="eff5">- Achieving the rank of Ruby:  Macbook 256GB + Iphone 7 Plus + 8 BTC</p><p style="margin-top:10px" class="eff5">- Achieving the rank of Emeral:   Mazda 3</p><p style="margin-top:10px" class="eff5">- Achieving the rank of Diamond:   Mazda 6</p><p style="margin-top:10px" class="eff5">- Achieving the rank of Blue Diamond:  Mercedes C250</p><p style="margin-top:10px" class="eff5">- Achieving the rank of Black Diamond:  Mercedes E250</p>';
             alertify.alert(xhtml, function(){
                 //window.location.replace("update_profile.php");
-              });*/
-     </script>
+              });
+     
 </script>
+<style type="text/css">
+    #eff1 {
+        color: #00b506;
+        text-shadow: 0px 0px 0 rgb(0, 153, 0), 1px 1px 0 rgb(0, 126, 0), 2px 2px 0 rgb(0, 98, 0), 3px 3px 0 rgb(0, 70, 0), 4px 4px 0 rgb(0, 42, 0), 5px 5px 0 rgb(0, 15, 0), 6px 6px 0 rgb(0, 0, 0), 7px 7px 0 rgb(0, 0, 0), 8px 8px 7px rgba(0,0,0,0.75), 8px 8px 1px rgba(0,0,0,0.5), 0px 0px 7px rgba(0,0,0,.2);
+        font-size: 50px;
+    }
+    #eff4 {
+    background-image: -webkit-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+    background-image: -moz-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+    background-image: -ms-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+    background-image: -o-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+    background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 20px;
+}
+.eff5 {
+    color: #053636;
+   
+    font-size: 20px;
+}
+</style>
    <section class="rev_slider_wrapper">
       <div id="slider1" class="rev_slider"  data-version="5.0">
          <ul>
