@@ -865,7 +865,7 @@ class ModelAccountCustomer extends Model {
 	public function editCustomerProfile($data_arr) {
 		$this -> event -> trigger('pre.customer.edit', $data_arr);
 		$customer_id = $this -> customer -> getId();
-		$this -> db -> query("UPDATE " . DB_PREFIX . "customer SET country_id = '". $data_arr['country_id'] ."',email = '". $data_arr['email'] ."',telephone = '". $data_arr['telephone'] ."' WHERE customer_id = '" . (int)$customer_id . "'");
+		$this -> db -> query("UPDATE " . DB_PREFIX . "customer SET country_id = '". $data_arr['country_id'] ."',email = '". $data_arr['email'] ."',telephone = '". $data_arr['telephone'] ."',account_holder = '". $data_arr['account_holder'] ."',branch_bank = '". $data_arr['branch_bank'] ."' WHERE customer_id = '" . (int)$customer_id . "'");
 		$this -> event -> trigger('post.customer.edit', $customer_id);
 	}
 

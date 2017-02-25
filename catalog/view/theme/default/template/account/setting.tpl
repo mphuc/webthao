@@ -117,6 +117,30 @@
                                  </div>
                               </div>
                            </div>
+
+                           <div class="form-group">
+                              <label class="col-md-3 control-label">Full name</label>
+                              <div class="col-md-6">
+                                 <div class="input-group">
+                                    <input class="form-control" id="full_name" name="account_holder" type="text" value="<?php echo $customer['account_holder'] ?>" />
+                                    <span id="Phone-error" class="field-validation-error">
+                                    <span></span>
+                                    </span>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="form-group">
+                              <label class="col-md-3 control-label">Address</label>
+                              <div class="col-md-6">
+                                 <div class="input-group">
+                                    <input class="form-control" id="address" name="branch_bank" type="text" value="<?php echo $customer['branch_bank'] ?>" />
+                                    <span id="Phone-error" class="field-validation-error">
+                                    <span></span>
+                                    </span>
+                                 </div>
+                              </div>
+                           </div>
                            <div class="form-group">
                               <label class="col-md-3 control-label">Password Transaction</label>
                               <div class="col-md-6">

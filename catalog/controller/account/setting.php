@@ -320,21 +320,25 @@ class ControllerAccountSetting extends Controller {
 	}
 
 	public function update_profile(){
-		$this -> load -> model('account/customer');
-		if ($this -> customer -> isLogged()) {
-			$getPasswdTransaction =  $this -> model_account_customer -> getPasswdTransaction($_POST['password_transaction']);
-			if ($getPasswdTransaction['number'] > 0)
-			{
-				$this -> model_account_customer -> editCustomerProfile($_POST);
-				$json['complete'] = 1;
+		if ($_POST)
+		{
+			$this -> load -> model('account/customer');
+			if ($this -> customer -> isLogged()) {
+				$getPasswdTransaction =  $this -> model_account_customer -> getPasswdTransaction($_POST['password_transaction']);
+				if ($getPasswdTransaction['number'] > 0)
+				{
+					$this -> model_account_customer -> editCustomerProfile($_POST);
+					$json['complete'] = 1;
+				}
+				else{
+					$json['password'] = -1;
+				}
+				
+				$this -> response -> setOutput(json_encode($json));
+				
 			}
-			else{
-				$json['password'] = -1;
-			}
-			
-			$this -> response -> setOutput(json_encode($json));
-			
 		}
+		
 	}
 
 	public function checkuser() {

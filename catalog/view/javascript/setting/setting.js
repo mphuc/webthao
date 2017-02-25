@@ -648,6 +648,16 @@ $( document ).ready(function() {
                     $('#Phone').css({'border':'1px solid red'});
                     return false;
                 }
+                if ($('#full_name').val() == ""){
+                    $('#full_name').focus();
+                    $('#full_name').css({'border':'1px solid red'});
+                    return false;
+                }
+                if ($('#address').val() == ""){
+                    $('#address').focus();
+                    $('#address').css({'border':'1px solid red'});
+                    return false;
+                }
                 if ($('#password_transaction').val() == ""){
                     $('#password_transaction').focus();
                     $('#password_transaction').css({'border':'1px solid red'});
