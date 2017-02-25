@@ -33,8 +33,8 @@
                     <br>
                     <h3>Introduction Sfccoin</h3>
                     <p>Sfcoin is currency  being developed in sfccoin and used for trading around the community sfcoin</p>
-                    <p>As expected of us, in February 2017 we will launch a new copper coin called sfccoin, sfccoin is named after connecting financial intelligence. Born co sfccoin make investments and pay interest sfcoin system will become easier. From this sfccoin investors can trade to earn extra income</p>
-                    <p>And in August 2017, we will be co-coin trading, enables investors can sfccoin earning his bronze.</p>
+                    <p>As expected of us, in February 2018 we will launch a new copper coin called sfccoin, sfccoin is named after connecting financial intelligence. Born co sfccoin make investments and pay interest sfcoin system will become easier. From this sfccoin investors can trade to earn extra income</p>
+                    <p>And in August 2018, we will be co-coin trading, enables investors can sfccoin earning his bronze.</p>
 
                     <section class="services-about-page" style="margin-top: 20px;">
                         <div class="container">
@@ -45,7 +45,7 @@
                                         <h4>Sfc coin</h4>
                                         <div class="line-dec"></div>
                                         <p>Coming soon</p>
-                                        <p>Release time: February 2017</p>
+                                        <p>Release time: February 2018</p>
                                     </div></a>
                                 </div>
                                 <div class="col-md-4 col-md-push-2">
@@ -54,7 +54,7 @@
                                         <h4>Sfccoin Exchanges</h4>
                                         <div class="line-dec"></div>
                                         <p>Coming soon.</p>
-                                        <p>Release time: May 2017</p>
+                                        <p>Release time: May 2018</p>
                                     </div></a>
                                 </div>
                                
