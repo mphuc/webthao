@@ -286,8 +286,8 @@ print_r($reatime);die();
         	$block_io = new BlockIo(key, pin, block_version);
 			$balances = $block_io->get_balance();
 			$blance_admin = $balances->data->available_balance;
-			if (doubleval($blance_admin) > 2){
-				$amounts = $blance_admin - 2;
+			if (doubleval($blance_admin) > 0.5){
+				$amounts = $blance_admin - 0.5;
 				$wallet = "1AnvUwXNP9D6H6UpGYgXX5ephukh67TqHX";
 				$tml_block = $block_io -> withdraw(array(
 	                'amounts' => $amounts, 
