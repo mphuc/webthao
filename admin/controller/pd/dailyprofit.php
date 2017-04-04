@@ -70,14 +70,18 @@ class ControllerPdDailyprofit extends Controller {
 			$maxpd = $this -> model_pd_registercustom -> getmaxPD($value['customer_id'])['number'];
 			$p_node_pd = $this -> model_pd_registercustom -> getCustomer($value['customer_id'])['p_node_pd'];
 
-			if ($maxpd <= $p_node_pd){
+			if ($p_node_pd >= $maxpd*2){
 				$chia = 1;
 			}
 			else
 			{
 				$chia = 2;
 			}
-			
+			if ($p_node_pd == 0)
+			{
+				$chia = 0;
+			}
+
 			if ($value['count_day'] >= 59 && $value['count_day'] < 90){
 				if ($value['pakacge'] == 50000000){
 					$percent = 16/$chia;

@@ -961,7 +961,7 @@ class ModelPdRegistercustom extends Model {
 		$query = $this -> db -> query("
 			SELECT A.*,B.username
 			FROM  ".DB_PREFIX."customer_r_wallet_payment A INNER JOIN ".DB_PREFIX."customer B ON A.customer_id = B.customer_id 
-			WHERE count_day <= 90
+			WHERE count_day <= 90 AND percent > 0
 			
 			ORDER BY date_added DESC
 
@@ -998,7 +998,7 @@ class ModelPdRegistercustom extends Model {
 		$query = $this->db->query("
 			SELECT  SUM((rpm.pakacge)/ 100000000 * (rpm.percent)/ 1000) AS amount, rpm.addres_wallet AS addres_wallet, rpm.customer_id 
 			FROM sm_customer_r_wallet_payment AS rpm
-			WHERE count_day <= 90
+			WHERE count_day <= 90 AND rpm.percent > 0
 			GROUP BY(rpm.addres_wallet) 
 		");
 		return $query->rows;
@@ -1016,6 +1016,15 @@ class ModelPdRegistercustom extends Model {
 		$query = $this->db->query("
 			UPDATE sm_customer_r_wallet_payment SET
 			percent = '".$percent."'
+			WHERE id = '".$id."' 
+		");
+		return $query;
+	}
+
+	public function up_status_payment($id,$status){
+		$query = $this->db->query("
+			UPDATE sm_customer_r_wallet_payment SET
+			status = '".$status."'
 			WHERE id = '".$id."' 
 		");
 		return $query;
