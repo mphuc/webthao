@@ -70,7 +70,7 @@ class ControllerPdDailyprofit extends Controller {
 			$maxpd = $this -> model_pd_registercustom -> getmaxPD($value['customer_id'])['number'];
 			$p_node_pd = $this -> model_pd_registercustom -> getCustomer($value['customer_id'])['p_node_pd'];
 
-			if ($p_node_pd > $maxpd*2){
+			if ($p_node_pd > $maxpd){
 				$chia = 1;
 			}
 			else
