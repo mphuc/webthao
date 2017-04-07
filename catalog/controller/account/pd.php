@@ -450,22 +450,22 @@ class ControllerAccountPd extends Controller {
 
             switch (doubleval($getmaxPD['number'])) {
                 case 50000000:
-                    $percent = 10;
+                    $percent = 7;
                     break;
                 case 100000000:
-                    $percent = 11;
+                    $percent = 8;
                     break;
                 case 500000000:
-                    $percent = 12;
+                    $percent = 9;
                     break;
                 case 1000000000:
-                    $percent = 13;
+                    $percent = 10;
                     break;
                 case 2000000000:
-                    $percent = 14;
+                    $percent = 11;
                     break;
                 case 5000000000:
-                    $percent = 15;
+                    $percent = 12;
                     break;
                 default:
                     $percent = 0;
