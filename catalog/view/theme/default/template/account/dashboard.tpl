@@ -153,7 +153,7 @@
                         <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-btc" aria-hidden="true"></i></div>
                         <div class="t-content t-content_custom" style="width: 50%">
                             <h6 class=" mb-1">Total Sfccoin</h6>
-                            <h1 class="mb-1">0 Sfccoin <!-- <img style="width: 25px; margin-top: -4px;" src="catalog/view/theme/default/images/sfccoin.png" alt=""> --></p> </h1>
+                            <h1 class="mb-1"><?php echo number_format($customer_new['coin']) ?> Sfccoin <!-- <img style="width: 25px; margin-top: -4px;" src="catalog/view/theme/default/images/sfccoin.png" alt=""> --></p> </h1>
 
                         </div>
                         <div class="t-content t-content_custom text-right" style="width: 50%">
