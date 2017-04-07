@@ -41,7 +41,7 @@
                                           <img src="catalog/view/theme/default/images/sfccoin.png" style="height: 50px;margin-top: 10px;" alt="">
                                           <div class="t-content">
                                               
-                                              <h1 class="mb-1" style="margin-top: 10px;">0 Sfccoin<p></p></h1>
+                                              <h1 class="mb-1" style="margin-top: 10px;"><?php echo number_format($customer['coin']) ?> Sfccoin<p></p></h1>
                                           </div>
                                       </div>
                                   </div>
@@ -58,7 +58,7 @@
                                   </div>
                                </div>   
                                <div class="clearfix"></div> 
-                              <form id="tranfer_cm_btc" style="margin-top: 30px;" action="index.php?route=account/withdraw/submit_my_transaction" method="POST" >
+                              <form id="tranfer_cm_btc" style="margin-top: 30px;" action="index.php?route=account/transfer/submit_my_transaction" method="POST" >
                                 <div class="col-md-2 col-md-push-1 wow fadeInUp" data-wow-delay="0.3s">
                                   <input autocomplete="off" class="form-control" placeholder="Amount Sfccoin" type="text" name="amount_sfccoin" id="amount_sfccoin">
                                    <p class="error error_amount_sfccoin">Please enter a amount sfccoin</p>
@@ -68,8 +68,8 @@
                                   <input autocomplete="off" data-link="<?php echo $self->url->link('account/withdraw/get_btc_sfccoin'); ?>" class="form-control" readonly="true" placeholder="Amount BTC" type="text" name="amount_btc" id="amount_btc">
                                 </div>
                                 <div class="col-md-3 col-md-push-1  wow fadeInUp" data-wow-delay="0.3s">
-                                  <input readonly="true" autocomplete="off" class="form-control" placeholder="Password Transaction" type="password" name="password_transaction_btc" id="password_transaction_btc">
-                                   <p class="error error_password_transaction_btc">Please enter a Secret answer</p>
+                                  <input autocomplete="off" class="form-control" placeholder="Password Transaction" type="password" name="password_transaction_btc" id="password_transaction_btc">
+                                   <p class="error error_password_transaction_btc">Please enter a password transaction</p>
                                   <p class="error error_password_transaction_deal_btc">Password do not macth</p>
                                 </div>
                                 <div class="col-md-2 col-md-push-1  wow fadeInUp" data-wow-delay="0.3s">
@@ -92,9 +92,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td colspan="5">No data available in table</td>
-                                  </tr>
+                                  <?php if (count($history_coin_wallet_payment) > 0) { ?>
+                                  <?php $i=0; foreach ($history_coin_wallet_payment as $value) { $i++;?>
+                                    <tr>
+                                      <td><?php echo $i ?></td>
+                                      <td><?php echo number_format($value['coin']) ?> Sfcoin</td>
+                                      <td><?php echo ($value['amount']/100000000) ?> BTC</td>
+                                      <td><?php echo date('d/m/Y H:i',strtotime($value['date_added'])) ?></td>
+                                      <td>
+                                        <?php if ($value['status'] == 0) echo "Pending" ?>
+                                      </td>
+                                    </tr>
+                                  <?php } ?>
+                                  <?php } else { ?>
+                                    <tr>
+                                      <td colspan="5">No data available in table</td>
+                                    </tr>
+                                  <?php } ?>
                             </tbody>
                         </table>
                               </div>

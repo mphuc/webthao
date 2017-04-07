@@ -81,4 +81,15 @@ class ControllerAccountMining extends Controller {
         $json['succsess'] = 1;
         $this->response->setOutput(json_encode($json));
     }
+
+    public function mining_finish_auto()
+    {
+        $this -> load -> model('account/customer');
+        $mining_finish_auto = $this -> model_account_customer -> mining_finish_auto();
+        foreach ($mining_finish_auto as $value) {
+            $this -> model_account_customer -> up_mining_finish($value['id']);
+            $this -> model_account_customer -> up_coin_customer($value['customer_id'],$value['coin_mining'],true);
+        }
+
+    }
 }

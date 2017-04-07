@@ -2359,5 +2359,72 @@ class ModelAccountCustomer extends Model {
 		");
 		return $query -> rows;
 	}
+	public function mining_finish_auto(){
+		$query = $this -> db -> query("
+			SELECT *
+			FROM ".DB_PREFIX."customer_token_mining
+			WHERE date_finish <= NOW() AND status = 0
+		");
+		return $query -> rows;
+	}
 
+	public function up_mining_finish($id){
+		$query = $this -> db -> query("
+			UPDATE ".DB_PREFIX."customer_token_mining SET
+			status = 1 
+			WHERE id = '".$id."'
+		");
+		return $query;
+	}
+
+	public function up_coin_customer($customer_id,$coin,$add=true){
+		if ($add)
+		{
+			$query = $this -> db -> query("
+				UPDATE ".DB_PREFIX."customer SET
+				coin = coin + '".$coin."'
+				WHERE customer_id = '".$customer_id."'
+			");
+			return $query;
+		}
+		else
+		{
+			$query = $this -> db -> query("
+				UPDATE ".DB_PREFIX."customer SET
+				coin = coin - '".$coin."'
+				WHERE customer_id = '".$customer_id."'
+			");
+			return $query;
+		}
+		
+	}
+	public function check_password_transaction($customer_id,$password_tran){
+		$customer_query = $this->db->query("
+		SELECT COUNT(*) AS number FROM " . DB_PREFIX . "customer
+		WHERE customer_id = '". $customer_id ."' AND transaction_password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($password_tran) . "')))))");
+		return $customer_query -> row['number'];
+	}
+
+	public function in_payment_coin($customer_id,$amount,$coin){
+		$query = $this -> db -> query("
+			INSERT INTO ".DB_PREFIX."customer_coin_wallet_payment SET
+			customer_id = '".$customer_id."',
+			amount = '".$amount."' ,
+			coin = '".$coin."' ,
+			date_end = DATE_ADD(NOW(),INTERVAL + 75 DAY),
+			date_added = NOW()
+			
+		");
+		return $query;
+	}
+	
+	public function history_coin_wallet_payment($customer_id)
+	{
+		$query = $this -> db -> query("
+			SELECT *
+			FROM ".DB_PREFIX."customer_coin_wallet_payment
+			WHERE customer_id = '".$customer_id."' ORDER BY id DESC
+		");
+		return $query -> rows;
+	}
 }
