@@ -46,7 +46,7 @@ class ControllerPdDailyprofit extends Controller {
 				$chia = 2;
 			}
 			
-			if ($value['count_day'] >= 30 && $value['count_day'] < 60){
+			if ($value['count_day'] >= 30 && $value['count_day'] < 45){
 				
 				if ($value['pakacge'] == 50000000){
 					$percent = 18/$chia;
@@ -83,7 +83,7 @@ class ControllerPdDailyprofit extends Controller {
 				$chia = 0;
 			}
 
-			if ($value['count_day'] >= 59 && $value['count_day'] < 90){
+			if ($value['count_day'] >= 45 && $value['count_day'] < 90){
 				if ($value['pakacge'] == 50000000){
 					$percent = 16/$chia;
 				}
