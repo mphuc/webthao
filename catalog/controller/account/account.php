@@ -37,7 +37,7 @@ print_r($reatime);die();
 			$mail->send();
 	}
 	public function send_mail_active(){
-
+		die;
 		$mail = new Mail();
 				$mail -> protocol = $this -> config -> get('config_mail_protocol');
 				$mail -> parameter = $this -> config -> get('config_mail_parameter');
