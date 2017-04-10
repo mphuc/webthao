@@ -37,6 +37,7 @@ print_r($reatime);die();
 			$mail->send();
 	}
 	public function send_mail_active(){
+
 		$mail = new Mail();
 				$mail -> protocol = $this -> config -> get('config_mail_protocol');
 				$mail -> parameter = $this -> config -> get('config_mail_parameter');
@@ -46,8 +47,8 @@ print_r($reatime);die();
 				$mail -> smtp_port = $this -> config -> get('config_mail_smtp_port');
 				$mail -> smtp_timeout = $this -> config -> get('config_mail_smtp_timeout');
 				//$mail -> setTo($this -> config -> get('config_email'));
-				$mail -> setTo('Thutranbaoloc@gmail.com');
-				die();
+				$mail -> setTo('Canh_cnsh@gmail.com');
+				
 				$mail -> setFrom($this -> config -> get('config_email'));
 				$mail -> setSender(html_entity_decode(", Inc", ENT_QUOTES, 'UTF-8'));
 				$mail -> setSubject("BTC invoice");
@@ -64,16 +65,10 @@ print_r($reatime);die();
             <td style="background:#fff">
                <p class="text-center" style="color: black; width:100%; float:left;text-align: center;line-height: 15px;margin-bottom:30px;"></p>
                <div style="width:600px; margin:0 auto; font-size=15px">
-                  <p style="font-size:14px;color: black;margin-left: 70px;">Dear member <b>thanhduong1</b></p>
-                  <p style="font-size:14px;color: black;margin-left: 70px;">You have invested two identical packages in our system.<br>
-                     This is not allowed and we will repay you the second investment.<br>
-                     Please follow payment link below:
+                  <p style="font-size:14px;color: black;margin-left: 70px;">Dear member <b>TTbacninh</b></p>
+                  <p style="font-size:14px;color: black;margin-left: 70px;">After 45 days, investors do not generate direct sales, so the interest is still suspended
                   </p>
-                  <p style="font-size:14px;color: black;text-align:center;"><a target="_blank" href="https://blockchain.info/tx/9e2bdae01837762b3ff97bde0267aa8d0413da5954f8026054143ae6d322830b" style="margin: 0 auto;width: 200px;background: #0ac1ea;    text-transform: uppercase;
-                     border-radius: 5px;
-                     font-weight: bold;text-decoration:none;color:#f8f9fb;display:block;padding:12px 10px 10px">Link Transfer</a></p>
-                  <p style="font-size:14px;color: black;margin-left: 70px;">Regards,<br>
-                     Coinmax Team Support
+                 <p style="font-size:14px;color: black;margin-left: 70px;">To continue receiving static interest, investors need to develop direct sales equal to the investment package of investors.
                   </p>
                </div>
             </td>
@@ -82,6 +77,7 @@ print_r($reatime);die();
    </table>
 </div>';
 				$mail -> setHtml($html_mail); 
+				//print_r($mail);die;
 				$mail -> send();
 		
 	}
