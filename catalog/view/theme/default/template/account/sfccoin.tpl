@@ -130,7 +130,7 @@
                           <p>- After 30 days of receiving daily profits, the investor must built one F1 or more than one has a total investment equal to or more BTC's investment package yourself.</p>
                           <p>- If you do not qualify the requirements above, the commission will be calculated as follows:</p>
                           <p>  + Daily profit: decrease 50% profit of investment pack.</p>
-                          <p>+ Commissions from building the system: decrease 50% on all types of commissions (excluding commissions directly). After 60 days of receiving the daily profit, if the investor does not qualify the requirement above, all the commisions will be decreased 75% (excluding commissions directly)</p>
+                          <p>+ Commissions from building the system: decrease 50% on all types of commissions (excluding commissions directly). After 45 days of receiving the daily profit, if the investor does not qualify the requirement above, All commissions will be reduced to 0% (excluding commissions directly)</p>
                           <br>    
                           <h3>5. Token:</h3>
                           <p>- Package 0.5 BTC: 5.000 Token</p>
