@@ -27,12 +27,12 @@
                             </span>
                         </div>
                         
-                        <h3>MainStay New York Tax Free Opportunities Fund (MNOAX)</h3>
+                        <!-- <h3>MainStay New York Tax Free Opportunities Fund (MNOAX)</h3>
                         <br>
                         <div class="text-center">
                             <img style="margin: 0 auto" src="catalog/view/theme/default/images/abount.png" alt="Awesome Image" />
                         </div>
-                        
+                         -->
                     </div>
                 </div>
                 
