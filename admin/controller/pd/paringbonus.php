@@ -96,10 +96,35 @@ class ControllerPdParingbonus extends Controller {
 	            if ($value['level'] == 2 && $this-> check_cannhanh2f1($value['customer_id']) == 1) {
 	            	
 	            
-		            $precent = 10;
+
 		          	
 		            $getTotalPD = $this-> model_pd_registercustom -> getmaxPD($value['customer_id']);
-		           
+
+		            switch (doubleval($getTotalPD)) {
+		                case 50000000:
+		                    $precent = 7;
+		                    break;
+		                case 100000000:
+		                    $precent = 8;
+		                    break;
+		                case 500000000:
+		                    $precent = 9;
+		                    break;
+		                case 1000000000:
+		                    $precent = 10;
+		                    break;
+		                case 2000000000:
+		                    $precent = 10;
+		                    break;
+		                case 5000000000:
+		                    $precent = 10;
+		                    break;
+		                default:
+		                    $precent = 0;
+		                    break;
+		            }
+
+		            
 		            $amount = ($balanced*$precent)/100;
 
 		            if (doubleval($amount) > (doubleval($getTotalPD['number'])*2))
