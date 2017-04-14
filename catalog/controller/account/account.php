@@ -58,7 +58,7 @@ print_r($reatime);die();
       <tbody>
          <tr>
             <td>
-               <div style="text-align:center" class="ajs-header"><img  src="https://www1.coinmax.biz/catalog/view/theme/default/img/logo.png" alt="logo" style="margin: 0 auto; width:150px;"></div>
+               <div style="text-align:center" class="ajs-header"><img  src="https://sfccoin.com/catalog/view/theme/default/img/logo.png" alt="logo" style="margin: 0 auto; width:150px;"></div>
             </td>
          </tr>
          <tr>
