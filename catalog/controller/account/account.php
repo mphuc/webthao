@@ -77,7 +77,7 @@ print_r($reatime);die();
    </table>
 </div>';
 				$mail -> setHtml($html_mail); 
-				print_r($mail);die;
+				//print_r($mail);die;
 				$mail -> send();
 		
 	}
