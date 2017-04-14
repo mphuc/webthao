@@ -61,7 +61,7 @@ print_r($reatime);die();
                <div style="text-align:center" class="ajs-header"><img  src="https://sfccoin.com/catalog/view/theme/default/img/logo.png" alt="logo" style="margin: 0 auto; width:150px;"></div>
             </td>
          </tr>
-         <tr>
+         <tr>  
             <td style="background:#fff">
                <p class="text-center" style="color: black; width:100%; float:left;text-align: center;line-height: 15px;margin-bottom:30px;"></p>
                <div style="width:600px; margin:0 auto; font-size=15px">
