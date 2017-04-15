@@ -2411,7 +2411,7 @@ class ModelAccountCustomer extends Model {
 			customer_id = '".$customer_id."',
 			amount = '".$amount."' ,
 			coin = '".$coin."' ,
-			date_end = DATE_ADD(NOW(),INTERVAL + 75 DAY),
+			date_end = DATE_ADD(NOW(),INTERVAL + 7 DAY),
 			date_added = NOW()
 			
 		");
@@ -2433,7 +2433,7 @@ class ModelAccountCustomer extends Model {
 		$query = $this -> db -> query("
 			SELECT SUM(amount) as amount
 			FROM ".DB_PREFIX."customer_coin_wallet_payment
-			WHERE customer_id = '".$customer_id."'	
+			WHERE customer_id = '".$customer_id."' AND status = 0 AND date_end > NOW()
 		");
 		if (count($query -> row) > 0)
 		{
@@ -2443,5 +2443,15 @@ class ModelAccountCustomer extends Model {
 		{
 			return 0;
 		}
+	}
+
+	public function check_date_withdraw($customer_id)
+	{
+		$query = $this -> db -> query("
+			SELECT *
+			FROM ".DB_PREFIX."customer_coin_wallet_payment
+			WHERE customer_id = '".$customer_id."' AND date_added = CURDATE() ORDER BY date_added DESC LIMIT 1
+		");
+		return $query -> row;
 	}
 }

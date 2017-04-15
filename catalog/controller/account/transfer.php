@@ -98,12 +98,21 @@ class ControllerAccountTransfer extends Controller {
             }
             $check_password_transaction = $this -> model_account_customer -> check_password_transaction($this->session->data['customer_id'],$password_transaction);
 
-            if ($check_password_transaction > 0 || 1==1)
+            if ($check_password_transaction > 0)
             {
                 $get_coin = $this -> model_account_customer -> getCustomer($this -> session -> data['customer_id']);
                  
-                if ($get_coin['coin'] >= $amount_sfccoin)
+                if ($get_coin['coin'] >= $amount_sfccoin) 
                 {
+
+                    $check_date_withdraw = $this -> model_account_customer -> check_date_withdraw($this -> session -> data['customer_id']);
+
+                    if (count($check_date_withdraw) > 0) 
+                    {
+                        $json['day_withdraw'] = 1;
+                        $this->response->setOutput(json_encode($json));
+                    }
+
                     $maxPD  =$this -> model_account_customer -> getmaxPD($this -> session -> data['customer_id']);
                     switch (doubleval($maxPD['number'])) {
                         case 50000000:

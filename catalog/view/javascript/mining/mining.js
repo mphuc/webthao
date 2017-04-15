@@ -111,7 +111,11 @@ $(function() {
                     window.funLazyLoad.reset();
                     return false;
                 }
-
+                if (result.day_withdraw)
+                {
+                  $('#thongbaomin').show().html('You have too many withdrawals per day');
+                  return false;
+                }
                 if (result.max_withdraw)
                 {
 
