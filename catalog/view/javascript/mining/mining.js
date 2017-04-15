@@ -94,11 +94,11 @@ $(function() {
                     $(this).focus();
                     return false;
                 } 
-                if ($('#amount_btc').val() == "" || isNaN(parseFloat($('#amount_btc').val())) || parseFloat($('#amount_btc').val()) < 0.3){
+               /* if ($('#amount_btc').val() == "" || isNaN(parseFloat($('#amount_btc').val())) || parseFloat($('#amount_btc').val()) < 0.3){
                     $('#thongbaomin').show();
                     $
                     return false;
-                } 
+                } */
                 if ($('#password_transaction_btc').val() == ""){
                     $('.error_password_transaction_btc').show();
                     return false;
@@ -111,10 +111,18 @@ $(function() {
                     window.funLazyLoad.reset();
                     return false;
                 }
+
+                if (result.max_withdraw)
+                {
+
+                  $('#thongbaomin').show().html('Withdrawal minimum '+result.max_withdraw+' BTC');
+                  return false;
+                }
                  if (result.password) {
                     $('.error_password_transaction_btc').html('Transaction password is wrong').show();
                     return false;
                 }
+                
                 if (result.money_transfer) {
                    window.funLazyLoad.reset();
                     var html = '<div class="col-md-12">';

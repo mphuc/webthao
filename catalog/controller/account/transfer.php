@@ -104,11 +104,47 @@ class ControllerAccountTransfer extends Controller {
                  
                 if ($get_coin['coin'] >= $amount_sfccoin)
                 {
-                    
-                    $this -> model_account_customer -> up_coin_customer($this -> session -> data['customer_id'],$amount_sfccoin,false);
-                    $this -> model_account_customer -> in_payment_coin($this -> session -> data['customer_id'],$amount_sfccoin*0.0008*100000000,$amount_sfccoin);
+                    $maxPD  =$this -> model_account_customer -> getmaxPD($this -> session -> data['customer_id']);
+                    switch (doubleval($maxPD['number'])) {
+                        case 50000000:
+                            $percent_r_payment = 0.004;
+                           
+                            break;
+                        case 100000000:
+                            $percent_r_payment = 0.008;
+                           
+                            break;
+                        case 500000000:
+                            $percent_r_payment = 0.01;
+                           
+                            break;
+                        case 1000000000:
+                            $percent_r_payment = 0.015;
+                            
+                            break;
+                        case 2000000000:
+                            $percent_r_payment = 0.02;
+                           
+                            break;
+                        case 5000000000:
+                            $percent_r_payment = 0.03;
+                            break;
+                        default:
+                            die;
+                            break;
+                    }
 
-                    $json['succsess'] = 1;
+                    if ($amount_sfccoin*0.0008 <= $percent_r_payment)
+                    {
+                        $this -> model_account_customer -> up_coin_customer($this -> session -> data['customer_id'],$amount_sfccoin,false);
+                        $this -> model_account_customer -> in_payment_coin($this -> session -> data['customer_id'],$amount_sfccoin*0.0008*100000000,$amount_sfccoin);
+
+                        $json['succsess'] = 1;
+                    }
+                    else
+                    {
+                        $json['max_withdraw'] = $percent_r_payment;
+                    }
                 }
                 else
                 {
