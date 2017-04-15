@@ -34,7 +34,7 @@
                            </ul>
                            <div class="tab-content ">
                               <div class="tab-pane active" id="home11" role="tabpanel">
-                                <div class="col-md-4 text-center">
+                                <div class="col-md-4 text-center col-md-push-2">
                                   <div class="item_wallet">
                                       <h5>Your Sfccoin</h5>
                                       <div class="box box-block bg-white tile tile-1 mb-2">
@@ -46,18 +46,17 @@
                                       </div>
                                   </div>
                                </div>     
-                               <div class="col-md-4 text-center">
+                              <!--  <div class="col-md-4 text-center">
                                   <div class="item_wallet">
                                       <h5>Your Balance Wallet</h5>
                                       <div class="wallet wallet_blockcio">
-                                          <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?php echo $customer['wallet'] ?>" alt="">
+                                          <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?php //echo $customer['wallet'] ?>" alt="">
                                       </div>
-                                      <p><?php echo $customer['wallet'] ?></p>
-                                      <!-- <p>Amount: <?php //echo doubleval(round($amount_blockchain,8)); ?> BTC</p> -->
-                                      <!-- <p>Amount Pending: <?php //echo doubleval(round($amount_blockchain_pending,8)); ?> BTC</p> -->
+                                      <p><?php //echo $customer['wallet'] ?></p>
+                                      
                                   </div>
-                               </div>  
-                               <div class="col-md-4 text-center">
+                               </div>   -->
+                               <div class="col-md-4 text-center  col-md-push-2">
                                   <div class="item_wallet">
                                       <h5>Your Withdraw Pending</h5>
                                       <div class="box box-block bg-white tile tile-1 mb-2" style="background: #3c352c !important">
