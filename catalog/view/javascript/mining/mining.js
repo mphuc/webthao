@@ -94,8 +94,9 @@ $(function() {
                     $(this).focus();
                     return false;
                 } 
-                if ($('#amount_btc').val() == "" || isNaN(parseFloat($('#amount_btc').val()))){
-                    $('.error_amount_btc').show();
+                if ($('#amount_btc').val() == "" || isNaN(parseFloat($('#amount_btc').val())) || parseFloat($('#amount_btc').val()) < 0.3){
+                    $('#thongbaomin').show();
+                    $
                     return false;
                 } 
                 if ($('#password_transaction_btc').val() == ""){

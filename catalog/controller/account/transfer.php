@@ -24,6 +24,9 @@ class ControllerAccountTransfer extends Controller {
 
         $data['history_coin_wallet_payment'] = $this -> model_account_customer -> history_coin_wallet_payment($this -> session -> data['customer_id']);
 
+
+        $data['withdrraw_pendding'] = $this -> model_account_customer -> withdrraw_pendding($this -> session -> data['customer_id']);
+
         !call_user_func_array("myCheckLoign", array($this)) && $this->response->redirect(HTTPS_SERVER . 'login.html');
         call_user_func_array("myConfig", array($this));  
 

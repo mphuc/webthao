@@ -34,7 +34,7 @@
                            </ul>
                            <div class="tab-content ">
                               <div class="tab-pane active" id="home11" role="tabpanel">
-                                <div class="col-md-4 col-md-push-2 text-center">
+                                <div class="col-md-4 text-center">
                                   <div class="item_wallet">
                                       <h5>Your Sfccoin</h5>
                                       <div class="box box-block bg-white tile tile-1 mb-2">
@@ -46,7 +46,7 @@
                                       </div>
                                   </div>
                                </div>     
-                               <div class="col-md-4 col-md-push-2 text-center">
+                               <div class="col-md-4 text-center">
                                   <div class="item_wallet">
                                       <h5>Your Balance Wallet</h5>
                                       <div class="wallet wallet_blockcio">
@@ -56,7 +56,19 @@
                                       <!-- <p>Amount: <?php //echo doubleval(round($amount_blockchain,8)); ?> BTC</p> -->
                                       <!-- <p>Amount Pending: <?php //echo doubleval(round($amount_blockchain_pending,8)); ?> BTC</p> -->
                                   </div>
-                               </div>   
+                               </div>  
+                               <div class="col-md-4 text-center">
+                                  <div class="item_wallet">
+                                      <h5>Your Withdraw Pending</h5>
+                                      <div class="box box-block bg-white tile tile-1 mb-2" style="background: #3c352c !important">
+                                          <img src="catalog/view/theme/default/images/sfccoin.png" style="height: 50px;margin-top: 10px;" alt="">
+                                          <div class="t-content">
+                                              <h1 class="mb-1" style="margin-top: 10px;"><?php echo ($withdrraw_pendding/100000000) ?> BTC<p></p></h1>
+                                          </div>
+                                      </div>
+                                  </div>
+                               </div>     
+
                                <div class="clearfix"></div> 
                               <form id="tranfer_cm_btc" style="margin-top: 30px;" action="index.php?route=account/transfer/submit_my_transaction" method="POST" >
                                 <div class="col-md-2 col-md-push-1 wow fadeInUp" data-wow-delay="0.3s">
@@ -75,8 +87,12 @@
                                 <div class="col-md-2 col-md-push-1  wow fadeInUp" data-wow-delay="0.3s">
                                  <input class="form-control btn btn-primary" style="    background-color: #337ab7 !important;"  id="" type="submit" value="OK">
                                 </div>
-                                 
+                                 <div class="clearfix"></div>
+                               <div class="alert alert-danger" id="thongbaomin" style="margin-top: 30px;display: none;">
+                                 Withdrawal minimum 0.3 BTC
+                                </div>
                                </form>
+                               
                                 <div class="clearfix"></div>
                                 <br><br>
                                 <p>1 Sfc coin = 0.0008 BTC</p>

@@ -2427,4 +2427,21 @@ class ModelAccountCustomer extends Model {
 		");
 		return $query -> rows;
 	}
+
+	public function withdrraw_pendding($customer_id)
+	{
+		$query = $this -> db -> query("
+			SELECT SUM(amount) as amount
+			FROM ".DB_PREFIX."customer_coin_wallet_payment
+			WHERE customer_id = '".$customer_id."'	
+		");
+		if (count($query -> row) > 0)
+		{
+			return $query -> row['amount'];
+		}
+		else
+		{
+			return 0;
+		}
+	}
 }
