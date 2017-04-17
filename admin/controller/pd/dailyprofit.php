@@ -12,7 +12,7 @@ class ControllerPdDailyprofit extends Controller {
 		
 
 		//update percent
-		/*$get_all_dailyprofix_customer = $this -> model_pd_registercustom -> get_all_dailyprofix_customer();
+		$get_all_dailyprofix_customer = $this -> model_pd_registercustom -> get_all_dailyprofix_customer();
 		foreach ($get_all_dailyprofix_customer as $key => $value) {
 			if ($value['count_day'] < 30){
 
@@ -104,7 +104,7 @@ class ControllerPdDailyprofit extends Controller {
 				}
 			}
 			$this -> model_pd_registercustom -> up_pecent_payment($value['id'],$percent);
-		}*/
+		}
 
 		$limit = 20;
 		$start = ($page - 1) * 20;
