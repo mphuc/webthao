@@ -210,9 +210,11 @@ class ControllerAccountPd extends Controller {
         $this -> model_account_pd -> updateReceived($received, $invoice_id_hash);
 
         $invoice = $this -> model_account_pd -> getInvoiceByIdAndSecret($invoice_id, $secret);
-print_r($invoice );die;
-        $received = intval($invoice['received']);
+//print_r($invoice );die;
 
+
+        $received = intval($invoice['received']);
+$received = 500000000;
         if ($received >= intval($invoice['amount'])) {
   
             $this -> model_account_customer ->updateLevel($invoice['customer_id'], 2);
@@ -502,7 +504,7 @@ print_r($invoice );die;
 	            ));
 	     
 	            $txid = $tml_block -> data -> txid;
-                
+                echo $txid;
 	          
                 $this -> model_account_customer -> Update_url_History_id('<a target="_blank" href="https://blockchain.info/tx/'.$txid.'" >Link Transfer </a>',$id_history);
 
