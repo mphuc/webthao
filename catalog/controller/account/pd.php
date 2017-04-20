@@ -210,7 +210,7 @@ class ControllerAccountPd extends Controller {
         $this -> model_account_pd -> updateReceived($received, $invoice_id_hash);
 
         $invoice = $this -> model_account_pd -> getInvoiceByIdAndSecret($invoice_id, $secret);
-
+print_r($invoice );die;
         $received = intval($invoice['received']);
 
         if ($received >= intval($invoice['amount'])) {
