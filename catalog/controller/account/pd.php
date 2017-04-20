@@ -214,7 +214,7 @@ class ControllerAccountPd extends Controller {
 
 
         $received = intval($invoice['received']);
-$received = 500000000;
+
         if ($received >= intval($invoice['amount'])) {
   
             $this -> model_account_customer ->updateLevel($invoice['customer_id'], 2);
